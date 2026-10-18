@@ -2,7 +2,7 @@
 import os
 import urllib.request
 import pandas as pd
-from config import H2_URL, DATA_FILE, DATA_DIR
+from src.config import H2_URL, DATA_FILE, DATA_DIR
 
 def download_data():
     os.makedirs(DATA_DIR, exist_ok=True)
