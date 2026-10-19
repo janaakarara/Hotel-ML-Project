@@ -19,21 +19,14 @@ OUTPUT_REPORT_PATH = os.path.join(
 def generate_eda_report():
     os.makedirs(os.path.dirname(OUTPUT_REPORT_PATH), exist_ok=True)
 
-    # Load data: processed file first, raw file as fallback
-    clean_data_path = os.path.join(
-        "data", "processed", "h2_clean.csv"
-    )
+    # Always analyze the raw source file for this report.
+    data_file = os.path.join("data", "raw", "H2.csv")
 
-    if not os.path.exists(clean_data_path):
-        clean_data_path = os.path.join(
-            "data", "raw", "H2.csv"
-        )
-
-    if not os.path.exists(clean_data_path):
-        print(f"[ERROR] CSV file not found: {clean_data_path}")
+    if not os.path.exists(data_file):
+        print(f"[ERROR] CSV file not found: {data_file}")
         return
 
-    df = pd.read_csv(clean_data_path)
+    df = pd.read_csv(data_file)
 
     total_rows, total_cols = df.shape
 
@@ -52,7 +45,7 @@ def generate_eda_report():
 
     log("# Exploratory Data Analysis & Audit Report: City Hotel (H2)")
     log(
-        f"**Loaded File:** `{clean_data_path}` | "
+        f"**Loaded File:** `{data_file}` | "
         f"**Total Records:** {total_rows:,} | "
         f"**Features Count:** {total_cols} | "
         f"**Duplicate Rows:** {duplicates_count:,} "
