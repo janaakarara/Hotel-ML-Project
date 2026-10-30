@@ -12,9 +12,11 @@ What it does (no manual column editing):
        redundancy between columns, leave-one-out cluster impact, surrogate importance.
   4. Applies thresholds (see THRESHOLDS) -> DROP / KEEP, each with a written reason.
   5. Cleans rows (impossible rows, undefined categories, rare categories -> 'Other').
+     Derived feature: Kids = Children + Babies (Babies alone is 99% zeros).
   6. Saves the clustering-ready file + decision tables + graphs.
 
-No target labels are used to pick features (IsCanceled is never read as a signal).
+IsCanceled is read ONLY by the leakage screen (step 2b), to detect columns that secretly
+encode the outcome. It is never used to choose useful features, k, or hyperparameters.
 """
 from __future__ import annotations
 
@@ -44,6 +46,8 @@ THRESHOLDS = {
     "rare_category_share": 0.01,  # categories under 1% are grouped into 'Other'
     "skew_transform": 2.0,        # |skew| above this -> log1p before scaling
     "loo_noise_margin": 0.03,     # LOO ARI within this of the re-seeding ARI = no impact
+    "leak_min_group": 100,        # leakage screen: ignore groups smaller than this
+    "leak_extreme_rate": 0.01,    # a group with cancel rate <=1% or >=99% = suspicious
     "max_importance_share": 0.20,  # one feature explaining >20% of the cluster structure
 }                                  # hijacks the clustering -> dropped, then re-checked
 
@@ -55,11 +59,14 @@ LEAKAGE = {
     "AssignedRoomType": "assigned at/near check-in, not known when booking is made",
     "BookingChanges": "accumulates between booking and check-in (future information)",
     "ADR": "price outcome: clusters would become 'cheap vs expensive'",
+    "TotalOfSpecialRequests": "accumulates between booking and check-in (like BookingChanges); "
+                              "within every lead-time bin, non-canceled bookings have ~60% more "
+                              "requests, consistent with canceled bookings stopping early",
 }
 CALENDAR = ["ArrivalDateYear", "ArrivalDateWeekNumber", "ArrivalDateDayOfMonth",
             "ArrivalDateMonth"]   # describe WHEN, not WHO -> used to interpret clusters later
 NUMERIC = ["LeadTime", "ArrivalDateYear", "ArrivalDateWeekNumber", "ArrivalDateDayOfMonth",
-           "StaysInWeekendNights", "StaysInWeekNights", "Adults", "Children", "Babies",
+           "StaysInWeekendNights", "StaysInWeekNights", "Adults", "Kids",
            "IsRepeatedGuest", "PreviousCancellations", "PreviousBookingsNotCanceled",
            "DaysInWaitingList", "RequiredCarParkingSpaces", "TotalOfSpecialRequests"]
 CATEGORICAL = ["ArrivalDateMonth", "Meal", "Country", "MarketSegment",
@@ -136,6 +143,29 @@ def reference(df, surv):
     return blocks, X, ref, imp
 
 
+def leakage_screen(raw, cand_num, cand_cat, target="IsCanceled"):
+    """LEAKAGE DETECTION ONLY. For every candidate column, compute the cancellation rate
+    inside each value group. A sizeable group where (almost) nobody or (almost) everybody
+    cancels means the column is probably filled in AFTER the outcome is known."""
+    y = pd.to_numeric(raw[target], errors="coerce")
+    rows = []
+    for c in cand_num + cand_cat:
+        x = raw[c]
+        if c in cand_num and x.nunique() > 15:
+            g = pd.qcut(x, 10, duplicates="drop").astype(str)
+        else:
+            g = x.astype(str).fillna("MISSING")
+        t = pd.DataFrame({"g": g, "y": y}).groupby("g").y.agg(["size", "mean"])
+        for k, r in t.iterrows():
+            rows.append({"column": c, "group": k, "rows": int(r["size"]),
+                         "cancel_rate": round(float(r["mean"]), 4)})
+    tab = pd.DataFrame(rows)
+    lo, hi = THRESHOLDS["leak_extreme_rate"], 1 - THRESHOLDS["leak_extreme_rate"]
+    tab["suspicious"] = ((tab["rows"] >= THRESHOLDS["leak_min_group"]) &
+                         ((tab["cancel_rate"] <= lo) | (tab["cancel_rate"] >= hi)))
+    return tab
+
+
 def barh(series, title, path, xlabel="", vline=None, color=None):
     fig, ax = plt.subplots(figsize=(7, max(3, 0.28 * len(series))))
     series.sort_values().plot.barh(ax=ax, color=color)
@@ -152,6 +182,13 @@ def main(input_path: str, out_dir="outputs/clustering/audit",
     rng = np.random.RandomState(SEED)
     raw = load(input_path)
     n0 = len(raw)
+    n_cols0 = raw.shape[1]
+
+    # ---- 0. derived feature: Kids = Children + Babies --------------------------------
+    for c in ["Children", "Babies"]:
+        raw[c] = pd.to_numeric(raw[c], errors="coerce")
+    raw["Children"] = raw["Children"].fillna(0)          # 4 blanks -> 0
+    raw["Kids"] = raw["Children"] + raw["Babies"]        # Babies alone is ~99% zeros
     reasons: dict[str, list[str]] = {}
     evidence: dict[str, dict] = {}
 
@@ -167,6 +204,18 @@ def main(input_path: str, out_dir="outputs/clustering/audit",
     cand_cat = [c for c in CATEGORICAL if c in raw]
     for c in cand_num:
         raw[c] = pd.to_numeric(raw[c], errors="coerce")
+
+    # ---- 2b. leakage screen (uses IsCanceled ONLY to detect leaks) ----------------------
+    if "IsCanceled" in raw:
+        leak = leakage_screen(raw, cand_num, cand_cat)
+        leak.to_csv(out / "leakage_screen.csv", index=False)
+        for c, grp in leak[leak.suspicious].groupby("column"):
+            if c in reasons:
+                continue
+            ex = grp.sort_values("rows", ascending=False).iloc[0]
+            drop(c, f"SUSPECTED INDIRECT LEAKAGE: value '{ex.group}' ({ex.rows} rows) has "
+                    f"cancellation rate {ex.cancel_rate:.1%}, so the column is probably "
+                    f"recorded after the outcome is known")
 
     # ---- 2. data-evidence audit (graphs 1-4) ------------------------------------------
     cand = cand_num + cand_cat
@@ -319,7 +368,7 @@ def main(input_path: str, out_dir="outputs/clustering/audit",
     # ---- 6. final tables, cleaned file ------------------------------------------------------
     keep = [c for c in cand if c not in reasons]
     rows = []
-    for c in list(LEAKAGE) + cand:
+    for c in dict.fromkeys(list(LEAKAGE) + cand):   # no duplicates
         if c not in raw:
             continue
         ev = evidence.get(c, {})
@@ -330,6 +379,9 @@ def main(input_path: str, out_dir="outputs/clustering/audit",
                      "loo_ARI": round(float(loo["ARI_vs_full"].get(c, np.nan)), 3),
                      "review_flag": review.get(c, ""),
                      **ev})
+    for c in ["Children", "Babies"]:
+        rows.append({"feature": c, "decision": "MERGED",
+                     "reason": "merged into Kids = Children + Babies (Babies alone is 99% zeros)"})
     dec = pd.DataFrame(rows)
     dec.to_csv(out / "feature_decisions.csv", index=False)
     pd.DataFrame(log).to_csv(out / "cleaning_log.csv", index=False)
@@ -342,11 +394,11 @@ def main(input_path: str, out_dir="outputs/clustering/audit",
          "categorical": [c for c in keep if c in CATEGORICAL],
          "thresholds": THRESHOLDS, "reference_k": K_REF}, indent=2))
 
-    print(f"rows: {n0} -> {len(final)}   features: {len(cand)+len(LEAKAGE)} -> {len(keep)}")
+    print(f"rows: {n0} -> {len(final)}   features: {n_cols0} -> {len(keep)} (Children + Babies merged into Kids)")
     print(f"reference silhouette (k={K_REF}): {ref_sil:.3f} | re-seeding ARI: {noise:.3f}\n")
     print(dec[["feature", "decision", "reason"]].to_string(index=False, max_colwidth=100))
     print("\nREVIEW FLAGS (advice only):")
-    print(dec[dec.review_flag != ""][["feature", "review_flag"]].to_string(index=False))
+    print(dec[dec.review_flag.fillna("") != ""][["feature", "review_flag"]].to_string(index=False))
     print("\n", pd.DataFrame(log).to_string(index=False))
 
 

@@ -7,7 +7,6 @@
     "Children",
     "IsRepeatedGuest",
     "PreviousCancellations",
-    "RequiredCarParkingSpaces",
     "TotalOfSpecialRequests"
   ],
   "categorical": [
@@ -25,6 +24,8 @@
     "rare_category_share": 0.01,
     "skew_transform": 2.0,
     "loo_noise_margin": 0.03,
+    "leak_min_group": 100,
+    "leak_extreme_rate": 0.01,
     "max_importance_share": 0.2
   },
   "reference_k": 4

@@ -5,28 +5,28 @@ ReservationStatusDate,DROP,LEAKAGE: outcome: date the final status was set (futu
 AssignedRoomType,DROP,"LEAKAGE: assigned at/near check-in, not known when booking is made",,,,,,,
 BookingChanges,DROP,LEAKAGE: accumulates between booking and check-in (future information),,,,,,,
 ADR,DROP,LEAKAGE: price outcome: clusters would become 'cheap vs expensive',,,,,,,
-LeadTime,KEEP,passed every check,0.0073,0.474,explains 21% of the cluster structure (dominant),0.0,453.0,0.053,1.58
-ArrivalDateYear,DROP,"CALENDAR: describes when, not who. Together the calendar columns explain 79% of the cluster structure, so the clusters would mean 'which period' instead of 'which customer'. Use them to INTERPRET clusters later.",0.2191,,,0.0,3.0,0.501,-0.33
-ArrivalDateWeekNumber,DROP,"CALENDAR: describes when, not who. Together the calendar columns explain 79% of the cluster structure, so the clusters would mean 'which period' instead of 'which customer'. Use them to INTERPRET clusters later.",0.3655,,,0.0,53.0,0.031,0.06
-ArrivalDateDayOfMonth,DROP,"CALENDAR: describes when, not who. Together the calendar columns explain 79% of the cluster structure, so the clusters would mean 'which period' instead of 'which customer'. Use them to INTERPRET clusters later.",0.0049,,,0.0,31.0,0.035,0.01
-StaysInWeekendNights,KEEP,passed every check,0.0008,0.534,,0.0,9.0,0.435,0.7
-StaysInWeekNights,KEEP,passed every check,0.0018,0.649,,0.0,19.0,0.278,1.65
-Adults,KEEP,passed every check,0.0039,0.524,,0.0,5.0,0.713,-0.24
-Children,KEEP,passed every check,0.0004,0.719,,0.0,4.0,0.907,3.49
+LeadTime,KEEP,passed every check,0.2226,0.543,,0.0,453.0,0.053,1.58
+ArrivalDateYear,DROP,"CALENDAR: describes when, not who. Together the calendar columns explain 57% of the cluster structure, so the clusters would mean 'which period' instead of 'which customer'. Use them to INTERPRET clusters later.",0.1121,,,0.0,3.0,0.501,-0.33
+ArrivalDateWeekNumber,DROP,"CALENDAR: describes when, not who. Together the calendar columns explain 57% of the cluster structure, so the clusters would mean 'which period' instead of 'which customer'. Use them to INTERPRET clusters later.",0.2796,,,0.0,53.0,0.031,0.06
+ArrivalDateDayOfMonth,DROP,"CALENDAR: describes when, not who. Together the calendar columns explain 57% of the cluster structure, so the clusters would mean 'which period' instead of 'which customer'. Use them to INTERPRET clusters later.",0.0069,,,0.0,31.0,0.035,0.01
+StaysInWeekendNights,KEEP,passed every check,0.0221,0.493,,0.0,9.0,0.435,0.7
+StaysInWeekNights,KEEP,passed every check,0.048,0.638,,0.0,19.0,0.278,1.65
+Adults,KEEP,passed every check,0.0134,0.581,,0.0,5.0,0.713,-0.24
+Children,KEEP,passed every check,0.0044,0.347,explains 23% of the cluster structure (dominant),0.0,4.0,0.907,3.49
 Babies,DROP,NEAR-CONSTANT: one value covers 99.3% of rows,,,,0.0,3.0,0.993,12.37
-IsRepeatedGuest,KEEP,passed every check,0.0469,0.762,,0.0,2.0,0.969,5.4
-PreviousCancellations,KEEP,passed every check,0.0046,0.966,removing it changes clusters no more than re-seeding,0.0,10.0,0.978,22.89
-PreviousBookingsNotCanceled,DROP,REDUNDANT with IsRepeatedGuest (association 0.87) - same information counted twice,0.0302,,,0.0,73.0,0.971,19.32
+IsRepeatedGuest,KEEP,passed every check,0.0387,0.569,,0.0,2.0,0.969,5.4
+PreviousCancellations,KEEP,passed every check,0.0044,0.987,removing it changes clusters no more than re-seeding,0.0,10.0,0.978,22.89
+PreviousBookingsNotCanceled,DROP,REDUNDANT with IsRepeatedGuest (association 0.87) - same information counted twice,0.0294,,,0.0,73.0,0.971,19.32
 DaysInWaitingList,DROP,NEAR-CONSTANT: one value covers 98.7% of rows,,,,0.0,114.0,0.987,17.29
-RequiredCarParkingSpaces,KEEP,passed every check,0.0844,0.669,,0.0,4.0,0.964,5.12
-TotalOfSpecialRequests,KEEP,passed every check,0.0014,0.7,,0.0,6.0,0.493,1.05
-ArrivalDateMonth,DROP,"CALENDAR: describes when, not who. Together the calendar columns explain 79% of the cluster structure, so the clusters would mean 'which period' instead of 'which customer'. Use them to INTERPRET clusters later.",0.2027,,,0.0,12.0,0.123,
-Meal,KEEP,passed every check,0.0017,0.804,removing it changes clusters no more than re-seeding,0.0,4.0,0.773,
+RequiredCarParkingSpaces,DROP,"SUSPECTED INDIRECT LEAKAGE: value '1' (1885 rows) has cancellation rate 0.0%, so the column is probably recorded after the outcome is known",,,,0.0,4.0,0.964,5.12
+TotalOfSpecialRequests,KEEP,passed every check,0.0075,0.698,removing it changes clusters no more than re-seeding,0.0,6.0,0.493,1.05
+ArrivalDateMonth,DROP,"CALENDAR: describes when, not who. Together the calendar columns explain 57% of the cluster structure, so the clusters would mean 'which period' instead of 'which customer'. Use them to INTERPRET clusters later.",0.1736,,,0.0,12.0,0.123,
+Meal,KEEP,passed every check,0.0046,0.951,removing it changes clusters no more than re-seeding,0.0,4.0,0.773,
 Country,DROP,HIGH CARDINALITY: 165 levels -> one-hot would swamp distances,,,,0.0,165.0,0.246,
-MarketSegment,KEEP,passed every check,0.0079,0.897,removing it changes clusters no more than re-seeding,0.0,8.0,0.656,
-DistributionChannel,KEEP,passed every check,0.0075,0.95,removing it changes clusters no more than re-seeding,0.0,5.0,0.834,
-ReservedRoomType,KEEP,passed every check,0.0028,0.477,,0.0,7.0,0.71,
+MarketSegment,KEEP,passed every check,0.0091,0.862,removing it changes clusters no more than re-seeding,0.0,8.0,0.656,
+DistributionChannel,KEEP,passed every check,0.0069,0.715,removing it changes clusters no more than re-seeding,0.0,5.0,0.834,
+ReservedRoomType,KEEP,passed every check,0.0093,0.905,removing it changes clusters no more than re-seeding,0.0,7.0,0.71,
 DepositType,DROP,NEAR-CONSTANT: one value covers 98.4% of rows,,,,0.0,3.0,0.984,
 Agent,DROP,HIGH CARDINALITY: 223 levels -> one-hot would swamp distances,,,,0.104,223.0,0.601,
 Company,DROP,MISSING: 95% of rows are blank/'none' | HIGH CARDINALITY: 202 levels -> one-hot would swamp distances,,,,0.948,202.0,0.306,
-CustomerType,KEEP,passed every check,0.0063,0.811,removing it changes clusters no more than re-seeding,0.0,4.0,0.836,
+CustomerType,KEEP,passed every check,0.0073,0.963,removing it changes clusters no more than re-seeding,0.0,4.0,0.836,
