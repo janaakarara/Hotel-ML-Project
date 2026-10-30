@@ -10,3 +10,4 @@ pyyaml
 streamlit
 scipy
 pyarrow
+pytest
