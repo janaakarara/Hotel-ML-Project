@@ -1,0 +1,2 @@
+algorithm,config,k,rows,features_after_encoding,silhouette,davies_bouldin,calinski_harabasz,inertia,fit_seconds,pca_2d_variance_shown
+kmeans,baseline,4,53239,22,0.2071333309585465,1.5543957212973898,10376.989017676207,178340.805734735,0.11,0.481
