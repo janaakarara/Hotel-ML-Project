@@ -1,0 +1,12 @@
+column,dtype,missing,unique,skew,dominant_share,group,reason
+LeadTime,int64,0,453,1.58,0.053,SCALE,"spread-out values but long right tail (skew 1.58) -> log1p, then standardize"
+StaysInWeekendNights,int64,0,9,0.7,0.435,SCALE,fairly symmetric (skew 0.70) -> standardize
+StaysInWeekNights,int64,0,19,1.65,0.278,SCALE,"spread-out values but long right tail (skew 1.65) -> log1p, then standardize"
+Adults,int64,0,5,-0.24,0.713,SCALE,fairly symmetric (skew -0.24) -> standardize
+Children,float64,4,4,3.49,0.907,BOOLEAN,91% of rows share one value and skew = 3.49 -> keep only 'different from usual?'  [4 missing -> filled with the median]
+IsRepeatedGuest,int64,0,2,5.4,0.969,KEEP 0/1,already a 0/1 flag -> left as is (scaling would inflate its rare 1s)
+MarketSegment,str,0,8,,0.656,ENCODE,"text column, 8 categories -> one-hot; 3 rare (<1%) merged into 'infrequent'"
+DistributionChannel,str,0,5,,0.834,ENCODE,"text column, 5 categories -> one-hot; 2 rare (<1%) merged into 'infrequent'"
+CustomerType,str,0,4,,0.836,ENCODE,"text column, 4 categories -> one-hot; 1 rare (<1%) merged into 'infrequent'"
+Meal,str,0,4,,0.773,ENCODE,"text column, 4 categories -> one-hot; 1 rare (<1%) merged into 'infrequent'"
+ReservedRoomType,str,0,7,,0.71,ENCODE,"text column, 7 categories -> one-hot; 2 rare (<1%) merged into 'infrequent'"
