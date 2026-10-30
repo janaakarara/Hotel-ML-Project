@@ -1,0 +1,12 @@
+step,rows_removed
+Children blank -> 0,0
+impossible: zero guests,0
+impossible: zero nights stayed,231
+undefined MarketSegment,2
+undefined DistributionChannel,2
+blank categorical,0
+Meal: grouped 1 rare level(s) into 'Other',0
+MarketSegment: grouped 2 rare level(s) into 'Other',0
+DistributionChannel: grouped 1 rare level(s) into 'Other',0
+ReservedRoomType: grouped 2 rare level(s) into 'Other',0
+CustomerType: grouped 1 rare level(s) into 'Other',0

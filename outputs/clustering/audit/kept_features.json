@@ -1,0 +1,31 @@
+{
+  "numeric": [
+    "LeadTime",
+    "StaysInWeekendNights",
+    "StaysInWeekNights",
+    "Adults",
+    "Children",
+    "IsRepeatedGuest",
+    "PreviousCancellations",
+    "RequiredCarParkingSpaces",
+    "TotalOfSpecialRequests"
+  ],
+  "categorical": [
+    "Meal",
+    "MarketSegment",
+    "DistributionChannel",
+    "ReservedRoomType",
+    "CustomerType"
+  ],
+  "thresholds": {
+    "max_missing_share": 0.5,
+    "max_cardinality": 30,
+    "max_dominant_share": 0.98,
+    "redundancy": 0.8,
+    "rare_category_share": 0.01,
+    "skew_transform": 2.0,
+    "loo_noise_margin": 0.03,
+    "max_importance_share": 0.2
+  },
+  "reference_k": 4
+}
