@@ -1,0 +1,15 @@
+# One place for every setting, so all scripts use the same values.
+seed: 42
+
+paths:
+  clean_data: data/processed/H2_clean_v2_dedup.csv
+  figures: outputs/figures
+  tables: outputs/tables
+  artifacts: artifacts
+
+clustering:
+  k_values: [2, 3, 4, 5, 6, 7, 8, 9, 10]   # numbers of clusters we try
+  min_k_to_choose: 3        # k = 2 only splits the hotel in half: too coarse to describe segments
+  max_k_to_choose: 8        # more than 8 segments is too many to describe and act on
+  silhouette_sample: 10000  # silhouette is slow on 53k rows, so we score a fixed random sample
+  plot_sample: 5000         # points drawn in the PCA scatter plot
