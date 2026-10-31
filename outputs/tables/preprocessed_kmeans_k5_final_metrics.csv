@@ -1,0 +1,2 @@
+algorithm,k,init,seed,rows,columns,silhouette,davies_bouldin,calinski_harabasz,inertia,smallest_cluster_pct
+kmeans,5,random,15,53239,30,0.1645,1.7223,8132.2025,199781.1157,12.2955
