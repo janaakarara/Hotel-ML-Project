@@ -1,24 +1,33 @@
 """
 Task C - K-Means tuning on the preprocessed table (h2_clustering_preprocessed_v0.csv).
 
-    python -m src.clustering.preprocessedcsv_trials.kmeans_tuning
-    python -m src.clustering.preprocessedcsv_trials.kmeans_tuning --k 5   # force a k
+    python -m src.clustering.preprocessedcsv_trials.kmeans_tuning              # best 2 k values
+    python -m src.clustering.preprocessedcsv_trials.kmeans_tuning --top 3      # best 3 k values
+    python -m src.clustering.preprocessedcsv_trials.kmeans_tuning --k 5 6      # exactly these k values
 
-Every k-specific output is named preprocessed_kmeans_k<k>_...  (so k=5 and k=6 never overwrite each other).
+Every k-specific output is named preprocessed_kmeans_k<k>_...  (so different k never overwrite each other).
 
 What it does
   1. K SCAN      k = 2..10, each k fitted with 5 different seeds (10 restarts each) and averaged,
-                 so the choice does not depend on one lucky seed.
+                 so the choice does not depend on one lucky seed.   (done once)
   2. CHOOSE k    inside k = 3..8, drop any k whose smallest cluster is under 3% or whose result
                  changes with the seed (stability below 0.90). Rank the rest by silhouette
-                 (higher is better) and Davies-Bouldin (lower is better). Best average rank wins;
-                 a tie goes to the smaller k (easier to describe).
-  3. SEEDING     for the chosen k, try 2 initialisations (k-means++ and random) x 20 seeds, one
-                 start each, and keep the (init, seed) with the lowest inertia.
+                 (higher is better) and Davies-Bouldin (lower is better). The BEST 2 (lowest average
+                 rank; a tie goes to the smaller k) are carried forward.   (done once)
+  Then, for EACH of the chosen k:
+  3. SEEDING     try 2 initialisations (k-means++ and random) x 20 seeds, one start each,
+                 and keep the (init, seed) with the lowest inertia.
   4. TRAIN/TEST  fit on 80% of the rows, then assign the unseen 20% to the nearest centre and
                  compare the scores. Similar scores = the clusters are not specific to the training rows.
-  5. FINAL       refit on all rows with the best settings, describe the clusters with the raw
-                 columns, and save the model.
+  5. FINAL       refit on all rows with the best settings and save the model.
+  6. EXPLAIN     say which cluster each feature BELONGS TO: for every feature, the one cluster where
+                 it differs most from the hotel average, HIGH or LOW, with the numbers in plain words.
+                 Also saves the cluster profiles in real units, a heatmap, and a CSV with the cluster
+                 of every booking.
+
+  "belongs to" = the cluster where that feature differs most from the hotel average (at least 0.5
+                 standard deviations away, in either direction). If no cluster stands out, the feature
+                 is spread evenly and belongs to none.
 
 No outcome column (IsCanceled, ADR ...) is read anywhere. Only distances between bookings are used.
 """
@@ -42,6 +51,7 @@ from sklearn.model_selection import train_test_split
 
 # ----------------------------------------------------------------------------- settings
 ROOT = Path(__file__).resolve().parents[3]            # project folder (src/clustering/preprocessedcsv_trials/ -> 3 levels up)
+PROCESSED = ROOT / "data" / "processed"
 PREP_CSV = ROOT / "data" / "processed" / "h2_clustering_preprocessed_v0.csv"
 RAW_CSV = ROOT / "data" / "processed" / "h2_clustering_raw_features.csv"   # only to describe clusters
 TABLES = ROOT / "outputs" / "tables"
@@ -58,6 +68,8 @@ SEED_TRIALS = list(range(20))   # seeds tried for the final model
 INITS = ["k-means++", "random"]
 SILHOUETTE_SAMPLE = 10_000      # silhouette compares every pair of points: score a fixed sample
 TEST_SIZE = 0.20
+TOP_K = 2                       # how many of the best k values are carried forward
+NOTICEABLE = 0.5                # |z-diff| at or above this is reported as a defining feature
 PLOT_SAMPLE = 5_000
 
 
@@ -184,6 +196,105 @@ def raw_is_aligned(raw, prep):
     return raw["LeadTime"].corr(prep["LeadTime"], method="spearman") > 0.99
 
 
+# ----------------------------------------------------------------------------- 6. explain
+def zdiff_table(prep, labels):
+    """cluster x feature: (cluster mean - overall mean) / overall std  (+ = higher than the hotel average)."""
+    overall_mean, overall_std = prep.mean(), prep.std(ddof=0).replace(0, np.nan)
+    return ((prep.groupby(labels).mean() - overall_mean) / overall_std).round(3)
+
+
+def pretty(feature, raw_columns):
+    """MarketSegment_Direct -> 'MarketSegment = Direct', Children_flag -> 'Children (has any)'."""
+    for col in sorted(raw_columns, key=len, reverse=True):
+        if feature == col:
+            return col
+        if feature == col + "_flag":
+            return f"{col} (has any)"
+        if feature.startswith(col + "_"):
+            value = feature[len(col) + 1:]
+            return f"{col} = {'Other (rare types)' if value == 'Other' else value}"
+    return feature
+
+
+def feature_to_cluster(prep, labels, z, raw):
+    """One row per feature: the ONE cluster it belongs to (where it differs most from the hotel
+    average), whether it is HIGH or LOW there, and WHY in plain words."""
+    means = prep.groupby(labels).mean()
+    overall = prep.mean()
+    raw_columns = list(raw.columns) if raw is not None else []
+    rows = []
+    for f in z.columns:
+        zf = z[f].dropna()
+        if zf.empty:
+            continue
+        c = int(zf.abs().idxmax())
+        strength = float(abs(zf[c]))
+        name = pretty(f, raw_columns)
+        if strength < NOTICEABLE:
+            rows.append({"belongs_to_cluster": "none", "feature": name, "direction": "", "strength": round(strength, 2),
+                         "why": "about the same in every cluster"})
+            continue
+        high = zf[c] > 0
+        if set(prep[f].unique()) <= {0, 1, 0.0, 1.0}:
+            share, hotel = 100 * means.loc[c, f], 100 * overall[f]
+            why = f"{share:.0f}% of this cluster vs {hotel:.0f}% of the whole hotel"
+            if high:
+                why += f"; {100 * prep.loc[labels == c, f].sum() / prep[f].sum():.0f}% of all such bookings are in this cluster"
+        else:
+            src = raw[f] if raw is not None and f in raw else None
+            if src is not None:
+                per = src.groupby(labels).mean()
+                why = f"average {per[c]:.1f} here vs {src.mean():.1f} for the whole hotel"
+                other = int(zf.idxmin() if high else zf.idxmax())          # the opposite extreme
+                if other != c and abs(zf[other]) >= NOTICEABLE:
+                    why += f"; the {'lowest' if high else 'highest'} is cluster {other} (average {per[other]:.1f})"
+            else:
+                why = f"{'above' if high else 'below'} the hotel average (scaled units)"
+        rows.append({"belongs_to_cluster": c, "feature": name, "direction": "HIGH" if high else "LOW",
+                     "strength": round(strength, 2), "why": why})
+    table = pd.DataFrame(rows)
+    table["_o"] = table.belongs_to_cluster.map(lambda v: 99 if v == "none" else v)
+    return table.sort_values(["_o", "strength"], ascending=[True, False]).drop(columns="_o").reset_index(drop=True)
+
+
+def print_simple_answer(table, labels, k):
+    """Grouped by cluster: each feature, HIGH or LOW, and why."""
+    sizes = pd.Series(labels).value_counts().sort_index()
+    width = max(len(f) for f in table.feature) + 2
+    print("\n" + "#" * 100)
+    print(f"# k = {k}: WHICH FEATURE BELONGS TO WHICH CLUSTER, AND WHY")
+    print("#   HIGH = this feature is higher in the cluster than in the whole hotel, LOW = lower")
+    print("#" * 100)
+    for c in range(k):
+        mine = table[table.belongs_to_cluster == c]
+        print(f"\nCLUSTER {c}   ({sizes[c]} bookings, {100 * sizes[c] / len(labels):.0f}% of the hotel)")
+        if mine.empty:
+            print("   no feature stands out: these are the 'typical' bookings")
+        for r in mine.itertuples():
+            print(f"   {r.feature:<{width}}{r.direction:<5}  {r.why}")
+    none = table[table.belongs_to_cluster == "none"].feature.tolist()
+    print(f"\nNO CLUSTER (about the same everywhere): {', '.join(none) if none else '-'}")
+
+
+def plot_heatmap(z, k, tag):
+    data = z.T.fillna(0)                                   # features down, clusters across
+    fig, ax = plt.subplots(figsize=(1.2 * k + 5, 0.32 * len(data) + 2))
+    im = ax.imshow(data.values, cmap="RdBu_r", vmin=-2, vmax=2, aspect="auto")
+    ax.set_xticks(range(k), [f"cluster {c}" for c in data.columns])
+    ax.set_yticks(range(len(data)), data.index, fontsize=8)
+    for i in range(data.shape[0]):
+        for j in range(data.shape[1]):
+            v = data.values[i, j]
+            ax.text(j, i, f"{v:+.1f}", ha="center", va="center", fontsize=7,
+                    color="white" if abs(v) > 1.2 else "black")
+    fig.colorbar(im, ax=ax, label="z-diff vs hotel average (red = higher, blue = lower)", shrink=0.6)
+    ax.set_title(f"What defines each cluster (k = {k})")
+    fig.tight_layout()
+    fig.savefig(FIGURES / f"{tag}_centroid_heatmap.png", dpi=140)
+    plt.close(fig)
+
+
+
 # ----------------------------------------------------------------------------- plots
 def plot_scan(scan, ok, k, tag):
     fig, ax = plt.subplots(1, 3, figsize=(14, 4))
@@ -211,31 +322,12 @@ def plot_pca(X, labels, centers, tag):
     fig.tight_layout(); fig.savefig(FIGURES / f"{tag}_pca_2d.png", dpi=130); plt.close(fig)
 
 
-# ----------------------------------------------------------------------------- main
-def main(force_k=None):
-    for folder in (TABLES, FIGURES, ARTIFACTS):
-        folder.mkdir(parents=True, exist_ok=True)
-    prep = pd.read_csv(PREP_CSV)
-    assert not prep.isna().any().any(), "the preprocessed table must have no missing values"
-    X = prep.to_numpy(dtype=float)
-    sample_idx = np.random.RandomState(SEED).choice(len(X), min(SILHOUETTE_SAMPLE, len(X)), replace=False)
-    print(f"Loaded {X.shape[0]} bookings x {X.shape[1]} columns from {PREP_CSV.name}\n")
-
-    print("1) k scan (5 seeds per k, 10 restarts each):")
-    scan = scan_k(X, sample_idx)
-    scan.round(4).to_csv(TABLES / "preprocessed_kmeans_k_scan.csv", index=False)
-
-    chosen, ranked, note = choose_k(scan)
-    k = force_k or chosen
+# ----------------------------------------------------------------------------- one k, steps 3-6
+def run_one_k(k, prep, X, scan, ranked, sample_idx, raw):
     tag = f"preprocessed_kmeans_k{k}"          # every k-specific file starts with this
-    print(f"\n2) Choice of k (range {K_MIN}-{K_MAX}, smallest cluster >= {MIN_CLUSTER_SHARE:.0%}, "
-          f"stability >= {MIN_STABILITY}):")
-    print(ranked[["k", "silhouette", "davies_bouldin", "smallest_cluster_pct", "stability_ari",
-                  "mean_rank"]].round(3).to_string(index=False))
-    if note:
-        print(note)
-    print(f"   -> best k = {chosen}" + (f"   (forced to k = {force_k})" if force_k else ""))
-    ranked.round(4).to_csv(TABLES / "preprocessed_kmeans_k_ranking.csv", index=False)
+    print("\n" + "=" * 100)
+    print(f"k = {k}")
+    print("=" * 100)
 
     print(f"\n3) Seeding for k = {k}: {len(INITS)} inits x {len(SEED_TRIALS)} seeds, one start each")
     seeds, init, seed, typical = search_seed(X, k, sample_idx)
@@ -253,33 +345,93 @@ def main(force_k=None):
           f"({'clusters carry over to unseen bookings' if gap < 0.02 else 'check: clusters may be specific to the training rows'})")
     print(shares.to_string(index=False))
     tt.round(4).to_csv(TABLES / f"{tag}_train_test.csv", index=False)
-    shares.to_csv(TABLES / f"{tag}_train_test_shares.csv", index=False)
 
     print("\n5) Final model on all rows")
     model = KMeans(n_clusters=k, init=init, n_init=1, random_state=seed).fit(X)
     labels = model.labels_
     final = {"algorithm": "kmeans", "k": k, "init": init, "seed": seed, "rows": len(X),
              "columns": X.shape[1], **score(X, labels, sample_idx), "inertia": float(model.inertia_),
-             "smallest_cluster_pct": float(100 * smallest_share(labels))}
+             "smallest_cluster_pct": float(100 * smallest_share(labels)),
+             "train_test_silhouette_gap": float(gap)}
     pd.DataFrame([final]).round(4).to_csv(TABLES / f"{tag}_final_metrics.csv", index=False)
     print({key: (round(v, 4) if isinstance(v, float) else v) for key, v in final.items()})
+    joblib.dump({"model": model, "columns": list(prep.columns), "k": k, "init": init, "seed": seed},
+                ARTIFACTS / f"{tag}.joblib")
 
-    if RAW_CSV.exists() and raw_is_aligned(pd.read_csv(RAW_CSV), prep):
-        profile = profile_clusters(pd.read_csv(RAW_CSV), labels)
+    # ---- 6. explain: which cluster does each feature belong to?
+    print(f"\n6) Which cluster does each feature belong to? (k = {k})  -> printed at the very end, saved to {tag}_feature_to_cluster.csv")
+    z = zdiff_table(prep, labels)
+    table = feature_to_cluster(prep, labels, z, raw)
+    table.to_csv(TABLES / f"{tag}_feature_to_cluster.csv", index=False)
+    if raw is not None:
+        profile = profile_clusters(raw, labels)
         profile.to_csv(TABLES / f"{tag}_cluster_profiles.csv")
-        print("\nCluster profiles (original, unscaled columns):")
+        print("\n   Cluster profiles (original, unscaled columns):")
         print(profile.T.to_string())
+        labeled = raw.copy()
+        labeled["cluster"] = labels
+        labeled.to_csv(PROCESSED / f"h2_clustering_labeled_k{k}.csv", index=False)
     else:
-        print("\n(Profiles skipped: raw feature file missing or not in the same row order.)")
+        print("(Profiles and the labeled CSV skipped: raw feature file missing or not in the same row order.)")
 
     plot_scan(scan, ranked, k, tag)
     plot_pca(X, labels, model.cluster_centers_, tag)
-    joblib.dump({"model": model, "columns": list(prep.columns), "k": k, "init": init, "seed": seed},
-                ARTIFACTS / f"{tag}.joblib")
-    print(f"\nSaved tables to {TABLES}, figures to {FIGURES}, model to {ARTIFACTS / (tag + '.joblib')}")
+    plot_heatmap(z, k, tag)
+    print(f"\nSaved for k = {k}: tables {tag}_*.csv, figures {tag}_k_scan / _pca_2d / _centroid_heatmap .png, "
+          f"model artifacts/{tag}.joblib" + (f", data/processed/h2_clustering_labeled_k{k}.csv" if raw is not None else ""))
+    return final, table, labels
+
+
+# ----------------------------------------------------------------------------- main
+def main(force_ks=None, top=TOP_K):
+    for folder in (TABLES, FIGURES, ARTIFACTS, PROCESSED):
+        folder.mkdir(parents=True, exist_ok=True)
+    prep = pd.read_csv(PREP_CSV)
+    assert not prep.isna().any().any(), "the preprocessed table must have no missing values"
+    X = prep.to_numpy(dtype=float)
+    sample_idx = np.random.RandomState(SEED).choice(len(X), min(SILHOUETTE_SAMPLE, len(X)), replace=False)
+    print(f"Loaded {X.shape[0]} bookings x {X.shape[1]} columns from {PREP_CSV.name}\n")
+
+    print("1) k scan (5 seeds per k, 10 restarts each):")
+    scan = scan_k(X, sample_idx)
+    scan.round(4).to_csv(TABLES / "preprocessed_kmeans_k_scan.csv", index=False)
+
+    chosen_all, ranked, note = choose_k(scan)
+    best = [int(k) for k in ranked.k.head(top)]              # ranked is already sorted best-first
+    ks = force_ks or best
+    print(f"\n2) Choice of k (range {K_MIN}-{K_MAX}, smallest cluster >= {MIN_CLUSTER_SHARE:.0%}, "
+          f"stability >= {MIN_STABILITY}):")
+    print(ranked[["k", "silhouette", "davies_bouldin", "calinski_harabasz", "smallest_cluster_pct",
+                  "stability_ari", "mean_rank"]].round(3).to_string(index=False))
+    if note:
+        print(note)
+    print(f"   -> best {top} k values: {best}" + (f"   (forced to k = {force_ks})" if force_ks else ""))
+    ranked.round(4).to_csv(TABLES / "preprocessed_kmeans_k_ranking.csv", index=False)
+
+    raw = None
+    if RAW_CSV.exists():
+        candidate = pd.read_csv(RAW_CSV)
+        raw = candidate if raw_is_aligned(candidate, prep) else None
+
+    results = [run_one_k(k, prep, X, scan, ranked, sample_idx, raw) for k in ks]
+    finals = [r[0] for r in results]
+
+    print("\n" + "=" * 100)
+    print("Final comparison of the chosen k values (all rows)")
+    print("=" * 100)
+    comparison = pd.DataFrame(finals).set_index("k")[
+        ["silhouette", "davies_bouldin", "calinski_harabasz", "inertia", "smallest_cluster_pct",
+         "train_test_silhouette_gap", "init", "seed"]]
+    print(comparison.round(4).to_string())
+    print(f"\nTables in {TABLES}, figures in {FIGURES}, models in {ARTIFACTS}")
+
+    for k, (_, table, labels) in zip(ks, results):          # the easy answer, last, so it is what you see
+        print_simple_answer(table, labels, k)
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(description="Tune and train K-Means on the preprocessed table")
-    ap.add_argument("--k", type=int, default=None, help="force a number of clusters")
-    main(ap.parse_args().k)
+    ap = argparse.ArgumentParser(description="Tune K-Means on the preprocessed table, then train and explain the best k values")
+    ap.add_argument("--k", type=int, nargs="+", default=None, help="use exactly these k values instead of the best ones")
+    ap.add_argument("--top", type=int, default=TOP_K, help="how many of the best k values to carry forward")
+    args = ap.parse_args()
+    main(args.k, args.top)

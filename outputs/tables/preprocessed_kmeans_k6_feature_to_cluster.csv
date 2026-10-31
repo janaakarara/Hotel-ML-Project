@@ -1,0 +1,31 @@
+belongs_to_cluster,feature,direction,strength,why
+0,CustomerType = Transient-Party,HIGH,0.79,40% of this cluster vs 13% of the whole hotel; 34% of all such bookings are in this cluster
+0,CustomerType = Transient,LOW,0.71,57% of this cluster vs 84% of the whole hotel
+0,MarketSegment = Groups,HIGH,0.57,17% of this cluster vs 5% of the whole hotel; 39% of all such bookings are in this cluster
+1,StaysInWeekNights,LOW,1.33,average 0.7 here vs 2.3 for the whole hotel; the highest is cluster 3 (average 3.7)
+2,LeadTime,LOW,1.71,average 2.9 here vs 77.8 for the whole hotel
+2,DistributionChannel = TA/TO,LOW,0.93,49% of this cluster vs 83% of the whole hotel
+2,IsRepeatedGuest,HIGH,0.68,15% of this cluster vs 3% of the whole hotel; 75% of all such bookings are in this cluster
+2,DistributionChannel = Direct,HIGH,0.66,32% of this cluster vs 11% of the whole hotel; 44% of all such bookings are in this cluster
+2,DistributionChannel = Corporate,HIGH,0.59,18% of this cluster vs 5% of the whole hotel; 56% of all such bookings are in this cluster
+2,MarketSegment = Corporate,HIGH,0.57,16% of this cluster vs 4% of the whole hotel; 58% of all such bookings are in this cluster
+2,MarketSegment = Direct,HIGH,0.57,28% of this cluster vs 10% of the whole hotel; 41% of all such bookings are in this cluster
+2,MarketSegment = Online TA,LOW,0.51,41% of this cluster vs 66% of the whole hotel
+3,StaysInWeekendNights,HIGH,1.41,average 2.1 here vs 0.9 for the whole hotel; the lowest is cluster 2 (average 0.3)
+5,Adults,HIGH,2.1,average 3.0 here vs 1.9 for the whole hotel; the lowest is cluster 0 (average 1.0)
+5,ReservedRoomType = D,HIGH,1.24,70% of this cluster vs 20% of the whole hotel; 28% of all such bookings are in this cluster
+5,ReservedRoomType = A,LOW,1.22,16% of this cluster vs 71% of the whole hotel
+none,MarketSegment = Other (rare types),,0.45,about the same in every cluster
+none,Meal = SC,,0.42,about the same in every cluster
+none,ReservedRoomType = E,,0.38,about the same in every cluster
+none,Meal = BB,,0.35,about the same in every cluster
+none,ReservedRoomType = Other (rare types),,0.25,about the same in every cluster
+none,MarketSegment = Offline TA/TO,,0.24,about the same in every cluster
+none,Children (has any),,0.22,about the same in every cluster
+none,ReservedRoomType = B,,0.16,about the same in every cluster
+none,DistributionChannel = Other (rare types),,0.15,about the same in every cluster
+none,CustomerType = Contract,,0.15,about the same in every cluster
+none,Meal = HB,,0.15,about the same in every cluster
+none,ReservedRoomType = F,,0.15,about the same in every cluster
+none,CustomerType = Other (rare types),,0.07,about the same in every cluster
+none,Meal = Other (rare types),,0.05,about the same in every cluster
