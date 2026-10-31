@@ -1,7 +1,5 @@
-#Constants, paths, seed raqam wahed (RANDOM_STATE = 42) 3lshan el reproducibility, w el target columns.
 import os
 
-# Paths
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data", "raw")
 DATA_FILE = os.path.join(DATA_DIR, "H2.csv")
@@ -18,5 +16,4 @@ RANDOM_STATE = 42
 LEAKAGE_COLS = ["ReservationStatus", "ReservationStatusDate"]
 
 # Targets
-TARGET_REGRESSION = "ADR"
 TARGET_CLASSIFICATION = "IsCanceled"

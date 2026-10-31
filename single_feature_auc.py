@@ -7,7 +7,7 @@ from sklearn.metrics import roc_auc_score
 
 TARGET = "IsCanceled"
 full = pd.read_csv("data/raw/H2.csv")
-#full = full.drop_duplicates()  # deduplicate, just in case
+full = full.drop_duplicates()  # deduplicate, just in case
 # turn text columns into categories; the date string into a number
 full["ReservationStatusDate"] = pd.to_datetime(full["ReservationStatusDate"]).map(pd.Timestamp.toordinal)
 for c in full.select_dtypes(exclude="number").columns:

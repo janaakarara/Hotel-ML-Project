@@ -1,74 +1,79 @@
-"""
-Leakage & ablation tests for the H2 hotel-cancellation data.
-Usage:  python leakage_tests.py            (expects H2.csv in the same folder)
-Needs:  pandas, scikit-learn
-"""
+import numpy as np
 import pandas as pd
 from sklearn.ensemble import HistGradientBoostingClassifier
 from sklearn.metrics import roc_auc_score
 
 TARGET = "IsCanceled"
-FEATURE_TO_TEST = "PreviousBookingsNotCanceled"
-LEAKY = ["ReservationStatus", "ReservationStatusDate",
-         "RequiredCarParkingSpaces", "AssignedRoomType"]
+TIME_COL = "ArrivalDateYear"
+FEATURES_TO_TEST = ["DistributionChannel", "MarketSegment"]
+ALWAYS_DROP = ["ReservationStatus", "ReservationStatusDate", "AssignedRoomType"]
+SEEDS = (0, 1, 2, 3, 4)
 
-# ---------- 1. Load, deduplicate, drop known leaky columns ----------
-df = pd.read_csv("data/raw/H2.csv")
-print(f"Rows before dedup: {len(df):,}")
-#df = df.drop_duplicates()
-#print(f"Rows after dedup:  {len(df):,}")
-
-# Direct leakage evidence (run BEFORE dropping, on the raw file)
+# ---------- 1. Load and leakage check (on raw data, before dropping) ----------
 raw = pd.read_csv("data/raw/H2.csv")
+print(f"Rows: {len(raw):,}  |  exact duplicates: {raw.duplicated().sum():,}")
+
 print("\n--- ReservationStatus vs target (perfect mapping = leakage) ---")
 print(pd.crosstab(raw["ReservationStatus"], raw[TARGET]))
 
-df = df.drop(columns=LEAKY)
-for c in df.select_dtypes(exclude="number").columns:
-    df[c] = df[c].astype("category")
-
-# ---------- 2. Time-based split ----------
-train = df[df["ArrivalDateYear"] < 2017]
-test = df[df["ArrivalDateYear"] == 2017]
+# ---------- 2. Prepare data ----------
+df = raw.drop(columns=ALWAYS_DROP)
+cat_cols = df.select_dtypes(exclude="number").columns
+df[cat_cols] = df[cat_cols].astype("category")
 all_cols = [c for c in df.columns if c != TARGET]
 
+# ---------- 3. Time-based split ----------
+train = df[df[TIME_COL] < 2017]
+test = df[df[TIME_COL] == 2017]
+assert len(train) and len(test), "Time split produced an empty set"
+print(f"\nTrain rows: {len(train):,}  |  Test rows (2017): {len(test):,}")
 
-def fit_auc(cols, seed=0):
+
+def fit_auc(cols, seed):
     model = HistGradientBoostingClassifier(random_state=seed)
     model.fit(train[cols], train[TARGET])
     return roc_auc_score(test[TARGET], model.predict_proba(test[cols])[:, 1])
 
 
-# ---------- 3. Ablation: with vs without the feature (several seeds) ----------
-def ablate(feature, seeds=(0, 1, 2, 3, 4)):
-    with_f = [fit_auc(all_cols, s) for s in seeds]
-    without_f = [fit_auc([c for c in all_cols if c != feature], s) for s in seeds]
-    w, wo = sum(with_f) / len(seeds), sum(without_f) / len(seeds)
-    print(f"\n--- Ablation: {feature} ---")
-    print(f"AUC with:    {w:.4f}")
-    print(f"AUC without: {wo:.4f}")
-    print(f"Difference:  {w - wo:+.4f}")
+def score(cols):
+    scores = [fit_auc(cols, s) for s in SEEDS]
+    return np.mean(scores), np.std(scores)
 
 
-ablate(FEATURE_TO_TEST)
+# ---------- 4. Baseline and ablations ----------
+base_m, base_sd = score(all_cols)
+print(f"\nBaseline AUC (all features): {base_m:.4f} ± {base_sd:.4f}")
 
-# ---------- 4. Single-feature AUC (numeric columns) ----------
-print("\n--- Single-feature AUC (flag anything > 0.9 or < 0.1) ---")
+print("\n--- Ablations (Δ = with − without; positive = feature helps) ---")
+for f in FEATURES_TO_TEST:
+    m, sd = score([c for c in all_cols if c != f])
+    print(f"without {f:22s} AUC = {m:.4f} ± {sd:.4f}  Δ = {base_m - m:+.4f}")
+
+m, sd = score([c for c in all_cols if c not in FEATURES_TO_TEST])
+print(f"without both                 AUC = {m:.4f} ± {sd:.4f}  Δ = {base_m - m:+.4f}")
+
+# ---------- 5. Single-feature AUC (numeric columns, direction-aware) ----------
+print("\n--- Single-feature AUC (flag if strength > 0.9) ---")
 for c in df.select_dtypes("number").columns.drop(TARGET):
-    print(f"{c:32s} {roc_auc_score(df[TARGET], df[c].fillna(0)):.3f}")
+    auc = roc_auc_score(df[TARGET], df[c].fillna(0))
+    strength = max(auc, 1 - auc)
+    flag = "  <-- check for leak" if strength > 0.9 else ""
+    print(f"{c:32s} AUC={auc:.3f}  strength={strength:.3f}{flag}")
 
-# ---------- 5. Stability over time ----------
-print(f"\n--- {FEATURE_TO_TEST}: cancel rate by year (only rows > 0) ---")
-sub = df[df[FEATURE_TO_TEST] > 0]
-print(sub.groupby("ArrivalDateYear")[TARGET].agg(["mean", "size"]))
-print("\nShare of rows > 0 by year:")
-print(df.groupby("ArrivalDateYear")[FEATURE_TO_TEST].apply(lambda s: (s > 0).mean()))
 
-# ---------- 6. Cancel rate by feature bucket ----------
-print(f"\n--- Cancel rate by {FEATURE_TO_TEST} bucket ---")
-buckets = pd.cut(df[FEATURE_TO_TEST], [-1, 0, 2, 10, 100])
-print(df.groupby(buckets, observed=True)[TARGET].agg(["mean", "size"]))
+# ---------- 6. Stability and patterns, per tested feature ----------
+def describe(feature):
+    print(f"\n--- {feature} ---")
+    if pd.api.types.is_numeric_dtype(df[feature]):
+        buckets = pd.qcut(df[feature], 4, duplicates="drop")
+        print(df.groupby(buckets, observed=True)[TARGET].agg(["mean", "size"]))
+    else:
+        print(df.groupby(feature, observed=True)[TARGET]
+                .agg(["mean", "size"]).sort_values("size", ascending=False))
+        print("\nCancel rate by year:")
+        print(df.pivot_table(index=feature, columns=TIME_COL, values=TARGET,
+                             aggfunc="mean", observed=True).round(3))
 
-# ---------- 7. Consistency with IsRepeatedGuest ----------
-print("\n--- IsRepeatedGuest vs has_history ---")
-print(pd.crosstab(df["IsRepeatedGuest"], df[FEATURE_TO_TEST] > 0))
+
+for f in FEATURES_TO_TEST:
+    describe(f)

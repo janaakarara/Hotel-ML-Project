@@ -1,9 +1,3 @@
-"""Train a random forest to predict hotel booking cancellations.
-
-Run from any directory with:
-    python rftesst.py
-"""
-
 from pathlib import Path
 
 import joblib
