@@ -3,11 +3,8 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import pandas as pd
 from scipy.stats import pointbiserialr
-from data_analysis.config import DATA
+from config import DATA_FILE , ARTIFACTS_DIR
 
-
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-ARTIFACTS_DIR = PROJECT_ROOT / "artifacts"
 
 SUMMARY_CSV = ARTIFACTS_DIR / "adr_cancellation_summary.csv"
 ANALYSIS_MD = ARTIFACTS_DIR / "adr_cancellation_analysis.md"
@@ -17,7 +14,7 @@ RATE_CHART = ARTIFACTS_DIR / "adr_cancellation_rate_chart.png"
 def main() -> None:
     ARTIFACTS_DIR.mkdir(parents=True, exist_ok=True)
 
-    df = pd.read_csv(DATA)
+    df = pd.read_csv(DATA_FILE)
     required = {"ADR", "IsCanceled"}
     missing_columns = required.difference(df.columns)
     if missing_columns:
@@ -97,7 +94,7 @@ def main() -> None:
     report = [
         "# ADR vs. Cancellation Analysis",
         "",
-        f"- **Data file:** `{DATA.relative_to(PROJECT_ROOT)}`",
+        f"- **Data file:** `{DATA_FILE}`",
         f"- **Rows analyzed:** {len(df):,}",
         f"- **Overall cancellation rate:** {overall_rate:.2%}",
         "",

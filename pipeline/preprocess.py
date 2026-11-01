@@ -8,19 +8,8 @@ from typing import Any
 import pandas as pd
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.pipeline import Pipeline
+from config import DROPPED_COLUMNS, DATA_FILE
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.insert(0, str(PROJECT_ROOT))
-
-from data_analysis.config import DATA
-
-
-DROPPED_COLUMNS = [
-    "ReservationStatus",
-    "ReservationStatusDate",
-    "RequiredCarParkingSpaces",
-]
 UNDEFINED_DISTRIBUTION_CHANNEL = "Undefined"
 BOOKING_CHANGES_COLUMN = "BookingChanges"
 
@@ -157,7 +146,7 @@ def main() -> None:
     parser.add_argument(
         "--input",
         type=Path,
-        default=Path(DATA),
+        default=Path(DATA_FILE),
     )
     args = parser.parse_args()
 

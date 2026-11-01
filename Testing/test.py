@@ -2,15 +2,16 @@ import numpy as np
 import pandas as pd
 from sklearn.ensemble import HistGradientBoostingClassifier
 from sklearn.metrics import roc_auc_score
+from config import DROPPED_COLUMNS, DATA_FILE
 
 TARGET = "IsCanceled"
 TIME_COL = "ArrivalDateYear"
 FEATURES_TO_TEST = ["DistributionChannel", "MarketSegment","BookingChanges"]
-ALWAYS_DROP = ["ReservationStatus", "ReservationStatusDate", "AssignedRoomType"]
+ALWAYS_DROP = DROPPED_COLUMNS
 SEEDS = (0, 1, 2, 3, 4)
 
 # ---------- 1. Load and leakage check (on raw data, before dropping) ----------
-raw = pd.read_csv("data/raw/H2.csv")
+raw = pd.read_csv(DATA_FILE)
 print(f"Rows: {len(raw):,}  |  exact duplicates: {raw.duplicated().sum():,}")
 
 print("\n--- ReservationStatus vs target (perfect mapping = leakage) ---")

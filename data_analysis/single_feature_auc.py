@@ -4,9 +4,10 @@ import pandas as pd
 from sklearn.ensemble import HistGradientBoostingClassifier
 from sklearn.model_selection import cross_val_predict, StratifiedKFold
 from sklearn.metrics import roc_auc_score
+from config import DATA_FILE
 
 TARGET = "IsCanceled"
-full = pd.read_csv("data/raw/H2.csv")
+full = pd.read_csv(DATA_FILE)
 full = full.drop_duplicates()  # deduplicate, just in case
 # turn text columns into categories; the date string into a number
 full["ReservationStatusDate"] = pd.to_datetime(full["ReservationStatusDate"]).map(pd.Timestamp.toordinal)

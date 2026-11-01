@@ -1,10 +1,9 @@
 import os
 import pandas as pd
-from data_analysis.config import DATA
+from config import DATA_FILE
 
+df = pd.read_csv(DATA_FILE)
 os.makedirs("outputs", exist_ok=True)
-
-df = pd.read_csv(DATA)
 
 # 1. Distribution of assigned room types
 print("Distribution of assigned room types:")

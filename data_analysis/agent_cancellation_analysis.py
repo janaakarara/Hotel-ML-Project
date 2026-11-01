@@ -3,11 +3,8 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import pandas as pd
 from scipy.stats import chi2_contingency
-from data_analysis.config import DATA
+from config import DATA_FILE , ARTIFACTS_DIR
 
-
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-ARTIFACTS_DIR = PROJECT_ROOT / "artifacts"
 
 SUMMARY_CSV = ARTIFACTS_DIR / "agent_cancellation_summary.csv"
 ANALYSIS_MD = ARTIFACTS_DIR / "agent_cancellation_analysis.md"
@@ -35,7 +32,7 @@ def cramer_v(table: pd.DataFrame) -> float:
 def main() -> None:
     ARTIFACTS_DIR.mkdir(parents=True, exist_ok=True)
 
-    df = pd.read_csv(DATA)
+    df = pd.read_csv(DATA_FILE)
     required = {"Agent", "IsCanceled"}
     missing_columns = required.difference(df.columns)
     if missing_columns:
@@ -91,7 +88,7 @@ def main() -> None:
     report = [
         "# Agent vs. Cancellation Analysis",
         "",
-        f"- **Data file:** `{DATA.relative_to(PROJECT_ROOT)}`",
+        f"- **Data file:** `{DATA_FILE}`",
         f"- **Rows analyzed:** {len(df):,}",
         f"- **Agents (including UNKNOWN):** {df['Agent'].nunique():,}",
         f"- **Overall cancellation rate:** {overall_rate:.2%}",

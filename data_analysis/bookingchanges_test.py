@@ -1,12 +1,11 @@
 import os
 import pandas as pd
+from config import DATA_FILE
 
-from data_analysis.config import DATA
-
+df = pd.read_csv(DATA_FILE)
+    
 os.makedirs("outputs", exist_ok=True)
 
-df = pd.read_csv(DATA)
-    
 # ---------- Normal (multi-level) analysis ----------
 
 # 1. Distribution of booking changes

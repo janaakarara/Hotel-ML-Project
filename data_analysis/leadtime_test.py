@@ -1,7 +1,7 @@
 import pandas as pd
-from data_analysis.config import DATA
+from config import DATA_FILE
 
-df = pd.read_csv(DATA)
+df = pd.read_csv(DATA_FILE)
 
 print(df["LeadTime"].describe())
 

@@ -8,7 +8,7 @@ import numpy as np
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 
 from src.data_loader import load_data
-from pipeline.config import BASE_DIR
+from config import BASE_DIR
 
 
 OUTPUT_REPORT_PATH = os.path.join(
