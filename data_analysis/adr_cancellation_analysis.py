@@ -7,7 +7,6 @@ from config import DATA_FILE , ARTIFACTS_DIR
 
 
 SUMMARY_CSV = ARTIFACTS_DIR / "adr_cancellation_summary.csv"
-ANALYSIS_MD = ARTIFACTS_DIR / "adr_cancellation_analysis.md"
 RATE_CHART = ARTIFACTS_DIR / "adr_cancellation_rate_chart.png"
 
 
@@ -146,15 +145,12 @@ def main() -> None:
         "",
     ])
 
-    ANALYSIS_MD.write_text("\n".join(report), encoding="utf-8")
-
     print(f"Analyzed {len(df):,} rows")
     print(f"ADR = 0: {zero_rows:,} rows, {zero_canceled:,} canceled, {zero_cancellation_rate:.2%}")
     print(f"ADR = 0 always canceled: {'Yes' if always_canceled else 'No'}")
     print(f"ADR != 0 cancellation rate: {nonzero_cancellation_rate:.2%}")
     print(f"Point-biserial correlation: {point_biserial.statistic:.4f}; p={point_biserial.pvalue:.3e}")
     print(f"Wrote {SUMMARY_CSV}")
-    print(f"Wrote {ANALYSIS_MD}")
     print(f"Wrote {RATE_CHART}")
 
 

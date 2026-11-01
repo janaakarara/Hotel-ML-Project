@@ -6,4 +6,4 @@ DROPPED_COLUMNS = [
     "RequiredCarParkingSpaces",
 ]
 TARGET_CLASSIFICATION = "IsCanceled"
-RANDOM_STATE = 67
+RANDOM_STATE = 42

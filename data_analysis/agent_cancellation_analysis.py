@@ -7,7 +7,6 @@ from config import DATA_FILE , ARTIFACTS_DIR
 
 
 SUMMARY_CSV = ARTIFACTS_DIR / "agent_cancellation_summary.csv"
-ANALYSIS_MD = ARTIFACTS_DIR / "agent_cancellation_analysis.md"
 RATE_CHART = ARTIFACTS_DIR / "agent_cancellation_rates.png"
 MIN_BOOKINGS_FOR_RATE_RANKING = 30
 
@@ -150,13 +149,10 @@ def main() -> None:
         "",
     ])
 
-    ANALYSIS_MD.write_text("\n".join(report), encoding="utf-8")
-
     print(f"Analyzed {len(df):,} rows across {df['Agent'].nunique():,} agents.")
     print(f"Overall cancellation rate: {overall_rate:.2%}")
     print(f"Chi-square p-value: {p_value:.3e}; Cramer's V: {v:.4f}")
     print(f"Wrote {SUMMARY_CSV}")
-    print(f"Wrote {ANALYSIS_MD}")
     print(f"Wrote {RATE_CHART}")
 
 
