@@ -5,7 +5,7 @@ from sklearn.metrics import roc_auc_score
 
 TARGET = "IsCanceled"
 TIME_COL = "ArrivalDateYear"
-FEATURES_TO_TEST = ["DistributionChannel", "MarketSegment"]
+FEATURES_TO_TEST = ["DistributionChannel", "MarketSegment","BookingChanges"]
 ALWAYS_DROP = ["ReservationStatus", "ReservationStatusDate", "AssignedRoomType"]
 SEEDS = (0, 1, 2, 3, 4)
 

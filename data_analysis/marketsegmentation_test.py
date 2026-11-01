@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv("Hotel_Data.csv")
+df = pd.read_csv(r"data\raw\H2.csv")
 
 # 1. Cancellation rate per market segment
 summary = (

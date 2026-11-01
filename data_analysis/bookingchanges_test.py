@@ -1,6 +1,11 @@
+import os
 import pandas as pd
 
+os.makedirs("outputs", exist_ok=True)
+
 df = pd.read_csv(r"data\raw\H2.csv")
+
+# ---------- Normal (multi-level) analysis ----------
 
 # 1. Distribution of booking changes
 print("Distribution of booking changes:")
@@ -16,12 +21,32 @@ by_changes["cancellation_rate"] = (by_changes["cancellation_rate"] * 100).round(
 by_changes["share_of_bookings"] = (by_changes["bookings"] / len(df) * 100).round(1)
 print("\nCancellation rate by booking changes (%):")
 print(by_changes)
-by_changes.to_csv("cancellation_by_booking_changes.csv")
+by_changes.to_csv(os.path.join("outputs", "cancellation_by_booking_changes.csv"))
 
-# 3. Leakage check: mean changes by ReservationStatus
-print("\nMean booking changes by ReservationStatus:")
-print(df.groupby("ReservationStatus")["BookingChanges"].agg(["mean", "median", "count"]).round(2))
+# 3. Mean booking changes for canceled vs non-canceled bookings
+print("\nMean booking changes by IsCanceled:")
+print(df.groupby("IsCanceled")["BookingChanges"].agg(["mean", "median", "count"]).round(2))
 
-# 4. Correlation with cancellation
+# 4. Correlation with cancellation (count version)
 corr = df["BookingChanges"].corr(df["IsCanceled"])
 print(f"\nPearson correlation (BookingChanges vs IsCanceled): {corr:.3f}")
+
+# ---------- Binary analysis ----------
+
+# 5. Binary flag: 1 if changed at least once, 0 otherwise
+df["has_booking_change"] = (df["BookingChanges"] > 0).astype(int)
+
+binary = (
+    df.groupby("has_booking_change")["IsCanceled"]
+    .agg(cancellation_rate="mean", bookings="count")
+)
+binary["cancellation_rate"] = (binary["cancellation_rate"] * 100).round(1)
+binary["share_of_bookings"] = (binary["bookings"] / len(df) * 100).round(1)
+binary.index = binary.index.map({0: "No changes", 1: "At least one change"})
+print("\nCancellation rate by booking changes (binary, %):")
+print(binary)
+binary.to_csv(os.path.join("outputs", "cancellation_by_booking_changes_binary.csv"))
+
+# 6. Correlation of the binary flag with cancellation
+corr_binary = df["has_booking_change"].corr(df["IsCanceled"])
+print(f"\nPearson correlation (has_booking_change vs IsCanceled): {corr_binary:.3f}")
