@@ -1,13 +1,19 @@
 from __future__ import annotations
 
 import argparse
-import json
+import sys
 from pathlib import Path
 from typing import Any
 
 import pandas as pd
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.pipeline import Pipeline
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from data_analysis.config import DATA
 
 
 DROPPED_COLUMNS = [
@@ -151,17 +157,7 @@ def main() -> None:
     parser.add_argument(
         "--input",
         type=Path,
-        default=Path(DATA_FILE),
-    )
-    parser.add_argument(
-        "--report",
-        type=Path,
-        default=Path("report.md"),
-    )
-    parser.add_argument(
-        "--summary",
-        type=Path,
-        default=Path("data/processed/preprocessing_summary.json"),
+        default=Path(DATA),
     )
     args = parser.parse_args()
 
@@ -171,19 +167,11 @@ def main() -> None:
     raw = pd.read_csv(args.input)
     processed, summary = preprocess(raw)
 
-    args.summary.parent.mkdir(parents=True, exist_ok=True)
-    args.summary.write_text(
-        json.dumps(summary, indent=2),
-        encoding="utf-8",
-    )
-    write_report(args.report, summary)
-
     print(
         f"Preprocessed {len(raw):,} rows into {len(processed):,} rows "
         f"and {len(processed.columns)} columns."
     )
     print(f"Pipeline: {build_preprocessing_pipeline()}")
-    print(f"Report: {args.report}")
 
 
 if __name__ == "__main__":
