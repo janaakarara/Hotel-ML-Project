@@ -1,6 +1,7 @@
 import pandas as pd
+from data_analysis.config import DATA
 
-df = pd.read_csv(r"data\raw\H2.csv")
+df = pd.read_csv(DATA)
 
 # 1. Distribution of meal types
 print("Distribution of meal types:")

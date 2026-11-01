@@ -1,9 +1,10 @@
 import os
 import pandas as pd
+from data_analysis.config import DATA
 
 os.makedirs("outputs", exist_ok=True)
 
-df = pd.read_csv(r"data\raw\H2.csv")
+df = pd.read_csv(DATA)
 
 # 1. Distribution of parking spaces requested
 print("Distribution of required parking spaces:")

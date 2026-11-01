@@ -1,7 +1,8 @@
 import pandas as pd
 import numpy as np
+from data_analysis.config import DATA
 
-df = pd.read_csv("Hotel_Data.csv")
+df = pd.read_csv(DATA)
 
 # 1. Basic distribution
 print("Distribution of special requests:")

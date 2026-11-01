@@ -1,6 +1,7 @@
 import pandas as pd
+from data_analysis.config import DATA
 
-df = pd.read_csv("data\\raw\\H2.csv")
+df = pd.read_csv(DATA)
 
 print(df["LeadTime"].describe())
 

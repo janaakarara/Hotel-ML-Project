@@ -1,10 +1,11 @@
 import os
 import pandas as pd
 
+
 os.makedirs("outputs", exist_ok=True)
 
 # 1. Load the CSV
-df = pd.read_csv(r"data\raw\H2.csv")
+df = pd.read_csv(r"data\H2.csv")
 print("Rows, columns:", df.shape)
 
 # 2. Missing marker in this file is the text 'none' (also handle NULL and blanks)

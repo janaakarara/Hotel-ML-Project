@@ -3,10 +3,10 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import pandas as pd
 from scipy.stats import chi2_contingency
+from data_analysis.config import DATA
 
 
-PROJECT_ROOT = Path(__file__).resolve().parent
-DATA_PATH = PROJECT_ROOT / "data" / "raw" / "H2.csv"
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 ARTIFACTS_DIR = PROJECT_ROOT / "artifacts"
 
 COUNTRY_SUMMARY_CSV = ARTIFACTS_DIR / "country_cancellation_summary.csv"
@@ -35,7 +35,7 @@ def cramer_v(table: pd.DataFrame) -> float:
 def main() -> None:
     ARTIFACTS_DIR.mkdir(parents=True, exist_ok=True)
 
-    df = pd.read_csv(DATA_PATH)
+    df = pd.read_csv(DATA)
     required = {"Country", "IsCanceled"}
     missing_columns = required.difference(df.columns)
     if missing_columns:
@@ -91,7 +91,7 @@ def main() -> None:
     report = [
         "# Country vs. Cancellation Analysis",
         "",
-        f"- **Data file:** `{DATA_PATH.relative_to(PROJECT_ROOT)}`",
+        f"- **Data file:** `{DATA.relative_to(PROJECT_ROOT)}`",
         f"- **Rows analyzed:** {len(df):,}",
         f"- **Countries (including UNKNOWN):** {df['Country'].nunique():,}",
         f"- **Overall cancellation rate:** {overall_rate:.2%}",
