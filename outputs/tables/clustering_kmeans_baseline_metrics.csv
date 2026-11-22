@@ -1,2 +1,0 @@
-algorithm,config,k,rows,features_after_encoding,silhouette,davies_bouldin,calinski_harabasz,inertia,fit_seconds,seeds_averaged,silhouette_mean_over_seeds,silhouette_std_over_seeds,stability_ari,pca_2d_variance_shown
-kmeans,baseline,4,53036,16,0.1964343906897977,1.5814101913932086,12092.006591724909,152656.21558715453,0.13,5,0.21457081684081314,0.016623332023359926,0.6161167985545027,0.523
