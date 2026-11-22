@@ -1,22 +1,4 @@
-"""Look at every column of the clustering CSV and decide how it must be prepared.
-
-Each column ends up in exactly ONE of three groups:
-
-  ENCODE   text categories           -> one 0/1 column per category (one-hot)
-  SCALE    numbers on a ruler        -> (log1p if long right tail) then StandardScaler
-  BOOLEAN  skewed "almost always 0"  -> a 0/1 flag ("is it different from the usual value?")
-
-Columns that are already 0/1 are left alone (scaling a rare flag would blow its 1s up).
-
-Run from the project root:
-    python -m src.preprocessing.feature_router
-    python -m src.preprocessing.feature_router --input data/processed/h2_clustering_raw_features.csv
-
-It prints what it decided and what changed, and writes:
-    data/processed/h2_clustering_preprocessed.csv   <- the clean, all-numeric table
-    outputs/tables/preprocessing_decisions.csv      <- one row per column: group + reason
-    artifacts/clustering_preprocessor.joblib        <- fitted transformer, reused at inference
-"""
+# NOT USED in the baseline pipeline - kept as reference for the leakage audit / tuning stage.
 import argparse
 import sys
 from pathlib import Path

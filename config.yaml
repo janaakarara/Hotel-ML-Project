@@ -1,8 +1,8 @@
-# One place for every setting, so all scripts use the same values.
+﻿# One place for every setting, so all scripts use the same values.
 seed: 42
 
 paths:
-  clean_data: data/processed/H2_clean_v2_dedup.csv
+  clean_data: data/processed/h2_clean.csv
   figures: outputs/figures
   tables: outputs/tables
   artifacts: artifacts

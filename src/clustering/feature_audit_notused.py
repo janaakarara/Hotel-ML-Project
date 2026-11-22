@@ -1,23 +1,4 @@
-"""
-Clustering feature audit + cleaning (CSE382 Task C, stage 1).
-
-    python -m src.clustering.feature_audit --input data/processed/H2_clean_v2_dedup.csv
-
-What it does (no manual column editing):
-  1. Loads the file, normalises placeholders ('NULL', 'none', blanks).
-  2. Drops columns by MEANING (leakage: outcome / known-only-later). A model cannot
-     decide this - it depends on timing - so this list is the only hand-written rule.
-  3. Audits every remaining column with DATA evidence and draws graphs:
-       missing share, cardinality, dominant-value share, skew,
-       redundancy between columns, leave-one-out cluster impact, surrogate importance.
-  4. Applies thresholds (see THRESHOLDS) -> DROP / KEEP, each with a written reason.
-  5. Cleans rows (impossible rows, undefined categories, rare categories -> 'Other').
-     Derived feature: Kids = Children + Babies (Babies alone is 99% zeros).
-  6. Saves the clustering-ready file + decision tables + graphs.
-
-IsCanceled is read ONLY by the leakage screen (step 2b), to detect columns that secretly
-encode the outcome. It is never used to choose useful features, k, or hyperparameters.
-"""
+# NOT USED in baseline – reference for leakage audit / tuning stage
 from __future__ import annotations
 
 import argparse

@@ -1,4 +1,4 @@
-"""Load the already-cleaned H2 file and check it still has the 31 source columns."""
+﻿"""Load the already-cleaned H2 file and check it still has the 31 source columns."""
 import pandas as pd
 
 SOURCE_COLUMNS = [
@@ -6,7 +6,7 @@ SOURCE_COLUMNS = [
     "ArrivalDateDayOfMonth", "StaysInWeekendNights", "StaysInWeekNights", "Adults", "Children",
     "Babies", "Meal", "Country", "MarketSegment", "DistributionChannel", "IsRepeatedGuest",
     "PreviousCancellations", "PreviousBookingsNotCanceled", "ReservedRoomType", "AssignedRoomType",
-    "BookingChanges", "DepositType", "Agent", "Company", "DaysInWaitingList", "CustomerType", "ADR",
+    "BookingChanges", "DepositType", "Agent", "has_company", "DaysInWaitingList", "CustomerType", "ADR",
     "RequiredCarParkingSpaces", "TotalOfSpecialRequests", "ReservationStatus", "ReservationStatusDate",
 ]
 
