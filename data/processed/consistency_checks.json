@@ -1,0 +1,21 @@
+{
+  "constant_columns": [],
+  "fully_empty_rows": 0,
+  "negative_values": {},
+  "invalid_arrival_dates": 0,
+  "invalid_status_dates": 0,
+  "status_matches_target_exactly": true,
+  "status_vs_target": {
+    "0": {
+      "Canceled": 0,
+      "Check-Out": 37379,
+      "No-Show": 0
+    },
+    "1": {
+      "Canceled": 15301,
+      "Check-Out": 0,
+      "No-Show": 748
+    }
+  },
+  "checkout_date_mismatch_rows": 5
+}
