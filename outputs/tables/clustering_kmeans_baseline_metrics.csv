@@ -1,2 +1,2 @@
-algorithm,config,k,rows,features_after_encoding,silhouette,davies_bouldin,calinski_harabasz,inertia,fit_seconds,pca_2d_variance_shown
-kmeans,baseline,6,53036,21,0.19500103190840037,1.5325790204484584,9494.590576987428,148476.25248369476,0.2,0.478
+algorithm,config,k,rows,features_after_encoding,silhouette,davies_bouldin,calinski_harabasz,inertia,fit_seconds,seeds_averaged,silhouette_mean_over_seeds,silhouette_std_over_seeds,stability_ari,pca_2d_variance_shown
+kmeans,baseline,5,53036,21,0.17310253222151425,1.6873136745676462,8655.247659153827,170247.8452347877,0.18,5,0.18298869067694695,0.004943740156551443,0.7143364851970503,0.478

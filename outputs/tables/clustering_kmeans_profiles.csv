@@ -1,7 +1,6 @@
 cluster,bookings,share,lead_time_median,nights_mean,weekend_share_mean,adults_mean,has_kids,repeated_guest,top_market_segment,top_customer_type,top_meal,cancel_rate_not_used,adr_mean_not_used
-0,6313,0.119,48.0,3.29,0.23,0.97,0.071,0.041,Online TA (45%),Transient (61%),BB (84%),0.287,95.5
-1,4294,0.081,80.0,3.59,0.24,3.01,0.03,0.002,Online TA (82%),Transient (93%),BB (91%),0.374,155.1
-2,19148,0.361,76.0,4.39,0.39,2.0,0.119,0.002,Online TA (73%),Transient (87%),BB (76%),0.341,109.5
-3,7324,0.138,2.0,1.57,0.04,1.59,0.082,0.128,Online TA (46%),Transient (87%),BB (78%),0.117,105.4
-4,11695,0.221,73.0,2.48,0.0,2.0,0.118,0.004,Online TA (72%),Transient (83%),BB (73%),0.364,112.6
-5,4262,0.08,11.0,1.54,0.93,1.78,0.088,0.057,Online TA (62%),Transient (88%),BB (71%),0.223,109.6
+0,7147,0.135,41.0,3.06,0.28,0.97,0.066,0.049,Online TA (45%),Transient (63%),BB (84%),0.283,95.7
+1,4491,0.085,79.0,3.5,0.27,3.01,0.029,0.002,Online TA (82%),Transient (93%),BB (91%),0.369,155.5
+2,20703,0.39,73.0,4.15,0.44,2.0,0.119,0.003,Online TA (73%),Transient (87%),BB (75%),0.34,109.8
+3,8308,0.157,1.0,1.56,0.22,1.6,0.08,0.129,Online TA (46%),Transient (88%),BB (77%),0.105,104.5
+4,12387,0.234,69.0,2.5,0.0,2.0,0.119,0.005,Online TA (72%),Transient (83%),BB (73%),0.356,113.0
