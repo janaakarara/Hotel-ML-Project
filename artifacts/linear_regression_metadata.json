@@ -1,0 +1,68 @@
+{
+  "model": "LinearRegression",
+  "description": "Ordinary Least Squares baseline regressor",
+  "baseline_cv_metrics": {
+    "cv_mae": 15.349661939142397,
+    "cv_mae_std": 0.18305436434193453,
+    "cv_rmse": 21.90180166230157,
+    "cv_rmse_std": 0.375181525924048,
+    "cv_r2": 0.692962313451693,
+    "cv_r2_std": 0.009214196719697153,
+    "sec": 6.448989629745483
+  },
+  "test_metrics": {
+    "mae": 15.446331394869334,
+    "rmse": 22.19114296778581,
+    "r2": 0.6846729886068016,
+    "sec": 1.4577126502990723
+  },
+  "n_train": 41829,
+  "n_test": 10458,
+  "strict_mode": false,
+  "numeric_features": [
+    "LeadTime",
+    "LogLeadTime",
+    "ArrivalDateYear",
+    "StaysInWeekendNights",
+    "StaysInWeekNights",
+    "TotalNights",
+    "WeekendShare",
+    "Adults",
+    "Children",
+    "Babies",
+    "TotalGuests",
+    "HasChildren",
+    "IsRepeatedGuest",
+    "PreviousCancellations",
+    "PreviousBookingsNotCanceled",
+    "HasCompany",
+    "month_sin",
+    "month_cos",
+    "dow_sin",
+    "dow_cos",
+    "week_sin",
+    "week_cos",
+    "RequiredCarParkingSpaces"
+  ],
+  "categorical_features": [
+    "Meal",
+    "Country",
+    "MarketSegment",
+    "DistributionChannel",
+    "ReservedRoomType",
+    "DepositType",
+    "CustomerType",
+    "Agent"
+  ],
+  "excluded_columns": [
+    "ReservationStatus",
+    "ReservationStatusDate",
+    "IsCanceled",
+    "AssignedRoomType",
+    "TotalOfSpecialRequests",
+    "BookingChanges",
+    "DaysInWaitingList"
+  ],
+  "sklearn_version": "1.9.1",
+  "trained_at": "2026-11-23T17:06:48.414316+00:00"
+}
