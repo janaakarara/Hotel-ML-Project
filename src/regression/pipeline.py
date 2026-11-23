@@ -35,6 +35,7 @@ LEAKAGE_COLUMNS: Final[tuple[str, ...]] = (
     "ReservationStatusDate",   # fatal outcome leak
     "IsCanceled",              # outcome unknown at quote time
     "AssignedRoomType",        # assigned at/after check-in -> use ReservedRoomType
+    "TotalOfSpecialRequests",
 )
 
 #: Fields that only materialise AFTER the initial inquiry (lifespan audit).
@@ -47,7 +48,6 @@ LIFESPAN_COLUMNS: Final[tuple[str, ...]] = (
 #: dropped when ``strict=True`` / ``--strict`` is used.
 STRICT_ONLY_COLUMNS: Final[tuple[str, ...]] = (
     "RequiredCarParkingSpaces",
-    "TotalOfSpecialRequests",
 )
 
 # --------------------------------------------------------------------------
