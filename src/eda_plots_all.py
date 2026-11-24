@@ -2,7 +2,7 @@
 
 Run from the project root:   python src/eda_plots_all.py
 Data: data/raw/H2.csv with exact duplicates removed (nothing else is changed).
-Figures: p1_* (skew, dominant values, categories) and p1b_01 .. p1b_11 in outputs/figures/.
+Figures: p1_* (skew, dominant values, categories) and p1b_01 .. p1b_08 in outputs/figures/.
 Tables:  p1b_column_table.csv and p1b_timing_table.csv in outputs/tables/.
 """
 import matplotlib
@@ -129,42 +129,6 @@ for a, (cat, num) in zip(ax, [("MarketSegment", "LeadTime"), ("DepositType", "Le
     a.set_title(f"{num} by {cat}"); a.tick_params(axis="x", rotation=35); a.set_xlabel("")
 plt.tight_layout(); plt.savefig(FIG / "p1b_05_category_vs_number.png", dpi=140); plt.close()
 
-# ---------- 8. Duplicates after encoding on candidate columns ----------
-cands = {
-    "all 31 columns": list(df.columns[:31]),
-    "no ADR/status/dates (28)": [c for c in df.columns[:31] if c not in ("ADR", "ReservationStatus", "ReservationStatusDate", "IsCanceled")],
-    "7 core columns": ["LeadTime", "StaysInWeekendNights", "StaysInWeekNights", "Adults", "IsRepeatedGuest", "MarketSegment", "CustomerType"],
-    "4 numeric only": ["LeadTime", "TotalNights", "Adults", "BookingChanges"],
-}
-dist = {k: len(df[v].drop_duplicates()) for k, v in cands.items()}
-fig, ax = plt.subplots(figsize=(7.5, 3.6))
-ax.barh(list(dist.keys()), list(dist.values()), color="#B8800A")
-ax.axvline(len(df), color="k", ls="--"); ax.text(len(df), -0.45, f" rows: {len(df)}", fontsize=8)
-for i, v in enumerate(dist.values()): ax.text(v, i, f" {v}", va="center", fontsize=8)
-ax.set_title("Distinct rows on chosen columns (fewer = more ties for DBSCAN)")
-plt.tight_layout(); plt.savefig(FIG / "p1b_06_duplicates_after_selection.png", dpi=140); plt.close()
-
-# ---------- 9. Impossible values and missingness ----------
-rules = {
-    "Adults+Children+Babies = 0": (df.TotalGuests == 0).sum(),
-    "TotalNights = 0": (df.TotalNights == 0).sum(),
-    "ADR <= 0": (df.ADR <= 0).sum(),
-    "ADR > 1000": (df.ADR > 1000).sum(),
-    "Babies > 2": (df.Babies > 2).sum(),
-    "MarketSegment = Undefined": (df.MarketSegment == "Undefined").sum(),
-    "DistributionChannel = Undefined": (df.DistributionChannel == "Undefined").sum(),
-}
-miss = df.isna().mean() * 100
-miss = miss[miss > 0].sort_values()
-fig, ax = plt.subplots(1, 2, figsize=(13, 4))
-r = pd.Series(rules).sort_values()
-ax[0].barh(r.index, r.values, color="#C8433B"); ax[0].set_title("Rows breaking a sanity rule")
-for i, v in enumerate(r.values): ax[0].text(v, i, f" {v}", va="center", fontsize=8)
-ax[1].barh(miss.index, miss.values, color="#2F5DA8"); ax[1].set_title("% missing per column")
-plt.tight_layout(); plt.savefig(FIG / "p1b_07_impossible_and_missing.png", dpi=140); plt.close()
-mm = df[["Agent", "Company", "Country", "Children"]].isna()
-print("missing together (rows):\n", mm.value_counts().to_string())
-
 # ---------- 10. Rare categories (cumulative coverage) ----------
 fig, ax = plt.subplots(figsize=(7.5, 4))
 for c in ["Country", "Agent"]:
@@ -173,7 +137,7 @@ for c in ["Country", "Agent"]:
 ax.axhline(90, color="k", ls="--", lw=.8); ax.set_xscale("log")
 ax.set_xlabel("number of top categories kept"); ax.set_ylabel("% of rows covered"); ax.legend()
 ax.set_title("How many categories cover 90% of rows?")
-plt.tight_layout(); plt.savefig(FIG / "p1b_08_rare_categories.png", dpi=140); plt.close()
+plt.tight_layout(); plt.savefig(FIG / "p1b_06_rare_categories.png", dpi=140); plt.close()
 
 # ---------- 11-12. Seasonality and cyclical month ----------
 fig, ax = plt.subplots(1, 2, figsize=(12, 4))
@@ -184,7 +148,7 @@ ang = 2 * np.pi * (m.index - 1) / 12
 ax[1].scatter(np.sin(ang), np.cos(ang), s=m.values / m.values.max() * 600, color="#0E8A8A")
 for a_, i in zip(ang, m.index): ax[1].text(np.sin(a_) * 1.18, np.cos(a_) * 1.18, str(i), ha="center", va="center")
 ax[1].set_aspect("equal"); ax[1].axis("off"); ax[1].set_title("Months on a circle (12 sits next to 1)")
-plt.tight_layout(); plt.savefig(FIG / "p1b_09_seasonality_cyclical.png", dpi=140); plt.close()
+plt.tight_layout(); plt.savefig(FIG / "p1b_07_seasonality_cyclical.png", dpi=140); plt.close()
 
 # ---------- 13. Timing table (fill the last column yourself) ----------
 timing = pd.DataFrame([
@@ -200,40 +164,6 @@ timing = pd.DataFrame([
     ("LeadTime, Adults, Meal, MarketSegment, ...", "known at booking", "Fine"),
 ], columns=["column", "when it is known", "your decision (edit this)"])
 timing.to_csv(TAB / "p1b_timing_table.csv", index=False)
-
-# ---------- 14. Cluster tendency: Hopkins + kNN distance ----------
-core = ["LeadTime", "TotalNights", "Adults", "Children", "Babies", "BookingChanges", "DaysInWaitingList",
-        "PreviousCancellations", "PreviousBookingsNotCanceled", "TotalOfSpecialRequests", "RequiredCarParkingSpaces",
-        "IsRepeatedGuest"]
-X = df[core].fillna(0).copy()
-X["LeadTime"] = np.log1p(X.LeadTime); X["TotalNights"] = np.log1p(X.TotalNights)
-X = X.drop_duplicates()   # identical rows give nearest-neighbour distance 0 and fake a high Hopkins value
-print(f"distinct rows on these 12 columns: {len(X)} of {len(df)}")
-Xs = StandardScaler().fit_transform(X)
-def hopkins(A, m=1000, seeds=5):
-    vals = []
-    for s in range(seeds):
-        r = np.random.default_rng(SEED + s)
-        idx = r.choice(len(A), m, replace=False)
-        nn = NearestNeighbors(n_neighbors=2).fit(A)
-        w = nn.kneighbors(A[idx], 2)[0][:, 1]
-        U = r.uniform(A.min(0), A.max(0), size=(m, A.shape[1]))
-        u = nn.kneighbors(U, 1)[0][:, 0]
-        vals.append(u.sum() / (u.sum() + w.sum()))
-    return float(np.mean(vals)), float(np.std(vals))
-h, hs = hopkins(Xs)
-# Fair comparison: shuffle each column on its own (keeps every column's shape, destroys relations between columns)
-Xsh = np.column_stack([rng.permutation(Xs[:, j]) for j in range(Xs.shape[1])])
-h0, _ = hopkins(Xsh)
-print(f"Hopkins statistic (12 numeric columns): {h:.3f} +- {hs:.3f};  shuffled-columns baseline: {h0:.3f}")
-kn = NearestNeighbors(n_neighbors=10).fit(Xs)
-d10 = np.sort(kn.kneighbors(Xs[rng.choice(len(Xs), 8000, replace=False)])[0][:, -1])
-fig, ax = plt.subplots(1, 2, figsize=(11, 4))
-ax[0].bar(["shuffled columns\n(no relations)", "real data"], [h0, h], color=["#999", "#0E8A8A"])
-ax[0].set_ylim(0, 1); ax[0].set_title(f"Hopkins: real {h:.2f} vs shuffled {h0:.2f}\n(compare the two, not with 0.5)")
-ax[1].plot(d10, color="#2F5DA8"); ax[1].set_title("Sorted distance to 10th neighbour (DBSCAN eps hint)")
-ax[1].set_xlabel("points, sorted"); ax[1].set_ylabel("distance")
-plt.tight_layout(); plt.savefig(FIG / "p1b_10_cluster_tendency.png", dpi=140); plt.close()
 
 # ---------- 15. PCA 2D, for VIEWING only ----------
 S = df.sample(8000, random_state=SEED)
@@ -251,7 +181,7 @@ for k, col in zip(S.MarketSegment.fillna("NA").unique(), sns.color_palette("tab1
     mk = (S.MarketSegment.fillna("NA") == k).values
     ax[1].scatter(P[mk, 0], P[mk, 1], s=3, alpha=.4, color=col, label=k)
 ax[1].legend(markerscale=4, fontsize=7); ax[1].set_title("Same plot coloured by MarketSegment (viewing only)")
-plt.tight_layout(); plt.savefig(FIG / "p1b_11_pca_view.png", dpi=140); plt.close()
+plt.tight_layout(); plt.savefig(FIG / "p1b_08_pca_view.png", dpi=140); plt.close()
 
 # ---------- column summary table ----------
 rows = []
