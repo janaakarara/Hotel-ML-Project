@@ -1,0 +1,6 @@
+column,n_categories,n_rare_under_1pct,rows_covered_by_rare,rare_values
+Country,167,152,0.1303,"CN, POL, NOR, RUS, ISR, DNK, AGO, ROU, AUS, FIN, TUR, LUX, JPN, MAR, HUN, ARG, CZE, KOR, GRC, IND, HRV, IRN, DZA, MEX, BGR, ZAF, COL, MOZ, NZL, CHL, SRB, EST, UKR, SAU, TWN, SVK, CYP, ARE, TUN, THA"
+MarketSegment,7,2,0.0135,"Complementary, Aviation"
+Meal,4,1,0.0002,FB
+CustomerType,4,1,0.0051,Group
+ReservedRoomType,7,2,0.0092,"G, C"
