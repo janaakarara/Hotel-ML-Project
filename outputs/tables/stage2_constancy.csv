@@ -1,0 +1,23 @@
+column,n_unique,top_value,top_share,norm_entropy,flag_near_constant
+Babies,3,0,0.9931,0.038,True
+DaysInWaitingList,114,0,0.9865,0.027,True
+PreviousCancellations,10,0,0.9779,0.054,True
+PreviousBookingsNotCanceled,73,0,0.9714,0.048,True
+IsRepeatedGuest,2,0,0.9709,0.19,True
+has_company,2,0,0.9483,0.294,False
+Children,4,0,0.9071,0.272,False
+CustomerType,4,Transient,0.8356,0.392,False
+DistributionChannel,4,TA/TO,0.8352,0.406,False
+Meal,4,BB,0.7726,0.476,False
+Adults,5,2,0.7136,0.496,False
+ReservedRoomType,7,A,0.7099,0.46,False
+MarketSegment,7,Online TA,0.6567,0.58,False
+Agent,224,9,0.5401,0.394,False
+ArrivalDateYear,3,2016,0.5005,0.884,False
+StaysInWeekendNights,12,0,0.4323,0.461,False
+StaysInWeekNights,26,2,0.2786,0.526,False
+Country,167,PRT,0.2437,0.562,False
+ArrivalDateMonth,12,8,0.1236,0.986,False
+LeadTime,453,0,0.0511,0.863,False
+ArrivalDateDayOfMonth,31,20,0.0351,0.999,False
+ArrivalDateWeekNumber,53,33,0.0309,0.99,False

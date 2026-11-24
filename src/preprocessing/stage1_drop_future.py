@@ -3,7 +3,7 @@
 Logic-based (see the dataset paper's variable definitions). No statistics are used here.
 Redundancy, near-constant columns, skew and grouping are decided later from the plots.
 
-Usage: python src/stage1_drop_future.py --input data/processed/h2_clean.csv --out-dir data/processed
+Usage: python src/preprocessing/stage1_drop_future.py --input data/processed/h2_clean.csv --out-dir data/processed
 Writes: h2_clustering_stage1.csv           (the 22 columns still in play)
         clustering_stage1_decisions.md     (readable table of every decision)
 The dropped columns stay available in h2_clean.csv (same row order) for describing clusters afterwards.
@@ -49,3 +49,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
