@@ -1,9 +1,9 @@
 # Stage 5: grouping and skew fixes
 
-Applies the decisions made from the stage 4 figures. No row is removed and the row order is unchanged.
+Applies the decisions made from the stage 3a figures. No row is removed and the row order is unchanged.
 
-- **Input:** `data/processed/h2_clustering_stage3.csv` (53036 rows, 11 columns)
-- **Output:** `h2_clustering_stage5.csv`
+- **Input:** `data/processed/h2_clustering_stage2.csv` (53036 rows, 11 columns)
+- **Output:** `h2_clustering_stage3.csv`
 
 ## 1. Country: top 5 countries plus continents
 
@@ -42,7 +42,7 @@ The merges of Meal and CustomerType are judgment calls. If you prefer, change th
 
 ## 3. Skew fixes
 
-Skew under 0.5 is balanced, 0.5 to 1 moderate, over 1 high. Long tails would stretch the distance between points and let a few extreme bookings dominate the clusters. For each column we used the method with the lowest skew in the stage 4 figure.
+Skew under 0.5 is balanced, 0.5 to 1 moderate, over 1 high. Long tails would stretch the distance between points and let a few extreme bookings dominate the clusters. For each column we used the method with the lowest skew in the stage 3a figure.
 
 | Column | Method | New column | Skew before | Skew after |
 |---|---|---|---|---|
@@ -50,7 +50,7 @@ Skew under 0.5 is balanced, 0.5 to 1 moderate, over 1 high. Long tails would str
 | StaysInWeekNights | Yeo-Johnson | StaysInWeekNights_yj | 2.52 | 0.02 |
 | StaysInWeekendNights | Square root | StaysInWeekendNights_sqrt | 1.00 | -0.01 |
 
-**Children** became a 0/1 flag (`HasChildren`). 91% of values are 0, so no transform can fix the skew (every method stayed above 2.8 in the stage 4 figure). The question that matters for segments is whether children are present.
+**Children** became a 0/1 flag (`HasChildren`). 91% of values are 0, so no transform can fix the skew (every method stayed above 2.8 in the stage 3a figure). The question that matters for segments is whether children are present.
 
 **Adults** was checked and left unchanged (skew -0.24, already balanced).
 
@@ -62,6 +62,6 @@ Skew under 0.5 is balanced, 0.5 to 1 moderate, over 1 high. Long tails would str
 
 Final columns: `Adults`, `MarketSegment`, `Meal`, `Country`, `CustomerType`, `ReservedRoomType`, `ArrivalDateMonth`, `LeadTime_yj`, `StaysInWeekNights_yj`, `StaysInWeekendNights_sqrt`, `HasChildren`
 
-The skew fixes learn nothing from any target. Clustering is unsupervised, so fitting the Yeo-Johnson setting on all rows leaks nothing. The fitted settings are saved in `stage5_transform_params.json` so the same transform can be repeated on new bookings.
+The skew fixes learn nothing from any target. Clustering is unsupervised, so fitting the Yeo-Johnson setting on all rows leaks nothing. The fitted settings are saved in `stage3_transform_params.json` so the same transform can be repeated on new bookings.
 
-The untransformed columns stay in `h2_clustering_stage3.csv` (same row order) for describing the clusters afterwards.
+The untransformed columns stay in `h2_clustering_stage2.csv` (same row order) for describing the clusters afterwards.

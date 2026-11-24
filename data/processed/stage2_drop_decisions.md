@@ -8,7 +8,7 @@ The purpose is to reduce redundant and low-information features before clusterin
 ## 2. Input and Output
 
 - **Input:** `data/processed/h2_clustering_stage1.csv`
-- **Output:** `data/processed/h2_clustering_stage3.csv`
+- **Output:** `data/processed/h2_clustering_stage2.csv`
 - **Rows:** 53036
 - **Original columns:** 22
 - **Dropped columns:** 11
@@ -18,16 +18,16 @@ The purpose is to reduce redundant and low-information features before clusterin
 
 | Column | Reason | Evidence | Stage 2 reference |
 |---|---|---|---|
-| `Babies` | Near-constant | 99.31% of rows contain 0. | `stage2_constancy.png` |
-| `DaysInWaitingList` | Near-constant | 98.65% of rows contain 0. | `stage2_constancy.png` |
-| `PreviousCancellations` | Near-constant | 97.79% of rows contain 0. | `stage2_constancy.png` |
-| `PreviousBookingsNotCanceled` | Near-constant | 97.14% of rows contain 0. | `stage2_constancy.png` |
-| `IsRepeatedGuest` | Near-constant | 97.09% of rows contain 0. | `stage2_constancy.png` |
-| `DistributionChannel` | Redundancy | Redundant with MarketSegment (Cramer's V = 0.77), Agent (V = 0.86), and has_company (V = 0.82). | `stage2_cramers_v.png` |
-| `Agent` | Redundancy | Redundant with DistributionChannel (Cramer's V = 0.86). It also has 224 categories. | `stage2_cramers_v.png` |
-| `has_company` | Redundancy | Redundant with MarketSegment (Cramer's V = 0.85). Additionally, 94.83% of rows contain 0. | `stage2_cramers_v.png` |
-| `ArrivalDateWeekNumber` | Redundancy | Almost completely explained by ArrivalDateMonth (eta = 0.995). | `stage2_eta.png` |
-| `ArrivalDateDayOfMonth` | Judgment-based removal | The day is spread relatively evenly throughout the month and showed no meaningful relationship with other columns. | `stage2_spearman.png` |
+| `Babies` | Near-constant | 99.31% of rows contain 0. | `stage2a_constancy.png` |
+| `DaysInWaitingList` | Near-constant | 98.65% of rows contain 0. | `stage2a_constancy.png` |
+| `PreviousCancellations` | Near-constant | 97.79% of rows contain 0. | `stage2a_constancy.png` |
+| `PreviousBookingsNotCanceled` | Near-constant | 97.14% of rows contain 0. | `stage2a_constancy.png` |
+| `IsRepeatedGuest` | Near-constant | 97.09% of rows contain 0. | `stage2a_constancy.png` |
+| `DistributionChannel` | Redundancy | Redundant with MarketSegment (Cramer's V = 0.77), Agent (V = 0.86), and has_company (V = 0.82). | `stage2a_cramers_v.png` |
+| `Agent` | Redundancy | Redundant with DistributionChannel (Cramer's V = 0.86). It also has 224 categories. | `stage2a_cramers_v.png` |
+| `has_company` | Redundancy | Redundant with MarketSegment (Cramer's V = 0.85). Additionally, 94.83% of rows contain 0. | `stage2a_cramers_v.png` |
+| `ArrivalDateWeekNumber` | Redundancy | Almost completely explained by ArrivalDateMonth (eta = 0.995). | `stage2a_eta.png` |
+| `ArrivalDateDayOfMonth` | Judgment-based removal | The day is spread relatively evenly throughout the month and showed no meaningful relationship with other columns. | `stage2a_spearman.png` |
 | `ArrivalDateYear` | Judgment-based removal | The dataset covers only July 2015 to August 2017. Year was treated as a calendar artifact rather than a useful clustering feature. | `Dataset date coverage` |
 
 ## 4. Retained Columns

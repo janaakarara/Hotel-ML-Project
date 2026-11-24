@@ -1,14 +1,14 @@
-﻿"""Stage 4a: look at skew (numeric columns) and rare categories (category columns).
+"""Stage 4a: look at skew (numeric columns) and rare categories (category columns).
 
 Only MEASURES and DRAWS. No column is changed. You decide what to do by reading the figures.
 
 Usage (from the repo root):
-  python src/preprocessing/stage4_distributions_check.py
-Reads:  data/processed/h2_clustering_stage3.csv
-Writes: outputs/figures/stage4_numeric_skew.png        (big: every column x every method, best option in red)
-        outputs/figures/stage4_categorical_shares.png
-        outputs/tables/stage4_numeric_skew.csv
-        outputs/tables/stage4_rare_categories.csv
+  python src/preprocessing/stage3a_distributions_check.py
+Reads:  data/processed/h2_clustering_stage2.csv
+Writes: outputs/figures/stage3a_numeric_skew.png        (big: every column x every method, best option in red)
+        outputs/figures/stage3a_categorical_shares.png
+        outputs/tables/stage3a_numeric_skew.csv
+        outputs/tables/stage3a_rare_categories.csv
 """
 import argparse
 from pathlib import Path
@@ -104,7 +104,7 @@ def categorical_figure(df, path, top_country=25):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--input", default="data/processed/h2_clustering_stage3.csv")
+    ap.add_argument("--input", default="data/processed/h2_clustering_stage2.csv")
     ap.add_argument("--out", default="outputs")
     a = ap.parse_args()
     out = Path(a.out)
@@ -113,13 +113,13 @@ def main():
     df = pd.read_csv(a.input)
     print(f"rows={len(df)} columns={df.shape[1]}")
 
-    sk = numeric_figure(df, out / "figures/stage4_numeric_skew.png")
-    sk.to_csv(out / "tables/stage4_numeric_skew.csv", index=False)
+    sk = numeric_figure(df, out / "figures/stage3a_numeric_skew.png")
+    sk.to_csv(out / "tables/stage3a_numeric_skew.csv", index=False)
     print("\n=== SKEW OF EVERY METHOD (under 0.5 balanced, over 1 HIGH) ===")
     print(sk.to_string(index=False))
 
-    cat = categorical_figure(df, out / "figures/stage4_categorical_shares.png")
-    cat.to_csv(out / "tables/stage4_rare_categories.csv", index=False)
+    cat = categorical_figure(df, out / "figures/stage3a_categorical_shares.png")
+    cat.to_csv(out / "tables/stage3a_rare_categories.csv", index=False)
     print("\n=== RARE CATEGORIES (under 1% of rows) ===")
     print(cat.drop(columns=["rare_values"]).to_string(index=False))
 

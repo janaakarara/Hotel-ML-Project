@@ -1,15 +1,15 @@
-﻿"""Stage 6a: scaling check. Only MEASURES and DRAWS, no column is changed.
+"""Stage 6a: scaling check. Only MEASURES and DRAWS, no column is changed.
 
 Compares the 4 numeric columns before and after three scalers.
 HasChildren is a 0/1 flag and is left out on purpose: 0/1 columns are not scaled.
 
 Usage (from the repo root):
-  python src/preprocessing/stage6a_scaling_check.py
-Reads:  data/processed/h2_clustering_stage5.csv
-Writes: outputs/figures/stage6_scaling_distributions.png   (big: every column x every scaler)
-        outputs/figures/stage6_scaling_spread.png          (spread of each column before and after)
-        outputs/tables/stage6_scaling_summary.csv
-        outputs/tables/stage6_scaling_ranking.csv       (which scaler is best, and the score)
+  python src/preprocessing/stage4a_scaling_check.py
+Reads:  data/processed/h2_clustering_stage3.csv
+Writes: outputs/figures/stage4a_scaling_distributions.png   (big: every column x every scaler)
+        outputs/figures/stage4a_scaling_spread.png          (spread of each column before and after)
+        outputs/tables/stage4a_scaling_summary.csv
+        outputs/tables/stage4a_scaling_ranking.csv       (which scaler is best, and the score)
 """
 import argparse
 from pathlib import Path
@@ -98,7 +98,7 @@ def spread_figure(summary, path, best):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--input", default="data/processed/h2_clustering_stage5.csv")
+    ap.add_argument("--input", default="data/processed/h2_clustering_stage3.csv")
     ap.add_argument("--out", default="outputs")
     a = ap.parse_args()
     out = Path(a.out)
@@ -108,10 +108,10 @@ def main():
     print(f"rows={len(df)} columns={df.shape[1]}")
 
     rank, best = ranking(df)
-    rank.to_csv(out / "tables/stage6_scaling_ranking.csv", index=False)
-    summary = distributions_figure(df, out / "figures/stage6_scaling_distributions.png", best)
-    summary.to_csv(out / "tables/stage6_scaling_summary.csv", index=False)
-    spread_figure(summary, out / "figures/stage6_scaling_spread.png", best)
+    rank.to_csv(out / "tables/stage4a_scaling_ranking.csv", index=False)
+    summary = distributions_figure(df, out / "figures/stage4a_scaling_distributions.png", best)
+    summary.to_csv(out / "tables/stage4a_scaling_summary.csv", index=False)
+    spread_figure(summary, out / "figures/stage4a_scaling_spread.png", best)
     print("\n=== WHICH SCALER GIVES THE MOST EQUAL SPREAD? (1.0 = perfectly equal, lower is better) ===")
     print(rank.to_string(index=False))
     print("BEST:", best)

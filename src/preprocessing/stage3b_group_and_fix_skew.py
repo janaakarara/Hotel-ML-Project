@@ -1,13 +1,13 @@
-﻿"""Stage 5: group rare categories (incl. Country hybrid) and fix skew in the numeric columns.
+"""Stage 5: group rare categories (incl. Country hybrid) and fix skew in the numeric columns.
 
-Applies the decisions made from the stage 4 figures. Writes a readable explanation file.
+Applies the decisions made from the stage 3a figures. Writes a readable explanation file.
 
 Usage (from the repo root):
-  python src/preprocessing/stage5_group_and_fix_skew.py
-Reads:  data/processed/h2_clustering_stage3.csv
-Writes: data/processed/h2_clustering_stage5.csv        (same rows, same order)
-        data/processed/stage5_decisions.md             (why each thing was done)
-        data/processed/stage5_transform_params.json    (fitted Yeo-Johnson lambdas)
+  python src/preprocessing/stage3b_group_and_fix_skew.py
+Reads:  data/processed/h2_clustering_stage2.csv
+Writes: data/processed/h2_clustering_stage3.csv        (same rows, same order)
+        data/processed/stage3_decisions.md             (why each thing was done)
+        data/processed/stage3_transform_params.json    (fitted Yeo-Johnson lambdas)
 """
 import argparse
 import json
@@ -82,7 +82,7 @@ def md_table(headers, rows):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--input", default="data/processed/h2_clustering_stage3.csv")
+    ap.add_argument("--input", default="data/processed/h2_clustering_stage2.csv")
     ap.add_argument("--out-dir", default="data/processed")
     a = ap.parse_args()
     out_dir = Path(a.out_dir)
@@ -92,9 +92,9 @@ def main():
     out = df.copy()
     n = len(df)
     md = ["# Stage 5: grouping and skew fixes", "",
-          "Applies the decisions made from the stage 4 figures. No row is removed and the row order is unchanged.", "",
+          "Applies the decisions made from the stage 3a figures. No row is removed and the row order is unchanged.", "",
           f"- **Input:** `{a.input}` ({n} rows, {df.shape[1]} columns)",
-          "- **Output:** `h2_clustering_stage5.csv`", ""]
+          "- **Output:** `h2_clustering_stage3.csv`", ""]
 
     # ---------- 1) Country: top 5 countries + continents ----------
     country_before = df["Country"].nunique()
@@ -131,7 +131,7 @@ def main():
     md += ["## 3. Skew fixes", "",
            "Skew under 0.5 is balanced, 0.5 to 1 moderate, over 1 high. Long tails would stretch the distance "
            "between points and let a few extreme bookings dominate the clusters. For each column we used the "
-           "method with the lowest skew in the stage 4 figure.", ""]
+           "method with the lowest skew in the stage 3a figure.", ""]
     srows = []
     for col, (method, new) in SKEW_FIXES.items():
         x = df[col].astype(float).values
@@ -149,7 +149,7 @@ def main():
     out = out.drop(columns=["Children"])
     params["HasChildren"] = {"method": "binary", "source": "Children", "rule": "Children > 0"}
     md += ["", f"**Children** became a 0/1 flag (`HasChildren`). {100 * (df['Children'] == 0).mean():.0f}% of values are 0, "
-           "so no transform can fix the skew (every method stayed above 2.8 in the stage 4 figure). "
+           "so no transform can fix the skew (every method stayed above 2.8 in the stage 3a figure). "
            "The question that matters for segments is whether children are present.", "",
            "**Adults** was checked and left unchanged (skew -0.24, already balanced).", "",
            "**ArrivalDateMonth** is unchanged here. It is a cyclical category and is handled in the encoding stage.", ""]
@@ -157,18 +157,18 @@ def main():
     # ---------- checks + output ----------
     assert len(out) == n, "row count changed"
     assert out.isna().sum().sum() == 0, "missing values appeared"
-    out.to_csv(out_dir / "h2_clustering_stage5.csv", index=False)
-    (out_dir / "stage5_transform_params.json").write_text(json.dumps(params, indent=2), encoding="utf-8")
+    out.to_csv(out_dir / "h2_clustering_stage3.csv", index=False)
+    (out_dir / "stage3_transform_params.json").write_text(json.dumps(params, indent=2), encoding="utf-8")
 
     md += ["## 4. Result", "",
            f"{df.shape[1]} columns in, {out.shape[1]} columns out, {n} rows kept.", "",
            "Final columns: " + ", ".join(f"`{c}`" for c in out.columns), "",
            "The skew fixes learn nothing from any target. Clustering is unsupervised, so fitting the Yeo-Johnson "
-           "setting on all rows leaks nothing. The fitted settings are saved in `stage5_transform_params.json` "
+           "setting on all rows leaks nothing. The fitted settings are saved in `stage3_transform_params.json` "
            "so the same transform can be repeated on new bookings.", "",
-           "The untransformed columns stay in `h2_clustering_stage3.csv` (same row order) for describing the "
+           "The untransformed columns stay in `h2_clustering_stage2.csv` (same row order) for describing the "
            "clusters afterwards.", ""]
-    (out_dir / "stage5_decisions.md").write_text("\n".join(md), encoding="utf-8")
+    (out_dir / "stage3_decisions.md").write_text("\n".join(md), encoding="utf-8")
 
     print("\n========== STAGE 5 COMPLETED ==========")
     print(f"rows {n}, columns {df.shape[1]} -> {out.shape[1]}")

@@ -1,0 +1,48 @@
+{
+  "one_hot": {
+    "MarketSegment": [
+      "MarketSegment_Corporate",
+      "MarketSegment_Direct",
+      "MarketSegment_Groups",
+      "MarketSegment_Offline TA/TO",
+      "MarketSegment_Online TA",
+      "MarketSegment_Other"
+    ],
+    "Meal": [
+      "Meal_BB",
+      "Meal_HB/FB",
+      "Meal_SC"
+    ],
+    "Country": [
+      "Country_Africa",
+      "Country_Asia",
+      "Country_DEU",
+      "Country_ESP",
+      "Country_FRA",
+      "Country_GBR",
+      "Country_North America",
+      "Country_Other",
+      "Country_PRT",
+      "Country_Rest of Europe",
+      "Country_South America"
+    ],
+    "CustomerType": [
+      "CustomerType_Contract",
+      "CustomerType_Transient",
+      "CustomerType_Transient-Party/Group"
+    ],
+    "ReservedRoomType": [
+      "ReservedRoomType_A",
+      "ReservedRoomType_B",
+      "ReservedRoomType_D",
+      "ReservedRoomType_E",
+      "ReservedRoomType_F",
+      "ReservedRoomType_Other"
+    ]
+  },
+  "month": [
+    "ArrivalMonth_sin",
+    "ArrivalMonth_cos"
+  ],
+  "cat_weight": 1.0
+}
