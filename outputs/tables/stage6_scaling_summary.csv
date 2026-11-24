@@ -1,0 +1,17 @@
+column,version,std,min,max,range
+Adults,Original,0.535,0.0,4.0,4.0
+Adults,StandardScaler,1.0,-3.516,3.954,7.47
+Adults,MinMax (0 to 1),0.134,0.0,1.0,1.0
+Adults,RobustScaler,0.535,-2.0,2.0,4.0
+LeadTime_yj,Original,3.537,0.0,16.337,16.337
+LeadTime_yj,StandardScaler,1.0,-1.859,2.76,4.618
+LeadTime_yj,MinMax (0 to 1),0.217,0.0,1.0,1.0
+LeadTime_yj,RobustScaler,0.651,-1.254,1.753,3.007
+StaysInWeekNights_yj,Original,0.563,0.0,4.985,4.985
+StaysInWeekNights_yj,StandardScaler,1.0,-2.169,6.691,8.86
+StaysInWeekNights_yj,MinMax (0 to 1),0.113,0.0,1.0,1.0
+StaysInWeekNights_yj,RobustScaler,0.672,-1.452,4.505,5.957
+StaysInWeekendNights_sqrt,Original,0.63,0.0,3.742,3.742
+StaysInWeekendNights_sqrt,StandardScaler,1.0,-1.098,4.845,5.944
+StaysInWeekendNights_sqrt,MinMax (0 to 1),0.168,0.0,1.0,1.0
+StaysInWeekendNights_sqrt,RobustScaler,0.445,-0.707,1.939,2.646
