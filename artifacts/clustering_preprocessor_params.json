@@ -1,0 +1,98 @@
+{
+  "cat_weight": 1.0,
+  "yeo_johnson_lambda": {
+    "LeadTime_yj": 0.2545151684215529,
+    "StaysInWeekNights_yj": 0.18045767104302674
+  },
+  "scaler_mean": {
+    "Adults": 1.882702315408402,
+    "LeadTime_yj": 6.5752738345827915,
+    "StaysInWeekNights_yj": 1.220400896177822,
+    "StaysInWeekendNights_sqrt": 0.6915359453402461
+  },
+  "scaler_std": {
+    "Adults": 0.5354766636018374,
+    "LeadTime_yj": 3.537357989450947,
+    "StaysInWeekNights_yj": 0.562578845626185,
+    "StaysInWeekendNights_sqrt": 0.6295364055628878
+  },
+  "categories": {
+    "MarketSegment": [
+      "Corporate",
+      "Direct",
+      "Groups",
+      "Offline TA/TO",
+      "Online TA",
+      "Other"
+    ],
+    "Meal": [
+      "BB",
+      "HB/FB",
+      "SC"
+    ],
+    "Country": [
+      "Africa",
+      "Asia",
+      "DEU",
+      "ESP",
+      "FRA",
+      "GBR",
+      "North America",
+      "Other",
+      "PRT",
+      "Rest of Europe",
+      "South America"
+    ],
+    "CustomerType": [
+      "Contract",
+      "Transient",
+      "Transient-Party/Group"
+    ],
+    "ReservedRoomType": [
+      "A",
+      "B",
+      "D",
+      "E",
+      "F",
+      "Other"
+    ]
+  },
+  "feature_names": [
+    "Adults",
+    "LeadTime_yj",
+    "StaysInWeekNights_yj",
+    "StaysInWeekendNights_sqrt",
+    "HasChildren",
+    "ArrivalMonth_sin",
+    "ArrivalMonth_cos",
+    "MarketSegment_Corporate",
+    "MarketSegment_Direct",
+    "MarketSegment_Groups",
+    "MarketSegment_Offline TA/TO",
+    "MarketSegment_Online TA",
+    "MarketSegment_Other",
+    "Meal_BB",
+    "Meal_HB/FB",
+    "Meal_SC",
+    "Country_Africa",
+    "Country_Asia",
+    "Country_DEU",
+    "Country_ESP",
+    "Country_FRA",
+    "Country_GBR",
+    "Country_North America",
+    "Country_Other",
+    "Country_PRT",
+    "Country_Rest of Europe",
+    "Country_South America",
+    "CustomerType_Contract",
+    "CustomerType_Transient",
+    "CustomerType_Transient-Party/Group",
+    "ReservedRoomType_A",
+    "ReservedRoomType_B",
+    "ReservedRoomType_D",
+    "ReservedRoomType_E",
+    "ReservedRoomType_F",
+    "ReservedRoomType_Other"
+  ]
+}
