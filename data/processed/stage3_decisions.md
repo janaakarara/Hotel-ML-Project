@@ -1,4 +1,4 @@
-# Stage 5: grouping and skew fixes
+# Stage 3b: grouping and skew fixes
 
 Applies the decisions made from the stage 3a figures. No row is removed and the row order is unchanged.
 

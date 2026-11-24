@@ -1,8 +1,8 @@
-# Stage 3: Column Removal Decisions
+# Stage 2b: Column Removal Decisions
 
 ## 1. Objective
 
-Stage 3 removes the 11 columns selected for removal based on the Stage 2 redundancy analysis.
+Stage 2b removes the 11 columns selected for removal based on the Stage 2a redundancy analysis.
 The purpose is to reduce redundant and low-information features before clustering.
 
 ## 2. Input and Output
@@ -16,7 +16,7 @@ The purpose is to reduce redundant and low-information features before clusterin
 
 ## 3. Reasons for Dropping Each Column
 
-| Column | Reason | Evidence | Stage 2 reference |
+| Column | Reason | Evidence | Stage 2a reference |
 |---|---|---|---|
 | `Babies` | Near-constant | 99.32% of rows contain 0. | `stage2a_constancy.png` |
 | `DaysInWaitingList` | Near-constant | 98.65% of rows contain 0. | `stage2a_constancy.png` |
@@ -46,10 +46,10 @@ The purpose is to reduce redundant and low-information features before clusterin
 
 ## 5. Final Result
 
-Stage 3 reduced the dataset from **22 to 11 columns**, while preserving all **52817 rows** and their original order.
+Stage 2b reduced the dataset from **22 to 11 columns**, while preserving all **52817 rows** and their original order.
 
 No encoding, scaling, grouping, or additional statistical analysis is performed in this stage.
 
 ## 6. Methodological Note
 
-The removal decisions are based on the Stage 2 analysis and the documented judgment calls above. Stage 3 only applies these decisions; it does not recalculate the Stage 2 statistics.
+The removal decisions are based on the Stage 2a analysis and the documented judgment calls above. Stage 2b only applies these decisions; it does not recalculate the Stage 2a statistics.

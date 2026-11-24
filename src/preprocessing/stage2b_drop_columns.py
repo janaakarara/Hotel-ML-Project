@@ -1,4 +1,4 @@
-﻿"""Stage 3: Drop columns selected from Stage 2 redundancy analysis."""
+﻿"""Stage 2b: Drop columns selected from Stage 2a redundancy analysis."""
 
 import argparse
 from pathlib import Path
@@ -51,11 +51,11 @@ def main():
     out.to_csv(a.output, index=False)
 
     report = [
-        "# Stage 3: Column Removal Decisions",
+        "# Stage 2b: Column Removal Decisions",
         "",
         "## 1. Objective",
         "",
-        "Stage 3 removes the 11 columns selected for removal based on the Stage 2 redundancy analysis.",
+        "Stage 2b removes the 11 columns selected for removal based on the Stage 2a redundancy analysis.",
         "The purpose is to reduce redundant and low-information features before clustering.",
         "",
         "## 2. Input and Output",
@@ -69,7 +69,7 @@ def main():
         "",
         "## 3. Reasons for Dropping Each Column",
         "",
-        "| Column | Reason | Evidence | Stage 2 reference |",
+        "| Column | Reason | Evidence | Stage 2a reference |",
         "|---|---|---|---|",
     ]
 
@@ -91,22 +91,22 @@ def main():
         "",
         "## 5. Final Result",
         "",
-        f"Stage 3 reduced the dataset from **{len(df.columns)} to {len(out.columns)} columns**, "
+        f"Stage 2b reduced the dataset from **{len(df.columns)} to {len(out.columns)} columns**, "
         f"while preserving all **{len(df)} rows** and their original order.",
         "",
         "No encoding, scaling, grouping, or additional statistical analysis is performed in this stage.",
         "",
         "## 6. Methodological Note",
         "",
-        "The removal decisions are based on the Stage 2 analysis and the documented judgment calls above. "
-        "Stage 3 only applies these decisions; it does not recalculate the Stage 2 statistics.",
+        "The removal decisions are based on the Stage 2a analysis and the documented judgment calls above. "
+        "Stage 2b only applies these decisions; it does not recalculate the Stage 2a statistics.",
         "",
     ]
 
     Path(a.report).parent.mkdir(parents=True, exist_ok=True)
     Path(a.report).write_text("\n".join(report), encoding="utf-8")
 
-    print("\n========== STAGE 3 COMPLETED ==========")
+    print("\n========== STAGE 2b COMPLETED ==========")
     print(f"Rows preserved: {len(out)}")
     print(f"Columns dropped: {len(DECISIONS)}")
     print(f"Columns retained: {len(out.columns)}")

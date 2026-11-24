@@ -1,4 +1,4 @@
-"""Stage 5: group rare categories (incl. Country hybrid) and fix skew in the numeric columns.
+﻿"""Stage 3b: group rare categories (incl. Country hybrid) and fix skew in the numeric columns.
 
 Applies the decisions made from the stage 3a figures. Writes a readable explanation file.
 
@@ -91,7 +91,7 @@ def main():
     df = pd.read_csv(a.input)
     out = df.copy()
     n = len(df)
-    md = ["# Stage 5: grouping and skew fixes", "",
+    md = ["# Stage 3b: grouping and skew fixes", "",
           "Applies the decisions made from the stage 3a figures. No row is removed and the row order is unchanged.", "",
           f"- **Input:** `{a.input}` ({n} rows, {df.shape[1]} columns)",
           "- **Output:** `h2_clustering_stage3.csv`", ""]
@@ -170,7 +170,7 @@ def main():
            "clusters afterwards.", ""]
     (out_dir / "stage3_decisions.md").write_text("\n".join(md), encoding="utf-8")
 
-    print("\n========== STAGE 5 COMPLETED ==========")
+    print("\n========== STAGE 3b COMPLETED ==========")
     print(f"rows {n}, columns {df.shape[1]} -> {out.shape[1]}")
     print("columns:", ", ".join(out.columns))
     print("\nCountry groups (% of rows):")

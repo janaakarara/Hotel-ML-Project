@@ -1,4 +1,4 @@
-"""Stage 4a: look at skew (numeric columns) and rare categories (category columns).
+﻿"""Stage 3a: look at skew (numeric columns) and rare categories (category columns).
 
 Only MEASURES and DRAWS. No column is changed. You decide what to do by reading the figures.
 
