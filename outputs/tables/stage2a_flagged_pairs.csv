@@ -1,5 +1,5 @@
 kind,col_a,col_b,value
 cramers_v,MarketSegment,has_company,0.851
 cramers_v,DistributionChannel,Agent,0.858
-cramers_v,DistributionChannel,has_company,0.818
+cramers_v,DistributionChannel,has_company,0.819
 eta,ArrivalDateWeekNumber,ArrivalDateMonth,0.995

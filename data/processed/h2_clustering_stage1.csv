@@ -468,7 +468,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 2,2015,8,33,10,1,1,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 0,2015,8,33,10,1,1,2,1,0,BB,MAR,Direct,Direct,0,0,0,A,none,0,0,Transient
 1,2015,8,33,10,1,1,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,A,9,1,0,Transient
-1,2015,8,33,10,1,1,0,3,0,BB,PRT,Direct,Direct,0,0,0,B,none,0,0,Transient-Party
 3,2015,8,33,10,1,1,2,2,0,BB,ESP,Online TA,TA/TO,0,0,0,F,9,0,0,Contract
 39,2015,8,33,10,1,1,2,0,0,BB,PRT,Groups,TA/TO,0,0,0,A,1,0,0,Transient-Party
 0,2015,8,33,10,1,2,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -524,7 +523,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 3,2015,8,33,11,0,2,1,2,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 1,2015,8,33,11,0,3,1,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 3,2015,8,33,11,0,3,2,0,0,SC,PRT,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
-104,2015,8,33,11,0,3,0,2,0,BB,FRA,Online TA,TA/TO,0,0,0,B,7,0,0,Transient-Party
 1,2015,8,33,11,0,3,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Contract
 147,2015,8,33,11,0,3,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 0,2015,8,33,11,0,3,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Contract
@@ -689,7 +687,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 5,2015,8,34,16,1,0,1,0,0,BB,PRT,Direct,Direct,0,0,0,A,14,0,0,Transient
 137,2015,8,34,16,1,0,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 3,2015,8,34,16,2,0,2,0,0,BB,PRT,Direct,Direct,0,0,0,B,none,0,0,Transient-Party
-3,2015,8,34,16,2,0,0,2,0,BB,PRT,Direct,Direct,0,0,0,B,none,0,0,Transient-Party
 0,2015,8,34,16,2,1,2,0,0,BB,PRT,Direct,Direct,0,0,0,A,none,0,0,Transient
 1,2015,8,34,16,2,1,2,0,0,BB,FRA,Direct,Direct,0,0,0,D,14,0,0,Group
 5,2015,8,34,16,2,1,1,0,0,BB,IRL,Direct,Direct,0,0,0,A,14,0,0,Transient
@@ -1051,7 +1048,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 119,2015,8,35,27,2,6,2,0,0,BB,ISR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 0,2015,8,35,27,2,6,2,0,0,BB,PRT,Direct,Direct,0,0,0,A,none,0,0,Transient
 10,2015,8,35,28,0,1,1,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Contract
-15,2015,8,35,28,0,1,0,2,0,BB,PRT,Complementary,Direct,0,0,0,B,none,1,0,Transient
 24,2015,8,35,28,0,1,2,0,0,BB,PRT,Direct,Direct,0,0,0,A,14,0,0,Transient
 10,2015,8,35,28,0,1,2,0,1,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Contract
 15,2015,8,35,28,0,1,2,0,1,BB,PRT,Complementary,Direct,0,0,0,B,none,1,0,Transient
@@ -2585,7 +2581,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 40,2015,10,43,19,1,3,1,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,83,0,0,Contract
 48,2015,10,43,19,1,3,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Contract
 66,2015,10,43,19,1,3,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Contract
-48,2015,10,43,19,1,3,0,2,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,B,13,0,0,Transient-Party
 66,2015,10,43,19,1,3,2,0,0,BB,IRL,Online TA,TA/TO,0,0,0,A,9,0,0,Contract
 61,2015,10,43,19,1,3,2,0,0,BB,CHE,Online TA,TA/TO,0,0,0,D,7,0,0,Transient
 61,2015,10,43,19,1,4,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Contract
@@ -2952,7 +2947,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 100,2015,12,50,12,2,1,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Contract
 100,2015,12,50,12,2,1,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Contract
 100,2015,12,50,12,2,1,1,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Contract
-6,2015,12,51,13,1,0,0,3,0,BB,PRT,Online TA,TA/TO,0,0,0,B,8,0,0,Transient-Party
 8,2015,12,51,13,1,0,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,B,8,0,0,Transient-Party
 11,2015,12,51,13,2,1,1,0,0,BB,BEL,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 1,2015,12,51,14,1,0,1,0,0,BB,IRL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -2970,7 +2964,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 6,2015,12,51,17,0,2,1,0,0,BB,BRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 124,2015,12,51,17,0,3,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 8,2015,12,51,17,0,3,2,0,0,BB,BRA,Direct,Direct,0,0,0,A,14,0,0,Transient
-6,2015,12,51,18,0,1,0,2,1,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 6,2015,12,51,18,0,1,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 2,2015,12,51,18,0,1,1,1,0,BB,PRT,Direct,Direct,0,0,0,B,14,0,0,Transient
 9,2015,12,51,18,0,1,2,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -3003,7 +2996,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 19,2015,12,52,23,0,1,2,0,0,BB,CHN,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 15,2015,12,52,23,0,1,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,8,0,0,Transient
 1,2015,12,52,23,0,3,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-1,2015,12,52,23,0,3,0,2,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 10,2015,12,52,23,0,4,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 125,2015,12,52,23,0,4,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Contract
 2,2015,12,52,23,2,4,3,0,0,BB,ETH,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
@@ -3012,7 +3004,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 0,2015,12,52,24,0,1,2,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 2,2015,12,52,24,0,1,2,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 12,2015,12,52,24,0,2,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-12,2015,12,52,24,0,2,0,2,0,BB,BEL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 5,2015,12,52,24,0,2,2,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 2,2015,12,52,24,0,3,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 115,2015,12,52,24,0,3,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Contract
@@ -3034,7 +3025,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 119,2015,12,52,26,2,1,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 11,2015,12,52,26,2,1,2,0,1,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 22,2015,12,52,26,2,1,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,11,0,0,Transient
-7,2015,12,52,26,2,1,0,2,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 14,2015,12,52,26,2,1,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 14,2015,12,52,26,2,1,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 14,2015,12,52,26,2,2,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -3194,7 +3184,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 0,2016,1,2,3,1,0,1,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 2,2016,1,2,3,1,0,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 1,2016,1,2,3,1,0,2,0,0,SC,SAU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-30,2016,1,2,3,1,0,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 0,2016,1,2,3,1,0,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 31,2016,1,2,3,1,0,2,0,0,BB,BRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 2,2016,1,2,3,1,0,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -3235,7 +3224,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 0,2016,1,2,6,0,1,1,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 0,2016,1,2,6,0,1,1,0,0,BB,KOR,Direct,Direct,0,0,0,A,none,0,0,Transient
 1,2016,1,2,6,0,1,2,0,0,BB,USA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
-33,2016,1,2,6,0,2,0,2,0,BB,BRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 0,2016,1,2,6,0,2,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 24,2016,1,2,6,0,2,2,0,0,BB,BRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 24,2016,1,2,6,0,2,2,0,0,BB,BRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
@@ -3247,7 +3235,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 1,2016,1,2,7,0,1,1,0,0,BB,ARE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 0,2016,1,2,7,0,1,1,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 0,2016,1,2,7,0,1,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-0,2016,1,2,7,0,1,0,2,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 5,2016,1,2,7,0,1,2,0,0,SC,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 2,2016,1,2,7,0,3,2,0,0,BB,IND,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 6,2016,1,2,7,0,3,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
@@ -3322,14 +3309,11 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 4,2016,1,3,14,0,1,2,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 10,2016,1,3,14,0,1,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 9,2016,1,3,14,0,2,2,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-40,2016,1,3,14,0,3,0,2,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 43,2016,1,3,14,0,3,2,2,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-40,2016,1,3,14,0,3,0,2,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 40,2016,1,3,14,0,3,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 43,2016,1,3,14,0,3,2,2,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 43,2016,1,3,14,0,3,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 43,2016,1,3,14,0,3,2,2,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-40,2016,1,3,14,0,3,0,2,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 43,2016,1,3,14,0,3,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 38,2016,1,3,14,0,3,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 10,2016,1,3,14,1,3,1,0,0,BB,ZAF,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -3359,7 +3343,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 9,2016,1,3,15,1,2,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 43,2016,1,3,15,1,2,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 12,2016,1,3,15,2,2,2,0,0,SC,OMN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
-11,2016,1,3,15,2,2,0,2,0,BB,OMN,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 12,2016,1,3,15,2,2,2,1,0,SC,OMN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 18,2016,1,3,15,2,3,2,2,0,BB,IRQ,Online TA,TA/TO,0,0,0,F,9,0,0,Transient-Party
 18,2016,1,3,15,2,3,2,0,0,BB,IRQ,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
@@ -3408,7 +3391,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 15,2016,1,4,18,1,2,2,0,0,BB,TUR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 150,2016,1,4,18,1,2,1,0,0,BB,NLD,Offline TA/TO,TA/TO,0,0,0,A,19,0,63,Transient-Party
 16,2016,1,4,18,1,3,2,0,0,BB,BRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-16,2016,1,4,18,1,3,0,2,0,BB,BRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 0,2016,1,4,18,1,3,2,0,0,BB,AGO,Direct,Direct,0,0,0,A,none,0,0,Transient
 150,2016,1,4,18,1,4,1,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,19,0,63,Transient-Party
 18,2016,1,4,18,1,2,2,0,0,BB,PRT,Direct,Direct,0,0,0,A,14,0,0,Transient
@@ -3667,7 +3649,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 8,2016,2,6,5,0,2,3,0,0,BB,ESP,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 31,2016,2,6,5,0,2,2,0,0,SC,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 8,2016,2,6,5,0,2,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-43,2016,2,6,5,1,2,0,2,0,BB,BEL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 60,2016,2,6,5,1,2,2,0,0,BB,CHN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 33,2016,2,6,5,1,2,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 12,2016,2,6,5,1,2,1,0,0,BB,ARE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -3693,7 +3674,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 32,2016,2,6,6,0,1,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 32,2016,2,6,6,1,1,2,0,0,SC,BRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 15,2016,2,6,6,1,1,1,0,0,BB,FRA,Direct,Direct,0,0,0,A,14,0,0,Transient
-35,2016,2,6,6,1,1,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 33,2016,2,6,6,1,1,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 85,2016,2,6,6,1,1,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Contract
 16,2016,2,6,6,1,1,1,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -3725,7 +3705,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 35,2016,2,7,7,2,2,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 46,2016,2,7,7,2,3,2,0,0,BB,DEU,Direct,Direct,0,0,0,B,14,0,0,Transient
 46,2016,2,7,7,2,3,2,0,0,BB,DEU,Direct,Direct,0,0,0,D,14,0,0,Transient
-46,2016,2,7,7,2,3,0,1,0,BB,PRT,Direct,Direct,0,0,0,B,14,0,0,Transient
 27,2016,2,7,7,4,5,1,0,0,BB,CHN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 33,2016,2,7,8,1,0,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 39,2016,2,7,8,1,1,2,0,0,BB,CHN,Online TA,TA/TO,0,0,0,A,15,0,0,Transient
@@ -3736,7 +3715,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 56,2016,2,7,8,1,2,2,0,0,BB,BRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 31,2016,2,7,8,1,2,1,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 33,2016,2,7,8,1,3,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-44,2016,2,7,8,1,3,0,2,0,BB,ITA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 37,2016,2,7,8,1,4,2,0,0,SC,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 34,2016,2,7,8,1,4,1,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 33,2016,2,7,8,1,4,2,1,0,BB,FRA,Online TA,TA/TO,0,0,0,D,7,0,0,Transient
@@ -3747,7 +3725,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 1,2016,2,7,9,0,1,2,0,0,SC,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 17,2016,2,7,9,0,2,3,0,0,BB,BRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 41,2016,2,7,9,0,2,1,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
-64,2016,2,7,9,0,3,0,2,0,BB,POL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 1,2016,2,7,9,0,3,1,0,0,BB,PRT,Direct,Direct,0,0,0,A,none,0,0,Transient
 66,2016,2,7,9,0,3,2,0,0,BB,POL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 34,2016,2,7,9,0,4,2,0,0,SC,LUX,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -3784,7 +3761,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 41,2016,2,7,11,1,3,2,0,0,BB,GBR,Direct,Direct,0,0,0,B,14,0,0,Transient-Party
 35,2016,2,7,11,1,3,2,0,0,BB,LTU,Online TA,TA/TO,0,0,0,A,15,0,0,Transient
 44,2016,2,7,11,1,3,2,0,0,BB,CZE,Direct,Direct,0,0,0,A,14,0,0,Transient
-40,2016,2,7,11,1,3,0,2,0,BB,KOR,Direct,Direct,0,0,0,B,14,0,0,Transient-Party
 70,2016,2,7,11,0,3,2,0,0,SC,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 39,2016,2,7,11,2,3,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 38,2016,2,7,11,2,3,2,0,0,SC,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -3801,7 +3777,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 50,2016,2,7,12,0,2,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 19,2016,2,7,12,0,2,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 40,2016,2,7,12,1,2,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-37,2016,2,7,12,1,2,0,2,0,BB,USA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 42,2016,2,7,12,1,2,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 9,2016,2,7,12,1,2,1,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 17,2016,2,7,12,1,2,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -3952,7 +3927,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 7,2016,2,9,21,2,0,2,0,0,SC,ZAF,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 73,2016,2,9,21,2,1,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 19,2016,2,9,21,2,0,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-73,2016,2,9,21,2,1,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 9,2016,2,9,21,2,1,1,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 76,2016,2,9,21,2,1,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 9,2016,2,9,21,2,1,1,0,0,SC,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
@@ -4060,7 +4034,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 54,2016,2,9,27,2,1,2,0,0,SC,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 66,2016,2,9,27,2,2,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 115,2016,2,9,27,2,2,1,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,134,0,0,Transient-Party
-65,2016,2,9,27,2,2,0,2,0,BB,ITA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 115,2016,2,9,27,2,2,1,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,134,0,0,Transient-Party
 115,2016,2,9,27,2,3,1,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,134,0,0,Transient-Party
 57,2016,2,9,27,2,4,2,0,0,BB,CHE,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
@@ -4199,7 +4172,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 62,2016,3,10,4,1,2,2,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 29,2016,3,10,4,1,2,2,1,0,BB,TUR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 62,2016,3,10,4,2,2,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
-7,2016,3,10,4,2,2,0,2,0,BB,CHN,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 8,2016,3,10,4,2,2,2,0,0,BB,CHN,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 14,2016,3,10,4,2,7,1,0,0,BB,CHN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 14,2016,3,10,4,2,7,2,0,0,HB,CHN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -4549,7 +4521,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 38,2016,3,12,18,2,3,2,2,0,BB,ESP,Direct,Direct,0,0,0,F,14,0,0,Transient
 83,2016,3,12,18,2,5,2,0,0,BB,AUT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 5,2016,3,12,19,0,1,1,0,0,BB,PRT,Groups,TA/TO,0,0,0,A,1,0,0,Transient
-72,2016,3,12,19,0,1,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 85,2016,3,12,19,0,1,2,0,0,BB,FRA,Direct,Direct,0,0,0,A,14,0,0,Transient
 72,2016,3,12,19,0,1,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 17,2016,3,12,19,1,1,1,0,0,SC,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -4558,7 +4529,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 45,2016,3,12,19,1,1,3,0,0,BB,IRL,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 5,2016,3,12,19,2,1,2,0,0,BB,PRT,Groups,TA/TO,0,0,0,A,1,0,0,Transient
 5,2016,3,12,19,2,1,2,0,0,BB,PRT,Groups,TA/TO,0,0,0,A,1,0,0,Transient-Party
-75,2016,3,12,19,2,1,0,2,0,BB,MEX,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 393,2016,3,12,19,2,1,2,0,0,BB,PRT,Groups,TA/TO,0,0,0,A,1,0,0,Transient
 393,2016,3,12,19,2,1,2,0,0,BB,PRT,Groups,TA/TO,0,0,0,A,1,0,0,Transient
 393,2016,3,12,19,2,1,2,0,0,BB,PRT,Groups,TA/TO,0,0,0,A,1,0,0,Transient
@@ -4690,7 +4660,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 37,2016,3,13,23,2,4,2,1,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 36,2016,3,13,23,2,4,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 108,2016,3,13,23,2,5,2,0,0,BB,CHE,Direct,Direct,0,0,0,B,14,0,0,Transient-Party
-107,2016,3,13,23,2,5,0,2,0,BB,CHE,Direct,Direct,0,0,0,B,14,0,0,Transient-Party
 36,2016,3,13,23,2,4,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 81,2016,3,13,23,2,5,2,0,0,BB,CHE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 36,2016,3,13,24,0,1,2,1,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -4738,7 +4707,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 108,2016,3,13,24,2,3,2,0,0,BB,SWE,Online TA,TA/TO,0,0,0,B,8,0,0,Transient-Party
 85,2016,3,13,24,2,3,2,2,0,BB,ESP,Online TA,TA/TO,0,0,0,F,9,0,0,Transient-Party
 85,2016,3,13,24,2,3,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,D,9,0,0,Transient-Party
-108,2016,3,13,24,2,3,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,8,0,0,Transient-Party
 85,2016,3,13,24,2,3,2,2,0,BB,ESP,Online TA,TA/TO,0,0,0,F,9,0,0,Transient-Party
 106,2016,3,13,24,1,3,2,0,0,BB,ESP,Direct,Direct,0,0,0,D,14,0,0,Transient
 83,2016,3,13,24,1,3,2,0,0,BB,CHE,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -4790,7 +4758,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 7,2016,3,13,25,2,2,2,0,0,BB,ARE,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 81,2016,3,13,25,2,2,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 0,2016,3,13,25,2,2,2,2,0,BB,CHE,Online TA,TA/TO,0,0,0,F,9,0,0,Transient-Party
-34,2016,3,13,25,2,2,0,2,0,BB,AUT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 80,2016,3,13,25,2,2,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,118,0,0,Transient
 39,2016,3,13,25,2,2,2,1,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 35,2016,3,13,25,2,2,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,3,0,0,Transient
@@ -4890,7 +4857,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 123,2016,3,14,30,0,3,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 29,2016,3,14,30,0,3,2,0,0,BB,IRN,Direct,Direct,0,0,0,D,14,0,0,Transient
 123,2016,3,14,30,0,3,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
-123,2016,3,14,30,0,3,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 108,2016,3,14,30,0,3,2,0,0,BB,BRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 89,2016,3,14,30,0,3,2,0,0,SC,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 61,2016,3,14,30,0,3,3,0,0,BB,ITA,Direct,Direct,0,0,0,A,14,0,0,Transient
@@ -4928,7 +4894,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 30,2016,3,14,31,0,3,3,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 58,2016,3,14,31,0,3,3,0,0,BB,ESP,Online TA,TA/TO,0,0,0,D,9,0,0,Transient-Party
 76,2016,3,14,31,0,3,2,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,8,0,0,Transient
-113,2016,3,14,31,0,3,0,2,0,BB,BEL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 60,2016,3,14,31,0,3,2,1,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 90,2016,3,14,31,0,3,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 58,2016,3,14,31,0,3,2,0,0,BB,CZE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -4974,7 +4939,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 48,2016,4,14,1,2,3,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 75,2016,4,14,1,2,3,2,0,0,BB,DNK,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 50,2016,4,14,1,2,3,2,0,0,BB,ARG,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-109,2016,4,14,1,2,4,0,1,0,BB,BEL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 111,2016,4,14,1,2,4,2,0,0,BB,POL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 64,2016,4,14,1,4,10,1,0,0,BB,PRT,Online TA,TA/TO,0,0,0,D,8,0,0,Transient
 31,2016,4,14,2,0,1,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -5057,13 +5021,11 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 91,2016,4,15,4,1,2,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,3,0,0,Transient
 101,2016,4,15,4,1,2,1,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,3,0,41,Transient
 68,2016,4,15,4,1,2,2,0,0,SC,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-147,2016,4,15,4,1,3,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 147,2016,4,15,4,1,3,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 111,2016,4,15,4,1,3,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 113,2016,4,15,4,1,3,2,0,0,BB,USA,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 50,2016,4,15,4,1,3,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 5,2016,4,15,4,1,3,1,0,0,BB,PRT,Aviation,Corporate,0,0,0,A,none,1,0,Transient-Party
-91,2016,4,15,4,1,3,0,2,0,BB,BEL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 93,2016,4,15,4,1,3,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 89,2016,4,15,4,1,3,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 90,2016,4,15,4,1,3,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -5297,7 +5259,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 76,2016,4,16,12,0,4,2,0,0,SC,ARG,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 78,2016,4,16,12,0,4,2,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 120,2016,4,16,12,0,4,2,0,0,SC,IRL,Online TA,TA/TO,0,0,0,A,8,0,0,Transient
-123,2016,4,16,12,0,5,0,2,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 125,2016,4,16,12,0,5,2,0,0,BB,IRL,Online TA,TA/TO,0,0,0,D,8,0,0,Transient
 9,2016,4,16,12,0,5,2,0,0,BB,GEO,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 90,2016,4,16,12,0,4,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -5649,7 +5610,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 57,2016,4,18,24,2,1,2,2,0,HB,ITA,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 68,2016,4,18,24,2,2,1,1,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,83,0,0,Transient
 80,2016,4,18,24,2,2,2,2,0,HB,USA,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
-68,2016,4,18,24,2,2,0,2,0,BB,NLD,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 111,2016,4,18,24,2,2,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 198,2016,4,18,24,2,2,2,0,0,BB,PRT,Direct,Direct,0,0,0,A,14,0,0,Group
 11,2016,4,18,24,2,2,2,2,0,BB,FRA,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
@@ -6323,7 +6283,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 29,2016,5,21,18,0,1,2,0,0,BB,ISR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 10,2016,5,21,18,0,2,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 81,2016,5,21,18,0,2,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-9,2016,5,21,18,0,2,0,2,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 57,2016,5,21,18,0,2,3,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,22,0,0,Transient
 40,2016,5,21,18,0,2,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 37,2016,5,21,18,0,2,1,0,0,BB,PRT,Corporate,Corporate,0,0,0,A,none,1,0,Transient
@@ -6437,7 +6396,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 68,2016,5,21,21,2,3,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 28,2016,5,21,21,2,3,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 23,2016,5,21,21,2,4,2,0,0,BB,IND,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-23,2016,5,21,21,2,4,0,2,0,BB,IND,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 138,2016,5,21,21,2,5,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 76,2016,5,22,22,1,0,2,0,0,SC,USA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 2,2016,5,22,22,1,0,1,0,0,BB,PRT,Aviation,Corporate,0,0,0,D,none,1,0,Transient
@@ -6655,7 +6613,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 12,2016,5,23,31,0,3,2,0,0,BB,DNK,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 15,2016,5,23,31,0,3,2,0,0,SC,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 124,2016,5,23,31,0,3,2,1,0,BB,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-150,2016,5,23,31,0,3,0,2,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 21,2016,5,23,31,0,3,2,1,0,BB,NIC,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 18,2016,5,23,31,0,4,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,D,15,0,0,Transient
 25,2016,5,23,31,0,4,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -7003,7 +6960,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 71,2016,6,25,17,2,2,3,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,3,0,0,Transient-Party
 15,2016,6,25,17,2,2,3,0,0,BB,IND,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 71,2016,6,25,17,2,2,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,3,0,0,Transient-Party
-45,2016,6,25,17,2,2,0,2,0,BB,PRT,Direct,Direct,0,0,0,B,none,0,0,Transient-Party
 26,2016,6,25,17,2,4,3,0,0,BB,ITA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 161,2016,6,25,17,2,5,2,0,0,SC,IRL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 38,2016,6,25,17,2,5,1,0,0,BB,RUS,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -7160,7 +7116,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 65,2016,6,27,26,2,2,3,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,8,0,0,Transient
 116,2016,6,27,26,2,2,2,2,0,BB,SWE,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 60,2016,6,27,26,2,2,2,0,0,BB,CHE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-115,2016,6,27,26,2,2,0,2,0,BB,SWE,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 99,2016,6,27,26,2,2,3,0,0,BB,ARE,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 55,2016,6,27,26,2,2,2,0,0,BB,CHE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 31,2016,6,27,26,2,2,3,0,0,HB,ESP,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -7405,7 +7360,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 140,2016,7,28,4,1,5,2,0,0,BB,ISR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 101,2016,7,28,4,2,5,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 140,2016,7,28,4,1,5,2,0,0,BB,ISR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
-193,2016,7,28,4,3,10,0,2,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 196,2016,7,28,4,3,10,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 188,2016,7,28,4,7,17,2,0,0,BB,AGO,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 47,2016,7,28,5,0,1,2,1,0,BB,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -7458,12 +7412,9 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 365,2016,7,28,7,0,2,2,0,0,BB,PRT,Groups,TA/TO,0,0,0,A,1,0,0,Transient
 186,2016,7,28,7,0,2,2,2,0,BB,NOR,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 159,2016,7,28,7,0,1,3,0,0,BB,DNK,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
-187,2016,7,28,7,0,2,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 188,2016,7,28,7,0,2,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-187,2016,7,28,7,0,2,0,2,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 188,2016,7,28,7,0,2,2,2,0,BB,GBR,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 188,2016,7,28,7,0,2,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-187,2016,7,28,7,0,2,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 115,2016,7,28,7,0,3,2,0,0,BB,PRT,Direct,Direct,0,0,0,A,14,0,0,Transient
 128,2016,7,28,7,0,3,2,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 145,2016,7,28,7,0,3,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -7535,7 +7486,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 49,2016,7,28,9,1,1,2,0,0,SC,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 17,2016,7,28,9,1,1,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 17,2016,7,28,9,1,1,3,0,0,BB,ESP,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
-194,2016,7,28,9,2,1,0,2,0,BB,NLD,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 194,2016,7,28,9,2,1,2,0,0,BB,NLD,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 193,2016,7,28,9,2,1,2,0,0,BB,SWE,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 193,2016,7,28,9,2,1,2,0,0,BB,SWE,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
@@ -7670,7 +7620,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 193,2016,7,29,15,0,1,2,0,0,BB,CHE,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 106,2016,7,29,15,0,1,2,0,0,SC,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 131,2016,7,29,15,0,1,2,2,0,BB,ITA,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
-193,2016,7,29,15,0,1,0,2,0,BB,CHE,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 18,2016,7,29,15,0,2,2,0,0,SC,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 32,2016,7,29,15,1,2,3,0,0,BB,ITA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 88,2016,7,29,15,1,2,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,D,3,0,0,Transient
@@ -7715,7 +7664,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 139,2016,7,29,16,4,9,3,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 68,2016,7,29,16,2,5,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 134,2016,7,30,17,1,0,2,0,0,SC,USA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-197,2016,7,30,17,1,0,0,2,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 25,2016,7,30,17,1,0,2,0,0,SC,BRA,Direct,Direct,0,0,0,A,14,0,0,Transient
 179,2016,7,30,17,1,0,2,0,0,SC,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 198,2016,7,30,17,1,0,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
@@ -7804,7 +7752,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 99,2016,7,30,21,0,1,2,1,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 202,2016,7,30,21,0,1,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 379,2016,7,30,21,0,1,1,0,0,BB,PRT,Groups,TA/TO,0,0,0,A,1,0,0,Transient
-201,2016,7,30,21,0,1,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 150,2016,7,30,21,0,1,2,0,0,SC,PRT,Offline TA/TO,TA/TO,0,0,0,A,85,0,0,Transient
 379,2016,7,30,21,0,2,2,0,0,BB,PRT,Groups,TA/TO,0,0,0,A,1,0,0,Transient
 9,2016,7,30,21,0,1,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -7888,7 +7835,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 64,2016,7,31,24,2,2,2,1,0,BB,ISR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 101,2016,7,31,24,2,3,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,22,0,0,Transient
 135,2016,7,31,24,2,3,2,0,0,BB,ARG,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-59,2016,7,31,24,2,4,0,3,0,BB,PRT,Direct,Direct,0,0,0,B,none,0,0,Transient
 59,2016,7,31,24,2,4,2,0,0,BB,PRT,Direct,Direct,0,0,0,B,none,0,0,Transient
 156,2016,7,31,24,4,5,2,1,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 206,2016,7,31,25,1,0,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -7937,7 +7883,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 70,2016,7,31,26,0,3,3,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 40,2016,7,31,26,0,3,3,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 62,2016,7,31,26,0,3,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-230,2016,7,31,26,0,3,0,2,0,BB,BEL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 65,2016,7,31,26,0,3,3,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 30,2016,7,31,26,0,4,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 182,2016,7,31,26,0,4,2,0,0,BB,FRA,Direct,Direct,0,0,0,A,14,0,0,Transient-Party
@@ -7988,8 +7933,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 237,2016,7,31,28,2,4,2,0,0,BB,NLD,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 207,2016,7,31,28,2,4,2,0,0,SC,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 227,2016,7,31,28,2,4,2,3,0,BB,FRA,Direct,Direct,0,0,0,B,14,0,0,Transient
-236,2016,7,31,28,2,4,0,2,0,BB,NLD,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-225,2016,7,31,28,2,4,0,3,0,BB,FRA,Direct,Direct,0,0,0,B,14,0,0,Transient
 188,2016,7,31,28,2,5,2,0,0,BB,BGR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 17,2016,7,31,29,0,1,2,1,0,BB,ISR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 25,2016,7,31,29,0,1,2,2,0,BB,BRA,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
@@ -8082,7 +8025,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 114,2016,8,32,2,0,2,2,3,0,BB,PRT,Online TA,TA/TO,0,0,0,G,8,0,0,Transient
 173,2016,8,32,2,0,2,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 20,2016,8,32,2,0,2,1,0,0,BB,PRT,Corporate,Corporate,0,0,0,A,40,0,0,Transient
-36,2016,8,32,2,0,3,0,2,0,BB,ESP,Direct,Direct,0,0,0,B,14,0,0,Transient
 175,2016,8,32,2,0,3,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 166,2016,8,32,2,0,3,2,0,0,BB,NOR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 25,2016,8,32,2,0,3,1,0,0,SC,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -8165,7 +8107,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 81,2016,8,32,5,0,2,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 238,2016,8,32,5,0,2,2,0,0,BB,NLD,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 207,2016,8,32,5,0,2,2,0,0,BB,BRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
-237,2016,8,32,5,0,2,0,2,0,BB,NLD,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 229,2016,8,32,5,1,2,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 109,2016,8,32,5,1,2,2,0,0,SC,VGB,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 94,2016,8,32,5,1,2,2,1,0,BB,CN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -8330,7 +8271,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 35,2016,8,33,10,0,2,2,0,0,SC,TUR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 134,2016,8,33,10,0,2,2,0,0,SC,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 221,2016,8,33,10,0,3,2,0,0,BB,MAR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-219,2016,8,33,10,0,3,0,2,0,BB,MAR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 178,2016,8,33,10,0,4,2,0,0,SC,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 237,2016,8,33,10,0,4,2,0,0,SC,CHN,Online TA,TA/TO,0,0,0,A,8,0,0,Transient
 76,2016,8,33,10,0,4,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -8393,7 +8333,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 195,2016,8,33,13,0,1,1,1,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 12,2016,8,33,13,0,1,2,0,0,BB,PRT,Direct,Direct,0,0,0,A,none,0,0,Transient
 76,2016,8,33,13,0,1,2,2,0,BB,ESP,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
-14,2016,8,33,13,1,1,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,G,7,0,0,Transient
 188,2016,8,33,13,1,1,2,0,0,BB,ISR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 212,2016,8,33,13,1,1,2,0,0,HB,PRT,Groups,TA/TO,0,0,0,A,1,0,0,Transient
 184,2016,8,33,13,1,1,2,0,0,SC,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -8448,7 +8387,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 44,2016,8,34,14,2,2,3,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 84,2016,8,34,14,2,2,2,1,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 252,2016,8,34,14,2,3,2,2,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-251,2016,8,34,14,2,3,0,2,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 164,2016,8,34,14,2,4,2,0,0,BB,POL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 111,2016,8,34,14,2,4,3,0,0,BB,UKR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 158,2016,8,34,14,2,4,2,0,0,HB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -8604,7 +8542,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 165,2016,8,34,19,2,3,3,0,0,HB,POL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 164,2016,8,34,19,2,3,2,0,0,HB,POL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 303,2016,8,34,19,2,3,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,21,0,0,Transient-Party
-151,2016,8,34,19,2,3,0,2,0,BB,POL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 157,2016,8,34,19,2,3,2,2,0,HB,POL,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 38,2016,8,34,19,2,2,3,0,0,BB,CHN,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 165,2016,8,34,19,2,3,3,0,0,HB,POL,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -8723,7 +8660,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 13,2016,8,35,23,0,2,1,0,0,SC,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 3,2016,8,35,23,0,3,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 19,2016,8,35,23,0,3,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
-178,2016,8,35,23,0,3,0,2,0,BB,ITA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 178,2016,8,35,23,0,3,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 133,2016,8,35,23,0,4,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 137,2016,8,35,23,0,4,3,0,0,BB,ITA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -8840,7 +8776,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 114,2016,8,35,27,0,1,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 142,2016,8,35,27,0,1,2,2,0,BB,FRA,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 226,2016,8,35,27,1,1,2,0,0,HB,PRT,Groups,TA/TO,0,0,0,A,1,0,0,Transient
-247,2016,8,35,27,1,1,0,2,0,BB,RUS,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 176,2016,8,35,27,1,1,2,0,0,BB,USA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 231,2016,8,35,27,1,1,2,0,0,SC,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 209,2016,8,35,27,1,1,2,0,0,SC,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -8970,7 +8905,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 157,2016,8,36,31,0,3,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 29,2016,8,36,31,0,3,1,0,0,SC,CHN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 42,2016,8,36,31,0,3,2,0,0,HB,GBR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
-156,2016,8,36,31,0,3,0,2,0,BB,ITA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 55,2016,8,36,31,0,3,2,0,0,HB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 142,2016,8,36,31,0,3,2,1,0,HB,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 175,2016,8,36,31,0,4,2,0,0,BB,SWE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -9036,7 +8970,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 119,2016,9,36,2,2,3,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 179,2016,9,36,2,2,3,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 54,2016,9,36,2,2,3,3,0,0,BB,EGY,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
-179,2016,9,36,2,2,5,0,2,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 87,2016,9,36,2,2,7,1,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,86,0,0,Transient-Party
 223,2016,9,36,2,4,12,2,0,0,SC,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 178,2016,9,36,2,2,5,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
@@ -9088,7 +9021,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 62,2016,9,37,4,2,2,2,0,0,BB,USA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 174,2016,9,37,4,2,2,2,0,0,SC,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 62,2016,9,37,4,2,2,1,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-62,2016,9,37,4,2,2,0,2,0,BB,USA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 164,2016,9,37,4,2,2,2,0,0,SC,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 69,2016,9,37,4,2,3,2,0,0,BB,POL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 42,2016,9,37,4,2,3,2,2,0,BB,GBR,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
@@ -9097,7 +9029,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 41,2016,9,37,4,2,3,2,2,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 67,2016,9,37,4,2,3,2,0,0,BB,POL,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 58,2016,9,37,4,2,4,2,0,0,BB,POL,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
-40,2016,9,37,4,2,5,0,2,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 53,2016,9,37,4,2,5,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 88,2016,9,37,4,2,4,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,D,8,0,0,Transient
 65,2016,9,37,4,2,5,2,0,0,BB,ITA,Direct,Direct,0,0,0,A,14,0,0,Transient
@@ -9215,7 +9146,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 198,2016,9,37,9,1,2,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,3,0,0,Transient
 198,2016,9,37,9,1,2,2,0,0,BB,PRT,Groups,TA/TO,0,0,0,A,37,0,0,Transient
 243,2016,9,37,9,1,2,2,0,0,SC,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-17,2016,9,37,9,1,2,0,2,0,BB,NLD,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 131,2016,9,37,9,1,2,2,0,0,BB,ARE,Direct,Direct,0,0,0,A,14,0,0,Transient
 243,2016,9,37,9,1,2,2,0,0,SC,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 68,2016,9,37,9,1,2,2,1,0,HB,CHE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -9288,7 +9218,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 230,2016,9,38,12,1,3,2,0,0,BB,GBR,Direct,Direct,0,0,0,B,14,0,0,Transient
 3,2016,9,38,12,1,3,2,0,0,BB,PRT,Direct,Direct,0,0,0,A,none,0,0,Transient
 144,2016,9,38,12,1,3,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-32,2016,9,38,12,1,4,0,2,0,BB,SAU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 277,2016,9,38,12,1,4,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 33,2016,9,38,12,1,4,2,0,0,BB,SAU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 255,2016,9,38,12,1,5,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -9402,7 +9331,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 0,2016,9,38,16,1,2,2,0,0,BB,CHE,Direct,Direct,0,0,0,A,14,0,0,Transient
 32,2016,9,38,16,2,2,1,0,0,BB,TZA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 145,2016,9,38,16,2,2,2,0,0,SC,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-31,2016,9,38,16,2,2,0,2,0,BB,TZA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 159,2016,9,38,16,2,3,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 69,2016,9,38,17,0,1,2,0,0,BB,CHE,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 151,2016,9,38,17,0,1,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,86,0,107,Transient-Party
@@ -9507,7 +9435,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 2,2016,9,39,21,0,1,1,0,0,BB,PRT,Corporate,Corporate,0,0,0,A,none,1,0,Transient
 62,2016,9,39,21,0,1,1,0,0,HB,PRT,Offline TA/TO,TA/TO,0,0,0,A,3,0,0,Transient-Party
 20,2016,9,39,21,0,1,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,138,0,0,Transient
-76,2016,9,39,21,0,3,0,2,0,BB,IRL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 77,2016,9,39,21,0,3,2,0,0,BB,IRL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 271,2016,9,39,21,0,3,1,0,0,HB,PRT,Offline TA/TO,TA/TO,0,0,0,A,12,0,0,Transient-Party
 296,2016,9,39,21,0,4,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,26,0,0,Transient-Party
@@ -10563,7 +10490,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 154,2016,10,45,30,2,1,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 105,2016,10,45,30,2,2,1,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 102,2016,10,45,30,2,2,2,0,0,SC,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-158,2016,10,45,30,2,2,0,2,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 72,2016,10,45,30,2,2,2,0,0,SC,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 82,2016,10,45,30,2,2,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 159,2016,10,45,30,2,2,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
@@ -10816,7 +10742,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 78,2016,11,46,12,2,5,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 259,2016,11,46,12,2,5,2,0,0,BB,TUR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 105,2016,11,46,12,2,5,2,1,0,BB,BRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-255,2016,11,46,12,2,5,0,2,0,BB,TUR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 12,2016,11,46,12,3,6,1,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,8,0,0,Transient
 39,2016,11,46,12,5,11,1,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,8,0,0,Transient
 166,2016,11,46,12,2,4,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -10971,7 +10896,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 1,2016,11,47,18,6,12,1,0,0,BB,BRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 11,2016,11,47,18,6,14,2,0,0,SC,AGO,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 3,2016,11,47,19,0,1,2,0,0,SC,AGO,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-44,2016,11,47,19,0,1,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 45,2016,11,47,19,0,1,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 128,2016,11,47,19,1,1,2,0,0,BB,SVN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 39,2016,11,47,19,1,1,2,0,0,SC,BRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -11072,7 +10996,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 308,2016,11,48,23,0,3,2,0,0,BB,NOR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 308,2016,11,48,23,0,3,1,0,0,BB,NOR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 69,2016,11,48,23,0,4,1,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-30,2016,11,48,23,0,4,0,2,0,BB,MAR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 67,2016,11,48,23,0,4,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 29,2016,11,48,23,0,4,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 31,2016,11,48,23,0,4,2,0,0,BB,MAR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
@@ -11174,7 +11097,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 258,2016,11,49,28,1,3,2,0,0,BB,DEU,Direct,Direct,0,0,0,A,14,0,0,Transient
 1,2016,11,49,28,1,3,1,0,0,BB,BRA,Direct,Direct,0,0,0,A,14,0,0,Transient
 137,2016,11,49,28,1,4,2,0,0,BB,ARG,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-136,2016,11,49,28,1,4,0,2,0,BB,ARG,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 42,2016,11,49,29,0,3,2,0,0,BB,PRT,Groups,TA/TO,0,0,0,A,none,1,0,Transient
 42,2016,11,49,29,0,3,1,0,0,BB,PRT,Groups,TA/TO,0,0,0,A,none,1,0,Transient
 92,2016,11,49,29,0,3,2,0,0,BB,PRT,Groups,TA/TO,0,0,0,A,none,1,50,Transient
@@ -11192,7 +11114,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 8,2016,11,49,30,0,3,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 30,2016,11,49,30,0,3,2,0,0,BB,NOR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 43,2016,11,49,30,0,4,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-215,2016,11,49,30,0,4,0,2,0,BB,ROU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 79,2016,11,49,30,0,4,3,0,0,BB,ITA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 79,2016,11,49,30,0,4,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 215,2016,11,49,30,0,4,2,0,0,BB,ROU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
@@ -11220,7 +11141,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 24,2016,12,49,1,4,10,2,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 47,2016,12,49,2,0,1,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,8,0,0,Transient
 195,2016,12,49,2,0,2,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-195,2016,12,49,2,0,2,0,2,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 315,2016,12,49,2,0,2,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,20,0,0,Transient
 266,2016,12,49,2,0,2,1,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,56,0,0,Transient
 98,2016,12,49,2,0,2,2,0,0,SC,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -11470,7 +11390,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 18,2016,12,50,9,3,7,2,0,0,SC,AGO,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 0,2016,12,50,9,4,7,2,0,0,SC,USA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 173,2016,12,50,9,2,3,3,0,0,HB,BRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
-9,2016,12,50,10,0,1,0,2,0,BB,PRT,Complementary,Direct,0,0,0,B,none,1,0,Transient-Party
 12,2016,12,50,10,0,1,3,0,0,BB,GBR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 74,2016,12,50,10,0,1,2,0,0,HB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 38,2016,12,50,10,0,1,2,0,0,BB,PRT,Direct,Direct,0,0,0,A,none,0,0,Transient-Party
@@ -11657,7 +11576,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 60,2016,12,52,23,0,1,2,2,0,BB,AUT,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 60,2016,12,52,23,0,1,2,2,0,BB,AUT,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 59,2016,12,52,23,0,2,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-381,2016,12,52,23,1,2,0,2,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 62,2016,12,52,23,1,2,2,1,0,HB,PRT,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 342,2016,12,52,23,1,2,2,0,0,HB,DEU,Direct,Direct,0,0,0,A,14,0,0,Transient
 62,2016,12,52,23,1,2,2,1,0,HB,PRT,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
@@ -11745,7 +11663,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 136,2016,12,53,26,1,3,2,0,0,HB,ESP,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 124,2016,12,53,26,1,3,2,1,0,BB,FRA,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 56,2016,12,53,26,1,3,2,0,0,SC,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-102,2016,12,53,26,1,3,0,2,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 262,2016,12,53,26,1,3,3,0,0,BB,ESP,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 262,2016,12,53,26,1,3,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 265,2016,12,53,26,1,3,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -11842,7 +11759,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 237,2016,12,53,28,2,5,2,1,0,BB,USA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 252,2016,12,53,28,2,7,2,0,0,SC,RUS,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 252,2016,12,53,28,2,9,2,2,0,BB,CHE,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-251,2016,12,53,28,2,9,0,2,0,BB,CHE,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 22,2016,12,53,28,4,10,2,0,0,BB,RUS,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 15,2016,12,53,28,2,5,2,0,0,SC,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 237,2016,12,53,28,2,5,2,2,0,BB,USA,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
@@ -11992,13 +11908,11 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 4,2017,1,1,2,1,3,2,0,0,HB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 15,2017,1,1,2,1,3,2,0,0,SC,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 33,2017,1,1,2,1,3,2,1,0,BB,IRN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-111,2017,1,1,2,1,3,0,2,0,BB,RUS,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 49,2017,1,1,2,1,3,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 203,2017,1,1,2,1,3,2,0,0,BB,RUS,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 306,2017,1,1,2,1,3,2,1,0,BB,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 138,2017,1,1,2,1,3,3,0,0,HB,ITA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 6,2017,1,1,2,1,3,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-268,2017,1,1,2,1,4,0,2,0,BB,RUS,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 113,2017,1,1,2,1,4,2,0,0,HB,DEU,Online TA,TA/TO,0,0,0,A,8,0,0,Transient
 268,2017,1,1,2,1,4,2,0,0,BB,RUS,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 335,2017,1,1,2,1,4,2,0,0,HB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -12588,7 +12502,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 69,2017,2,6,5,2,2,2,0,0,SC,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 322,2017,2,6,5,2,3,2,1,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 25,2017,2,6,5,2,5,2,0,0,SC,BRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-148,2017,2,6,5,2,5,0,2,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 24,2017,2,6,5,2,5,1,0,0,BB,PRT,Groups,TA/TO,0,0,0,A,none,1,0,Transient-Party
 148,2017,2,6,5,2,5,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 26,2017,2,6,6,1,0,2,1,0,BB,CHN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -12938,7 +12851,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 9,2017,2,8,22,0,4,2,2,0,BB,FRA,Direct,Direct,0,0,0,F,14,0,0,Transient
 4,2017,2,8,22,1,4,2,2,0,BB,ISR,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 136,2017,2,8,22,1,4,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
-134,2017,2,8,22,2,4,0,2,0,BB,BRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 259,2017,2,8,22,2,4,2,0,0,BB,PRT,Direct,Direct,0,0,0,A,none,0,0,Transient
 134,2017,2,8,22,2,4,2,0,0,BB,BRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 14,2017,2,8,22,2,6,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -12981,7 +12893,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 19,2017,2,8,24,2,2,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 39,2017,2,8,24,2,2,2,0,0,BB,LUX,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 149,2017,2,8,24,2,2,2,0,0,BB,BRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-148,2017,2,8,24,2,2,0,2,0,BB,BRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 149,2017,2,8,24,2,2,2,0,0,SC,BRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 195,2017,2,8,24,2,3,2,0,0,SC,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 70,2017,2,8,24,2,4,2,2,0,BB,PRT,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
@@ -13179,7 +13090,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 39,2017,3,9,4,1,1,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 97,2017,3,9,4,2,1,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 144,2017,3,9,4,2,1,2,0,0,BB,BRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-144,2017,3,9,4,2,1,0,2,0,BB,BRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 64,2017,3,9,4,2,1,2,0,0,BB,IRL,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 30,2017,3,9,4,2,2,2,0,0,BB,CZE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 165,2017,3,9,4,2,2,3,0,0,BB,GBR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -13503,7 +13413,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 69,2017,3,11,17,2,3,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,138,0,0,Transient
 65,2017,3,11,17,2,3,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 161,2017,3,11,17,2,6,2,0,0,BB,EGY,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-160,2017,3,11,17,2,6,0,2,0,BB,EGY,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 0,2017,3,11,18,0,1,2,0,0,BB,PRT,Direct,Direct,0,0,0,A,none,0,0,Transient
 93,2017,3,11,18,0,1,2,0,0,SC,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 60,2017,3,11,18,0,1,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -13654,13 +13563,11 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 143,2017,3,12,24,1,2,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 126,2017,3,12,24,1,2,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 74,2017,3,12,24,2,2,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,E,9,0,0,Transient
-200,2017,3,12,24,2,2,0,2,0,BB,HUN,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 202,2017,3,12,24,2,2,2,0,0,BB,HUN,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 264,2017,3,12,24,2,2,3,0,0,HB,ESP,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 75,2017,3,12,24,2,2,2,0,0,BB,NOR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 58,2017,3,12,24,2,6,2,2,0,BB,ARE,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 173,2017,3,12,24,2,6,2,0,0,BB,ARE,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-172,2017,3,12,24,2,6,0,2,0,BB,ARE,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 37,2017,3,12,24,3,7,2,2,0,BB,BRA,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 41,2017,3,12,24,3,7,3,0,0,BB,BRA,Online TA,TA/TO,0,0,0,E,9,0,0,Transient
 305,2017,3,12,25,0,1,2,0,0,SC,CN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -13767,7 +13674,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 56,2017,3,13,30,0,3,1,0,0,SC,AUT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 160,2017,3,13,30,1,3,2,0,0,BB,ROU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 63,2017,3,13,30,1,3,3,0,0,BB,DEU,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
-160,2017,3,13,30,1,3,0,2,0,BB,ROU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 60,2017,3,13,30,1,3,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 70,2017,3,13,30,2,3,2,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,8,0,0,Transient
 63,2017,3,13,30,1,3,2,0,0,SC,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -13939,7 +13845,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 93,2017,4,14,6,0,3,2,0,0,BB,CHE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 139,2017,4,14,6,0,3,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,170,0,46,Transient
 175,2017,4,14,6,0,3,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-230,2017,4,14,6,0,3,0,2,0,BB,IRL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 31,2017,4,14,6,0,3,3,0,0,BB,NLD,Online TA,TA/TO,0,0,0,E,9,0,0,Transient
 55,2017,4,14,6,0,3,3,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 178,2017,4,14,6,0,3,2,0,0,BB,CHE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -13974,13 +13879,11 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 92,2017,4,14,7,1,2,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 2,2017,4,14,7,1,2,3,0,0,BB,BRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 25,2017,4,14,7,1,2,2,0,0,SC,CHN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-179,2017,4,14,7,1,2,0,2,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 236,2017,4,14,7,1,2,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 48,2017,4,14,7,1,2,3,0,0,BB,BRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 84,2017,4,14,7,1,2,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 133,2017,4,14,7,1,2,2,0,0,SC,POL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 213,2017,4,14,7,1,2,2,0,0,BB,ISR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-212,2017,4,14,7,1,2,0,2,0,BB,ISR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 105,2017,4,14,7,2,5,2,1,0,BB,DNK,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 197,2017,4,14,7,4,7,2,0,0,SC,IRL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 105,2017,4,14,7,2,5,2,0,0,BB,DNK,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -14149,7 +14052,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 146,2017,4,15,12,0,4,3,0,0,BB,CZE,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 121,2017,4,15,12,0,4,3,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 219,2017,4,15,12,0,4,2,2,0,BB,SWE,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-219,2017,4,15,12,0,4,0,2,0,BB,SWE,Direct,Direct,0,0,0,B,14,0,0,Transient
 83,2017,4,15,12,0,4,3,0,0,HB,ESP,Online TA,TA/TO,0,0,0,E,9,0,0,Transient
 143,2017,4,15,12,0,4,3,0,0,BB,CZE,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 114,2017,4,15,12,1,4,2,0,0,BB,CHE,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -14449,7 +14351,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 204,2017,4,16,21,0,1,3,0,0,BB,NLD,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 316,2017,4,16,21,0,1,2,0,0,BB,USA,Direct,Direct,0,0,0,A,14,0,0,Transient
 126,2017,4,16,21,0,1,2,0,0,SC,NLD,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-204,2017,4,16,21,0,1,0,2,0,BB,NLD,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 204,2017,4,16,21,0,1,2,0,0,SC,NLD,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 204,2017,4,16,21,0,1,2,0,0,BB,NLD,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 126,2017,4,16,21,0,1,2,1,0,BB,NLD,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -14647,7 +14548,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 151,2017,4,17,27,2,3,2,0,0,SC,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 287,2017,4,17,27,2,3,2,0,0,SC,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 108,2017,4,17,27,2,3,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-232,2017,4,17,27,2,3,0,2,0,BB,POL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 233,2017,4,17,27,2,3,2,0,0,BB,POL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 16,2017,4,17,27,2,3,2,0,0,BB,PRT,Direct,Direct,0,0,0,A,none,0,0,Transient
 233,2017,4,17,27,2,3,3,0,0,BB,POL,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -15416,7 +15316,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 49,2017,5,20,17,0,3,2,0,0,BB,BRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 267,2017,5,20,17,0,3,2,0,0,BB,AUT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 88,2017,5,20,17,0,3,2,0,0,SC,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-266,2017,5,20,17,0,3,0,2,0,BB,AUT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 61,2017,5,20,17,0,4,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 66,2017,5,20,17,0,4,2,0,0,SC,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 119,2017,5,20,17,1,4,2,0,0,BB,ARG,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -15569,7 +15468,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 270,2017,5,21,21,2,3,2,0,0,HB,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 211,2017,5,21,21,2,4,2,2,0,BB,DNK,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 211,2017,5,21,21,2,4,2,0,0,HB,DNK,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-209,2017,5,21,21,2,4,0,2,0,BB,DNK,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 211,2017,5,21,21,2,4,2,0,0,BB,DNK,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 29,2017,5,21,21,2,5,2,0,0,BB,BRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 29,2017,5,21,21,2,5,2,0,0,BB,BRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -15656,7 +15554,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 357,2017,5,21,24,0,3,3,0,0,HB,GBR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 194,2017,5,21,24,0,3,3,0,0,BB,PRT,Online TA,TA/TO,0,0,0,D,7,0,0,Transient
 13,2017,5,21,24,0,3,2,0,0,SC,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-273,2017,5,21,24,0,3,0,2,0,BB,AUT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 341,2017,5,21,24,0,3,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 273,2017,5,21,24,0,3,2,0,0,BB,AUT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 143,2017,5,21,24,0,3,2,2,0,BB,CHE,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
@@ -15679,7 +15576,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 228,2017,5,21,24,0,4,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 249,2017,5,21,24,0,4,3,0,0,BB,GBR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 262,2017,5,21,24,0,4,2,0,0,BB,CHE,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
-310,2017,5,21,24,0,4,0,2,0,BB,DNK,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 250,2017,5,21,24,0,4,2,0,0,BB,SWE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 262,2017,5,21,24,0,4,2,0,0,SC,CHE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 61,2017,5,21,24,0,4,2,2,0,BB,PRT,Online TA,TA/TO,0,0,0,G,7,0,0,Transient
@@ -15694,7 +15590,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 296,2017,5,21,24,0,4,2,0,0,BB,NLD,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 270,2017,5,21,24,0,4,2,0,0,BB,PRT,Direct,Direct,0,0,0,D,none,0,0,Transient
 73,2017,5,21,24,0,4,2,1,0,BB,PRT,Online TA,TA/TO,0,0,0,G,8,0,0,Transient
-311,2017,5,21,24,0,4,0,2,0,BB,DNK,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 138,2017,5,21,24,1,4,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,85,0,0,Transient
 189,2017,5,21,24,1,4,2,0,0,BB,FIN,Direct,Direct,0,0,0,D,14,0,0,Transient
 158,2017,5,21,24,2,4,2,1,0,HB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -16044,7 +15939,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 34,2017,6,23,5,1,5,1,0,0,SC,USA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 148,2017,6,23,5,1,5,2,1,0,BB,DEU,Direct,Direct,0,0,0,A,14,0,0,Transient
 238,2017,6,23,5,2,5,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-238,2017,6,23,5,2,5,0,2,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 83,2017,6,23,5,3,6,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 154,2017,6,23,5,3,7,2,0,0,SC,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 437,2017,6,23,6,0,1,2,0,0,BB,PRT,Groups,TA/TO,0,0,0,A,229,0,0,Transient-Party
@@ -16883,7 +16777,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 405,2017,7,27,4,0,2,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,6,0,0,Transient-Party
 6,2017,7,27,4,0,2,2,0,0,BB,PRT,Groups,TA/TO,0,0,0,A,6,0,0,Transient-Party
 230,2017,7,27,4,0,3,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-257,2017,7,27,4,0,3,0,2,0,BB,BRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 243,2017,7,27,4,0,3,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,229,0,0,Transient
 214,2017,7,27,4,0,3,2,1,0,BB,BRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 244,2017,7,27,4,0,3,2,0,0,BB,DNK,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -16978,9 +16871,7 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 365,2017,7,27,7,0,1,2,0,0,BB,PRT,Direct,Direct,0,0,0,G,none,0,0,Transient
 315,2017,7,27,7,0,1,2,0,0,BB,USA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 315,2017,7,27,7,0,1,2,0,0,SC,USA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-315,2017,7,27,7,0,1,0,2,0,BB,USA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 288,2017,7,27,7,0,1,2,1,0,BB,BRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-315,2017,7,27,7,0,1,0,2,0,BB,USA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 26,2017,7,27,7,0,1,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 86,2017,7,27,7,0,1,1,0,0,BB,PRT,Corporate,Corporate,0,0,0,A,none,1,0,Transient
 133,2017,7,27,7,0,2,2,0,0,HB,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -17079,7 +16970,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 19,2017,7,28,9,2,2,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 107,2017,7,28,9,2,2,3,0,0,BB,PRT,Online TA,TA/TO,0,0,0,D,7,0,0,Transient
 161,2017,7,28,9,2,2,2,0,0,SC,DNK,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-340,2017,7,28,9,2,2,0,2,0,BB,NOR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 8,2017,7,28,9,2,3,2,0,0,SC,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 187,2017,7,28,9,2,3,2,0,0,BB,ROU,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 111,2017,7,28,9,2,3,2,0,0,SC,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -18251,7 +18141,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 267,2017,8,33,15,0,3,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,229,0,0,Transient
 209,2017,8,33,15,0,3,2,1,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 97,2017,8,33,15,0,3,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-308,2017,8,33,15,0,4,0,2,0,BB,ITA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 309,2017,8,33,15,0,4,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 309,2017,8,33,15,0,4,2,0,0,SC,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 114,2017,8,33,15,0,4,3,0,0,BB,ESP,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -18293,7 +18182,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 84,2017,8,33,16,0,3,2,0,0,SC,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 88,2017,8,33,16,0,3,3,0,0,BB,CHE,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 25,2017,8,33,16,0,3,2,0,0,SC,IRL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-316,2017,8,33,16,0,3,0,2,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 92,2017,8,33,16,0,3,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,6,0,0,Transient
 84,2017,8,33,16,0,3,3,0,0,BB,CHE,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 293,2017,8,33,16,0,3,3,0,0,BB,URY,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -21062,7 +20950,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 16,2015,10,44,29,0,1,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Contract
 28,2015,10,44,29,0,1,1,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,98,0,0,Transient-Party
 34,2015,10,44,25,2,3,2,1,0,BB,FRA,Offline TA/TO,TA/TO,0,0,0,D,28,0,0,Transient
-296,2015,10,43,24,2,4,0,2,0,BB,GBR,Online TA,TA/TO,0,0,0,B,7,0,0,Transient-Party
 296,2015,10,43,24,2,4,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,B,7,0,0,Transient-Party
 9,2015,10,44,30,0,1,1,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,111,0,0,Transient-Party
 28,2015,10,44,29,0,1,1,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,98,0,0,Transient-Party
@@ -22038,7 +21925,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 0,2015,12,49,5,1,1,2,0,0,BB,IRQ,Direct,Direct,0,0,0,D,none,0,0,Transient
 0,2015,12,50,6,1,0,2,0,0,BB,UKR,Direct,Direct,0,0,0,G,none,0,0,Transient
 21,2015,12,49,4,1,2,2,0,0,SC,POL,Online TA,TA/TO,0,0,0,A,9,0,0,Contract
-13,2015,12,49,4,1,2,0,2,0,BB,ESP,Direct,Direct,0,0,0,B,14,0,0,Transient
 0,2015,12,49,5,1,1,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,B,7,0,0,Transient
 0,2015,12,49,5,1,1,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,B,7,0,0,Transient
 33,2015,12,50,8,2,5,1,0,0,BB,PRT,Offline TA/TO,TA/TO,0,1,0,A,27,0,0,Transient
@@ -22142,7 +22028,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 0,2015,12,50,9,1,4,2,0,0,BB,PRT,Direct,Direct,1,0,0,A,none,0,0,Transient
 292,2015,12,52,26,2,4,2,0,0,BB,PRT,Online TA,TA/TO,0,1,0,A,9,0,0,Transient-Party
 22,2015,12,50,9,1,4,2,0,0,BB,PRT,Direct,Direct,0,0,0,B,14,0,0,Transient
-22,2015,12,50,9,1,4,0,2,1,BB,PRT,Direct,Direct,0,0,0,B,14,0,0,Transient
 6,2015,12,50,6,2,2,2,0,0,BB,FRA,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Transient
 4,2015,12,50,8,0,2,1,0,0,BB,PRT,Corporate,Corporate,0,0,0,A,40,0,0,Transient
 8,2015,12,50,9,0,1,1,0,0,BB,FRA,Corporate,Corporate,0,0,0,A,91,0,0,Transient
@@ -22413,7 +22298,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 0,2015,12,52,20,2,1,2,0,0,BB,FRA,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Transient
 3,2015,12,52,21,1,1,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,B,168,0,0,Transient-Party
 13,2015,12,53,29,2,5,2,0,0,BB,BRA,Direct,Direct,0,1,0,B,none,0,0,Transient-Party
-13,2015,12,53,29,2,5,0,2,0,BB,BRA,Direct,Direct,0,1,0,B,none,0,0,Transient-Party
 12,2015,12,51,19,2,2,3,0,0,BB,FRA,Offline TA/TO,TA/TO,0,0,0,F,28,0,0,Transient
 19,2015,12,52,20,2,1,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Transient
 95,2015,12,51,18,2,3,1,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Contract
@@ -22452,7 +22336,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 44,2015,12,52,24,0,2,1,0,0,BB,ESP,Direct,Direct,0,0,0,A,14,0,0,Transient
 92,2015,12,52,22,0,4,2,0,0,BB,FRA,Offline TA/TO,TA/TO,0,0,0,D,28,0,0,Transient
 19,2015,12,52,24,0,2,2,0,0,BB,PRT,Direct,Direct,0,0,0,B,none,0,0,Transient-Party
-0,2017,1,3,21,0,1,0,2,0,BB,PRT,Direct,Direct,1,0,1,A,none,0,0,Transient
 53,2015,12,52,25,0,1,2,0,0,SC,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Contract
 17,2015,12,52,21,1,4,2,0,0,BB,FRA,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Transient
 90,2015,12,52,21,1,4,2,0,0,BB,FRA,Offline TA/TO,TA/TO,0,0,0,D,28,0,0,Transient
@@ -22467,7 +22350,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 35,2015,12,52,26,0,1,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 35,2015,12,52,26,0,1,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,D,9,0,0,Transient-Party
 5,2015,12,52,22,0,5,2,0,0,BB,ESP,Complementary,Direct,0,0,0,B,none,0,0,Transient
-5,2015,12,52,22,0,5,0,2,0,BB,PRT,Complementary,Direct,0,0,0,B,none,0,0,Transient
 72,2015,12,52,24,0,3,2,0,1,BB,ESP,Direct,Direct,0,0,0,A,14,0,0,Transient
 58,2015,12,52,23,0,4,1,0,0,HB,DEU,Offline TA/TO,TA/TO,0,0,0,A,16,0,0,Transient
 58,2015,12,52,23,0,4,2,0,0,HB,PRT,Offline TA/TO,TA/TO,0,0,0,A,16,0,0,Transient
@@ -22717,7 +22599,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 56,2015,12,53,30,1,4,2,0,0,SC,ESP,Online TA,TA/TO,0,0,0,D,9,0,0,Contract
 21,2016,1,2,8,8,22,2,0,0,BB,PRT,Direct,Direct,0,1,0,A,none,0,0,Transient
 150,2016,3,13,24,1,3,2,0,0,BB,PRT,Online TA,TA/TO,0,1,0,B,8,0,0,Transient-Party
-150,2016,3,13,24,1,3,0,2,0,BB,PRT,Online TA,TA/TO,0,1,0,B,8,0,0,Transient-Party
 83,2015,12,53,30,1,4,2,0,0,BB,CHE,Direct,Direct,0,0,0,A,14,0,0,Transient
 56,2015,12,53,30,1,4,2,0,0,SC,ESP,Online TA,TA/TO,0,0,0,D,9,0,0,Contract
 49,2016,2,9,22,2,5,2,0,0,BB,PRT,Offline TA/TO,TA/TO,1,1,0,E,86,0,0,Transient
@@ -22831,7 +22712,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 106,2016,1,2,5,0,5,2,0,0,BB,FRA,Offline TA/TO,TA/TO,0,0,0,D,28,0,0,Transient
 20,2016,1,2,4,1,5,2,0,0,BB,DEU,Offline TA/TO,TA/TO,0,0,0,A,27,0,0,Transient
 0,2016,1,2,8,0,2,2,0,0,BB,IRL,Direct,Direct,0,0,0,B,none,0,0,Transient-Party
-0,2016,1,2,8,0,2,0,3,0,BB,PRT,Direct,Direct,0,0,0,B,none,0,0,Transient-Party
 28,2016,1,2,8,0,2,2,0,0,HB,ROU,Offline TA/TO,TA/TO,0,0,0,A,83,0,0,Transient-Party
 21,2016,1,2,4,1,5,2,0,0,HB,FRA,Offline TA/TO,TA/TO,0,0,0,A,83,0,0,Transient
 0,2016,1,2,9,0,1,2,0,0,SC,AGO,Direct,Direct,0,0,0,A,none,0,0,Transient
@@ -23022,7 +22902,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 6,2016,1,4,23,0,1,2,0,0,BB,PRT,Direct,Direct,0,0,0,A,14,0,0,Transient
 4,2016,1,4,22,0,2,2,0,0,BB,PRT,Complementary,Direct,0,0,0,G,none,0,0,Transient
 2,2016,1,4,23,0,1,2,0,0,BB,ROU,Direct,Direct,0,0,0,A,none,0,0,Transient
-13,2016,1,4,21,0,3,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 4,2016,1,4,22,0,2,2,0,0,SC,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 85,2016,1,4,22,0,2,2,0,0,BB,GBR,Offline TA/TO,TA/TO,0,0,0,D,83,0,0,Transient
 0,2016,1,4,23,0,1,2,0,0,SC,POL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -23406,7 +23285,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 18,2016,2,6,6,2,1,1,0,0,BB,CHE,Online TA,TA/TO,0,0,0,D,8,0,0,Transient
 1,2016,2,6,4,2,3,1,0,0,BB,CN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 28,2016,2,6,5,2,2,2,0,0,BB,NLD,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-28,2016,2,6,5,2,2,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 28,2016,2,6,5,2,2,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 1,2016,2,6,5,2,2,1,0,0,BB,CN,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 12,2016,2,7,7,2,0,2,1,0,BB,PRT,Direct,Direct,0,0,0,F,14,0,0,Transient
@@ -23766,7 +23644,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 121,2016,2,8,15,1,3,2,0,0,BB,DNK,Online TA,TA/TO,0,0,0,B,7,0,0,Group
 126,2016,2,8,15,1,3,3,0,0,BB,IRL,Direct,Direct,0,0,0,A,14,0,0,Transient
 18,2016,2,7,11,2,6,1,0,0,BB,BRA,Direct,Direct,0,0,0,A,14,0,0,Transient
-121,2016,2,8,15,1,3,0,2,0,BB,DNK,Online TA,TA/TO,0,0,0,B,7,0,0,Group
 27,2016,2,8,18,0,1,3,0,0,BB,MAR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 4,2016,2,8,17,0,2,1,0,0,BB,DEU,Direct,Direct,0,0,0,A,none,0,0,Transient
 0,2016,2,8,15,1,3,1,0,0,BB,PRT,Aviation,TA/TO,0,0,0,A,153,0,0,Transient
@@ -24101,7 +23978,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 7,2016,2,9,24,0,3,2,0,0,BB,FRA,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Transient
 0,2016,2,9,26,0,1,2,0,0,SC,SWE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 68,2016,2,8,20,2,5,2,0,0,BB,DEU,Offline TA/TO,TA/TO,0,0,0,A,27,0,0,Transient
-39,2016,2,9,22,1,4,0,2,0,BB,FIN,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 1,2016,2,9,26,0,1,2,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 81,2016,2,9,24,0,3,3,0,0,BB,IRL,Offline TA/TO,TA/TO,0,0,0,A,22,0,0,Transient
 12,2016,2,9,23,0,4,2,0,0,SC,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -24178,7 +24054,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 7,2016,2,9,27,0,1,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 3,2016,2,9,25,0,3,2,0,0,BB,FRA,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Transient
 14,2016,2,9,25,0,3,3,0,0,BB,FRA,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Transient
-1,2016,2,9,25,0,3,0,2,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 0,2016,2,9,26,0,2,2,0,0,BB,PRT,Direct,Direct,0,0,0,A,none,0,0,Transient
 1,2016,2,9,27,0,1,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 1,2016,2,9,27,0,1,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
@@ -25487,7 +25362,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 37,2016,3,13,24,0,2,2,1,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 23,2016,3,13,25,0,1,2,1,0,BB,USA,Direct,Direct,0,0,0,G,14,0,0,Transient
 0,2016,3,13,25,0,1,2,1,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-130,2016,3,13,25,0,1,0,2,0,BB,ITA,Complementary,Direct,0,0,0,A,none,0,0,Contract
 33,2016,3,13,24,0,2,2,1,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 29,2016,3,13,23,0,3,2,0,0,SC,IRL,Offline TA/TO,TA/TO,0,0,0,A,138,0,0,Transient
 75,2016,3,13,22,0,4,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,D,9,0,0,Transient-Party
@@ -26114,7 +25988,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 83,2016,4,15,5,0,4,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 58,2016,4,15,7,0,2,2,0,0,BB,ARG,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 0,2016,4,15,8,0,1,2,0,0,BB,PRT,Direct,Direct,0,0,0,A,none,0,0,Transient
-0,2016,4,15,8,0,1,0,2,0,BB,FRA,Online TA,TA/TO,0,0,0,F,9,0,0,Transient-Party
 36,2016,4,15,8,0,1,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,F,9,0,0,Transient-Party
 33,2016,4,15,5,0,4,2,0,0,BB,DEU,Offline TA/TO,TA/TO,0,0,0,A,27,0,0,Transient
 1,2016,4,15,8,0,1,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -26440,7 +26313,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 152,2016,4,16,12,0,4,2,0,0,BB,GBR,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Contract
 94,2016,4,16,12,0,4,2,0,0,BB,NLD,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 122,2016,4,16,15,0,1,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,151,0,56,Transient-Party
-70,2016,4,16,12,0,4,0,3,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,B,20,0,0,Transient-Party
 70,2016,4,16,12,0,4,2,0,0,BB,FRA,Offline TA/TO,TA/TO,0,0,0,B,20,0,0,Transient-Party
 32,2016,4,16,13,0,3,3,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 0,2016,4,16,15,0,1,2,0,0,BB,DEU,Direct,Direct,0,0,0,A,none,0,0,Transient
@@ -27400,7 +27272,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 27,2016,5,19,4,0,1,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,138,0,0,Transient
 108,2016,5,19,2,1,2,2,0,0,SC,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 41,2016,4,18,30,2,3,2,0,0,BB,NLD,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-40,2016,4,18,30,2,3,0,2,0,BB,NLD,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 110,2016,5,19,2,1,2,2,1,0,SC,BEL,Online TA,TA/TO,0,0,0,A,11,0,0,Transient
 107,2016,4,18,30,2,3,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 24,2016,5,19,2,1,2,2,0,0,SC,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -27922,7 +27793,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 36,2016,5,20,13,1,2,2,0,0,SC,IRL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 56,2016,5,20,13,1,2,2,0,0,SC,IRL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 57,2016,5,20,11,1,4,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-38,2016,5,20,13,1,2,0,2,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 39,2016,5,20,13,1,2,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 56,2016,5,20,13,1,2,2,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 76,2016,5,20,12,1,3,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -28034,7 +27904,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 125,2016,5,21,15,2,1,2,1,0,BB,DEU,Online TA,TA/TO,0,0,0,D,7,0,0,Transient
 0,2016,5,21,15,2,1,2,0,0,BB,FRA,Direct,Direct,0,0,0,A,14,0,0,Transient
 54,2016,5,21,16,1,1,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-53,2016,5,21,16,1,1,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 97,2016,5,21,16,1,1,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,85,0,0,Transient
 114,2016,5,21,16,1,1,2,0,0,BB,DEU,Direct,Direct,0,0,0,A,14,0,0,Transient
 75,2016,5,20,9,3,6,3,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -28603,7 +28472,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 14,2016,5,22,27,0,1,1,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,21,0,0,Transient-Party
 14,2016,5,22,27,0,1,1,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,21,0,0,Transient-Party
 14,2016,5,22,27,0,1,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,21,0,0,Transient-Party
-84,2016,5,22,26,0,2,0,2,0,BB,PRT,Direct,Direct,0,0,0,B,14,0,0,Transient
 84,2016,5,22,26,0,2,3,0,0,BB,PRT,Direct,Direct,0,0,0,B,14,0,0,Transient
 1,2016,5,22,26,0,2,2,0,0,BB,CN,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 101,2016,5,22,25,0,4,2,0,0,BB,AUT,Online TA,TA/TO,0,0,0,D,9,0,0,Transient-Party
@@ -28811,9 +28679,7 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 24,2016,5,23,29,2,2,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 6,2016,6,23,1,0,1,2,0,0,BB,PRT,Direct,Direct,0,0,0,A,none,0,0,Transient
 88,2016,5,23,29,2,2,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-87,2016,5,23,29,2,2,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 88,2016,5,23,29,2,2,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-87,2016,5,23,29,2,2,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 1,2016,5,23,31,0,2,2,0,0,SC,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 109,2016,5,22,23,3,7,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 14,2016,5,23,31,0,2,1,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
@@ -29325,9 +29191,7 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 1,2016,6,24,10,0,2,2,0,0,BB,PRT,Direct,Direct,0,0,0,D,14,0,0,Transient
 29,2016,6,24,9,0,3,2,1,0,BB,ISR,Online TA,TA/TO,0,0,0,F,7,0,0,Transient
 107,2016,6,24,10,0,2,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,187,0,0,Transient-Party
-14,2016,6,24,9,0,3,0,2,0,BB,ITA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 107,2016,6,24,10,0,2,1,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,187,0,0,Transient-Party
-14,2016,6,24,9,0,3,0,2,1,BB,ITA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 3,2016,6,24,10,0,2,1,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,187,0,0,Transient-Party
 1,2016,6,24,11,0,1,2,0,0,BB,FIN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 107,2016,6,24,10,0,2,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,187,0,0,Transient-Party
@@ -29470,7 +29334,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 15,2016,6,25,14,0,1,1,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 11,2016,6,25,14,0,1,1,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,10,0,0,Transient
 11,2016,6,25,14,0,1,1,0,0,SC,DEU,Online TA,TA/TO,0,0,0,A,10,0,0,Transient
-34,2016,6,25,12,2,1,0,2,0,BB,USA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 34,2016,6,25,12,2,1,2,0,0,BB,USA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 29,2016,6,25,14,0,1,2,0,0,SC,PRT,Direct,Direct,0,0,0,A,14,0,0,Transient
 5,2016,6,25,14,0,1,1,0,0,BB,FRA,Offline TA/TO,TA/TO,0,0,0,A,83,0,0,Transient
@@ -29582,7 +29445,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 76,2016,6,25,13,1,3,2,0,0,BB,DEU,Offline TA/TO,TA/TO,0,0,0,A,83,0,0,Transient
 256,2016,6,25,15,0,2,1,0,0,HB,PRT,Offline TA/TO,TA/TO,0,0,0,A,6,0,0,Transient-Party
 4,2016,6,25,16,0,1,2,2,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-3,2016,6,25,16,0,1,0,2,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 243,2016,6,25,14,0,3,2,0,0,BB,NLD,Direct,Direct,0,0,0,D,14,0,0,Transient
 22,2016,6,25,13,1,3,3,0,0,BB,FRA,Online TA,TA/TO,0,0,0,F,8,0,0,Transient
 102,2016,6,25,12,2,3,3,0,0,BB,USA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -30318,7 +30180,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 6,2016,6,27,27,1,3,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 152,2016,6,27,27,1,3,2,0,0,BB,FIN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 2,2016,6,27,30,0,1,1,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-131,2016,6,27,26,2,3,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 119,2016,6,27,29,0,2,3,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 35,2016,6,27,26,2,3,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 159,2016,6,27,27,1,3,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -30346,7 +30207,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 14,2016,7,27,1,0,1,1,0,0,BB,CHN,Direct,Direct,0,0,0,A,14,0,0,Transient
 90,2016,6,27,26,2,4,2,0,0,BB,SWE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 121,2016,6,27,30,0,2,2,0,0,BB,FIN,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-120,2016,6,27,30,0,2,0,2,0,BB,FIN,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 124,2016,6,27,30,0,2,2,0,0,BB,FIN,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 124,2016,6,27,30,0,2,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 160,2016,6,26,25,2,5,2,1,0,BB,POL,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
@@ -31659,7 +31519,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 186,2016,7,30,21,1,3,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 175,2016,7,30,23,1,1,2,1,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 74,2016,7,30,22,1,2,3,0,0,BB,PRT,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
-237,2016,7,31,24,1,0,0,2,0,BB,BEL,Direct,Direct,0,0,0,B,14,0,0,Transient-Party
 237,2016,7,31,24,1,0,2,0,0,BB,BEL,Direct,Direct,0,0,0,B,14,0,0,Transient-Party
 172,2016,7,30,22,1,2,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 172,2016,7,30,22,1,2,3,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient-Party
@@ -31699,7 +31558,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 64,2016,7,31,25,1,0,2,0,0,SC,MEX,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 0,2016,7,31,24,2,0,1,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 83,2016,7,30,23,2,1,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-82,2016,7,30,23,2,1,0,2,0,BB,BEL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 80,2016,7,31,24,2,0,1,0,0,SC,FRA,Online TA,TA/TO,0,0,0,A,8,0,0,Transient
 39,2016,7,31,25,1,0,1,0,0,BB,PRT,Corporate,Corporate,0,0,0,A,none,1,0,Transient
 165,2016,7,30,21,2,3,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -31813,7 +31671,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 7,2016,7,30,19,2,7,1,0,0,BB,AGO,Complementary,Direct,0,0,0,A,none,0,0,Transient
 46,2016,7,31,27,0,1,2,1,0,BB,AUT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 96,2016,7,30,23,2,3,2,2,0,BB,BRA,Online TA,TA/TO,0,0,0,G,7,0,0,Transient
-72,2016,7,31,27,0,1,0,2,0,BB,BRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 115,2016,7,31,26,0,2,2,0,0,BB,PRT,Direct,Direct,0,0,0,A,none,0,0,Transient
 65,2016,7,31,24,2,2,2,0,0,BB,GBR,Direct,Direct,0,0,0,A,14,0,0,Transient
 61,2016,7,31,24,2,2,1,0,0,BB,PRT,Corporate,Corporate,0,0,0,A,none,1,0,Transient
@@ -31871,7 +31728,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 86,2016,7,31,26,0,3,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 48,2016,7,31,27,0,2,2,0,0,BB,SWE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 169,2016,7,31,25,1,3,2,0,0,SC,NOR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-85,2016,7,31,26,0,3,0,2,0,BB,CHE,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 119,2016,7,31,26,0,3,3,0,0,BB,SWE,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 182,2016,7,31,28,0,1,3,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 149,2016,7,30,23,2,4,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -31884,7 +31740,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 14,2016,7,30,23,2,4,2,0,0,BB,DEU,Offline TA/TO,TA/TO,0,0,0,A,138,0,0,Transient
 178,2016,7,30,23,2,4,2,0,1,HB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 159,2016,7,30,22,2,5,2,0,0,HB,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-1,2016,7,29,16,4,9,0,2,0,BB,FRA,Direct,Direct,0,0,0,E,14,0,0,Transient
 104,2016,7,29,16,4,9,2,0,0,BB,FRA,Direct,Direct,0,0,0,E,14,0,0,Transient
 1,2016,7,31,27,0,2,1,0,0,BB,PRT,Corporate,Corporate,0,0,0,A,none,1,0,Transient-Party
 63,2016,7,31,28,0,1,3,0,0,BB,NLD,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -32051,7 +31906,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 200,2016,7,31,27,0,4,2,0,0,BB,BEL,Direct,Direct,0,0,0,A,14,0,0,Transient
 63,2016,7,31,26,0,5,2,1,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,E,256,0,0,Transient
 196,2016,7,31,24,2,5,2,2,0,BB,GBR,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
-242,2016,7,31,29,0,2,0,2,0,BB,BEL,Direct,Direct,0,0,0,B,14,0,0,Transient-Party
 120,2016,7,31,29,0,2,2,1,0,BB,GBR,Offline TA/TO,TA/TO,0,0,0,D,83,0,0,Transient
 170,2016,7,31,28,0,3,2,1,0,SC,FRA,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 78,2016,7,31,27,0,4,1,0,0,BB,FRA,Direct,Direct,0,0,0,A,14,0,0,Transient
@@ -32327,7 +32181,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 43,2016,8,32,4,0,1,2,1,0,BB,HUN,Direct,Direct,0,0,0,A,none,0,0,Transient
 22,2016,8,32,1,1,3,2,1,0,BB,HUN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 66,2016,8,32,4,0,1,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-65,2016,8,32,4,0,1,0,2,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 1,2016,8,32,4,0,1,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 178,2016,7,31,27,2,7,3,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 1,2016,8,32,4,0,1,1,0,0,BB,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -32424,7 +32277,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 5,2016,8,32,3,0,3,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,E,89,0,0,Transient
 175,2016,8,32,2,0,4,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 188,2016,8,32,3,0,3,2,0,0,BB,NLD,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
-94,2016,8,32,4,0,2,0,2,0,BB,BEL,Direct,Direct,0,0,0,B,14,0,0,Transient
 206,2016,8,32,5,0,1,2,2,0,HB,GBR,Direct,Direct,0,0,0,G,14,0,0,Transient
 96,2016,8,32,4,0,2,2,0,0,BB,BEL,Direct,Direct,0,0,0,B,14,0,0,Transient
 147,2016,8,32,5,0,1,1,1,0,BB,GBR,Offline TA/TO,TA/TO,0,0,0,A,83,0,0,Transient
@@ -32873,7 +32725,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 214,2016,8,33,11,0,3,1,0,0,BB,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 93,2016,8,33,13,0,1,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 93,2016,8,33,13,0,1,1,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-93,2016,8,33,13,0,1,0,2,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 190,2016,8,33,9,0,5,2,0,0,BB,DEU,Offline TA/TO,TA/TO,0,0,0,D,16,0,0,Transient
 134,2016,8,33,11,0,3,2,0,0,SC,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 103,2016,8,33,11,0,3,3,0,0,HB,FRA,Direct,Direct,0,0,0,A,none,0,0,Transient
@@ -32943,7 +32794,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 96,2016,8,33,12,1,2,2,1,0,HB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 0,2016,8,33,9,1,5,2,0,0,BB,NLD,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 14,2016,8,33,13,1,1,2,0,0,BB,NLD,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-14,2016,8,33,13,1,1,0,2,0,BB,NLD,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 40,2016,8,33,13,1,1,2,2,0,HB,ESP,Direct,Direct,0,0,0,E,14,0,0,Transient
 149,2016,8,33,12,1,2,2,2,0,BB,FRA,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 1,2016,8,34,14,1,0,2,1,0,BB,PRT,Direct,Direct,0,0,0,A,14,0,0,Transient
@@ -33065,7 +32915,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 119,2016,8,33,13,2,2,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 0,2016,8,34,16,0,1,2,0,0,BB,PRT,Direct,Direct,0,0,0,A,none,0,0,Transient
 137,2016,8,34,15,1,1,3,0,0,BB,BEL,Direct,Direct,0,0,0,B,14,0,0,Transient-Party
-136,2016,8,34,15,1,1,0,2,0,BB,BEL,Direct,Direct,0,0,0,B,14,0,0,Transient-Party
 306,2016,8,34,14,2,1,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Contract
 18,2016,8,34,14,2,1,2,0,0,BB,DEU,Offline TA/TO,TA/TO,0,0,0,D,83,0,0,Transient
 306,2016,8,34,14,2,1,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Contract
@@ -33101,7 +32950,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 42,2016,8,34,14,2,2,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 15,2016,8,34,17,0,1,1,0,0,BB,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 15,2016,8,34,17,0,1,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-14,2016,8,34,17,0,1,0,2,0,BB,BEL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 16,2016,8,34,16,0,2,2,0,0,BB,FRA,Direct,Direct,0,0,0,D,14,0,0,Transient
 100,2016,8,34,16,0,2,3,0,0,BB,ESP,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 6,2016,8,34,17,0,1,1,0,0,BB,ESP,Corporate,Corporate,0,0,0,A,none,1,0,Transient
@@ -33126,7 +32974,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 3,2016,8,34,17,0,1,2,0,0,BB,FRA,Direct,Direct,0,0,0,A,none,0,0,Transient
 47,2016,8,34,14,2,2,2,0,0,HB,SWE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 145,2016,8,34,15,1,2,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-145,2016,8,34,15,1,2,0,2,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 2,2016,8,34,15,1,2,2,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 2,2016,8,34,15,1,2,2,0,0,SC,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 107,2016,8,34,17,0,1,2,0,0,BB,GBR,Offline TA/TO,TA/TO,0,0,0,A,138,0,0,Transient
@@ -33189,7 +33036,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 219,2016,8,34,18,0,1,2,2,0,BB,GBR,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 0,2016,8,34,18,0,1,1,0,0,BB,USA,Direct,Direct,0,0,0,A,none,0,0,Transient
 144,2016,8,34,18,0,1,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-143,2016,8,34,18,0,1,0,2,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 145,2016,8,34,17,0,2,2,2,0,BB,ITA,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 145,2016,8,34,17,0,2,2,2,0,BB,ITA,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 145,2016,8,34,17,0,2,3,0,0,BB,ITA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -33244,7 +33090,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 156,2016,8,34,14,2,3,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 16,2016,8,34,18,0,1,2,0,1,BB,FRA,Direct,Direct,0,0,0,E,14,0,0,Transient
 203,2016,8,33,13,2,5,3,0,0,BB,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-11,2016,8,34,19,0,1,0,2,0,BB,BEL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 11,2016,8,34,19,0,1,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 126,2016,8,34,15,1,4,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 189,2016,8,34,16,0,4,2,0,0,BB,AUT,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -33344,7 +33189,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 1,2016,8,34,20,0,1,1,0,0,BB,ESP,Direct,Direct,0,0,0,A,14,0,0,Transient
 0,2016,8,34,20,0,1,1,0,0,SC,FRA,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 180,2016,8,34,20,0,1,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-180,2016,8,34,20,0,1,0,2,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 0,2016,8,34,18,0,3,1,0,0,BB,DNK,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 0,2016,8,34,20,0,1,1,0,0,BB,MAR,Direct,Direct,0,0,0,A,none,0,0,Transient
 5,2016,8,34,20,0,1,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -33377,7 +33221,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 219,2016,8,34,20,1,1,3,0,0,HB,ITA,Groups,TA/TO,0,0,0,A,1,0,0,Transient-Party
 0,2016,8,35,21,1,0,2,1,0,BB,FRA,Direct,Direct,0,0,0,A,none,0,0,Transient
 123,2016,8,35,21,1,0,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
-120,2016,8,34,16,1,5,0,3,0,HB,FRA,Direct,Direct,0,0,0,D,none,0,0,Transient-Party
 120,2016,8,34,16,1,5,3,0,0,HB,FRA,Direct,Direct,0,0,0,D,none,0,0,Transient-Party
 193,2016,8,34,18,1,3,2,0,0,BB,AUT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 138,2016,8,34,17,1,4,3,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -33397,7 +33240,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 6,2016,8,34,20,1,1,2,0,0,SC,ESP,Direct,Direct,0,0,0,A,14,0,0,Transient
 15,2016,8,35,21,1,0,2,0,0,SC,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 137,2016,8,35,21,1,0,2,1,0,BB,ROU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-78,2016,8,34,19,1,2,0,2,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 42,2016,8,34,20,1,1,2,2,0,BB,FRA,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 16,2016,8,34,19,1,2,2,2,0,HB,FRA,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 54,2016,8,34,19,1,2,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -33428,7 +33270,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 175,2016,8,34,16,2,5,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 133,2016,8,35,21,2,0,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 48,2016,8,34,18,2,3,3,0,0,BB,ESP,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
-21,2016,8,34,20,2,1,0,2,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 38,2016,8,35,21,2,0,1,0,0,BB,MOZ,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 199,2016,8,34,19,2,2,3,0,0,BB,PRT,Direct,Direct,0,0,0,E,14,0,0,Transient
 212,2016,8,34,19,2,2,3,0,0,BB,DEU,Offline TA/TO,TA/TO,0,0,0,A,22,0,0,Transient
@@ -33650,7 +33491,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 3,2016,8,35,22,1,3,2,0,0,SC,ESP,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 142,2016,8,35,21,2,3,2,0,0,BB,IRL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 130,2016,8,35,24,0,2,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-142,2016,8,35,21,2,3,0,2,0,BB,IRL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 130,2016,8,35,24,0,2,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 12,2016,8,35,24,0,2,2,1,0,BB,PRT,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 172,2016,8,35,23,0,3,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
@@ -33777,7 +33617,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 29,2016,8,35,26,1,2,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 3,2016,8,35,26,1,2,2,0,0,BB,AUS,Direct,Direct,0,0,0,E,14,0,0,Transient
 180,2016,8,35,27,1,1,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-178,2016,8,35,27,1,1,0,2,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 158,2016,8,35,25,1,3,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 203,2016,8,35,26,1,2,2,0,0,BB,NLD,Offline TA/TO,TA/TO,0,0,0,A,121,0,0,Transient-Party
 0,2016,8,36,28,1,0,2,0,0,BB,DEU,Direct,Direct,0,0,0,A,none,0,0,Transient
@@ -33843,7 +33682,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 4,2016,8,36,29,1,0,2,0,0,SC,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 56,2016,8,35,26,2,2,3,0,0,BB,ITA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 6,2016,8,36,28,2,0,2,1,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,D,28,0,0,Transient
-185,2016,8,35,25,2,3,0,2,0,BB,BEL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 188,2016,8,35,25,2,3,2,2,0,BB,BEL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 42,2016,8,35,25,2,3,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 100,2016,8,35,26,2,2,3,0,0,BB,ESP,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -34415,7 +34253,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 15,2016,9,40,26,1,2,2,0,0,BB,PRT,Online TA,TA/TO,1,0,1,D,9,0,0,Transient
 75,2016,11,49,29,0,5,2,0,0,BB,BEL,Offline TA/TO,TA/TO,1,0,2,A,28,0,0,Transient
 188,2016,9,37,4,2,2,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-186,2016,9,37,4,2,2,0,2,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 84,2016,9,37,7,0,1,1,0,0,BB,PRT,Corporate,Corporate,0,0,0,A,none,1,0,Transient
 23,2016,9,37,6,0,2,2,0,0,BB,AUT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 68,2016,9,36,3,2,3,2,0,0,HB,PRT,Offline TA/TO,TA/TO,0,0,0,A,168,0,0,Transient
@@ -35168,7 +35005,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 253,2016,9,39,19,1,0,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,D,9,0,0,Transient-Party
 5,2016,9,39,19,1,0,1,0,0,BB,CHE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 35,2016,9,39,18,2,0,2,2,0,BB,CHL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-34,2016,9,39,18,2,0,0,2,0,BB,CHL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 0,2016,9,39,19,1,0,1,0,0,BB,GBR,Direct,Direct,0,0,0,G,none,1,0,Transient
 0,2016,9,39,18,2,0,1,0,0,BB,PRT,Complementary,Direct,0,0,0,A,none,1,0,Transient
 1,2017,3,11,15,0,1,2,0,0,BB,PRT,Complementary,Direct,1,0,1,G,none,0,0,Transient
@@ -35390,7 +35226,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 2,2016,9,39,22,0,1,1,0,0,BB,AGO,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 10,2016,10,41,7,2,2,2,0,0,SC,AGO,Online TA,TA/TO,1,0,1,A,9,0,0,Transient
 3,2016,9,39,20,0,3,1,0,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-3,2016,9,39,20,0,3,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 77,2016,9,39,19,1,3,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 15,2016,9,39,22,0,1,2,0,0,SC,PRT,Direct,Direct,0,0,0,A,14,0,0,Transient
 89,2016,9,39,20,0,3,3,0,0,BB,PRT,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -35697,7 +35532,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 80,2016,9,40,25,2,2,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 24,2016,9,40,28,0,1,2,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 16,2016,9,40,27,0,2,2,0,0,SC,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-107,2016,9,39,24,2,3,0,2,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 108,2016,9,39,24,2,3,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 6,2016,9,40,25,2,2,1,0,0,BB,PRT,Online TA,TA/TO,0,0,0,G,7,0,0,Transient
 83,2016,9,40,28,0,1,2,0,0,SC,CHN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -36206,7 +36040,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 163,2016,10,41,5,0,3,1,0,0,BB,ESP,Offline TA/TO,TA/TO,0,0,0,A,83,0,0,Transient
 30,2016,10,41,4,0,4,2,0,0,BB,BRA,Online TA,TA/TO,0,0,0,D,8,0,0,Transient
 260,2016,10,41,2,2,4,2,1,0,BB,CN,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
-71,2016,10,41,7,0,1,0,2,0,BB,CHE,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 32,2016,10,41,6,0,2,2,0,0,BB,POL,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 5,2016,10,41,5,0,3,2,0,0,SC,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 71,2016,10,41,7,0,1,2,0,0,BB,CHE,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
@@ -36420,7 +36253,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 99,2016,10,41,8,2,2,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 124,2016,10,42,9,2,1,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 89,2016,10,41,8,2,2,2,0,0,BB,CHE,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-88,2016,10,41,8,2,2,0,2,0,BB,CHE,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 24,2016,10,42,9,2,1,2,0,0,BB,ROU,Offline TA/TO,TA/TO,0,0,0,A,42,0,0,Transient
 222,2016,10,42,12,0,4,2,0,0,BB,ROU,Offline TA/TO,TA/TO,0,0,0,A,85,0,0,Transient
 266,2016,10,41,7,2,3,2,0,0,BB,DEU,Offline TA/TO,TA/TO,0,0,0,A,16,0,0,Transient
@@ -36491,7 +36323,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 112,2016,10,42,11,0,2,1,0,0,BB,SWE,Offline TA/TO,TA/TO,0,0,0,A,234,0,0,Transient-Party
 181,2016,10,42,11,0,2,1,0,0,BB,FRA,Offline TA/TO,TA/TO,0,0,0,A,234,0,0,Transient-Party
 187,2016,10,42,10,1,2,2,0,0,BB,CHE,Online TA,TA/TO,0,0,0,A,11,0,0,Transient
-125,2016,10,42,9,2,2,0,2,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 40,2016,10,42,10,1,2,2,0,0,BB,NLD,Offline TA/TO,TA/TO,0,0,0,A,85,0,0,Transient
 126,2016,10,42,9,2,2,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 32,2016,10,41,7,2,4,2,0,0,BB,FRA,Direct,Direct,0,0,0,D,14,0,0,Transient
@@ -36822,7 +36653,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 79,2016,10,43,16,2,2,3,0,0,BB,NLD,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 217,2016,10,43,16,2,2,3,0,0,BB,ITA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 127,2016,10,43,18,0,2,3,0,0,BB,NLD,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
-57,2016,10,42,15,2,3,0,2,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 188,2016,10,43,18,0,2,2,0,0,BB,CHE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 1,2016,10,43,18,0,2,1,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 41,2016,10,43,16,2,2,2,0,0,BB,DEU,Offline TA/TO,TA/TO,0,0,0,A,85,0,0,Transient
@@ -36930,7 +36760,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 5,2016,10,43,17,1,4,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 66,2016,10,43,20,0,2,2,2,0,BB,RUS,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 66,2016,10,43,20,0,2,2,0,0,BB,RUS,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-66,2016,10,43,20,0,2,0,2,0,BB,RUS,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 104,2016,10,43,18,0,4,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 4,2016,10,43,17,1,4,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 18,2016,10,43,21,0,1,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -36947,7 +36776,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 28,2016,10,43,20,0,3,2,0,0,BB,FRA,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Transient
 76,2016,10,43,16,2,5,2,0,0,BB,CN,Offline TA/TO,TA/TO,0,0,0,D,3,0,0,Transient
 256,2016,10,43,20,0,3,2,0,0,BB,CHE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
-130,2016,10,43,21,0,2,0,2,0,BB,IRL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 133,2016,10,43,21,0,2,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 205,2016,10,43,20,0,3,1,0,0,BB,CHE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 22,2016,10,43,20,0,3,2,0,0,BB,DEU,Direct,Direct,0,0,0,A,14,0,0,Transient
@@ -37169,7 +36997,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 97,2016,10,43,22,2,3,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 64,2016,10,44,25,0,2,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,D,7,0,0,Transient
 65,2016,10,44,27,0,1,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
-208,2016,10,44,23,2,2,0,2,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 208,2016,10,44,23,2,2,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 115,2016,10,44,26,0,1,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 267,2016,10,44,25,0,2,2,0,0,BB,DEU,Offline TA/TO,TA/TO,0,0,0,A,27,0,0,Transient
@@ -37236,7 +37063,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 62,2016,10,44,25,0,3,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 21,2016,10,44,25,0,3,1,0,0,SC,PRT,Offline TA/TO,TA/TO,0,0,0,A,6,0,0,Transient
 22,2016,10,44,25,0,3,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-216,2016,10,44,23,2,3,0,2,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 119,2016,10,44,24,1,3,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,7,0,0,Transient
 32,2016,10,44,24,1,3,2,0,0,BB,CHE,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Transient
 88,2016,10,43,22,2,4,2,0,0,HB,FRA,Offline TA/TO,TA/TO,0,0,0,A,42,0,0,Transient
@@ -37389,7 +37215,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 199,2016,10,44,28,0,2,1,2,0,BB,PRT,Groups,TA/TO,0,0,0,A,29,0,0,Transient-Party
 199,2016,10,44,28,0,2,3,0,0,BB,FRA,Groups,TA/TO,0,0,0,A,29,0,0,Transient-Party
 98,2016,10,44,24,1,5,2,0,0,HB,FRA,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
-0,2016,10,44,27,0,3,0,2,0,HB,FRA,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 6,2016,10,44,26,0,4,1,0,0,BB,FRA,Aviation,Corporate,0,0,0,D,none,1,0,Transient
 35,2016,10,44,28,0,2,2,0,0,BB,PRT,Direct,Direct,0,0,0,A,none,0,0,Transient
 26,2016,10,44,29,0,1,2,0,0,BB,FIN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -37418,7 +37243,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 240,2016,10,44,27,1,3,2,0,0,BB,DNK,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 268,2016,10,44,28,1,2,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 71,2016,10,45,30,1,0,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
-92,2016,10,44,29,1,1,0,2,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 93,2016,10,44,29,1,1,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 32,2016,10,44,25,1,5,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,83,0,0,Transient
 5,2016,10,44,28,1,2,2,0,0,HB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -37534,7 +37358,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 88,2016,10,45,30,2,1,2,0,0,BB,USA,Direct,Direct,0,0,0,A,none,0,0,Transient
 9,2016,10,44,29,2,2,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 243,2016,10,44,29,2,2,2,0,0,BB,SWE,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
-241,2016,10,44,29,2,2,0,2,0,BB,SWE,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 68,2016,10,45,30,2,1,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 58,2016,10,45,31,1,1,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 8,2016,10,45,30,2,1,2,0,0,BB,ISR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -37591,7 +37414,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 19,2016,11,45,2,0,1,1,0,0,BB,DEU,Offline TA/TO,TA/TO,0,0,0,A,138,0,0,Transient
 18,2016,11,45,1,0,2,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 200,2016,10,45,31,1,2,2,0,0,BB,CHE,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-200,2016,10,45,31,1,2,0,2,0,BB,CHE,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 91,2016,10,45,30,2,2,2,0,0,SC,GBR,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 45,2016,10,45,30,2,2,2,0,0,BB,FRA,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Transient
 102,2016,10,45,30,2,2,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -37657,7 +37479,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 43,2016,11,45,1,0,3,1,0,0,SC,CHE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 183,2016,10,45,31,1,3,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 45,2016,10,45,30,2,3,2,0,0,BB,FRA,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Transient
-182,2016,10,45,31,1,3,0,2,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 8,2016,10,45,30,2,3,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 186,2016,11,45,3,0,1,3,0,0,BB,NOR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 25,2016,11,45,1,0,3,2,0,0,SC,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -39087,7 +38908,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 138,2016,11,49,30,0,3,1,0,0,SC,BRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 53,2016,11,49,29,0,4,2,1,0,BB,ROU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 30,2016,11,49,29,0,4,2,0,0,SC,NLD,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-53,2016,11,49,29,0,4,0,2,0,BB,ROU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 53,2016,11,49,29,0,4,2,0,0,BB,ROU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 73,2016,12,49,3,0,1,2,0,0,SC,USA,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 18,2016,11,49,27,2,5,2,0,0,BB,GBR,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Transient
@@ -39198,7 +39018,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 0,2016,12,50,5,1,0,1,0,0,SC,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 50,2016,12,49,3,2,1,2,0,1,BB,ESP,Direct,Direct,0,0,0,A,14,0,0,Transient
 5,2016,12,49,3,2,1,2,2,0,BB,ESP,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
-38,2016,12,49,2,2,2,0,2,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 38,2016,12,49,2,2,2,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 143,2016,12,50,4,2,0,2,0,0,BB,CN,Online TA,TA/TO,0,0,0,D,7,0,0,Transient
 0,2016,12,49,3,2,1,2,0,0,BB,AGO,Direct,Direct,0,0,0,A,none,0,0,Transient
@@ -39347,7 +39166,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 44,2016,12,50,6,0,4,2,1,0,BB,ESP,Direct,Direct,0,0,0,A,14,0,0,Transient
 44,2016,12,50,6,0,4,2,0,0,BB,ESP,Direct,Direct,0,0,0,D,14,0,0,Transient
 129,2016,12,50,8,0,2,2,1,0,BB,BRA,Online TA,TA/TO,0,0,0,D,7,0,0,Transient
-56,2016,12,50,7,0,3,0,2,0,BB,ITA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 56,2016,12,50,7,0,3,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 66,2016,12,50,5,1,4,2,0,0,BB,BRA,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 17,2016,12,50,9,0,1,1,0,0,BB,PRT,Corporate,Corporate,0,0,0,A,none,1,0,Transient
@@ -39357,7 +39175,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 3,2016,12,50,9,0,1,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 62,2016,12,50,8,0,2,2,1,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 79,2016,12,50,7,0,3,3,0,0,BB,FRA,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Transient
-61,2016,12,50,8,0,2,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 27,2016,12,50,6,0,4,2,0,0,SC,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 34,2016,12,49,3,2,5,2,0,0,SC,FRA,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 15,2016,12,50,7,0,3,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -39400,7 +39217,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 157,2016,12,50,8,0,3,2,0,0,BB,ITA,Offline TA/TO,TA/TO,0,0,0,A,83,0,0,Transient-Party
 103,2016,12,50,9,0,2,2,0,0,SC,USA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 209,2016,12,50,8,0,3,1,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-56,2016,12,50,8,0,3,0,2,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 157,2016,12,50,8,0,3,2,0,0,BB,CHE,Offline TA/TO,TA/TO,0,0,0,A,83,0,0,Transient-Party
 122,2016,12,50,8,0,3,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,83,0,0,Transient-Party
 57,2016,12,50,8,0,3,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
@@ -39722,7 +39538,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 13,2016,12,52,19,1,1,1,0,0,SC,DEU,Online TA,GDS,0,0,0,A,195,0,0,Transient
 1,2016,12,52,20,0,1,1,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 7,2016,12,52,19,1,1,2,0,0,BB,PRT,Direct,Direct,0,0,0,A,14,0,0,Transient
-109,2016,12,51,16,2,3,0,2,0,BB,BRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 13,2016,12,52,19,1,1,1,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,10,0,0,Transient
 83,2016,12,52,18,2,1,2,0,0,BB,FRA,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Transient
 110,2016,12,51,16,2,3,2,2,0,BB,BRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
@@ -39826,7 +39641,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 72,2016,12,52,23,1,2,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 197,2016,12,52,21,1,4,2,0,0,HB,FRA,Offline TA/TO,TA/TO,0,0,0,A,3,0,0,Transient-Party
 197,2016,12,52,21,1,4,3,0,0,HB,FRA,Offline TA/TO,TA/TO,0,0,0,A,3,0,0,Transient-Party
-197,2016,12,52,21,1,4,0,3,0,HB,FRA,Offline TA/TO,TA/TO,0,0,0,A,3,0,0,Transient-Party
 197,2016,12,52,21,1,4,2,1,0,HB,FRA,Offline TA/TO,TA/TO,0,0,0,A,3,0,0,Transient-Party
 9,2016,12,52,21,1,4,2,0,0,HB,FRA,Groups,TA/TO,0,0,0,A,3,0,0,Transient-Party
 51,2016,12,52,20,1,5,3,0,0,BB,ITA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -39941,7 +39755,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 0,2016,12,53,27,0,1,2,0,0,HB,PRT,Direct,Direct,0,0,0,D,14,0,0,Transient
 95,2016,12,52,21,2,5,2,1,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 41,2016,12,53,27,0,1,1,0,0,BB,BRA,Offline TA/TO,TA/TO,0,0,0,A,220,0,0,Transient-Party
-104,2016,12,53,25,2,1,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 1,2016,12,53,27,0,1,1,0,0,SC,ITA,Online TA,TA/TO,0,0,0,A,152,0,0,Transient
 43,2016,12,53,25,2,1,2,0,0,SC,CHE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 111,2016,12,52,24,2,2,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -39949,7 +39762,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 106,2016,12,53,25,2,1,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 79,2016,12,53,27,0,1,2,0,1,BB,ITA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 79,2016,12,53,27,0,1,2,2,0,BB,ITA,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
-104,2016,12,53,25,2,1,0,2,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 16,2016,12,52,24,2,2,2,0,0,BB,BRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 9,2017,1,1,2,1,0,2,0,0,BB,BRA,Online TA,TA/TO,0,0,1,D,9,0,0,Group
 4,2016,12,53,26,1,1,2,0,0,BB,PRT,Corporate,Corporate,0,0,0,A,none,1,0,Transient
@@ -39960,7 +39772,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 108,2016,12,52,24,2,3,2,0,0,SC,BRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 116,2016,12,52,23,2,4,2,0,0,BB,SWE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 173,2016,12,53,26,1,2,2,2,0,BB,BRA,Direct,Direct,0,0,0,E,none,0,0,Transient
-247,2016,12,52,24,2,3,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 248,2016,12,52,24,2,3,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 77,2016,12,52,24,2,3,2,0,0,BB,BRA,Online TA,TA/TO,0,0,0,D,7,0,0,Transient
 0,2016,12,53,28,0,1,2,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -40313,7 +40124,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 110,2017,1,1,3,0,2,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 0,2017,1,1,2,1,2,1,0,0,BB,PRT,Direct,Direct,0,0,0,A,none,0,0,Transient
 0,2017,1,3,16,1,1,1,0,0,BB,PRT,Corporate,Corporate,1,0,1,A,none,1,0,Transient
-110,2017,1,1,3,0,2,0,2,0,BB,ESP,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 37,2017,1,1,4,0,1,1,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 139,2017,1,1,2,1,2,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 130,2017,1,1,3,0,2,2,2,0,BB,DEU,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
@@ -40498,7 +40308,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 3,2017,1,1,6,1,2,2,0,0,BB,AUS,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 107,2017,1,1,6,1,2,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 128,2017,1,1,6,1,2,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-128,2017,1,1,6,1,2,0,2,0,BB,THA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 4,2017,1,2,9,1,0,2,0,0,SC,AUT,Direct,Direct,0,0,0,A,none,0,0,Transient
 24,2017,1,1,6,2,2,2,0,0,BB,IRL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 87,2017,1,1,3,2,5,2,0,0,BB,BRA,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
@@ -40732,7 +40541,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 16,2017,1,2,11,1,4,2,0,0,BB,IRL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 10,2017,1,2,14,2,1,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 138,2017,1,2,13,2,2,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-137,2017,1,2,13,2,2,0,2,0,BB,BEL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 5,2017,1,2,14,2,1,2,0,0,SC,NLD,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 12,2017,1,2,12,2,3,2,0,0,BB,NLD,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 52,2017,1,2,14,2,1,2,0,0,BB,KOR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -40875,7 +40683,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 10,2017,1,3,20,0,1,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 29,2017,1,3,18,0,3,1,0,0,BB,PRT,Groups,TA/TO,0,0,0,A,171,0,0,Transient-Party
 77,2017,1,3,15,2,4,2,0,0,BB,BRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-76,2017,1,3,15,2,4,0,2,0,BB,BRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 29,2017,1,3,18,0,3,1,0,0,BB,DNK,Groups,TA/TO,0,0,0,A,171,0,0,Transient-Party
 0,2017,1,3,18,0,3,2,0,0,SC,PRT,Direct,Direct,0,0,0,A,none,0,0,Transient
 33,2017,1,2,14,2,6,2,0,0,BB,USA,Online TA,TA/TO,0,0,0,D,7,0,0,Transient
@@ -41002,7 +40809,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 2,2017,3,13,29,0,1,2,0,0,BB,DNK,Direct,Direct,1,0,1,A,none,0,0,Transient
 18,2017,1,3,21,2,1,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 7,2017,1,4,22,2,0,1,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-16,2017,1,3,20,2,2,0,2,0,BB,PRT,Direct,Direct,0,0,0,B,none,0,0,Transient-Party
 16,2017,1,3,20,2,2,2,0,0,BB,PRT,Direct,Direct,0,0,0,B,none,0,0,Transient-Party
 10,2017,1,4,22,2,0,1,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,77,0,0,Transient-Party
 2,2017,1,3,21,2,1,1,0,0,SC,GBR,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
@@ -41408,7 +41214,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 11,2017,2,5,2,0,3,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 15,2017,2,5,3,0,2,1,0,0,BB,PRT,Groups,TA/TO,0,0,0,A,none,1,0,Transient-Party
 53,2017,2,5,4,0,1,2,0,0,BB,BRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-0,2017,2,5,4,0,1,0,2,0,BB,PRT,Direct,Direct,0,0,0,A,none,0,0,Transient-Party
 53,2017,2,5,4,0,1,1,0,0,SC,BRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 24,2017,2,5,2,0,3,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 69,2017,2,5,2,0,3,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -42575,7 +42380,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 75,2017,2,9,27,1,3,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 38,2017,2,9,26,2,3,2,0,0,BB,FRA,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Transient
 202,2017,2,9,27,1,3,2,0,0,BB,NLD,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-201,2017,2,9,27,1,3,0,2,0,BB,NLD,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 148,2017,2,9,27,1,3,3,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 4,2017,2,9,28,0,3,1,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 5,2017,2,9,27,1,3,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
@@ -43930,7 +43734,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 79,2017,3,12,25,2,1,2,0,0,BB,GBR,Offline TA/TO,TA/TO,0,0,0,A,42,0,0,Transient
 76,2017,3,12,23,2,3,2,0,0,BB,GBR,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Transient
 34,2017,3,12,21,2,5,2,0,0,BB,PRT,Direct,Direct,0,0,0,B,14,0,0,Transient
-34,2017,3,12,21,2,5,0,1,0,BB,BLR,Direct,Direct,0,0,0,B,14,0,0,Transient
 0,2017,3,13,28,0,1,1,0,0,BB,USA,Online TA,TA/TO,1,0,0,G,9,0,0,Transient
 0,2017,6,24,13,0,2,1,0,0,BB,USA,Online TA,TA/TO,1,0,1,D,9,0,0,Transient
 31,2017,7,29,16,2,0,1,0,0,BB,USA,Direct,Direct,1,0,2,A,none,0,0,Transient
@@ -44334,7 +44137,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 55,2017,4,14,3,1,0,3,0,0,BB,CHN,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 18,2017,4,13,1,2,1,3,0,0,BB,GBR,Online TA,TA/TO,0,0,0,G,7,0,0,Transient
 83,2017,4,13,1,2,1,2,0,0,BB,FRA,Direct,Direct,0,0,0,B,14,0,0,Transient-Party
-82,2017,4,13,1,2,1,0,2,0,BB,FRA,Direct,Direct,0,0,0,B,14,0,0,Transient-Party
 62,2017,3,13,31,2,2,2,2,0,BB,SWE,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 100,2017,3,13,31,2,2,1,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,27,0,0,Transient
 51,2017,3,13,31,2,2,2,0,0,BB,BEL,Offline TA/TO,TA/TO,0,0,0,A,85,0,0,Transient
@@ -44724,7 +44526,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 30,2017,4,14,8,2,1,2,0,0,BB,USA,Online TA,TA/TO,0,0,0,E,9,0,0,Transient
 19,2017,4,14,8,2,1,2,0,0,BB,PRT,Direct,Direct,0,0,0,A,14,0,0,Transient
 178,2017,4,14,7,2,2,2,0,0,BB,LUX,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-177,2017,4,14,7,2,2,0,2,0,BB,LUX,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 189,2017,4,14,6,2,3,2,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,83,0,0,Transient
 82,2017,4,14,8,2,1,2,0,0,BB,GBR,Direct,Direct,0,0,0,D,14,0,0,Transient
 58,2017,4,15,9,2,0,3,0,0,HB,FRA,Online TA,TA/TO,0,0,0,E,9,0,0,Transient
@@ -44747,7 +44548,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 2,2017,4,15,11,0,1,2,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 202,2017,4,15,9,2,1,3,0,0,BB,USA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 82,2017,4,15,9,2,1,2,0,0,BB,FRA,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Transient
-202,2017,4,15,9,2,1,0,2,0,BB,USA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 77,2017,4,14,8,2,2,3,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 96,2017,4,15,9,2,1,2,0,0,BB,LUX,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Transient
 96,2017,4,15,9,2,1,2,0,0,BB,BEL,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Transient
@@ -44961,7 +44761,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 5,2017,4,15,12,0,3,2,0,0,SC,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 0,2017,4,15,13,0,2,2,0,0,SC,ESP,Online TA,TA/TO,0,0,0,A,425,0,0,Transient
 6,2017,4,15,13,0,2,2,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-182,2017,4,15,11,0,4,0,2,0,BB,BEL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 183,2017,4,15,11,0,4,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 6,2017,4,15,13,0,2,2,0,0,SC,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 102,2017,4,15,14,0,1,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -44977,7 +44776,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 96,2017,4,15,13,0,2,2,0,0,SC,URY,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 96,2017,4,15,13,0,2,2,0,0,SC,URY,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 64,2017,4,15,13,0,2,2,0,0,BB,ESP,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
-181,2017,4,15,10,1,4,0,2,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 76,2017,4,15,11,0,4,2,0,0,BB,ESP,Offline TA/TO,TA/TO,0,0,0,A,28,0,0,Transient
 139,2017,4,15,12,0,3,2,1,0,BB,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 82,2017,4,15,12,0,3,2,0,0,SC,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -45297,7 +45095,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 79,2017,4,16,18,0,3,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 114,2017,4,16,17,1,3,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,8,0,0,Transient-Party
 169,2017,4,16,20,0,1,2,0,0,BB,BRA,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
-255,2017,4,15,13,2,6,0,2,0,BB,USA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 145,2017,4,16,17,1,3,2,0,0,BB,ESP,Direct,Direct,0,0,0,A,none,0,0,Transient
 20,2017,4,16,19,0,2,2,0,0,SC,KOR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 106,2017,4,16,16,2,3,1,0,0,BB,DEU,Direct,Direct,0,0,0,D,14,0,0,Transient
@@ -45542,7 +45339,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 59,2017,4,17,26,0,1,2,0,0,BB,CHE,Direct,Direct,0,0,0,D,14,0,0,Transient
 204,2017,4,17,23,2,2,2,2,0,BB,CHE,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 204,2017,4,17,23,2,2,2,0,0,BB,CHE,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-202,2017,4,17,23,2,2,0,2,0,BB,CHE,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 137,2017,4,17,24,1,2,2,0,0,BB,DEU,Direct,Direct,0,0,0,A,none,0,0,Transient
 41,2017,4,17,26,0,1,1,0,0,BB,DEU,Corporate,Corporate,0,0,0,A,none,1,0,Transient-Party
 110,2017,4,16,22,2,3,2,0,0,HB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -47484,7 +47280,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 178,2017,5,21,25,0,3,2,0,0,BB,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 180,2017,5,21,25,0,3,2,0,0,BB,CHE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 180,2017,5,21,25,0,3,2,1,0,BB,CHE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-248,2017,5,21,25,0,3,0,2,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 249,2017,5,21,25,0,3,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 180,2017,5,21,25,0,3,3,0,0,BB,CHE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 233,2017,5,21,25,0,3,2,0,0,SC,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -47504,7 +47299,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 225,2017,5,21,25,0,3,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 131,2017,5,21,26,0,2,2,0,0,SC,DEU,Online TA,TA/TO,0,0,0,A,8,0,0,Transient
 29,2017,5,21,27,0,1,2,0,0,SC,CHE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-159,2017,5,21,24,0,4,0,3,0,HB,FRA,Online TA,TA/TO,0,0,0,A,83,0,0,Transient
 194,2017,5,21,25,0,3,2,0,0,BB,BEL,Direct,Direct,0,0,0,D,14,0,0,Transient
 159,2017,5,21,24,0,4,2,0,0,HB,FRA,Online TA,TA/TO,0,0,0,A,83,0,0,Transient
 159,2017,5,21,24,0,4,2,0,0,BB,PRT,Offline TA/TO,TA/TO,0,0,0,A,85,0,0,Transient
@@ -48322,7 +48116,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 55,2017,6,23,10,0,1,2,0,0,SC,CN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 1,2017,6,23,10,0,1,2,0,0,BB,PRT,Direct,Direct,0,0,0,D,14,0,0,Transient
 74,2017,6,23,9,0,2,2,0,0,SC,CHE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
-239,2017,6,23,4,2,5,0,1,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient-Party
 74,2017,6,23,9,0,2,3,0,0,SC,CHE,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 38,2017,6,23,9,0,2,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,E,9,0,0,Transient
 44,2017,6,23,5,1,5,2,0,0,SC,FIN,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
@@ -48450,7 +48243,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 109,2017,6,24,12,1,1,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 8,2017,6,24,11,2,1,3,0,0,BB,ITA,Offline TA/TO,TA/TO,0,0,0,A,6,0,0,Transient
 12,2017,6,24,11,2,1,1,0,0,BB,NLD,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-28,2017,6,24,13,0,1,0,2,0,SC,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 28,2017,6,24,13,0,1,2,0,0,SC,DEU,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 11,2017,6,24,12,1,1,1,0,0,BB,PRT,Online TA,TA/TO,0,0,0,A,10,0,0,Transient
 11,2017,6,24,12,1,1,1,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,10,0,0,Transient
@@ -50150,7 +49942,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 72,2017,7,28,10,1,2,2,0,0,HB,BEL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient-Party
 33,2017,7,28,11,0,2,2,0,0,SC,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 252,2017,7,27,8,2,3,2,0,0,BB,JOR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-250,2017,7,27,8,2,3,0,2,0,BB,JOR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 170,2017,7,28,9,2,2,3,0,0,BB,AUT,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 33,2017,7,28,9,2,2,2,0,0,SC,IRN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 46,2017,7,28,10,1,2,2,0,0,SC,NOR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -50312,7 +50103,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 26,2017,7,28,15,0,1,2,0,0,BB,FRA,Direct,Direct,0,0,0,A,14,0,0,Transient
 316,2017,7,28,11,0,5,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
 316,2017,7,28,11,0,5,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-315,2017,7,28,11,0,5,0,2,0,BB,FRA,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 44,2017,7,28,15,0,1,2,1,0,BB,NOR,Online TA,TA/TO,0,0,0,A,425,0,0,Transient
 181,2017,7,28,13,0,3,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,D,7,0,0,Transient
 17,2017,7,28,14,0,2,2,0,0,SC,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -50637,7 +50427,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 148,2017,7,29,19,0,3,2,1,0,BB,ITA,Direct,Direct,0,0,0,A,14,0,0,Transient
 118,2017,7,28,15,2,5,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 116,2017,7,29,19,0,3,2,0,0,BB,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-295,2017,7,29,20,0,2,0,2,0,BB,ZAF,Direct,Direct,0,0,0,B,none,0,0,Transient-Party
 295,2017,7,29,20,0,2,2,0,0,BB,ZAF,Direct,Direct,0,0,0,B,none,0,0,Transient-Party
 86,2017,7,29,20,0,2,3,0,0,BB,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 138,2017,7,29,21,0,1,2,0,0,SC,DEU,Online TA,TA/TO,0,0,0,A,8,0,0,Transient
@@ -50849,7 +50638,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 108,2017,7,30,24,1,1,3,0,0,BB,BRA,Online TA,TA/TO,0,0,0,D,83,0,0,Transient
 307,2017,7,30,25,0,1,2,0,0,SC,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 7,2017,7,30,23,2,1,2,0,0,BB,POL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-14,2017,7,30,24,1,1,0,3,0,BB,PRT,Direct,Direct,0,0,0,A,none,0,0,Transient-Party
 14,2017,7,30,24,1,1,2,0,0,BB,BRA,Direct,Direct,0,0,0,A,none,0,0,Transient-Party
 129,2017,7,29,21,2,3,2,2,0,HB,HRV,Direct,Direct,0,0,0,E,14,0,0,Transient
 112,2017,7,30,23,2,1,2,0,0,BB,ITA,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -51115,9 +50903,7 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 47,2017,7,30,28,0,2,2,1,0,HB,SWE,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 76,2017,7,30,27,0,3,2,0,0,BB,PRT,Corporate,Corporate,0,0,0,A,none,1,0,Transient
 352,2017,7,30,27,0,3,2,1,0,BB,NLD,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-351,2017,7,30,27,0,3,0,2,0,BB,CHE,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 278,2017,7,30,26,0,4,3,0,0,BB,DEU,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
-329,2017,7,30,24,1,5,0,2,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 331,2017,7,30,24,1,5,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 140,2017,7,30,23,2,5,2,0,0,SC,FRA,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 91,2017,7,30,27,0,3,2,0,0,BB,GBR,Direct,Direct,0,0,0,A,14,0,0,Transient
@@ -51179,7 +50965,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 28,2017,7,30,29,1,1,1,0,0,SC,CHN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 207,2017,7,30,29,1,1,3,1,0,BB,GBR,Direct,Direct,0,0,0,E,14,0,0,Transient
 296,2017,7,30,27,1,3,2,0,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-296,2017,7,30,27,1,3,0,2,0,BB,GBR,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 64,2017,7,30,28,1,2,2,0,0,SC,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 0,2017,7,30,29,1,1,2,0,0,SC,FRA,Direct,Direct,0,0,0,A,none,0,0,Transient
 198,2017,7,30,25,1,5,3,0,0,BB,ESP,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
@@ -51238,7 +51023,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 164,2017,7,31,30,2,0,1,0,0,BB,BRA,Offline TA/TO,TA/TO,0,0,0,A,6,0,0,Transient
 117,2017,7,30,29,2,1,2,0,0,BB,ITA,Offline TA/TO,TA/TO,0,0,0,A,85,0,0,Transient
 276,2017,7,31,30,2,1,2,2,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
-276,2017,7,31,30,2,1,0,2,0,BB,DEU,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 62,2017,8,31,1,0,1,2,0,0,SC,DNK,Online TA,TA/TO,0,0,0,A,85,0,0,Transient
 58,2017,7,30,29,2,2,2,2,0,BB,IRL,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 103,2017,7,30,29,2,2,2,0,0,SC,IRL,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -51265,7 +51049,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 20,2017,7,31,31,1,1,2,2,0,BB,CHN,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 14,2017,7,31,31,1,1,1,0,0,BB,ESP,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 155,2017,7,30,28,2,3,2,0,0,BB,AUT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-291,2017,7,30,29,2,2,0,2,0,BB,PRT,Online TA,TA/TO,0,0,0,B,9,0,0,Transient
 154,2017,7,31,30,2,1,2,0,0,BB,DEU,Online TA,TA/TO,0,0,0,A,7,0,0,Transient
 270,2017,7,31,31,1,1,2,0,0,SC,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 270,2017,7,31,31,1,1,2,0,0,SC,GBR,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
@@ -51390,7 +51173,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 186,2017,7,31,31,1,3,2,0,0,BB,ESP,Offline TA/TO,TA/TO,0,0,0,A,168,0,0,Transient
 0,2017,8,31,3,0,1,2,2,0,BB,FRA,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 1,2017,8,31,3,0,1,3,0,0,BB,GBR,Online TA,TA/TO,0,0,0,D,9,0,0,Transient
-159,2017,7,31,31,1,3,0,2,0,SC,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 159,2017,7,31,31,1,3,2,0,0,SC,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 2,2017,8,31,2,0,2,1,0,0,BB,PRT,Corporate,Corporate,0,0,0,A,none,1,0,Transient
 20,2017,8,31,3,0,1,2,0,0,BB,CHN,Online TA,TA/TO,0,0,0,D,9,0,0,Transient-Party
@@ -52048,7 +51830,6 @@ LeadTime,ArrivalDateYear,ArrivalDateMonth,ArrivalDateWeekNumber,ArrivalDateDayOf
 222,2017,8,32,11,2,3,2,2,0,BB,GBR,Online TA,TA/TO,0,0,0,F,9,0,0,Transient
 89,2017,8,32,12,2,2,2,0,0,SC,FRA,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 170,2017,8,33,15,0,1,2,0,0,BB,HUN,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
-10,2017,8,32,12,2,2,0,3,0,BB,MAR,Direct,Direct,0,0,0,B,none,0,0,Transient-Party
 10,2017,8,32,12,2,2,2,0,0,BB,CN,Direct,Direct,0,0,0,B,none,0,0,Transient-Party
 58,2017,8,33,15,0,1,2,1,0,BB,PRT,Online TA,TA/TO,0,0,0,A,9,0,0,Transient
 154,2017,8,32,9,2,5,2,0,0,SC,NLD,Online TA,TA/TO,0,0,0,A,9,0,0,Transient

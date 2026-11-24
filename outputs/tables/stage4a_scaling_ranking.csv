@@ -1,5 +1,5 @@
 version,widest_over_narrowest
-Original,6.61
+Original,6.75
 StandardScaler,1.0
 MinMax (0 to 1),1.92
 RobustScaler,1.51

@@ -1,20 +1,20 @@
 {
   "cat_weight": 1.0,
   "yeo_johnson_lambda": {
-    "LeadTime_yj": 0.2545151684215529,
-    "StaysInWeekNights_yj": 0.18045767104302674
+    "LeadTime_yj": 0.25400961265172267,
+    "StaysInWeekNights_yj": 0.18011401008938194
   },
   "scaler_mean": {
-    "Adults": 1.882702315408402,
-    "LeadTime_yj": 6.5752738345827915,
-    "StaysInWeekNights_yj": 1.220400896177822,
-    "StaysInWeekendNights_sqrt": 0.6915359453402461
+    "Adults": 1.8905087377170229,
+    "LeadTime_yj": 6.559255305201951,
+    "StaysInWeekNights_yj": 1.21957585305869,
+    "StaysInWeekendNights_sqrt": 0.6912439415579811
   },
   "scaler_std": {
-    "Adults": 0.5354766636018374,
-    "LeadTime_yj": 3.537357989450947,
-    "StaysInWeekNights_yj": 0.562578845626185,
-    "StaysInWeekendNights_sqrt": 0.6295364055628878
+    "Adults": 0.5226529101887776,
+    "LeadTime_yj": 3.5294815365273213,
+    "StaysInWeekNights_yj": 0.5624908477087041,
+    "StaysInWeekendNights_sqrt": 0.6294739986862655
   },
   "categories": {
     "MarketSegment": [

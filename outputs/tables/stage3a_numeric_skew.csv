@@ -1,5 +1,5 @@
 column,skew_Original,skew_log(1+x),skew_Square root,skew_Yeo-Johnson,skew_Cap at 99th pct,best_option,best_skew_label,share_zero
-LeadTime,1.57,-0.78,0.37,-0.12,1.28,Yeo-Johnson,balanced,0.051
+LeadTime,1.58,-0.78,0.37,-0.12,1.29,Yeo-Johnson,balanced,0.051
 StaysInWeekendNights,1.0,0.13,-0.01,0.05,0.39,Square root,balanced,0.432
 StaysInWeekNights,2.52,-0.3,-0.34,0.02,0.77,Yeo-Johnson,balanced,0.066
-Children,3.48,3.12,2.99,2.81,3.41,Yeo-Johnson,HIGH,0.907
+Children,3.59,3.21,3.07,2.88,3.52,Yeo-Johnson,HIGH,0.911

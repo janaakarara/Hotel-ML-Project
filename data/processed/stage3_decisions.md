@@ -2,7 +2,7 @@
 
 Applies the decisions made from the stage 3a figures. No row is removed and the row order is unchanged.
 
-- **Input:** `data/processed/h2_clustering_stage2.csv` (53036 rows, 11 columns)
+- **Input:** `data/processed/h2_clustering_stage2.csv` (52817 rows, 11 columns)
 - **Output:** `h2_clustering_stage3.csv`
 
 ## 1. Country: top 5 countries plus continents
@@ -14,12 +14,12 @@ Country had **167 values**, which would create 167 encoded columns and swamp eve
 | Group | % of rows |
 |---|---|
 | PRT | 24.4 |
-| Rest of Europe | 23.7 |
-| FRA | 13.9 |
+| Rest of Europe | 23.6 |
+| FRA | 14.0 |
 | GBR | 8.5 |
 | DEU | 8.4 |
 | ESP | 7.1 |
-| Asia | 5.1 |
+| Asia | 5.2 |
 | South America | 3.6 |
 | North America | 2.9 |
 | Africa | 1.6 |
@@ -46,7 +46,7 @@ Skew under 0.5 is balanced, 0.5 to 1 moderate, over 1 high. Long tails would str
 
 | Column | Method | New column | Skew before | Skew after |
 |---|---|---|---|---|
-| LeadTime | Yeo-Johnson | LeadTime_yj | 1.57 | -0.12 |
+| LeadTime | Yeo-Johnson | LeadTime_yj | 1.58 | -0.12 |
 | StaysInWeekNights | Yeo-Johnson | StaysInWeekNights_yj | 2.52 | 0.02 |
 | StaysInWeekendNights | Square root | StaysInWeekendNights_sqrt | 1.00 | -0.01 |
 
@@ -58,7 +58,7 @@ Skew under 0.5 is balanced, 0.5 to 1 moderate, over 1 high. Long tails would str
 
 ## 4. Result
 
-11 columns in, 11 columns out, 53036 rows kept.
+11 columns in, 11 columns out, 52817 rows kept.
 
 Final columns: `Adults`, `MarketSegment`, `Meal`, `Country`, `CustomerType`, `ReservedRoomType`, `ArrivalDateMonth`, `LeadTime_yj`, `StaysInWeekNights_yj`, `StaysInWeekendNights_sqrt`, `HasChildren`
 
