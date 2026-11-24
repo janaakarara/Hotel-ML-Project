@@ -1,0 +1,21 @@
+{
+  "LeadTime_yj": {
+    "method": "yeo-johnson",
+    "source": "LeadTime",
+    "lambda": 0.2545151684215529
+  },
+  "StaysInWeekNights_yj": {
+    "method": "yeo-johnson",
+    "source": "StaysInWeekNights",
+    "lambda": 0.18045767104302674
+  },
+  "StaysInWeekendNights_sqrt": {
+    "method": "sqrt",
+    "source": "StaysInWeekendNights"
+  },
+  "HasChildren": {
+    "method": "binary",
+    "source": "Children",
+    "rule": "Children > 0"
+  }
+}
