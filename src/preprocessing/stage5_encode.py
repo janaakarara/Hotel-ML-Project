@@ -3,7 +3,7 @@
 - MarketSegment, Meal, Country, CustomerType, ReservedRoomType -> one-hot (0/1), all levels kept
   (distance-based clustering needs no dropped level).
 - ArrivalDateMonth (1-12) -> ArrivalMonth_sin, ArrivalMonth_cos, so December sits next to January.
-- Numeric columns (already scaled in stage 4b) and HasChildren are left as they are.
+- Numeric columns and HasChildren (all already standardized in stage 4b) are left as they are.
 - Optional --cat-weight multiplies the one-hot columns (default 1.0 = no change). Values below 1
   (for example 0.7071) stop the many one-hot columns from dominating the distances.
 

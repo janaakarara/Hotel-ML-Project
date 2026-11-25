@@ -1,6 +1,6 @@
-"""Stage 4b: apply StandardScaler to the 4 numeric columns (the winner of stage 4a).
+"""Stage 4b: apply StandardScaler to the 4 numeric columns (winner of stage 4a) and to HasChildren.
 
-HasChildren (0/1) and ArrivalDateMonth (encoded later as sin/cos) are NOT scaled.
+ArrivalDateMonth (encoded later as sin/cos) is NOT scaled. HasChildren (0/1) is standardized with the four numeric columns so it keeps a fair share of the distance (see stage 5a).
 Clustering is unsupervised, so fitting on all rows leaks nothing.
 
 Usage (from the repo root):

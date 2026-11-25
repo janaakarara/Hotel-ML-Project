@@ -1,7 +1,7 @@
-﻿"""Stage 4a: scaling check. Only MEASURES and DRAWS, no column is changed.
+"""Stage 4a: scaling check. Only MEASURES and DRAWS, no column is changed.
 
 Compares the 4 numeric columns before and after three scalers.
-HasChildren is a 0/1 flag and is left out on purpose: 0/1 columns are not scaled.
+HasChildren is a 0/1 flag and is left out of this comparison. It is standardized in stage 4b (see the stage 5a balance check).
 
 Usage (from the repo root):
   python src/preprocessing/stage4a_scaling_check.py
