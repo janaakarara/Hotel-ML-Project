@@ -39,5 +39,5 @@ def test_single_booking(fitted):
 @needs_data
 def test_unknown_values_do_not_crash(fitted):
     z = fitted.transform(pd.DataFrame([{**BOOKING, "Country": "JPN", "Meal": "ZZ", "Children": np.nan}]))
-    assert z.loc[0, "Country_Asia"] == 1 and z.loc[0, "HasChildren"] == 0
+    assert z.loc[0, "Country_Asia"] == 1 and z.loc[0, "HasChildren"] < 0
     assert z[[c for c in z.columns if c.startswith("Meal_")]].sum(axis=1).iloc[0] == 0

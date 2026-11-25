@@ -15,7 +15,7 @@ from pathlib import Path
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
-NUMERIC = ["Adults", "LeadTime_yj", "StaysInWeekNights_yj", "StaysInWeekendNights_sqrt"]
+NUMERIC = ["Adults", "LeadTime_yj", "StaysInWeekNights_yj", "StaysInWeekendNights_sqrt", "HasChildren"]
 
 
 def main():

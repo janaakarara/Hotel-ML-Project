@@ -22,7 +22,7 @@ from sklearn.base import BaseEstimator, TransformerMixin
 RAW_COLUMNS = ["Adults", "MarketSegment", "Meal", "Country", "CustomerType", "ReservedRoomType",
                "ArrivalDateMonth", "LeadTime", "StaysInWeekNights", "StaysInWeekendNights", "Children"]
 CATEGORICAL = ["MarketSegment", "Meal", "Country", "CustomerType", "ReservedRoomType"]
-NUMERIC_OUT = ["Adults", "LeadTime_yj", "StaysInWeekNights_yj", "StaysInWeekendNights_sqrt"]
+NUMERIC_OUT = ["Adults", "LeadTime_yj", "StaysInWeekNights_yj", "StaysInWeekendNights_sqrt", "HasChildren"]
 MONTHS = {m: i + 1 for i, m in enumerate(
     ["January", "February", "March", "April", "May", "June", "July",
      "August", "September", "October", "November", "December"])}
@@ -107,7 +107,7 @@ class ClusteringPreprocessor(BaseEstimator, TransformerMixin):
             "LeadTime_yj": yeojohnson(g["LeadTime"].values, lmbda=self.lambdas_["LeadTime_yj"]),
             "StaysInWeekNights_yj": yeojohnson(g["StaysInWeekNights"].values,
                                                lmbda=self.lambdas_["StaysInWeekNights_yj"]),
-            "StaysInWeekendNights_sqrt": np.sqrt(g["StaysInWeekendNights"].values),
+            "StaysInWeekendNights_sqrt": np.sqrt(g["StaysInWeekendNights"].values), "HasChildren": (g["Children"].values > 0).astype(float),
         })
 
     # ---------- fit / transform ----------
@@ -119,7 +119,7 @@ class ClusteringPreprocessor(BaseEstimator, TransformerMixin):
         self.mean_ = {c: float(num[c].mean()) for c in NUMERIC_OUT}
         self.std_ = {c: float(num[c].std(ddof=0)) for c in NUMERIC_OUT}
         self.categories_ = {c: sorted(g[c].unique().tolist()) for c in CATEGORICAL}
-        self.feature_names_ = (NUMERIC_OUT + ["HasChildren", "ArrivalMonth_sin", "ArrivalMonth_cos"]
+        self.feature_names_ = (NUMERIC_OUT + ["ArrivalMonth_sin", "ArrivalMonth_cos"]
                                + [f"{c}_{v}" for c in CATEGORICAL for v in self.categories_[c]])
         return self
 
@@ -127,7 +127,7 @@ class ClusteringPreprocessor(BaseEstimator, TransformerMixin):
         g = self._prepare(X)
         num = self._numeric(g)
         out = pd.DataFrame({c: (num[c] - self.mean_[c]) / self.std_[c] for c in NUMERIC_OUT})
-        out["HasChildren"] = (g["Children"] > 0).astype(int).values
+        # HasChildren is now standardized together with the other numeric columns
         angle = 2 * np.pi * (g["ArrivalDateMonth"].values - 1) / 12
         out["ArrivalMonth_sin"] = np.sin(angle)
         out["ArrivalMonth_cos"] = np.cos(angle)
