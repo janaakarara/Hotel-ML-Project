@@ -1,0 +1,200 @@
+{
+  "model": "RandomForestClassifier",
+  "target": "IsCanceled",
+  "random_state": 42,
+  "n_estimators": 500,
+  "test_size": 0.2,
+  "preprocess_summary": {
+    "input": {
+      "rows": 53239,
+      "columns": 31
+    },
+    "output": {
+      "rows": 53235,
+      "columns": 28
+    },
+    "dropped_columns": [
+      "ReservationStatus",
+      "ReservationStatusDate",
+      "RequiredCarParkingSpaces"
+    ],
+    "undefined_distribution_channel_rows_removed": 4,
+    "booking_changes_original_value_counts": {
+      "0": 44498,
+      "1": 5983,
+      "2": 2043,
+      "3": 431,
+      "4": 171,
+      "5": 43,
+      "6": 26,
+      "7": 17,
+      "8": 7,
+      "9": 4,
+      "10": 3,
+      "11": 1,
+      "13": 3,
+      "14": 3,
+      "15": 3,
+      "16": 1,
+      "17": 1,
+      "18": 1
+    },
+    "booking_changes_binarized_value_counts": {
+      "0": 44494,
+      "1": 8741
+    },
+    "columns_after_drops": [
+      "IsCanceled",
+      "LeadTime",
+      "ArrivalDateYear",
+      "ArrivalDateMonth",
+      "ArrivalDateWeekNumber",
+      "ArrivalDateDayOfMonth",
+      "StaysInWeekendNights",
+      "StaysInWeekNights",
+      "Adults",
+      "Children",
+      "Babies",
+      "Meal",
+      "Country",
+      "MarketSegment",
+      "DistributionChannel",
+      "IsRepeatedGuest",
+      "PreviousCancellations",
+      "PreviousBookingsNotCanceled",
+      "ReservedRoomType",
+      "AssignedRoomType",
+      "BookingChanges",
+      "DepositType",
+      "Agent",
+      "Company",
+      "DaysInWaitingList",
+      "CustomerType",
+      "ADR",
+      "TotalOfSpecialRequests"
+    ],
+    "verification": {
+      "dropped_columns_absent": true,
+      "undefined_rows_absent": true,
+      "booking_changes_binary": true
+    }
+  },
+  "train_rows": 42588,
+  "test_rows": 10647,
+  "cross_validation": {
+    "folds": 5,
+    "metrics": {
+      "accuracy": {
+        "fold_scores": [
+          0.8099319088988025,
+          0.8170932143695703,
+          0.8037097910307583,
+          0.810379241516966,
+          0.8126100739697076
+        ],
+        "mean": 0.8107448459571611,
+        "std": 0.0043374505904623184
+      },
+      "precision": {
+        "fold_scores": [
+          0.7842900302114804,
+          0.8096415327564895,
+          0.7810126582278482,
+          0.7820895522388059,
+          0.7990074441687345
+        ],
+        "mean": 0.7912082435206717,
+        "std": 0.011274536339457577
+      },
+      "recall": {
+        "fold_scores": [
+          0.50703125,
+          0.51171875,
+          0.48203125,
+          0.51171875,
+          0.503125
+        ],
+        "mean": 0.503125,
+        "std": 0.011026424227735839
+      },
+      "f1": {
+        "fold_scores": [
+          0.6158956109134045,
+          0.627094303494495,
+          0.5961352657004831,
+          0.6186540731995277,
+          0.6174496644295302
+        ],
+        "mean": 0.6150457835474881,
+        "std": 0.010220519773624438
+      },
+      "roc_auc": {
+        "fold_scores": [
+          0.8785058888783986,
+          0.8852418098564954,
+          0.879856161096425,
+          0.8859377950835152,
+          0.8834249294422527
+        ],
+        "mean": 0.8825933168714173,
+        "std": 0.00293566750180818
+      },
+      "pr_auc": {
+        "fold_scores": [
+          0.7697721324766601,
+          0.7819312891718135,
+          0.762244142095647,
+          0.7768987183396827,
+          0.7772222709179207
+        ],
+        "mean": 0.7736137106003448,
+        "std": 0.006885054933245483
+      }
+    }
+  },
+  "test_set_performance": {
+    "accuracy": 0.8129050436742744,
+    "precision": 0.7940603700097371,
+    "recall": 0.5096875,
+    "f1_score": 0.6208602969166349,
+    "roc_auc": 0.8826976676849738,
+    "pr_auc": 0.774713678426769,
+    "confusion_matrix": [
+      [
+        7024,
+        423
+      ],
+      [
+        1569,
+        1631
+      ]
+    ]
+  },
+  "classification_report": {
+    "Not Canceled": {
+      "precision": 0.8174095193762365,
+      "recall": 0.9431986034644824,
+      "f1-score": 0.8758104738154614,
+      "support": 7447.0
+    },
+    "Canceled": {
+      "precision": 0.7940603700097371,
+      "recall": 0.5096875,
+      "f1-score": 0.6208602969166349,
+      "support": 3200.0
+    },
+    "accuracy": 0.8129050436742744,
+    "macro avg": {
+      "precision": 0.8057349446929868,
+      "recall": 0.7264430517322411,
+      "f1-score": 0.7483353853660482,
+      "support": 10647.0
+    },
+    "weighted avg": {
+      "precision": 0.8103918357120308,
+      "recall": 0.8129050436742744,
+      "f1-score": 0.7991841409445827,
+      "support": 10647.0
+    }
+  }
+}
