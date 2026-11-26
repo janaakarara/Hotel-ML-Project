@@ -37,5 +37,5 @@
     "ArrivalMonth_sin",
     "ArrivalMonth_cos"
   ],
-  "cat_weight": 1.0
+  "cat_weight": 0.5
 }

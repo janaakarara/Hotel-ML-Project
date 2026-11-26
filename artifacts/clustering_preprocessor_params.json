@@ -1,5 +1,5 @@
 {
-  "cat_weight": 1.0,
+  "cat_weight": 0.5,
   "yeo_johnson_lambda": {
     "LeadTime_yj": 0.25400961265172267,
     "StaysInWeekNights_yj": 0.18011401008938194
