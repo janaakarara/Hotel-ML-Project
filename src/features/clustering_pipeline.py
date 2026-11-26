@@ -3,15 +3,15 @@
 One object that holds every rule from the preprocessing stages, so it can be fitted once,
 saved, and reloaded to transform new bookings (the app) exactly like the training data.
 
-Input : the 9 clustering source columns (RAW_COLUMNS), one row per booking.
+Input : the 11 clustering source columns (RAW_COLUMNS), one row per booking.
 Output: the numeric features used for clustering (same order as h2_clustering_stage5.csv).
 
 Rules (from the stage scripts):
   - Country: 4 groups (Portugal, Latin Europe, Rest of Europe, Outside Europe), see country_groups.py
-  - CustomerType, MarketSegment: rare values merged (MERGES)
+  - Meal, CustomerType, MarketSegment, ReservedRoomType: rare values merged (MERGES)
   - LeadTime, StaysInWeekNights: Yeo-Johnson (lambda learned in fit); StaysInWeekendNights: sqrt
   - Children -> HasChildren (0/1);  Adults, the 3 transformed columns -> StandardScaler
-  - ArrivalDateMonth -> sin / cos;  3 categorical columns -> one-hot
+  - ArrivalDateMonth -> sin / cos;  5 categorical columns -> one-hot
 Fitting learns only the Yeo-Johnson lambdas, the scaler mean/std and the category lists.
 """
 import numpy as np
@@ -21,17 +21,19 @@ from sklearn.base import BaseEstimator, TransformerMixin
 
 from src.features.country_groups import country_group
 
-RAW_COLUMNS = ["Adults", "MarketSegment", "Country", "CustomerType",
+RAW_COLUMNS = ["Adults", "MarketSegment", "Meal", "Country", "CustomerType", "ReservedRoomType",
                "ArrivalDateMonth", "LeadTime", "StaysInWeekNights", "StaysInWeekendNights", "Children"]
-CATEGORICAL = ["MarketSegment", "Country", "CustomerType"]
+CATEGORICAL = ["MarketSegment", "Meal", "Country", "CustomerType", "ReservedRoomType"]
 NUMERIC_OUT = ["Adults", "LeadTime_yj", "StaysInWeekNights_yj", "StaysInWeekendNights_sqrt", "HasChildren"]
 MONTHS = {m: i + 1 for i, m in enumerate(
     ["January", "February", "March", "April", "May", "June", "July",
      "August", "September", "October", "November", "December"])}
 
 MERGES = {
+    "Meal": {"FB": "HB/FB", "HB": "HB/FB"},
     "CustomerType": {"Group": "Transient-Party/Group", "Transient-Party": "Transient-Party/Group"},
     "MarketSegment": {"Complementary": "Other", "Aviation": "Other"},
+    "ReservedRoomType": {"G": "Other", "C": "Other"},
 }
 
 

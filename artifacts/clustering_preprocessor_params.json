@@ -27,6 +27,11 @@
       "Online TA",
       "Other"
     ],
+    "Meal": [
+      "BB",
+      "HB/FB",
+      "SC"
+    ],
     "Country": [
       "Latin Europe",
       "Outside Europe",
@@ -37,6 +42,14 @@
       "Contract",
       "Transient",
       "Transient-Party/Group"
+    ],
+    "ReservedRoomType": [
+      "A",
+      "B",
+      "D",
+      "E",
+      "F",
+      "Other"
     ]
   },
   "feature_names": [
@@ -53,12 +66,21 @@
     "MarketSegment_Offline TA/TO",
     "MarketSegment_Online TA",
     "MarketSegment_Other",
+    "Meal_BB",
+    "Meal_HB/FB",
+    "Meal_SC",
     "Country_Latin Europe",
     "Country_Outside Europe",
     "Country_Portugal",
     "Country_Rest of Europe",
     "CustomerType_Contract",
     "CustomerType_Transient",
-    "CustomerType_Transient-Party/Group"
+    "CustomerType_Transient-Party/Group",
+    "ReservedRoomType_A",
+    "ReservedRoomType_B",
+    "ReservedRoomType_D",
+    "ReservedRoomType_E",
+    "ReservedRoomType_F",
+    "ReservedRoomType_Other"
   ]
 }

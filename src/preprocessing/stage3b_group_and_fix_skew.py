@@ -23,10 +23,14 @@ from src.features.country_groups import country_group, GROUP_ORDER  # noqa: E402
 
 # column: ({old value: new value}, why)
 MERGES = {
+    "Meal": ({"FB": "HB/FB", "HB": "HB/FB"},
+             "FB is 0.02% of rows. Both FB and HB are meal plans beyond breakfast, so they are merged."),
     "CustomerType": ({"Group": "Transient-Party/Group", "Transient-Party": "Transient-Party/Group"},
                      "Group is 0.5% of rows. Both are bookings tied to other bookings, so they are merged."),
     "MarketSegment": ({"Complementary": "Other", "Aviation": "Other"},
                       "Both are under 1% of rows and are special cases with no close relative."),
+    "ReservedRoomType": ({"G": "Other", "C": "Other"},
+                         "Both are under 1% of rows. Room codes are anonymous, so there is no meaning to merge by."),
 }
 
 SKEW_FIXES = {
@@ -106,7 +110,7 @@ def main():
                                     before[k] < 1 or k in before.index and v == "Other"), why,
                      f"{df[col].nunique()} -> {out[col].nunique()}"))
     md += md_table(["Column", "Merge", "Why", "Categories"], rows)
-    md += ["", "The CustomerType merge is a judgment call. If you prefer, change them to `Other` in `MERGES`.", ""]
+    md += ["", "The merges of Meal and CustomerType are judgment calls. If you prefer, change them to `Other` in `MERGES`.", ""]
 
     # ---------- 3) skew ----------
     params = {}
