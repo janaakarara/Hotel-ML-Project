@@ -1,4 +1,4 @@
-﻿"""Stage 3a: look at skew (numeric columns) and rare categories (category columns).
+"""Stage 3a: look at skew (numeric columns) and rare categories (category columns).
 
 Only MEASURES and DRAWS. No column is changed. You decide what to do by reading the figures.
 
@@ -77,9 +77,11 @@ def numeric_figure(df, path):
 
 
 def categorical_figure(df, path, top_country=25):
-    fig, axes = plt.subplots(len(CATEGORICAL), 1, figsize=(20, 6 * len(CATEGORICAL)))
+    cats = [c for c in CATEGORICAL if c in df.columns]   # skip columns dropped in stage 2b
+    fig, axes = plt.subplots(len(cats), 1, figsize=(20, 6 * len(cats)), squeeze=False)
+    axes = axes.ravel()
     rows = []
-    for ax, c in zip(axes, CATEGORICAL):
+    for ax, c in zip(axes, cats):
         vc = df[c].value_counts(normalize=True)
         rare = vc[vc < RARE]
         rows.append({"column": c, "n_categories": len(vc), "n_rare_under_1pct": len(rare),

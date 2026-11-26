@@ -2,12 +2,12 @@
   "LeadTime_yj": {
     "method": "yeo-johnson",
     "source": "LeadTime",
-    "lambda": 0.25400962143133826
+    "lambda": 0.25400961265172267
   },
   "StaysInWeekNights_yj": {
     "method": "yeo-johnson",
     "source": "StaysInWeekNights",
-    "lambda": 0.18011401008648487
+    "lambda": 0.18011401008938194
   },
   "StaysInWeekendNights_sqrt": {
     "method": "sqrt",

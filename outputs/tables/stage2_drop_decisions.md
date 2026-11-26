@@ -2,7 +2,7 @@
 
 ## 1. Objective
 
-Stage 2b removes the 11 columns selected for removal based on the Stage 2a redundancy analysis.
+Stage 2b removes the 13 columns selected for removal (Stage 2a redundancy analysis plus the V0-V7 feature-set test).
 The purpose is to reduce redundant and low-information features before clustering.
 
 ## 2. Input and Output
@@ -11,8 +11,8 @@ The purpose is to reduce redundant and low-information features before clusterin
 - **Output:** `data/processed/h2_clustering_stage2.csv`
 - **Rows:** 52817
 - **Original columns:** 22
-- **Dropped columns:** 11
-- **Retained columns:** 11
+- **Dropped columns:** 13
+- **Retained columns:** 9
 
 ## 3. Reasons for Dropping Each Column
 
@@ -28,6 +28,8 @@ The purpose is to reduce redundant and low-information features before clusterin
 | `has_company` | Redundancy | Redundant with MarketSegment (Cramer's V = 0.85). Additionally, 94.81% of rows contain 0. | `stage2a_cramers_v.png` |
 | `ArrivalDateWeekNumber` | Redundancy | Almost completely explained by ArrivalDateMonth (eta = 0.995). | `stage2a_eta.png` |
 | `ArrivalDateDayOfMonth` | Judgment-based removal | The day is spread relatively evenly throughout the month and showed no meaningful relationship with other columns. | `stage2a_spearman.png` |
+| `Meal` | Feature-set test | No added cluster information and lower stability (V0 vs V2 feature test). Kept for profiling only. | `V0 vs V2 feature test (see report)` |
+| `ReservedRoomType` | Feature-set test | No added cluster information and lower stability (V0 vs V2 feature test). Kept for profiling only. | `V0 vs V2 feature test (see report)` |
 | `ArrivalDateYear` | Judgment-based removal | The dataset covers only July 2015 to August 2017. Year was treated as a calendar artifact rather than a useful clustering feature. | `Dataset date coverage` |
 
 ## 4. Retained Columns
@@ -38,15 +40,13 @@ The purpose is to reduce redundant and low-information features before clusterin
 - `Adults`
 - `Children`
 - `MarketSegment`
-- `Meal`
 - `Country`
 - `CustomerType`
-- `ReservedRoomType`
 - `ArrivalDateMonth`
 
 ## 5. Final Result
 
-Stage 2b reduced the dataset from **22 to 11 columns**, while preserving all **52817 rows** and their original order.
+Stage 2b reduced the dataset from **22 to 9 columns**, while preserving all **52817 rows** and their original order.
 
 No encoding, scaling, grouping, or additional statistical analysis is performed in this stage.
 

@@ -35,10 +35,12 @@ def main():
     df = pd.read_csv(a.input)
 
     # ---- figure 1: every category column after grouping ----
-    fig, axes = plt.subplots(2, 3, figsize=(20, 11))
+    cats = [c for c in CATEGORICAL if c in df.columns]   # skip columns dropped in stage 2b
+    ncols = 2 if len(cats) <= 3 else 3                   # one spare panel holds the note
+    fig, axes = plt.subplots(2, ncols, figsize=(20 if ncols == 3 else 14, 11))
     axes = axes.ravel()
     rows = []
-    for ax, c in zip(axes, CATEGORICAL):
+    for ax, c in zip(axes, cats):
         vc = df[c].value_counts(normalize=True) * 100
         if c == "Country":
             vc = vc.reindex(COUNTRY_ORDER)
@@ -54,7 +56,7 @@ def main():
             rows.append({"column": c, "category": k, "pct_of_rows": round(v, 2)})
     axes[-1].axis("off")
     axes[-1].text(0.0, 0.6, "Dashed line = 1% rare threshold.\nRed bar would be a rare category.\n"
-                  "Country went from 167 raw codes to 4 groups,\nall above 13%. ReservedRoomType 'Other' (0.9%)\nis the merged C+G bucket, so it is left as is.",
+                  "Country went from 167 raw codes to 4 groups,\nall above 13%.",
                   fontsize=14, va="center")
     fig.suptitle("Categorical columns after grouping (clustering input, 52,817 rows)", fontsize=20)
     fig.tight_layout()

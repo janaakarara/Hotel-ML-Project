@@ -1,6 +1,6 @@
 """Stage 5: encoding. One-hot for the categorical columns, sin/cos for the month.
 
-- MarketSegment, Meal, Country, CustomerType, ReservedRoomType -> one-hot (0/1), all levels kept
+- MarketSegment, Country, CustomerType -> one-hot (0/1), all levels kept
   (distance-based clustering needs no dropped level).
 - ArrivalDateMonth (1-12) -> ArrivalMonth_sin, ArrivalMonth_cos, so December sits next to January.
 - Numeric columns and HasChildren (all already standardized in stage 4b) are left as they are.
@@ -19,7 +19,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-CATEGORICAL = ["MarketSegment", "Meal", "Country", "CustomerType", "ReservedRoomType"]
+CATEGORICAL = ["MarketSegment", "Country", "CustomerType"]
 
 
 def main():

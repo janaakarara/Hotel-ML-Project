@@ -1,22 +1,22 @@
 {
-  "cat_weight": 0.5,
+  "cat_weight": 1.0,
   "yeo_johnson_lambda": {
-    "LeadTime_yj": 0.25400962143133826,
-    "StaysInWeekNights_yj": 0.18011401008648487
+    "LeadTime_yj": 0.25400961265172267,
+    "StaysInWeekNights_yj": 0.18011401008938194
   },
   "scaler_mean": {
     "Adults": 1.8905087377170229,
-    "LeadTime_yj": 6.559255456040439,
-    "StaysInWeekNights_yj": 1.2195758530563006,
+    "LeadTime_yj": 6.559255305201951,
+    "StaysInWeekNights_yj": 1.21957585305869,
     "StaysInWeekendNights_sqrt": 0.6912439415579811,
     "HasChildren": 0.08911903364447053
   },
   "scaler_std": {
-    "Adults": 0.5226529101889457,
-    "LeadTime_yj": 3.529481647932947,
-    "StaysInWeekNights_yj": 0.5624908477068866,
-    "StaysInWeekendNights_sqrt": 0.6294739986861916,
-    "HasChildren": 0.28491548130404354
+    "Adults": 0.5226529101887776,
+    "LeadTime_yj": 3.5294815365273213,
+    "StaysInWeekNights_yj": 0.5624908477087041,
+    "StaysInWeekendNights_sqrt": 0.6294739986862655,
+    "HasChildren": 0.2849154813040987
   },
   "categories": {
     "MarketSegment": [
@@ -26,11 +26,6 @@
       "Offline TA/TO",
       "Online TA",
       "Other"
-    ],
-    "Meal": [
-      "BB",
-      "HB/FB",
-      "SC"
     ],
     "Country": [
       "Latin Europe",
@@ -42,14 +37,6 @@
       "Contract",
       "Transient",
       "Transient-Party/Group"
-    ],
-    "ReservedRoomType": [
-      "A",
-      "B",
-      "D",
-      "E",
-      "F",
-      "Other"
     ]
   },
   "feature_names": [
@@ -66,21 +53,12 @@
     "MarketSegment_Offline TA/TO",
     "MarketSegment_Online TA",
     "MarketSegment_Other",
-    "Meal_BB",
-    "Meal_HB/FB",
-    "Meal_SC",
     "Country_Latin Europe",
     "Country_Outside Europe",
     "Country_Portugal",
     "Country_Rest of Europe",
     "CustomerType_Contract",
     "CustomerType_Transient",
-    "CustomerType_Transient-Party/Group",
-    "ReservedRoomType_A",
-    "ReservedRoomType_B",
-    "ReservedRoomType_D",
-    "ReservedRoomType_E",
-    "ReservedRoomType_F",
-    "ReservedRoomType_Other"
+    "CustomerType_Transient-Party/Group"
   ]
 }

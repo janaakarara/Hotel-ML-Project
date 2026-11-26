@@ -2,7 +2,7 @@
 
 Applies the decisions made from the stage 3a figures. No row is removed and the row order is unchanged.
 
-- **Input:** `data/processed/h2_clustering_stage2.csv` (52817 rows, 11 columns)
+- **Input:** `data/processed/h2_clustering_stage2.csv` (52817 rows, 9 columns)
 - **Output:** `h2_clustering_stage3.csv`
 
 ## 1. Country: 4 groups
@@ -42,12 +42,10 @@ Rule: a value under 1% of rows is merged. Where a value has an obvious close rel
 
 | Column | Merge | Why | Categories |
 |---|---|---|---|
-| Meal | FB -> HB/FB | FB is 0.02% of rows. Both FB and HB are meal plans beyond breakfast, so they are merged. | 4 -> 3 |
 | CustomerType | Group -> Transient-Party/Group | Group is 0.5% of rows. Both are bookings tied to other bookings, so they are merged. | 4 -> 3 |
 | MarketSegment | Complementary -> Other, Aviation -> Other | Both are under 1% of rows and are special cases with no close relative. | 7 -> 6 |
-| ReservedRoomType | G -> Other, C -> Other | Both are under 1% of rows. Room codes are anonymous, so there is no meaning to merge by. | 7 -> 6 |
 
-The merges of Meal and CustomerType are judgment calls. If you prefer, change them to `Other` in `MERGES`.
+The CustomerType merge is a judgment call. If you prefer, change them to `Other` in `MERGES`.
 
 ## 3. Skew fixes
 
@@ -67,9 +65,9 @@ Skew under 0.5 is balanced, 0.5 to 1 moderate, over 1 high. Long tails would str
 
 ## 4. Result
 
-11 columns in, 11 columns out, 52817 rows kept.
+9 columns in, 9 columns out, 52817 rows kept.
 
-Final columns: `Adults`, `MarketSegment`, `Meal`, `Country`, `CustomerType`, `ReservedRoomType`, `ArrivalDateMonth`, `LeadTime_yj`, `StaysInWeekNights_yj`, `StaysInWeekendNights_sqrt`, `HasChildren`
+Final columns: `Adults`, `MarketSegment`, `Country`, `CustomerType`, `ArrivalDateMonth`, `LeadTime_yj`, `StaysInWeekNights_yj`, `StaysInWeekendNights_sqrt`, `HasChildren`
 
 The skew fixes learn nothing from any target. Clustering is unsupervised, so fitting the Yeo-Johnson setting on all rows leaks nothing. The fitted settings are saved in `stage3_transform_params.json` so the same transform can be repeated on new bookings.
 

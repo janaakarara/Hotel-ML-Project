@@ -8,11 +8,6 @@
       "MarketSegment_Online TA",
       "MarketSegment_Other"
     ],
-    "Meal": [
-      "Meal_BB",
-      "Meal_HB/FB",
-      "Meal_SC"
-    ],
     "Country": [
       "Country_Latin Europe",
       "Country_Outside Europe",
@@ -23,19 +18,11 @@
       "CustomerType_Contract",
       "CustomerType_Transient",
       "CustomerType_Transient-Party/Group"
-    ],
-    "ReservedRoomType": [
-      "ReservedRoomType_A",
-      "ReservedRoomType_B",
-      "ReservedRoomType_D",
-      "ReservedRoomType_E",
-      "ReservedRoomType_F",
-      "ReservedRoomType_Other"
     ]
   },
   "month": [
     "ArrivalMonth_sin",
     "ArrivalMonth_cos"
   ],
-  "cat_weight": 0.5
+  "cat_weight": 1.0
 }
