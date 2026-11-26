@@ -1,4 +1,4 @@
-﻿"""Stage 3b: group rare categories (incl. Country hybrid) and fix skew in the numeric columns.
+"""Stage 3b: group rare categories (Country -> 4 groups) and fix skew in the numeric columns.
 
 Applies the decisions made from the stage 3a figures. Writes a readable explanation file.
 
@@ -8,47 +8,18 @@ Reads:  data/processed/h2_clustering_stage2.csv
 Writes: data/processed/h2_clustering_stage3.csv        (same rows, same order)
         data/processed/stage3_decisions.md             (why each thing was done)
         data/processed/stage3_transform_params.json    (fitted Yeo-Johnson lambdas)
+        data/processed/stage3b_country_group_profile.csv (lead/stay/children by Country group)
 """
 import argparse
 import json
 from pathlib import Path
+import sys
 import numpy as np
 import pandas as pd
 from scipy.stats import yeojohnson
 
-TOP_COUNTRIES = ["PRT", "FRA", "GBR", "DEU", "ESP"]
-
-EUROPE = [
-    "ALB", "AND", "AUT", "BEL", "BGR", "BIH", "BLR", "CHE", "CZE", "DEU", "DNK", "ESP", "EST",
-    "FIN", "FRA", "FRO", "GBR", "GGY", "GIB", "GRC", "HRV", "HUN", "IMN", "IRL", "ISL", "ITA",
-    "JEY", "LIE", "LTU", "LUX", "LVA", "MCO", "MKD", "MLT", "MNE", "NLD", "NOR", "POL", "PRT",
-    "ROU", "RUS", "SRB", "SVK", "SVN", "SWE", "UKR",
-]
-ASIA = [
-    "ARE", "ARM", "AZE", "BGD", "BHR", "CHN", "CN", "CYP", "GEO", "HKG", "IDN", "IND", "IRN", "IRQ",
-    "ISR", "JOR", "JPN", "KAZ", "KHM", "KOR", "KWT", "LAO", "LBN", "LKA", "MAC", "MDV", "MMR",
-    "MYS", "OMN", "PAK", "PHL", "QAT", "SAU", "SGP", "SYR", "THA", "TJK", "TUR", "TWN", "UZB", "VNM",
-]
-SOUTH_AMERICA = [
-    "ARG", "BOL", "BRA", "CHL", "COL", "ECU", "GUY", "PER", "PRY", "SUR", "URY", "VEN",
-]
-NORTH_AMERICA = [
-    "ABW", "AIA", "BRB", "CRI", "CUB", "DMA", "DOM", "GLP", "GTM", "HND", "JAM", "KNA", "LCA",
-    "MEX", "NIC", "PAN", "PRI", "SLV", "USA", "VGB",
-]
-AFRICA = [
-    "AGO", "BEN", "BFA", "CAF", "CIV", "CMR", "COM", "CPV", "DZA", "EGY", "ETH", "GAB", "GHA",
-    "GNB", "KEN", "LBY", "MAR", "MLI", "MOZ", "MRT", "MUS", "MYT", "NAM", "NGA", "RWA", "SDN",
-    "SEN", "SLE", "STP", "SYC", "TGO", "TUN", "TZA", "UGA", "ZAF", "ZMB", "ZWE",
-]
-OCEANIA = [
-    "ASM", "AUS", "KIR", "NCL", "NZL", "PYF",
-]
-
-CONTINENTS = {"Rest of Europe": EUROPE, "Asia": ASIA, "South America": SOUTH_AMERICA,
-              "North America": NORTH_AMERICA, "Africa": AFRICA}
-CODE_TO_GROUP = {code: name for name, codes in CONTINENTS.items() for code in codes}
-# anything not listed (Oceania, Unknown, TMP, ATA ...) becomes "Other"
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))  # repo root, so `src.` imports work
+from src.features.country_groups import country_group, GROUP_ORDER  # noqa: E402
 
 # column: ({old value: new value}, why)
 MERGES = {
@@ -96,20 +67,35 @@ def main():
           f"- **Input:** `{a.input}` ({n} rows, {df.shape[1]} columns)",
           "- **Output:** `h2_clustering_stage3.csv`", ""]
 
-    # ---------- 1) Country: top 5 countries + continents ----------
+    # ---------- 1) Country: 4 balanced groups ----------
     country_before = df["Country"].nunique()
-    out["Country"] = df["Country"].where(df["Country"].isin(TOP_COUNTRIES),
-                                         df["Country"].map(CODE_TO_GROUP).fillna("Other"))
-    sh = share_table(out["Country"])
-    md += ["## 1. Country: top 5 countries plus continents", "",
+    raw_code = df["Country"].astype(str).str.strip().replace({"": "Unknown", "nan": "Unknown"})
+    out["Country"] = raw_code.map(country_group)
+    sh = share_table(out["Country"]).reindex(GROUP_ORDER)
+    prof = df.assign(G=out["Country"].values, HasKids=(df["Children"] > 0)).groupby("G").agg(
+        lead=("LeadTime", "median"), week=("StaysInWeekNights", "median"),
+        weekend=("StaysInWeekendNights", "median"), kids=("HasKids", "mean")).reindex(GROUP_ORDER)
+    md += ["## 1. Country: 4 groups", "",
            f"Country had **{country_before} values**, which would create {country_before} encoded columns and "
-           f"swamp every other feature. It now has **{out['Country'].nunique()} groups**.", "",
-           "**Why not pure continents?** About 86% of bookings are European, so one huge Europe group would hide big "
-           "differences. For example the median booking is made 26 days ahead for Portugal but 83 days ahead for "
-           "Germany. So the 5 biggest countries stay separate and only the rest are grouped by continent.", ""]
+           f"swamp every other feature. It now has **{out['Country'].nunique()} groups**, each at least 14% of rows.", "",
+           "| Group | Members |", "|---|---|",
+           "| Portugal | PRT (the hotel is in Lisbon: domestic guests) |",
+           "| Latin Europe | FRA, ESP, ITA (Portugal's nearest Latin-language neighbours) |",
+           "| Rest of Europe | all other European codes (GBR, DEU, BEL, NLD, CHE, IRL, AUT, Nordics, Eastern Europe ...) |",
+           "| Outside Europe | Asia, the Americas, Africa, Oceania, and unknown / junk codes (`Unknown`, `TMP`, `ATA` ...) |", "",
+           "**Why this grouping?** The earlier version (top 5 countries + continents) gave 11 columns and let Country "
+           "outvote the numeric features. Four groups of 14% to 36% remove every rare category and need only 4 columns. "
+           "Groups were chosen for balance and interpretability, not strict geography: 'Latin Europe' is only the three "
+           "Latin-language neighbours, and 'Rest of Europe' is everyone else. Germany and Britain are merged, which "
+           "averages two different booking habits; lead time is already a clustering feature, so most of that "
+           "difference is still captured.", ""]
     md += md_table(["Group", "% of rows"], [(g, f"{v:.1f}") for g, v in sh.items()])
-    md += ["", "Notes: `CN` is China in this dataset and is mapped to Asia by hand. Oceania and junk codes "
-           "(`Unknown`, `TMP`, `ATA` ...) fall into `Other`. Russia counts as Europe and Turkey and Cyprus as Asia.", ""]
+    md += ["", "**Do the groups differ?** (medians from the untransformed stage 2 columns)", ""]
+    md += md_table(["Group", "Median lead time (days)", "Median week nights", "Median weekend nights", "Share with children"],
+                   [(g, f"{r.lead:.0f}", f"{r.week:.0f}", f"{r.weekend:.0f}", f"{100 * r.kids:.1f}%") for g, r in prof.iterrows()])
+    md += ["", "Lead time is the clear separator; stay length and the children share differ little. "
+           "Note: Russia counts as Europe, Turkey and Cyprus as Asia (Outside Europe), `CN` is China.", ""]
+    prof.round(3).to_csv(out_dir / "stage3b_country_group_profile.csv")
 
     # ---------- 2) other categorical merges ----------
     md += ["## 2. Rare categories in the other columns", "",

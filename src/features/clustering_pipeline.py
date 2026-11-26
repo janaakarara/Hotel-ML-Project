@@ -1,13 +1,13 @@
-﻿"""Reusable preprocessing for the clustering task.
+"""Reusable preprocessing for the clustering task.
 
 One object that holds every rule from the preprocessing stages, so it can be fitted once,
 saved, and reloaded to transform new bookings (the app) exactly like the training data.
 
 Input : the 11 clustering source columns (RAW_COLUMNS), one row per booking.
-Output: the 36 numeric features used for clustering (same order as h2_clustering_stage5.csv).
+Output: the numeric features used for clustering (same order as h2_clustering_stage5.csv).
 
 Rules (from the stage scripts):
-  - Country: top 5 countries stay, the rest grouped by continent, unknown codes -> Other
+  - Country: 4 groups (Portugal, Latin Europe, Rest of Europe, Outside Europe), see country_groups.py
   - Meal, CustomerType, MarketSegment, ReservedRoomType: rare values merged (MERGES)
   - LeadTime, StaysInWeekNights: Yeo-Johnson (lambda learned in fit); StaysInWeekendNights: sqrt
   - Children -> HasChildren (0/1);  Adults, the 3 transformed columns -> StandardScaler
@@ -19,6 +19,8 @@ import pandas as pd
 from scipy.stats import yeojohnson
 from sklearn.base import BaseEstimator, TransformerMixin
 
+from src.features.country_groups import country_group
+
 RAW_COLUMNS = ["Adults", "MarketSegment", "Meal", "Country", "CustomerType", "ReservedRoomType",
                "ArrivalDateMonth", "LeadTime", "StaysInWeekNights", "StaysInWeekendNights", "Children"]
 CATEGORICAL = ["MarketSegment", "Meal", "Country", "CustomerType", "ReservedRoomType"]
@@ -26,33 +28,6 @@ NUMERIC_OUT = ["Adults", "LeadTime_yj", "StaysInWeekNights_yj", "StaysInWeekendN
 MONTHS = {m: i + 1 for i, m in enumerate(
     ["January", "February", "March", "April", "May", "June", "July",
      "August", "September", "October", "November", "December"])}
-
-TOP_COUNTRIES = ["PRT", "FRA", "GBR", "DEU", "ESP"]
-EUROPE = [
-    "ALB", "AND", "AUT", "BEL", "BGR", "BIH", "BLR", "CHE", "CZE", "DEU", "DNK", "ESP", "EST",
-    "FIN", "FRA", "FRO", "GBR", "GGY", "GIB", "GRC", "HRV", "HUN", "IMN", "IRL", "ISL", "ITA",
-    "JEY", "LIE", "LTU", "LUX", "LVA", "MCO", "MKD", "MLT", "MNE", "NLD", "NOR", "POL", "PRT",
-    "ROU", "RUS", "SRB", "SVK", "SVN", "SWE", "UKR",
-]
-ASIA = [
-    "ARE", "ARM", "AZE", "BGD", "BHR", "CHN", "CN", "CYP", "GEO", "HKG", "IDN", "IND", "IRN", "IRQ",
-    "ISR", "JOR", "JPN", "KAZ", "KHM", "KOR", "KWT", "LAO", "LBN", "LKA", "MAC", "MDV", "MMR",
-    "MYS", "OMN", "PAK", "PHL", "QAT", "SAU", "SGP", "SYR", "THA", "TJK", "TUR", "TWN", "UZB", "VNM",
-]
-SOUTH_AMERICA = ["ARG", "BOL", "BRA", "CHL", "COL", "ECU", "GUY", "PER", "PRY", "SUR", "URY", "VEN"]
-NORTH_AMERICA = [
-    "ABW", "AIA", "BRB", "CRI", "CUB", "DMA", "DOM", "GLP", "GTM", "HND", "JAM", "KNA", "LCA",
-    "MEX", "NIC", "PAN", "PRI", "SLV", "USA", "VGB",
-]
-AFRICA = [
-    "AGO", "BEN", "BFA", "CAF", "CIV", "CMR", "COM", "CPV", "DZA", "EGY", "ETH", "GAB", "GHA",
-    "GNB", "KEN", "LBY", "MAR", "MLI", "MOZ", "MRT", "MUS", "MYT", "NAM", "NGA", "RWA", "SDN",
-    "SEN", "SLE", "STP", "SYC", "TGO", "TUN", "TZA", "UGA", "ZAF", "ZMB", "ZWE",
-]
-CONTINENTS = {"Rest of Europe": EUROPE, "Asia": ASIA, "South America": SOUTH_AMERICA,
-              "North America": NORTH_AMERICA, "Africa": AFRICA}
-CODE_TO_GROUP = {code: name for name, codes in CONTINENTS.items() for code in codes}
-# anything not listed (Oceania, Unknown, TMP, ATA ...) becomes "Other"
 
 MERGES = {
     "Meal": {"FB": "HB/FB", "HB": "HB/FB"},
@@ -90,9 +65,7 @@ class ClusteringPreprocessor(BaseEstimator, TransformerMixin):
         df = df[RAW_COLUMNS].reset_index(drop=True) if not isinstance(X, pd.DataFrame) else df[RAW_COLUMNS].copy()
         for c in CATEGORICAL:
             df[c] = df[c].map(_text).astype(object)
-        df["Country"] = df["Country"].replace({"": "Unknown", "NULL": "Unknown"})
-        df["Country"] = df["Country"].where(df["Country"].isin(TOP_COUNTRIES),
-                                            df["Country"].map(CODE_TO_GROUP).fillna("Other"))
+        df["Country"] = df["Country"].map(country_group)
         for col, mapping in MERGES.items():
             df[col] = df[col].replace(mapping)
         df["ArrivalDateMonth"] = df["ArrivalDateMonth"].map(_month)

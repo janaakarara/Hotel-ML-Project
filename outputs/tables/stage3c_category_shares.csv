@@ -1,0 +1,23 @@
+column,category,pct_of_rows
+Country,Portugal,24.39
+Country,Latin Europe,26.05
+Country,Rest of Europe,35.61
+Country,Outside Europe,13.94
+MarketSegment,Online TA,65.59
+MarketSegment,Offline TA/TO,13.61
+MarketSegment,Direct,10.32
+MarketSegment,Groups,4.95
+MarketSegment,Corporate,4.17
+MarketSegment,Other,1.35
+Meal,BB,77.18
+Meal,SC,17.55
+Meal,HB/FB,5.27
+CustomerType,Transient,83.65
+CustomerType,Transient-Party/Group,13.59
+CustomerType,Contract,2.76
+ReservedRoomType,A,71.27
+ReservedRoomType,D,20.29
+ReservedRoomType,F,3.31
+ReservedRoomType,E,2.74
+ReservedRoomType,B,1.47
+ReservedRoomType,Other,0.92

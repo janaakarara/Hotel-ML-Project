@@ -5,27 +5,36 @@ Applies the decisions made from the stage 3a figures. No row is removed and the 
 - **Input:** `data/processed/h2_clustering_stage2.csv` (52817 rows, 11 columns)
 - **Output:** `h2_clustering_stage3.csv`
 
-## 1. Country: top 5 countries plus continents
+## 1. Country: 4 groups
 
-Country had **167 values**, which would create 167 encoded columns and swamp every other feature. It now has **11 groups**.
+Country had **167 values**, which would create 167 encoded columns and swamp every other feature. It now has **4 groups**, each at least 14% of rows.
 
-**Why not pure continents?** About 86% of bookings are European, so one huge Europe group would hide big differences. For example the median booking is made 26 days ahead for Portugal but 83 days ahead for Germany. So the 5 biggest countries stay separate and only the rest are grouped by continent.
+| Group | Members |
+|---|---|
+| Portugal | PRT (the hotel is in Lisbon: domestic guests) |
+| Latin Europe | FRA, ESP, ITA (Portugal's nearest Latin-language neighbours) |
+| Rest of Europe | all other European codes (GBR, DEU, BEL, NLD, CHE, IRL, AUT, Nordics, Eastern Europe ...) |
+| Outside Europe | Asia, the Americas, Africa, Oceania, and unknown / junk codes (`Unknown`, `TMP`, `ATA` ...) |
+
+**Why this grouping?** The earlier version (top 5 countries + continents) gave 11 columns and let Country outvote the numeric features. Four groups of 14% to 36% remove every rare category and need only 4 columns. Groups were chosen for balance and interpretability, not strict geography: 'Latin Europe' is only the three Latin-language neighbours, and 'Rest of Europe' is everyone else. Germany and Britain are merged, which averages two different booking habits; lead time is already a clustering feature, so most of that difference is still captured.
 
 | Group | % of rows |
 |---|---|
-| PRT | 24.4 |
-| Rest of Europe | 23.6 |
-| FRA | 14.0 |
-| GBR | 8.5 |
-| DEU | 8.4 |
-| ESP | 7.1 |
-| Asia | 5.2 |
-| South America | 3.6 |
-| North America | 2.9 |
-| Africa | 1.6 |
-| Other | 0.7 |
+| Portugal | 24.4 |
+| Latin Europe | 26.1 |
+| Rest of Europe | 35.6 |
+| Outside Europe | 13.9 |
 
-Notes: `CN` is China in this dataset and is mapped to Asia by hand. Oceania and junk codes (`Unknown`, `TMP`, `ATA` ...) fall into `Other`. Russia counts as Europe and Turkey and Cyprus as Asia.
+**Do the groups differ?** (medians from the untransformed stage 2 columns)
+
+| Group | Median lead time (days) | Median week nights | Median weekend nights | Share with children |
+|---|---|---|---|---|
+| Portugal | 26 | 2 | 0 | 6.6% |
+| Latin Europe | 49 | 2 | 1 | 10.7% |
+| Rest of Europe | 74 | 2 | 1 | 8.5% |
+| Outside Europe | 40 | 2 | 1 | 10.6% |
+
+Lead time is the clear separator; stay length and the children share differ little. Note: Russia counts as Europe, Turkey and Cyprus as Asia (Outside Europe), `CN` is China.
 
 ## 2. Rare categories in the other columns
 

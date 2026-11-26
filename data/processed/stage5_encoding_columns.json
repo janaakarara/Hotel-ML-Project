@@ -14,17 +14,10 @@
       "Meal_SC"
     ],
     "Country": [
-      "Country_Africa",
-      "Country_Asia",
-      "Country_DEU",
-      "Country_ESP",
-      "Country_FRA",
-      "Country_GBR",
-      "Country_North America",
-      "Country_Other",
-      "Country_PRT",
-      "Country_Rest of Europe",
-      "Country_South America"
+      "Country_Latin Europe",
+      "Country_Outside Europe",
+      "Country_Portugal",
+      "Country_Rest of Europe"
     ],
     "CustomerType": [
       "CustomerType_Contract",
