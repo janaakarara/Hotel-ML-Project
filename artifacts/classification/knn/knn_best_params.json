@@ -1,33 +1,46 @@
 {
   "best_params": {
-    "n_neighbors": 21,
+    "n_neighbors": 61,
     "weights": "distance",
     "p": 1,
-    "log_transform": true
+    "log_transform": true,
+    "feature_weights": {
+      "target": 3.0,
+      "categorical": 0.5
+    }
   },
   "search_space": {
     "classifier__n_neighbors": [
-      3,
-      5,
-      11,
       21,
       31,
-      51
+      41,
+      61
     ],
     "classifier__weights": [
-      "uniform",
       "distance"
     ],
     "classifier__p": [
-      1,
-      2
+      1
     ],
     "preprocessor__log_numeric__log__apply": [
-      false,
       true
+    ],
+    "preprocessor__transformer_weights": [
+      {
+        "target": 1.0,
+        "categorical": 0.5
+      },
+      {
+        "target": 2.0,
+        "categorical": 0.5
+      },
+      {
+        "target": 3.0,
+        "categorical": 0.5
+      }
     ]
   },
-  "scoring": "f1",
+  "scoring": "accuracy",
   "cv_folds": 5,
-  "random_state": 67
+  "random_state": 42
 }

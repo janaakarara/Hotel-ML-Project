@@ -1,15 +1,12 @@
 
 from __future__ import annotations
 
-import argparse
 import json
 import sys
 import time
 from pathlib import Path
-
 import joblib
 import matplotlib
-
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
@@ -35,25 +32,23 @@ from sklearn.model_selection import (
     cross_validate,
     train_test_split,
 )
-from sklearn.neighbors import KNeighborsClassifier
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.preprocessing import OneHotEncoder, StandardScaler, TargetEncoder
 from sklearn.utils.validation import check_array, check_is_fitted, check_X_y
 
-# Make `config` and `pipeline` importable no matter where the script is launched.
 ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from config import ARTIFACTS_DIR, DATA_FILE, RANDOM_STATE, TARGET_CLASSIFICATION  # noqa: E402
-from pipeline.preprocess import preprocess  # noqa: E402
+from config import ARTIFACTS_DIR, DATA_FILE, RANDOM_STATE, TARGET_CLASSIFICATION
+from pipeline.preprocess import preprocess 
 
 MODEL_NAME = "KNN"
 TEST_SIZE = 0.2
 N_SPLITS = 5
 LOG_COLUMNS = ["LeadTime", "ADR"]  # right-skewed; log transform is a tuned option
 ID_LIKE_COLUMNS = ["Agent", "Company"]  # IDs: must be treated as categories
-
+    
 SCORING = {
     "accuracy": "accuracy",
     "precision": "precision",
@@ -64,24 +59,19 @@ SCORING = {
 }
 
 FULL_GRID = {
-    "classifier__n_neighbors": [3, 5, 11, 21, 31, 51],
-    "classifier__weights": ["uniform", "distance"],
-    "classifier__p": [1, 2],  # 1 = Manhattan, 2 = Euclidean
-    "preprocessor__log_numeric__log__apply": [False, True],
-}
-QUICK_GRID = {
-    "classifier__n_neighbors": [5, 21],
-    "classifier__weights": ["uniform"],
-    "classifier__p": [2],
-    "preprocessor__log_numeric__log__apply": [False, True],
+    "classifier__n_neighbors": [21, 31, 41, 61],
+    "classifier__weights": ["distance"],
+    "classifier__p": [1],
+    "preprocessor__log_numeric__log__apply": [True],
+    "preprocessor__transformer_weights": [
+        {"target": 1.0, "categorical": 0.5},
+        {"target": 2.0, "categorical": 0.5},
+        {"target": 3.0, "categorical": 0.5},
+    ],
 }
 
-
-# --------------------------------------------------------------------------- #
 # Custom transformer
-# --------------------------------------------------------------------------- #
 class LogTransformer(BaseEstimator, TransformerMixin):
-    """log1p transform that can be switched on/off, so GridSearch can tune it."""
 
     def __init__(self, apply: bool = False) -> None:
         self.apply = apply
@@ -94,9 +84,7 @@ class LogTransformer(BaseEstimator, TransformerMixin):
         return np.log1p(np.clip(X, 0, None)) if self.apply else X
 
 
-# --------------------------------------------------------------------------- #
 # GPU KNN classifier (sklearn-compatible)
-# --------------------------------------------------------------------------- #
 class TorchKNNClassifier(ClassifierMixin, BaseEstimator):
 
 
@@ -114,7 +102,6 @@ class TorchKNNClassifier(ClassifierMixin, BaseEstimator):
         self.batch_size = batch_size
         self.device = device
 
-    # ------------------------------------------------------------------ utils
     def _get_device(self) -> torch.device:
         if self.device is not None:
             return torch.device(self.device)
@@ -137,7 +124,6 @@ class TorchKNNClassifier(ClassifierMixin, BaseEstimator):
             state["_cache"] = {}
         return state
 
-    # -------------------------------------------------------------------- fit
     def fit(self, X, y):
         if self.weights not in ("uniform", "distance"):
             raise ValueError("weights must be 'uniform' or 'distance'")
@@ -153,7 +139,6 @@ class TorchKNNClassifier(ClassifierMixin, BaseEstimator):
         self._cache = {}
         return self
 
-    # ---------------------------------------------------------------- predict
     @staticmethod
     def _distance_weights(dist: torch.Tensor) -> torch.Tensor:
         # Same rule as sklearn: if a query has an exact match (distance 0),
@@ -199,9 +184,7 @@ class TorchKNNClassifier(ClassifierMixin, BaseEstimator):
         return self.classes_[np.argmax(proba, axis=1)]
 
 
-# --------------------------------------------------------------------------- #
 # Data
-# --------------------------------------------------------------------------- #
 def load_data() -> tuple[pd.DataFrame, pd.Series]:
     raw = pd.read_csv(DATA_FILE)
     df, _ = preprocess(raw)
@@ -217,17 +200,18 @@ def load_data() -> tuple[pd.DataFrame, pd.Series]:
     X = df.drop(columns=[TARGET_CLASSIFICATION])
     return X, y
 
-
-# --------------------------------------------------------------------------- #
 # Pipeline
-# --------------------------------------------------------------------------- #
 def build_pipeline(X: pd.DataFrame) -> Pipeline:
     """Full model: preprocessing + KNN. Reusable by the inference code."""
     log_cols = [c for c in LOG_COLUMNS if c in X.columns]
     numeric_cols = [
         c for c in X.select_dtypes(include="number").columns if c not in log_cols
     ]
+
+    # Country, Agent, Company are target encoded; other text columns are one-hot
     categorical_cols = X.select_dtypes(exclude="number").columns.tolist()
+    high_card = [c for c in ["Country", "Agent", "Company"] if c in categorical_cols]
+    categorical_cols = [c for c in categorical_cols if c not in high_card]
 
     preprocessor = ColumnTransformer(
         transformers=[
@@ -262,6 +246,18 @@ def build_pipeline(X: pd.DataFrame) -> Pipeline:
                 ),
                 categorical_cols,
             ),
+            (
+                "target",
+                Pipeline([
+                    ("impute", SimpleImputer(strategy="most_frequent")),
+                    ("encode", TargetEncoder(
+                        target_type="binary",
+                        cv=StratifiedKFold(n_splits=5, shuffle=True, random_state=RANDOM_STATE),
+                    )),
+                    ("scale", StandardScaler()),
+                ]),
+                high_card,
+            ),
         ],
         sparse_threshold=0,  # dense output: faster distance computation for KNN
     )
@@ -270,9 +266,7 @@ def build_pipeline(X: pd.DataFrame) -> Pipeline:
     )
 
 
-# --------------------------------------------------------------------------- #
-# Evaluation helpers
-# --------------------------------------------------------------------------- #
+# Evaluation
 def cv_metrics(model: Pipeline, X, y, cv) -> dict:
     # n_jobs=1: the GPU is shared, so folds run one after another.
     res = cross_validate(model, X, y, cv=cv, scoring=SCORING, n_jobs=1)
@@ -307,17 +301,17 @@ def short_params(model: Pipeline) -> dict:
         "weights": knn.weights,
         "p": knn.p,
         "log_transform": bool(log_apply),
+        "feature_weights": model.named_steps["preprocessor"].transformer_weights,
     }
 
 
 def save_results(rows: list[dict], path: Path) -> None:
-    """Shared results table for all classification models (one row per model+config)."""
     new = pd.DataFrame(rows)
     if path.exists():
         old = pd.read_csv(path)
         old = old[old["model"] != MODEL_NAME]
         new = pd.concat([old, new], ignore_index=True)
-    new.to_csv(path, index=False)
+    new.to_csv(path, index=False, float_format="%.4f")
 
 
 def save_plots(out: Path, y_test, results: dict) -> None:
@@ -341,33 +335,13 @@ def save_plots(out: Path, y_test, results: dict) -> None:
     fig.savefig(out / "knn_roc_curve.png", dpi=150)
     plt.close(fig)
 
-
-# --------------------------------------------------------------------------- #
-# Main
-# --------------------------------------------------------------------------- #
-def verify_against_sklearn(X_train, y_train, X_test) -> None:
-    """Sanity check: the torch KNN must agree with sklearn's KNeighborsClassifier."""
-    pre = build_pipeline(X_train).named_steps["preprocessor"]
-    Xt = pre.fit_transform(X_train.iloc[:8000])
-    yt = y_train.iloc[:8000]
-    Xq = pre.transform(X_test.iloc[:1000])
-    for k, w, p in [(5, "uniform", 2), (11, "distance", 1), (21, "distance", 2)]:
-        ref = KNeighborsClassifier(n_neighbors=k, weights=w, p=p).fit(Xt, yt)
-        ours = TorchKNNClassifier(n_neighbors=k, weights=w, p=p).fit(Xt, yt)
-        diff = np.abs(ref.predict_proba(Xq) - ours.predict_proba(Xq)).max()
-        agree = (ref.predict(Xq) == ours.predict(Xq)).mean()
-        print(f"k={k:<2} weights={w:<8} p={p}: max proba diff={diff:.2e} | "
-              f"prediction agreement={agree:.2%}")
-
-
-class ProgressF1:
-    """F1 scorer that also prints one self-updating progress line."""
+class ProgressAccuracy:
 
     def __init__(self, total: int) -> None:
         self.total, self.done, self.start = total, 0, time.perf_counter()
 
     def __call__(self, estimator, X, y) -> float:
-        score = f1_score(y, estimator.predict(X), zero_division=0)
+        score = accuracy_score(y, estimator.predict(X))
         self.done += 1
         elapsed = time.perf_counter() - self.start
         eta = elapsed / self.done * (self.total - self.done)
@@ -376,14 +350,14 @@ class ProgressF1:
               end="", flush=True)
         return score
 
-def main(quick: bool = False, verify: bool = False) -> None:
+def main() -> None:
     gpu = (
         "GPU - " + torch.cuda.get_device_name(0)
         if torch.cuda.is_available()
         else "CPU (CUDA not available!)"
     )
     print(f"Compute device: {gpu}")
-    out = Path(ARTIFACTS_DIR)
+    out = ROOT / ARTIFACTS_DIR / "classification" / "knn"
     out.mkdir(parents=True, exist_ok=True)
 
     X, y = load_data()
@@ -393,9 +367,6 @@ def main(quick: bool = False, verify: bool = False) -> None:
         X, y, test_size=TEST_SIZE, stratify=y, random_state=RANDOM_STATE
     )
     print(f"Train: {len(X_train):,} | Test: {len(X_test):,}")
-    if verify:
-        verify_against_sklearn(X_train, y_train, X_test)
-        return
     cv = StratifiedKFold(n_splits=N_SPLITS, shuffle=True, random_state=RANDOM_STATE)
 
     # ---------------- Baseline (sklearn defaults: k=5, uniform, Euclidean) ------
@@ -406,12 +377,11 @@ def main(quick: bool = False, verify: bool = False) -> None:
     baseline.fit(X_train, y_train)
     base_fit_time = time.perf_counter() - t0
     base_test, base_pred, base_proba = test_metrics(baseline, X_test, y_test)
-    print(f"  CV F1 = {base_cv['cv_f1_mean']:.4f} | test F1 = {base_test['test_f1']:.4f}")
-
-    # ---------------- Tuned (GridSearchCV, scoring = F1) -----------------------
+    print(f"  CV Accuracy = {base_cv['cv_accuracy_mean']:.4f} | test Accuracy = {base_test['test_accuracy']:.4f}")
+    # ---------------- Tuned (GridSearchCV, scoring = Accuracy) -----------------------
     print("\n[2/2] GridSearchCV ...")
-    grid_space = QUICK_GRID if quick else FULL_GRID
-    progress = ProgressF1(len(ParameterGrid(grid_space)) * N_SPLITS)
+    grid_space = FULL_GRID
+    progress = ProgressAccuracy(len(ParameterGrid(grid_space)) * N_SPLITS)
     grid = GridSearchCV(
         build_pipeline(X_train),
         param_grid=grid_space,
@@ -430,9 +400,8 @@ def main(quick: bool = False, verify: bool = False) -> None:
     tuned_test, tuned_pred, tuned_proba = test_metrics(tuned, X_test, y_test)
     best_params = short_params(tuned)
     print(f"  Best params: {best_params}")
-    print(f"  CV F1 = {tuned_cv['cv_f1_mean']:.4f} | test F1 = {tuned_test['test_f1']:.4f}")
-
-    # ---------------- Save everything -----------------------------------------
+    print(f"  CV Accuracy = {tuned_cv['cv_accuracy_mean']:.4f} | test Accuracy = {tuned_test['test_accuracy']:.4f}")
+    # Save 
     rows = [
         {
             "task": "classification", "model": MODEL_NAME, "config": "baseline",
@@ -442,7 +411,7 @@ def main(quick: bool = False, verify: bool = False) -> None:
         },
         {
             "task": "classification", "model": MODEL_NAME, "config": "tuned",
-            "params": json.dumps(best_params), "selection_metric": "f1 (5-fold CV)",
+            "params": json.dumps(best_params), "selection_metric": "accuracy (5-fold CV)",
             "fit_time_s": float(grid.refit_time_), "search_time_s": search_time,
             **tuned_cv, **tuned_test,
         },
@@ -455,14 +424,14 @@ def main(quick: bool = False, verify: bool = False) -> None:
     ]
     (
         pd.DataFrame(grid.cv_results_)[keep]
-        .rename(columns={"mean_test_score": "mean_cv_f1", "std_test_score": "std_cv_f1"})
+        .rename(columns={"mean_test_score": "mean_cv_acc", "std_test_score": "std_cv_acc"})
         .sort_values("rank_test_score")
         .to_csv(out / "knn_grid_search_results.csv", index=False)
     )
     (out / "knn_best_params.json").write_text(
         json.dumps(
             {"best_params": best_params, "search_space": {k: list(v) for k, v in grid_space.items()},
-             "scoring": "f1", "cv_folds": N_SPLITS, "random_state": RANDOM_STATE},
+             "scoring": "accuracy", "cv_folds": N_SPLITS, "random_state": RANDOM_STATE},
             indent=2, default=str,
         ),
         encoding="utf-8",
@@ -472,27 +441,17 @@ def main(quick: bool = False, verify: bool = False) -> None:
         {"baseline": {"pred": base_pred, "proba": base_proba},
          "tuned": {"pred": tuned_pred, "proba": tuned_proba}},
     )
+    
     joblib.dump(tuned, out / "knn_classifier.joblib", compress=3)
+    joblib.dump(baseline, out / "knn_classifier_baseline.joblib", compress=3) 
 
     print("\n=== KNN results ===")
-    print(pd.DataFrame(rows)[["config", "cv_f1_mean", "test_accuracy", "test_precision",
-                              "test_recall", "test_f1", "test_roc_auc", "test_pr_auc",
-                              "fit_time_s"]].round(4).to_string(index=False))
+    print(pd.DataFrame(rows)[["config", "cv_accuracy_mean", "cv_f1_mean", "test_accuracy",
+                              "test_precision", "test_recall", "test_f1", "test_roc_auc",
+                              "test_pr_auc", "fit_time_s"]].round(4).to_string(index=False))
     print(f"\nSaved to: {out.resolve()}")
 
-
-def cli() -> None:
-    parser = argparse.ArgumentParser(description="Train KNN for IsCanceled.")
-    parser.add_argument("--quick", action="store_true", help="use a tiny grid (smoke test)")
-    parser.add_argument("--verify", action="store_true",
-                        help="only check that the torch KNN matches sklearn's KNN")
-    args = parser.parse_args()
-    main(quick=args.quick, verify=args.verify)
-
-
 if __name__ == "__main__":
-    # Re-import this file under its real module name so the classes inside the
-    # saved model are recorded as `pipeline.models.KNN.*` instead of `__main__.*`.
-    from pipeline.models.KNN import cli as _cli
+    from pipeline.models.KNN import main as _main
 
-    _cli()
+    _main()
