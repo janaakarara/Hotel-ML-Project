@@ -1,8 +1,8 @@
 DBSCAN BASELINE (untuned)
 settings: eps=0.5, min_samples=5, metric=euclidean (sklearn defaults), all rows
-rows: 52817 | clusters: 1888 | noise %: 59.10
-largest cluster: 69 | smallest: 2 | clusters under 100 points: 1888
-silhouette (non-noise only): 0.3251
-davies-bouldin: 1.0446
-calinski-harabasz: 219.2
+rows: 52817 | clusters: 2098 | noise %: 47.32
+largest cluster: 99 | smallest: 2 | clusters under 100 points: 2098
+silhouette (non-noise only): 0.2814
+davies-bouldin: 1.0714
+calinski-harabasz: 387.6
 note: scores ignore noise points and are not comparable with a method that labels every row

@@ -16,7 +16,7 @@ ROOT = HERE.parents[2]
 OUT = HERE / "outputs"
 OUT.mkdir(exist_ok=True)
 
-X = pd.read_csv(ROOT / "data/processed/h2_clustering_stage5.csv").to_numpy(dtype=float)
+X = pd.read_csv(ROOT / "data/processed/h2_clustering_stage5_frequency.csv").to_numpy(dtype=float)
 
 labels = DBSCAN(n_jobs=-1).fit_predict(X)     # sklearn defaults: eps=0.5, min_samples=5, all rows
 

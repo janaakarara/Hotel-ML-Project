@@ -1,7 +1,7 @@
 AGGLOMERATIVE BASELINE (untuned)
 settings: linkage=ward, metric=euclidean, k=4 (sklearn defaults except k), clustered sample=10000
 rows: 52817
-cluster sizes: [12365, 13764, 21981, 4707]
-silhouette: 0.1667
-davies-bouldin: 1.7655
-calinski-harabasz: 9518.0
+cluster sizes: [29726, 8294, 4703, 10094]
+silhouette: 0.1600
+davies-bouldin: 1.9408
+calinski-harabasz: 6767.2

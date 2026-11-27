@@ -19,7 +19,7 @@ ROOT = HERE.parents[2]
 OUT = HERE / "outputs"
 OUT.mkdir(exist_ok=True)
 
-X = pd.read_csv(ROOT / "data/processed/h2_clustering_stage5.csv").to_numpy(dtype=float)
+X = pd.read_csv(ROOT / "data/processed/h2_clustering_stage5_frequency.csv").to_numpy(dtype=float)
 rng = np.random.default_rng(SEED)
 idx = np.sort(rng.choice(len(X), SAMPLE, replace=False))
 Xs = X[idx]

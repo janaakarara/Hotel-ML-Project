@@ -1,17 +1,23 @@
-"""Stage 5: encoding. One-hot for the categorical columns, sin/cos for the month.
+﻿"""Stage 5: encoding. Month as sin/cos, categorical columns as one-hot (default) or frequency.
 
-- MarketSegment, Meal, Country, CustomerType, ReservedRoomType -> one-hot (0/1), all levels kept
-  (distance-based clustering needs no dropped level).
-- ArrivalDateMonth (1-12) -> ArrivalMonth_sin, ArrivalMonth_cos, so December sits next to January.
-- Numeric columns and HasChildren (all already standardized in stage 4b) are left as they are.
-- Optional --cat-weight multiplies the one-hot columns (default 1.0 = no change). Values below 1
-  (for example 0.7071) stop the many one-hot columns from dominating the distances.
+--encoding onehot (default, unchanged behaviour)
+    MarketSegment, Meal, Country, CustomerType, ReservedRoomType -> one-hot (0/1), all levels kept.
+    Optional --cat-weight multiplies the one-hot columns (1.0 = no change).
+    Writes data/processed/h2_clustering_stage5.csv
+--encoding frequency
+    Each categorical column becomes ONE column: how common its category is (share of rows), then z-scored
+    like the numeric columns. Winner of experiments/encoding_experiment for Agglomerative (and a tie for DBSCAN).
+    Writes data/processed/h2_clustering_stage5_frequency.csv   (the one-hot file is left untouched)
+
+ArrivalDateMonth (1-12) -> ArrivalMonth_sin, ArrivalMonth_cos in both modes.
+Numeric columns and HasChildren (already standardized in stage 4b) are left as they are.
 
 Usage (from the repo root):
-  python src/preprocessing/stage5_encode.py
+  python src/preprocessing/stage5_encode.py                       # one-hot, as before
+  python src/preprocessing/stage5_encode.py --encoding frequency  # frequency
 Reads:  data/processed/h2_clustering_stage4.csv
-Writes: data/processed/h2_clustering_stage5.csv
-        data/processed/stage5_encoding_columns.json   (which columns came from which source)
+Writes: see above, plus data/processed/stage5_encoding_columns.json (one-hot) or
+        data/processed/stage5_frequency_maps.json (frequency: category -> share, mean, std)
 """
 import argparse
 import json
@@ -26,7 +32,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--input", default="data/processed/h2_clustering_stage4.csv")
     ap.add_argument("--out", default="data/processed")
-    ap.add_argument("--cat-weight", type=float, default=1.0)
+    ap.add_argument("--encoding", choices=["onehot", "frequency"], default="onehot")
+    ap.add_argument("--cat-weight", type=float, default=1.0, help="one-hot only")
     a = ap.parse_args()
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
@@ -40,20 +47,29 @@ def main():
     df["ArrivalMonth_cos"] = np.cos(angle)
     df = df.drop(columns="ArrivalDateMonth")
 
-    # one-hot
-    dummies = pd.get_dummies(df[CATEGORICAL], dtype=int) * a.cat_weight
-    mapping = {c: [d for d in dummies.columns if d.startswith(c + "_")] for c in CATEGORICAL}
-    df = pd.concat([df.drop(columns=CATEGORICAL), dummies], axis=1)
+    if a.encoding == "onehot":
+        dummies = pd.get_dummies(df[CATEGORICAL], dtype=int) * a.cat_weight
+        mapping = {c: [d for d in dummies.columns if d.startswith(c + "_")] for c in CATEGORICAL}
+        df = pd.concat([df.drop(columns=CATEGORICAL), dummies], axis=1)
+        target = out / "h2_clustering_stage5.csv"
+        (out / "stage5_encoding_columns.json").write_text(json.dumps(
+            {"one_hot": mapping, "month": ["ArrivalMonth_sin", "ArrivalMonth_cos"], "cat_weight": a.cat_weight}, indent=2))
+        for c, cols in mapping.items():
+            print(f"  {c}: {len(cols)} columns")
+    else:
+        maps = {}
+        for c in CATEGORICAL:
+            share = df[c].map(df[c].value_counts(normalize=True))
+            maps[c] = {"share": df[c].value_counts(normalize=True).to_dict(),
+                       "mean": float(share.mean()), "std": float(share.std())}
+            df[c] = (share - share.mean()) / share.std()
+        target = out / "h2_clustering_stage5_frequency.csv"
+        (out / "stage5_frequency_maps.json").write_text(json.dumps(maps, indent=2))
 
     assert len(df) == n_rows and not df.isna().any().any()
-    df.to_csv(out / "h2_clustering_stage5.csv", index=False)
-    (out / "stage5_encoding_columns.json").write_text(json.dumps(
-        {"one_hot": mapping, "month": ["ArrivalMonth_sin", "ArrivalMonth_cos"], "cat_weight": a.cat_weight}, indent=2))
-
-    print(f"rows={len(df)} columns={df.shape[1]}")
-    for c, cols in mapping.items():
-        print(f"  {c}: {len(cols)} columns")
-    print("Saved", out / "h2_clustering_stage5.csv")
+    df.to_csv(target, index=False)
+    print(f"encoding={a.encoding} rows={len(df)} columns={df.shape[1]}")
+    print("Saved", target)
 
 
 if __name__ == "__main__":
