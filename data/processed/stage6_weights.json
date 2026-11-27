@@ -1,0 +1,116 @@
+{
+  "weighting": "equal",
+  "cat_weight_in_stage5": 0.5,
+  "nonfamily": {
+    "rows": 48110,
+    "weights": {
+      "Adults": {
+        "mean": -0.013934289893254098,
+        "std": 1.0313877402505394
+      },
+      "LeadTime_yj": {
+        "mean": -0.01149241652832716,
+        "std": 1.0025209639024164
+      },
+      "StaysInWeekNights_yj": {
+        "mean": -0.007774931224112266,
+        "std": 0.9988887469742782
+      },
+      "StaysInWeekendNights_sqrt": {
+        "mean": -0.005300179711284467,
+        "std": 0.9983080846034327
+      },
+      "ArrivalMonth (sin+cos)": {
+        "scale": 1.0125501096009117
+      },
+      "MarketSegment": {
+        "scale": 1.3491188874849112,
+        "levels": 6
+      },
+      "Meal": {
+        "scale": 1.6140673144790723,
+        "levels": 3
+      },
+      "Country": {
+        "scale": 1.1739363025084402,
+        "levels": 4
+      },
+      "CustomerType": {
+        "scale": 1.8462375001108506,
+        "levels": 3
+      },
+      "ReservedRoomType": {
+        "scale": 1.5628511734227784,
+        "levels": 6
+      }
+    },
+    "variance_share_pct": {
+      "Adults": 10.0,
+      "LeadTime_yj": 10.0,
+      "StaysInWeekNights_yj": 10.0,
+      "StaysInWeekendNights_sqrt": 10.0,
+      "ArrivalMonth": 10.0,
+      "MarketSegment": 10.0,
+      "Meal": 10.0,
+      "Country": 10.0,
+      "CustomerType": 10.0,
+      "ReservedRoomType": 10.0
+    }
+  },
+  "family": {
+    "rows": 4707,
+    "weights": {
+      "Adults": {
+        "mean": 0.14242164579656993,
+        "std": 0.5709965503644278
+      },
+      "LeadTime_yj": {
+        "mean": 0.1174633862710459,
+        "std": 0.9660508156599826
+      },
+      "StaysInWeekNights_yj": {
+        "mean": 0.07946716405184966,
+        "std": 1.0078544607982434
+      },
+      "StaysInWeekendNights_sqrt": {
+        "mean": 0.054172858701909916,
+        "std": 1.0155465888903872
+      },
+      "ArrivalMonth (sin+cos)": {
+        "scale": 1.0415050713198708
+      },
+      "MarketSegment": {
+        "scale": 1.6428930080615167,
+        "levels": 6
+      },
+      "Meal": {
+        "scale": 2.253724211568025,
+        "levels": 3
+      },
+      "Country": {
+        "scale": 1.173816410322044,
+        "levels": 4
+      },
+      "CustomerType": {
+        "scale": 2.697129364767819,
+        "levels": 3
+      },
+      "ReservedRoomType": {
+        "scale": 1.216873884262744,
+        "levels": 6
+      }
+    },
+    "variance_share_pct": {
+      "Adults": 10.0,
+      "LeadTime_yj": 10.0,
+      "StaysInWeekNights_yj": 10.0,
+      "StaysInWeekendNights_sqrt": 10.0,
+      "ArrivalMonth": 10.0,
+      "MarketSegment": 10.0,
+      "Meal": 10.0,
+      "Country": 10.0,
+      "CustomerType": 10.0,
+      "ReservedRoomType": 10.0
+    }
+  }
+}

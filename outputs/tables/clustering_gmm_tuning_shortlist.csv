@@ -1,0 +1,7 @@
+feature_space,model_dims,n_components,covariance_type,reg_covar,n_init,converged,bic_model_space,n_free_parameters,n_clusters_found,min_cluster_share_pct,max_cluster_share_pct,silhouette,davies_bouldin,calinski_harabasz,stability_ari_mean,stability_ari_min,selected
+pca90,7,2,full,1e-06,10,True,540341.37,71,2,8.91,91.09,0.3231,1.2534,9626.48,1.0,1.0,True
+pca95,10,2,full,1e-06,10,True,536908.53,131,2,8.91,91.09,0.3231,1.2534,9626.48,1.0,1.0,False
+pca95,10,6,full,1e-06,10,True,-45728.44,395,6,1.38,36.96,0.191,2.6925,7290.0,0.6029,0.4235,False
+pca90,7,10,full,1e-06,10,True,25330.2,359,10,0.61,33.53,0.1852,1.759,5869.27,0.659,0.4799,False
+pca90,7,4,full,1e-06,10,True,286443.03,143,4,8.42,63.55,0.1814,1.7983,8299.63,0.186,0.1096,False
+pca90,7,5,full,1e-06,10,True,202232.33,179,5,5.2,39.54,0.1718,1.7459,7777.12,0.7878,0.5268,False
