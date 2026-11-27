@@ -16,3 +16,5 @@ Run everything from the project root, in this order. Every script has working de
 Other folders: `src/features` = reusable preprocessing object for the app, `experiments` = side experiments.
 
 Known issues (see chat notes): src/03_encoding/stage5_freq.py + stage5b_pca.py keep the month as raw 1-12 (unscaled), so the PCA file is dominated by month; baseline and tuned models read different input files; tests/ and two experiments import a module (src.clustering.gmm_untuned) that no longer exists.
+
+File guide: data/processed/README.md (datasets) and outputs/README.md (figures and tables).
