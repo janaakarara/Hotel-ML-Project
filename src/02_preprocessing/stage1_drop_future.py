@@ -1,4 +1,4 @@
-﻿"""Stage 1 for clustering: drop zero-adult rows, then drop outcome and future-event columns.
+"""Stage 1 for clustering: drop zero-adult rows, then drop outcome and future-event columns.
 
 Logic-based (see the dataset paper's variable definitions). No statistics are used here.
 Redundancy, near-constant columns, skew and grouping are decided later from the plots.
@@ -6,7 +6,7 @@ Redundancy, near-constant columns, skew and grouping are decided later from the 
 Rows: bookings with Adults = 0 are removed (they all have children but no adult, so they are not a
 meaningful customer segment). This is done for clustering only; h2_clean.csv is not changed.
 
-Usage: python src/preprocessing/stage1_drop_future.py --input data/processed/h2_clean.csv --out-dir data/processed
+Usage: python src/02_preprocessing/stage1_drop_future.py --input data/processed/h2_clean.csv --out-dir data/processed
 Writes: h2_clustering_stage1.csv           (the 22 columns still in play)
         h2_clustering_profile_cols.csv     (the 9 dropped columns, same rows and order, for describing clusters)
         clustering_stage1_decisions.md     (readable table of every decision)

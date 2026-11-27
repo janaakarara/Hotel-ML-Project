@@ -3,7 +3,7 @@
 Only MEASURES and DRAWS. No column is changed. You decide what to do by reading the figures.
 
 Usage (from the repo root):
-  python src/preprocessing/stage3a_distributions_check.py
+  python src/02_preprocessing/stage3a_distributions_check.py
 Reads:  data/processed/h2_clustering_stage2.csv
 Writes: outputs/figures/stage3a_numeric_skew.png        (big: every column x every method, best option in red)
         outputs/figures/stage3a_categorical_shares.png

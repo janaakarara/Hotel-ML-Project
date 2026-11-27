@@ -1,6 +1,6 @@
 """Encoding experiment for ALL FOUR clustering models: K-Means, GMM, Agglomerative, DBSCAN.
 
-Extends experiments/encoding_experiment/run.py (which only covered Agglomerative + DBSCAN) with the K-Means and
+Extends the first two-model version of this experiment (removed) (which only covered Agglomerative + DBSCAN) with the K-Means and
 GMM baselines. Encodings and the "fair score" are identical to run.py, so the Agglomerative / DBSCAN numbers match.
 
 Each model keeps the settings of its own untuned baseline in clustering/*/baseline/run.py; only the encoding of
@@ -18,8 +18,8 @@ Robustness: the fair score is also recomputed on 5 other independent 3,000-row G
 Gower* (clustering directly on the Gower matrix) only exists for Agglomerative / DBSCAN: K-Means and GMM need
 feature vectors, so they get N/A there.
 
-Run from the project root:  python experiments/encoding_experiment/run_all_models.py
-Outputs (experiments/encoding_experiment/outputs/):
+Run from the project root:  python src/04_encoding_comparison/run_all_models.py
+Outputs (src/04_encoding_comparison/outputs/):
   all_models_results.csv, all_models_winners.txt, all_models_encoding_comparison.png
 """
 from pathlib import Path

@@ -1,4 +1,4 @@
-﻿"""Stage 5a: feature-balance check on the encoded matrix.
+"""Stage 5a: feature-balance check on the encoded matrix.
 
 A column contributes to squared distances in proportion to its variance, so
   share(group) = sum of Var(column) over the group's columns / sum of Var over all columns
@@ -7,7 +7,7 @@ Numeric-type groups far below the fair share are flagged. One-hot groups are sho
 their most common category, because their variance is capped by 1 - sum(p_k^2).
 
 Usage (from the repo root):
-  python src/preprocessing/stage5a_feature_balance_check.py
+  python src/03_encoding/stage5a_feature_balance_check.py
 Reads:  data/processed/h2_clustering_stage5.csv
 Writes: outputs/figures/stage5a_balance_<tag>.png, outputs/tables/stage5a_balance_<tag>.csv
 """

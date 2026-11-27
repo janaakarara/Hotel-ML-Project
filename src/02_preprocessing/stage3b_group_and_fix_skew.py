@@ -3,7 +3,7 @@
 Applies the decisions made from the stage 3a figures. Writes a readable explanation file.
 
 Usage (from the repo root):
-  python src/preprocessing/stage3b_group_and_fix_skew.py
+  python src/02_preprocessing/stage3b_group_and_fix_skew.py
 Reads:  data/processed/h2_clustering_stage2.csv
 Writes: data/processed/h2_clustering_stage3.csv        (same rows, same order)
         data/processed/stage3_decisions.md             (why each thing was done)

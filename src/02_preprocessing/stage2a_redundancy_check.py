@@ -3,7 +3,7 @@
 Everything here is NUMERIC + GRAPHS. No column is dropped by this script: it only measures and flags.
 You decide the drops by reading the printed tables and the figures.
 
-Usage: python src/preprocessing/stage2a_redundancy_check.py --input data/processed/h2_clustering_stage1.csv
+Usage: python src/02_preprocessing/stage2a_redundancy_check.py --input data/processed/h2_clustering_stage1.csv
 Writes: outputs/tables/stage2a_*.csv and outputs/figures/stage2a_*.png
 """
 import argparse

@@ -11,7 +11,7 @@ Column names are kept exactly as the source labels in Section 4 of the
 project specification. The only structural change is Company -> has_company.
 
 Usage:
-    python src/data/clean.py --input data/raw/H2.csv --out-dir data/processed
+    python src/01_cleaning/clean.py --input data/raw/H2.csv --out-dir data/processed
 """
 
 from __future__ import annotations

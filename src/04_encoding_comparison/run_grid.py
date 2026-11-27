@@ -23,8 +23,8 @@ Top 5 by fair score are re-run
 with 5 other seeds (K-Means / GMM / K-Prototypes) or 5 other 10k samples (Agglomerative / DBSCAN / HDBSCAN);
 winner = highest fair score with mean ARI >= 0.80. Done twice: any k, and k >= 3 (k=2 is favoured by silhouette).
 
-Run from the project root:  python experiments/encoding_experiment/run_grid.py
-Outputs in experiments/encoding_experiment/outputs/grid/
+Run from the project root:  python src/04_encoding_comparison/run_grid.py
+Outputs in src/04_encoding_comparison/outputs/grid/
 """
 import sys
 import time

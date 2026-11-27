@@ -4,7 +4,7 @@ Compares the 4 numeric columns before and after three scalers.
 HasChildren is a 0/1 flag and is left out of this comparison. It is standardized in stage 4b (see the stage 5a balance check).
 
 Usage (from the repo root):
-  python src/preprocessing/stage4a_scaling_check.py
+  python src/02_preprocessing/stage4a_scaling_check.py
 Reads:  data/processed/h2_clustering_stage3.csv
 Writes: outputs/figures/stage4a_scaling_distributions.png   (big: every column x every scaler)
         outputs/figures/stage4a_scaling_spread.png          (spread of each column before and after)

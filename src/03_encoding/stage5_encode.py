@@ -1,4 +1,4 @@
-﻿"""Stage 5: encoding. Month as sin/cos, categorical columns as one-hot (default) or frequency.
+"""Stage 5: encoding. Month as sin/cos, categorical columns as one-hot (default) or frequency.
 
 --encoding onehot (default, unchanged behaviour)
     MarketSegment, Meal, Country, CustomerType, ReservedRoomType -> one-hot (0/1), all levels kept.
@@ -6,15 +6,15 @@
     Writes data/processed/h2_clustering_stage5.csv
 --encoding frequency
     Each categorical column becomes ONE column: how common its category is (share of rows), then z-scored
-    like the numeric columns. Winner of experiments/encoding_experiment for Agglomerative (and a tie for DBSCAN).
+    like the numeric columns. Winner of src/04_encoding_comparison for Agglomerative (and a tie for DBSCAN).
     Writes data/processed/h2_clustering_stage5_frequency.csv   (the one-hot file is left untouched)
 
 ArrivalDateMonth (1-12) -> ArrivalMonth_sin, ArrivalMonth_cos in both modes.
 Numeric columns and HasChildren (already standardized in stage 4b) are left as they are.
 
 Usage (from the repo root):
-  python src/preprocessing/stage5_encode.py                       # one-hot, as before
-  python src/preprocessing/stage5_encode.py --encoding frequency  # frequency
+  python src/03_encoding/stage5_encode.py                       # one-hot, as before
+  python src/03_encoding/stage5_encode.py --encoding frequency  # frequency
 Reads:  data/processed/h2_clustering_stage4.csv
 Writes: see above, plus data/processed/stage5_encoding_columns.json (one-hot) or
         data/processed/stage5_frequency_maps.json (frequency: category -> share, mean, std)

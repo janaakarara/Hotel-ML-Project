@@ -4,7 +4,7 @@ ArrivalDateMonth (encoded later as sin/cos) is NOT scaled. HasChildren (0/1) is 
 Clustering is unsupervised, so fitting on all rows leaks nothing.
 
 Usage (from the repo root):
-  python src/preprocessing/stage4b_apply_scaling.py
+  python src/02_preprocessing/stage4b_apply_scaling.py
 Reads:  data/processed/h2_clustering_stage3.csv
 Writes: data/processed/h2_clustering_stage4.csv
         data/processed/stage4_scaler_params.json   (mean and std, to repeat the scaling on new bookings)

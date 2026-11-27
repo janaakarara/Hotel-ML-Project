@@ -3,7 +3,7 @@
 Only MEASURES and DRAWS. Nothing is changed.
 
 Usage (from the repo root):
-  python src/preprocessing/stage3c_categories_after_grouping.py
+  python src/02_preprocessing/stage3c_categories_after_grouping.py
 Reads:  data/processed/h2_clustering_stage3.csv
         data/processed/stage3b_country_group_profile.csv   (written by stage 3b)
 Writes: outputs/figures/stage3c_categories_after_grouping.png   (share of every category, all 5 columns)
