@@ -1,32 +1,37 @@
 """Tuned (hyperparameter-optimised) Gaussian Mixture Model for Task C (clustering).
 
 Search space
-  feature space   : raw 29-D features, PCA keeping 90% of variance, PCA keeping 95% of variance
-                    (fewer, continuous dimensions -> fewer parameters, and no zero-variance one-hot directions)
+  feature space   : preprocessed PCA-90 features (8-D from stage5b_pca.py)
   n_components k  : 2 .. 12
   covariance_type : full, tied, diag, spherical
   reg_covar       : 1e-6, 1e-4, 1e-2, 1e-1
   initialisation  : k-means++
 
 Selection (three steps, nothing uses IsCanceled / ADR)
-  1. Coarse grid, n_init=3. A fit is valid if it converged, uses all k components and its smallest
+1. Coarse grid, n_init=3. A fit is valid if it converged, uses all k components and its smallest
      cluster holds at least 2% of bookings.
-  2. BIC picks the covariance structure: for every (feature space, k) keep the valid fit with the lowest BIC.
+2. BIC picks the covariance structure: for every k keep the valid fit with the lowest BIC.
      BIC penalises the number of free parameters directly, so it is not biased towards spherical clusters
-     the way Silhouette / Davies-Bouldin / Calinski-Harabasz are. BIC is only compared within one feature
-     space (likelihoods in different spaces are not comparable).
-  3. BIC alone keeps falling as k grows on 52k rows, so it cannot choose k. Among the BIC-chosen models,
-     the 6 with the best Silhouette (computed in the common 29-D space) are refitted with n_init=10 and
-     tested for stability (Adjusted Rand Index against 5 refits with other seeds). The winner is the stable
-     model (mean ARI >= 0.80) with the highest Silhouette; ties go to the lower Davies-Bouldin.
-  The winner is refitted with n_init=20 and saved as a PCA -> GMM pipeline.
+     the way Silhouette / Davies-Bouldin / Calinski-Harabasz are.
+3. BIC alone keeps falling as k grows on 52k rows, so it cannot choose k. Among the BIC-chosen models,
+     the 6 with the best Silhouette (computed in the preprocessed feature space) are refitted with
+     n_init=10 and tested for stability (Adjusted Rand Index against 5 refits with other seeds). The
+     winner is the stable model (mean ARI >= 0.80) with the highest Silhouette; ties go to the lower
+     Davies-Bouldin.
+  The winner is refitted with n_init=20 and saved as a GMM pipeline.
 
-Usage (from the repo root; run gmm_untuned first so the comparison table is filled):
-  python -m src.clustering.gmm_tuned
+Usage (from the repo root; run baseline first so the comparison table is filled):
+  python clustering/gmm/tuned/run.py
 """
 import json
+import sys
 import time
 import warnings
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[3]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
 import joblib
 import matplotlib
@@ -35,19 +40,21 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from joblib import Parallel, delayed, parallel_config
-from sklearn.decomposition import PCA
 from sklearn.exceptions import ConvergenceWarning
 from sklearn.metrics import adjusted_rand_score
 from sklearn.mixture import GaussianMixture
 from sklearn.pipeline import Pipeline
 
-from src.clustering.gmm_untuned import (
+from clustering.gmm.baseline.run import (
     PALETTE, RANDOM_STATE, FLOOR_COL, base_arg_parser, build_cluster_profiles, cluster_metrics,
     covariance_diagnostics, data_zero_eigenvalues, load_data, make_dirs, n_free_parameters,
     plot_cluster_profiles, plot_cov_eigenvalues, plot_pca_2d, silhouette_sample_idx, summarize_model,
 )
 
-SPACES = {"raw": None, "pca90": 0.90, "pca95": 0.95}
+DEFAULT_FEATURES = "data/processed/h2_clustering_pca90.csv"
+DEFAULT_RAW = "data/processed/h2_clustering_stage2.csv"
+
+SPACES = {"preprocessed_pca90": None}
 COV_TYPES = ["full", "tied", "diag", "spherical"]
 REG_COVARS = [1e-6, 1e-4, 1e-2, 1e-1]
 MIN_SHARE_PCT = 2.0
@@ -56,12 +63,7 @@ STABILITY_SEEDS = [1, 2, 3, 4, 5]
 STABILITY_MIN_ARI = 0.80
 COV_STYLE = {"full": ("#2F5DA8", "o", "-"), "tied": ("#2E8B57", "s", "-"),
              "diag": ("#C8433B", "^", "--"), "spherical": ("#E08E2B", "D", "--")}
-SPACE_STYLE = {"raw": ("#8A8A8A", "o"), "pca90": ("#2F5DA8", "s"), "pca95": ("#2E8B57", "^")}
-
-
-def make_reducer(space):
-    var = SPACES[space]
-    return "passthrough" if var is None else PCA(n_components=var, svd_solver="full", random_state=RANDOM_STATE)
+SPACE_STYLE = {"preprocessed_pca90": ("#2F5DA8", "s")}
 
 
 def make_gmm(k, cov, reg, n_init, seed=RANDOM_STATE, max_iter=300):
@@ -112,17 +114,17 @@ def _refit_shortlisted(space, Z, X, sil_idx, k, cov, reg):
 
 # ---------------------------------------------------------------- plots
 def plot_tuning_curves(search, chosen, out_path):
-    """BIC, AIC and Silhouette vs k for every feature space and covariance type (best reg_covar by BIC)."""
+    """BIC, AIC and Silhouette vs k for every covariance type (best reg_covar by BIC)."""
     best = (search[search["valid"]].sort_values("bic_model_space")
             .groupby(["feature_space", "covariance_type", "n_components"], as_index=False).first())
     spaces = [s for s in SPACES if s in set(best["feature_space"])]
-    fig, axes = plt.subplots(len(spaces), 3, figsize=(16, 4.1 * len(spaces)), squeeze=False)
+    fig, axes = plt.subplots(len(spaces), 3, figsize=(16, 4.3 * len(spaces)), squeeze=False)
     for r, space in enumerate(spaces):
         sub = best[best["feature_space"] == space]
         dims = int(sub["model_dims"].iloc[0])
         for c, (col, label) in enumerate([("bic_model_space", "BIC (lower = better)"),
                                           ("aic_model_space", "AIC (lower = better)"),
-                                          ("silhouette", "Silhouette in 29-D space (higher = better)")]):
+                                          ("silhouette", f"Silhouette in {dims}-D space (higher = better)")]):
             ax = axes[r, c]
             for cov, (color, marker, ls) in COV_STYLE.items():
                 g = sub[sub["covariance_type"] == cov].sort_values("n_components")
@@ -136,7 +138,7 @@ def plot_tuning_curves(search, chosen, out_path):
             for s in ("top", "right"):
                 ax.spines[s].set_visible(False)
         axes[r, 0].legend(fontsize=8, frameon=True, facecolor="white", edgecolor="#CCCCCC")
-    fig.suptitle("GMM search: BIC / AIC (complexity-penalised fit) next to Silhouette, per feature space and covariance type\n"
+    fig.suptitle("GMM search: BIC / AIC (complexity-penalised fit) next to Silhouette across k and covariance types\n"
                  "(each point uses the reg_covar with the lowest BIC; only valid fits: converged, all k used, smallest cluster >= 2%)",
                  fontsize=12, fontweight="bold", y=1.0)
     fig.tight_layout()
@@ -145,7 +147,8 @@ def plot_tuning_curves(search, chosen, out_path):
 
 
 def plot_dashboard(bic_choice, shortlist, chosen, comp, out_path):
-    """k comparison across feature spaces + shortlist stability + untuned vs tuned."""
+    """k comparison + shortlist stability + untuned vs tuned."""
+    dims = int(chosen["model_dims"])
     fig, axes = plt.subplots(2, 3, figsize=(17, 9.6))
     for ax, (col, label) in zip(axes[0], [("silhouette", "Silhouette (higher = better)"),
                                           ("davies_bouldin", "Davies-Bouldin (lower = better)"),
@@ -162,7 +165,7 @@ def plot_dashboard(bic_choice, shortlist, chosen, comp, out_path):
         ax.set_xticks(sorted(bic_choice["n_components"].unique()))
     axes[0, 0].legend(fontsize=8.5, frameon=True, facecolor="white", edgecolor="#CCCCCC")
 
-    # cluster balance in the selected feature space
+    # cluster balance
     ax = axes[1, 0]
     g = bic_choice[bic_choice["feature_space"] == chosen["feature_space"]].sort_values("n_components")
     x = np.arange(len(g))
@@ -170,13 +173,13 @@ def plot_dashboard(bic_choice, shortlist, chosen, comp, out_path):
     ax.bar(x + 0.2, g["max_cluster_share_pct"], 0.4, color="#2F5DA8", edgecolor="black", lw=0.6, label="largest cluster %")
     ax.set_xticks(x)
     ax.set_xticklabels([f"k={int(k)}\n{c}" for k, c in zip(g["n_components"], g["covariance_type"])], fontsize=7.5)
-    ax.set_title(f"Cluster size balance ({chosen['feature_space']}, BIC-chosen covariance)", fontsize=10.5,
+    ax.set_title(f"Cluster size balance ({dims}-D preprocessed, BIC-chosen covariance)", fontsize=10.5,
                  fontweight="bold", loc="left")
     ax.legend(fontsize=8.5, frameon=True, facecolor="white", edgecolor="#CCCCCC")
 
     # shortlist: silhouette and stability
     ax = axes[1, 1]
-    names = [f"{r.feature_space} {r.covariance_type}\nk={r.n_components} reg={r.reg_covar:g}" for r in shortlist.itertuples()]
+    names = [f"{r.covariance_type}\nk={r.n_components} reg={r.reg_covar:g}" for r in shortlist.itertuples()]
     x = np.arange(len(shortlist))
     is_sel = [(r.feature_space, r.n_components, r.covariance_type, r.reg_covar) ==
               (chosen["feature_space"], chosen["n_components"], chosen["covariance_type"], chosen["reg_covar"])
@@ -189,7 +192,7 @@ def plot_dashboard(bic_choice, shortlist, chosen, comp, out_path):
         for b in bars:
             ax.text(b.get_x() + b.get_width() / 2, b.get_height() + 0.015, f"{b.get_height():.2f}", ha="center", fontsize=7.5)
     ax.set_xticks(x)
-    ax.set_xticklabels([("★ " if s else "") + n for n, s in zip(names, is_sel)], fontsize=7)
+    ax.set_xticklabels([("★ " if s else "") + n for n, s in zip(names, is_sel)], fontsize=7.5)
     ax.set_ylim(0, 1.12)
     ax.set_title("Shortlist refitted with n_init=10 (★ = selected)", fontsize=10.5, fontweight="bold", loc="left")
     ax.legend(fontsize=8, frameon=True, facecolor="white", edgecolor="#CCCCCC", loc="upper right")
@@ -203,8 +206,7 @@ def plot_dashboard(bic_choice, shortlist, chosen, comp, out_path):
     for i, cfg in enumerate(cfgs):
         vals = [rows.loc[cfg, m] for m, _ in mets]
         bars = ax.bar(x + (i - 0.5) * 0.38, vals, 0.38, color=["#C8433B", "#2E8B57"][i], edgecolor="black", lw=0.6,
-                      label=f"{cfg} ({rows.loc[cfg, 'feature_space']}, k={int(rows.loc[cfg, 'n_components'])}, "
-                            f"{rows.loc[cfg, 'covariance_type']})")
+                      label=f"{cfg} (k={int(rows.loc[cfg, 'n_components'])}, {rows.loc[cfg, 'covariance_type']})")
         for b, v in zip(bars, vals):
             ax.text(b.get_x() + b.get_width() / 2, v + 0.04, f"{v:.3f}", ha="center", fontsize=8.5, fontweight="bold")
     ax.set_xticks(x)
@@ -214,13 +216,13 @@ def plot_dashboard(bic_choice, shortlist, chosen, comp, out_path):
     ax.text(0.02, 0.97, txt, transform=ax.transAxes, va="top", fontsize=8,
             bbox=dict(boxstyle="round", facecolor="white", edgecolor="#CCCCCC"))
     ax.set_ylim(0, max(rows.loc[cfgs, "davies_bouldin"].max(), 1) * 1.45)
-    ax.set_title("Untuned vs tuned (metrics in the same 29-D space)", fontsize=10.5, fontweight="bold", loc="left")
+    ax.set_title(f"Untuned vs tuned (metrics in the same {dims}-D space)", fontsize=10.5, fontweight="bold", loc="left")
     ax.legend(fontsize=7.5, frameon=True, facecolor="white", edgecolor="#CCCCCC", loc="upper right")
 
     for a in axes.flat:
         for s in ("top", "right"):
             a.spines[s].set_visible(False)
-    fig.suptitle("GMM: comparison across k and feature spaces, stability check, and untuned vs tuned",
+    fig.suptitle("GMM: comparison across k, stability check, and untuned vs tuned",
                  fontsize=13.5, fontweight="bold", y=1.01)
     fig.tight_layout()
     fig.savefig(out_path, dpi=130, bbox_inches="tight")
@@ -230,6 +232,7 @@ def plot_dashboard(bic_choice, shortlist, chosen, comp, out_path):
 # ---------------------------------------------------------------- main
 def main():
     ap = base_arg_parser("Hyperparameter-tuned GMM.")
+    ap.set_defaults(features=DEFAULT_FEATURES, raw=DEFAULT_RAW)
     ap.add_argument("--k-min", type=int, default=2)
     ap.add_argument("--k-max", type=int, default=12)
     ap.add_argument("--n-jobs", type=int, default=-1)
@@ -242,11 +245,10 @@ def main():
     sil_idx = silhouette_sample_idx(len(X))
     ks = list(range(args.k_min, args.k_max + 1))
 
-    reducers = {s: make_reducer(s) for s in SPACES}
-    Zs = {s: (X if r == "passthrough" else r.fit_transform(X)) for s, r in reducers.items()}
+    # Input is already preprocessed (frequency-encoded + PCA-90); no secondary PCA is applied
+    Zs = {s: X for s in SPACES}
     for s, Z in Zs.items():
-        kept = 1.0 if reducers[s] == "passthrough" else reducers[s].explained_variance_ratio_.sum()
-        print(f"feature space {s:6s}: {Z.shape[1]:2d} dims, {kept * 100:.1f}% of variance")
+        print(f"feature space {s:18s}: {Z.shape[1]:2d} dims (from {args.features})")
 
     # step 1: coarse grid
     grid = [(s, k, c, r) for s in SPACES for c in COV_TYPES for r in REG_COVARS for k in ks]
@@ -291,12 +293,13 @@ def main():
     # final refit
     space, k, cov, reg = chosen["feature_space"], int(chosen["n_components"]), chosen["covariance_type"], float(chosen["reg_covar"])
     print(f"\nSelected: space={space}, k={k}, covariance_type={cov}, reg_covar={reg:g}. Final refit with n_init=20 ...")
-    pipe = Pipeline([("reduce", make_reducer(space)), ("gmm", make_gmm(k, cov, reg, n_init=20, max_iter=500))])
+    pipe = Pipeline([("reduce", "passthrough"), ("gmm", make_gmm(k, cov, reg, n_init=20, max_iter=500))])
     t0 = time.perf_counter()
     pipe.fit(X)
     fit_time = time.perf_counter() - t0
 
     metrics, labels, probs = summarize_model(pipe, X, sil_idx, fit_time, "tuned")
+    metrics["feature_space"] = space
     metrics["stability_ari_mean"] = chosen["stability_ari_mean"]
     gmm = pipe.named_steps["gmm"]
     Z_final = Zs[space]
@@ -311,10 +314,10 @@ def main():
     (art_dir / "gmm_tuned_metadata.json").write_text(json.dumps({
         "selected": {"feature_space": space, "model_dims": int(Z_final.shape[1]), "n_components": k,
                      "covariance_type": cov, "reg_covar": reg, "init_params": "k-means++", "n_init": 20, "max_iter": 500},
-        "search_space": {"feature_space": {s: (v if v is not None else "raw") for s, v in SPACES.items()},
+        "search_space": {"feature_space": space, "input_file": str(args.features),
                          "n_components": ks, "covariance_type": COV_TYPES, "reg_covar": REG_COVARS},
-        "selection_rule": ("valid = converged, all k used, smallest cluster >= 2%; per (space, k) lowest BIC picks "
-                           "covariance_type and reg_covar; top 6 by silhouette (29-D) refitted with n_init=10; "
+        "selection_rule": ("valid = converged, all k used, smallest cluster >= 2%; per k lowest BIC picks "
+                           f"covariance_type and reg_covar; top 6 by silhouette ({Z_final.shape[1]}-D) refitted with n_init=10; "
                            f"winner = highest silhouette among models with mean seed ARI >= {STABILITY_MIN_ARI}"),
         "feature_names": list(X_df.columns),
         "metrics": metrics}, indent=2, default=float), encoding="utf-8")

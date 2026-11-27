@@ -1,0 +1,52 @@
+{
+  "params": {
+    "n_components": 3,
+    "covariance_type": "full",
+    "reg_covar": 1e-06,
+    "n_init": 1,
+    "init_params": "kmeans",
+    "max_iter": 100,
+    "random_state": 42
+  },
+  "feature_names": [
+    "PC1",
+    "PC2",
+    "PC3",
+    "PC4",
+    "PC5",
+    "PC6",
+    "PC7",
+    "PC8"
+  ],
+  "metrics": {
+    "configuration": "untuned_baseline",
+    "feature_space": "raw",
+    "model_dims": 8,
+    "pca_variance_kept": 1.0,
+    "n_components": 3,
+    "covariance_type": "full",
+    "reg_covar": 1e-06,
+    "init_params": "kmeans",
+    "n_init": 1,
+    "max_iter": 100,
+    "converged": true,
+    "n_iter": 28,
+    "n_free_parameters": 134,
+    "n_clusters_found": 3,
+    "min_cluster_share_pct": 8.91,
+    "max_cluster_share_pct": 55.23,
+    "silhouette": 0.1071,
+    "davies_bouldin": 2.825,
+    "calinski_harabasz": 3820.26,
+    "bic_model_space": 1173686.32,
+    "aic_model_space": 1172497.13,
+    "mean_log_likelihood": -11.0971,
+    "mean_max_posterior": 0.9669,
+    "mean_normalised_entropy": 0.0818,
+    "cluster_shares_pct": "{\"0\": 35.86, \"1\": 8.91, \"2\": 55.23}",
+    "training_time_sec": 5.378,
+    "data_zero_eigenvalues": 0,
+    "max_condition_number": 259.6743430903845,
+    "min_eig_at_floor_per_component": 0
+  }
+}

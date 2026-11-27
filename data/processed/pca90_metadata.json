@@ -1,0 +1,22 @@
+{
+  "input_file": "data\\processed\\h2_clustering_stage5_freq.csv",
+  "input_shape": [
+    52817,
+    11
+  ],
+  "output_shape": [
+    52817,
+    8
+  ],
+  "variance_retained": 0.90531,
+  "explained_variance_ratio": [
+    0.486184,
+    0.098491,
+    0.068317,
+    0.065016,
+    0.049612,
+    0.048175,
+    0.04667,
+    0.042845
+  ]
+}

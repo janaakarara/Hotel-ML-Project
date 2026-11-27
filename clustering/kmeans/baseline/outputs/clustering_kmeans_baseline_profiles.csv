@@ -1,0 +1,4 @@
+Cluster,Count,Share_Pct,LeadTime_Mean,LeadTime_Median,TotalNights_Mean,WeekNights_Mean,WeekendNights_Mean,NoWeekendNight_Pct,Adults_Mean,HasChildren_Pct,Top_MarketSegment,Top_CustomerType,Top_CountryGroup,Top_Meal,Top_ReservedRoom,PostHoc_ADR_Mean,PostHoc_CancelRate_Pct,PostHoc_SpecialRequests_Mean
+0,14572,27.59,66.73,36.0,3.01,2.17,0.84,44.82,1.79,6.16,Online TA (56.2%),Transient (75.3%),Portugal (30.5%),BB (80.8%),A (76.1%),104.08,26.98,0.73
+1,21198,40.13,104.97,94.0,3.29,2.38,0.91,41.65,2.0,11.77,Online TA (72.0%),Transient (86.5%),Rest of Europe (41.4%),BB (75.0%),A (66.7%),126.41,33.16,0.75
+2,17047,32.28,53.68,34.0,3.11,2.24,0.87,43.88,1.84,7.71,Online TA (65.7%),Transient (87.3%),Rest of Europe (33.2%),BB (76.9%),A (72.9%),100.21,29.19,0.64

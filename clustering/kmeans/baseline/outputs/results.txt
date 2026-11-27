@@ -1,0 +1,7 @@
+K-Means untuned baseline  params={'n_clusters': 3, 'init': 'k-means++', 'n_init': 10, 'max_iter': 300, 'random_state': 42}
+rows x features: 52817 x 8
+cluster sizes: {0: 14572, 1: 21198, 2: 17047}  pct: {0: 27.59, 1: 40.13, 2: 32.28}
+silhouette (10k sample): 0.2034   davies_bouldin: 1.5785   calinski_harabasz: 23522.19
+inertia: 491092.06   n_iter: 8
+seed ARI vs seed 42 ([0, 1, 2, 3, 4]): {0: 0.9952, 1: 0.9972, 2: 0.9965, 3: 0.9994, 4: 0.9984}  mean=0.9973
+noise: n/a (K-Means assigns every row)
