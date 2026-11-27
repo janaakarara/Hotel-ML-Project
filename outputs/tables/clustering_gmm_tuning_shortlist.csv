@@ -1,7 +1,7 @@
 feature_space,model_dims,n_components,covariance_type,reg_covar,n_init,converged,bic_model_space,n_free_parameters,n_clusters_found,min_cluster_share_pct,max_cluster_share_pct,silhouette,davies_bouldin,calinski_harabasz,stability_ari_mean,stability_ari_min,selected
-preprocessed_pca90,8,2,full,1e-06,10,True,1219115.79,89,2,24.97,75.03,0.1105,3.4938,3103.72,0.9998,0.9995,True
-preprocessed_pca90,8,4,full,1e-06,10,True,931335.88,179,4,12.3,46.75,0.0616,3.4995,2273.47,0.5176,0.1865,False
-preprocessed_pca90,8,5,full,1e-06,10,True,685346.74,224,5,5.97,30.35,0.0509,3.9342,2078.65,0.6157,0.318,False
-preprocessed_pca90,8,11,full,0.01,10,True,921196.6,494,11,2.16,26.06,0.0504,3.7586,1623.27,0.5759,0.4427,False
-preprocessed_pca90,8,3,full,1e-06,10,True,1114211.99,134,3,16.24,66.71,0.0503,4.6345,2140.3,0.398,0.1384,False
-preprocessed_pca90,8,6,full,1e-06,10,True,605398.53,269,6,6.77,30.35,0.0379,4.6092,1925.67,0.6404,0.4064,False
+preprocessed_pca90,11,3,full,1e-06,10,True,387451.53,233,3,8.91,75.39,0.1253,2.474,3459.66,0.5266,0.173,False
+preprocessed_pca90,11,9,spherical,1e-06,10,True,1696150.03,116,9,4.36,20.86,0.1205,1.8238,8343.43,0.734,0.6634,False
+preprocessed_pca90,11,10,spherical,1e-06,10,True,1687590.99,129,10,4.52,18.12,0.1187,1.8507,7854.26,0.7351,0.6953,True
+preprocessed_pca90,11,2,full,1e-06,10,True,599302.13,155,2,24.61,75.39,0.109,3.589,2985.93,0.5017,0.0582,False
+preprocessed_pca90,11,12,spherical,1e-06,10,True,1673708.05,155,12,3.04,15.6,0.0829,1.8105,6862.95,0.6698,0.5991,False
+preprocessed_pca90,11,4,full,1e-06,10,True,-60743.15,311,4,3.51,49.82,0.041,3.8239,2098.31,0.2745,0.0936,False

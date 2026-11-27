@@ -1,0 +1,12 @@
+AGGLOMERATIVE TUNED RESULTS
+selected_feature_space : pca90_8d (8-D)
+settings               : linkage=average, metric=cosine, k=2, sample=10000, knn=5(distance)
+rows                   : 52817
+cluster_sizes          : [27585, 25232]
+min_cluster_share_pct  : 47.77
+max_cluster_share_pct  : 52.23
+silhouette             : 0.2795
+davies_bouldin         : 1.3015
+calinski_harabasz      : 28926.2
+stability_ari_mean     : 0.6658
+stability_ari_min      : 0.5505
