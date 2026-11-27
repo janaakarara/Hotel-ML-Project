@@ -1,0 +1,19 @@
+model,stage,encoding,reduction,dims,config,clusters,min_share_pct,noise_pct,fair,fair_robust_std,sil29,ari_mean
+K-Means,baseline one-hot,One-hot x1.0,none,29.0,k=3,3,8.91,0.0,0.1263,0.0024,0.1951,
+K-Means,encoding exp. v1,Frequency,none,12.0,k=3,3,8.91,0.0,0.1982,0.0023,0.1179,
+K-Means,grid best k>=3,One-hot x1.0,PCA90-whiten,12.0,k=7,7,8.91,0.0,0.2222,0.0055,0.0352,0.977
+K-Means,grid best (any k),One-hot x1.0,PCA90-whiten,12.0,k=7,7,8.91,0.0,0.2222,0.0055,0.0352,0.977
+GMM,baseline one-hot,One-hot x1.0,none,29.0,"k=3, cov=full",3,5.58,0.0,0.1238,0.0059,0.1105,
+GMM,encoding exp. v1,Frequency,none,12.0,"k=3, cov=full",3,8.91,0.0,0.1191,0.0061,0.0421,
+GMM,grid best k>=3,Frequency,PCA90,10.0,"k=7, cov=full",7,2.94,0.0,0.2255,0.0048,0.0309,0.851
+GMM,grid best (any k),Frequency,PCA90,10.0,"k=7, cov=full",7,2.94,0.0,0.2255,0.0048,0.0309,0.851
+Agglomerative,baseline one-hot,One-hot x1.0,none,29.0,k=4,4,8.91,0.0,0.086,0.002,0.1315,
+Agglomerative,encoding exp. v1,Frequency,none,12.0,k=4,4,8.9,0.0,0.2139,0.0025,0.0409,
+Agglomerative,grid best k>=3,Frequency,none,12.0,k=3,3,8.9,0.0,0.2288,0.0035,0.0721,1.0
+Agglomerative,grid best (any k),Frequency,none,12.0,k=3,3,8.9,0.0,0.2288,0.0035,0.0721,1.0
+DBSCAN,baseline one-hot,One-hot x1.0,none,29.0,"min_samples=5, eps=p90 (1.730)",7,0.04,4.4,0.0738,0.0118,0.072,
+DBSCAN,encoding exp. v1,One-hot x1.0,none,29.0,"min_samples=5, eps=p90 (1.730)",7,0.04,4.4,0.0738,0.0118,0.072,
+DBSCAN,grid best (any k),Frequency,PCA95,11.0,"min_samples=20, eps=p90 (2.123)",5,2.21,3.1,0.2137,0.0025,0.0265,0.993
+HDBSCAN (extra),grid best (any k),FAMD,PCA80,17.0,min_cluster_size=250,2,4.92,22.0,0.1755,0.0063,0.1128,0.96
+K-Prototypes (extra),grid best k>=3,none (mixed),-,11.0,k=3,3,8.91,0.0,0.1205,0.002,0.1962,0.876
+K-Prototypes (extra),grid best (any k),none (mixed),-,11.0,k=3,3,8.91,0.0,0.1205,0.002,0.1962,0.876

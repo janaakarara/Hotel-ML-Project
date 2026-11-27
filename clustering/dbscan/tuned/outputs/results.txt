@@ -1,0 +1,5 @@
+DBSCAN TUNED (PCA-90)
+settings: eps=2.0, min_samples=50, metric=euclidean, all rows
+rows: 52817 | clusters: 2 | noise %: 0.72
+cluster sizes: [47999, 4436]
+silhouette (non-noise): 0.1586 | davies-bouldin: 2.0206 | calinski-harabasz: 3230.8

@@ -1,0 +1,22 @@
+BEST ENCODING PER MODEL (fair score = Gower silhouette on the original columns, higher = better)
+
+K-Means  ->  Frequency  (score 0.198, robust 0.200 +/- 0.002)
+    runner-up: Label  |  no-categories reference: 0.115
+    ranking: Frequency 0.198, Label 0.196, FAMD 0.191, One-hot x1.0 0.126, Binary 0.126, One-hot block x0.5 0.117
+
+GMM  ->  Frequency  (score 0.201, robust 0.204 +/- 0.002)
+    runner-up: Label  |  no-categories reference: 0.088
+    ranking: Frequency 0.201, Label 0.147, One-hot x1.0 0.145, Binary 0.144, FAMD 0.078, One-hot block x0.5 0.059
+
+Agglomerative  ->  Frequency  (score 0.214, robust 0.217 +/- 0.003)
+    runner-up: Label  |  no-categories reference: 0.087
+    ranking: Frequency 0.214, Label 0.176, FAMD 0.157, Gower* 0.151, One-hot x1.0 0.086, Binary 0.083, One-hot block x0.5 0.081
+
+DBSCAN  ->  One-hot x1.0  (score 0.074, robust 0.067 +/- 0.012)
+    runner-up: Frequency  |  no-categories reference: -0.287
+    ranking: One-hot x1.0 0.074, Frequency 0.069, FAMD 0.052, Binary 0.025, Label -0.093, One-hot block x0.5 -0.173
+
+* Gower is clustered with the same ruler that scores it (3,000 rows, average linkage), so its score is
+  biased upwards; it does not apply to K-Means / GMM (they need feature vectors).
+Robust = mean +/- std of the fair score over 5 other independent 3,000-row Gower samples.
+Use the same encoding for the tuned version of each model.

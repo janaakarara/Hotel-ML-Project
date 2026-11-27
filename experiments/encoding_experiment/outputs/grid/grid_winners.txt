@@ -1,0 +1,60 @@
+ENCODING x PCA x HYPER-PARAMETER GRID - BEST CONFIGURATION PER MODEL
+fair  = Gower silhouette on the original columns (main criterion, comparable across encodings/PCA)
+sil29 = Euclidean silhouette in the 29-D one-hot space (the metric of the tuned GMM, 0.3231)
+valid = >=2 clusters, smallest cluster >= 2.0%, noise <= 30.0%; stable = mean ARI >= 0.8 over 5 seeds / samples
+
+Tuned GMM reproduced (One-hot x0.5 + PCA90, full, k=2): sil29 0.3231 | fair 0.2114 | split 91.1/8.9% | = HasChildren (ARI 1.00)  -> TRIVIAL split (one column)
+
+trivial = partition has ARI >= 0.9 with a single input column (a group-by, not a segmentation);
+trivial partitions are excluded from the winners but the best one per model is listed.
+
+K-Means
+  baseline (one-hot):    One-hot x1.0 + none (29-D), k=3  ->  fair 0.126 (+/-0.002) | sil29 0.195 | 3 clusters, smallest 8.9%, noise 0% | ARI n/a | closest column HasChildren (ARI 0.27)
+  encoding exp. v1:      Frequency + none (12-D), k=3  ->  fair 0.198 (+/-0.002) | sil29 0.118 | 3 clusters, smallest 8.9%, noise 0% | ARI n/a | closest column MarketSegment (ARI 0.39)
+  GRID WINNER (any k):   One-hot x1.0 + PCA90-whiten (12-D), k=7  ->  fair 0.222 (+/-0.005) | sil29 0.035 | 7 clusters, smallest 8.9%, noise 0% | ARI 0.98 | closest column Country (ARI 0.23)
+  GRID WINNER (k>=3):    One-hot x1.0 + PCA90-whiten (12-D), k=7  ->  fair 0.222 (+/-0.005) | sil29 0.035 | 7 clusters, smallest 8.9%, noise 0% | ARI 0.98 | closest column Country (ARI 0.23)
+  best TRIVIAL split:    FAMD + PCA90-whiten, k=4 -> fair 0.249 | sil29 0.011 | = Country (ARI 1.00)  [excluded]
+  best per encoding:  Label 0.244, One-hot x1.0 0.234, Frequency 0.229, FAMD 0.216, Binary 0.160, One-hot x0.5 0.117
+  best per reduction: PCA90-whiten 0.244, PCA90 0.216, none 0.216, PCA95 0.216, PCA80 0.207
+
+GMM
+  baseline (one-hot):    One-hot x1.0 + none (29-D), k=3, cov=full  ->  fair 0.124 (+/-0.006) | sil29 0.111 | 3 clusters, smallest 5.6%, noise 0% | ARI n/a | closest column HasChildren (ARI 0.56)
+  encoding exp. v1:      Frequency + none (12-D), k=3, cov=full  ->  fair 0.119 (+/-0.006) | sil29 0.042 | 3 clusters, smallest 8.9%, noise 0% | ARI n/a | closest column HasChildren (ARI 0.26)
+  GRID WINNER (any k):   Frequency + PCA90 (10-D), k=7, cov=full  ->  fair 0.226 (+/-0.005) | sil29 0.031 | 7 clusters, smallest 2.9%, noise 0% | ARI 0.85 | closest column ReservedRoomType (ARI 0.30)
+  GRID WINNER (k>=3):    Frequency + PCA90 (10-D), k=7, cov=full  ->  fair 0.226 (+/-0.005) | sil29 0.031 | 7 clusters, smallest 2.9%, noise 0% | ARI 0.85 | closest column ReservedRoomType (ARI 0.30)
+  best TRIVIAL split:    One-hot x1.0 + PCA80, k=2, cov=full -> fair 0.211 | sil29 0.323 | = HasChildren (ARI 1.00)  [excluded]
+  best per encoding:  Frequency 0.226, Label 0.224, FAMD 0.216, One-hot x0.5 0.211, One-hot x1.0 0.206, Binary 0.203
+  best per reduction: PCA90 0.226, PCA95 0.226, none 0.223, PCA90-whiten 0.221, PCA80 0.206
+
+Agglomerative
+  baseline (one-hot):    One-hot x1.0 + none (29-D), k=4  ->  fair 0.086 (+/-0.002) | sil29 0.132 | 4 clusters, smallest 8.9%, noise 0% | ARI n/a | closest column HasChildren (ARI 0.15)
+  encoding exp. v1:      Frequency + none (12-D), k=4  ->  fair 0.214 (+/-0.003) | sil29 0.041 | 4 clusters, smallest 8.9%, noise 0% | ARI n/a | closest column Meal (ARI 0.47)
+  GRID WINNER (any k):   Frequency + none (12-D), k=3  ->  fair 0.229 (+/-0.004) | sil29 0.072 | 3 clusters, smallest 8.9%, noise 0% | ARI 1.00 | closest column CustomerType (ARI 0.71)
+  GRID WINNER (k>=3):    Frequency + none (12-D), k=3  ->  fair 0.229 (+/-0.004) | sil29 0.072 | 3 clusters, smallest 8.9%, noise 0% | ARI 1.00 | closest column CustomerType (ARI 0.71)
+  best TRIVIAL split:    Frequency + none, k=2 -> fair 0.241 | sil29 0.012 | = CustomerType (ARI 0.95)  [excluded]
+  best per encoding:  Frequency 0.229, One-hot x1.0 0.223, Label 0.205, FAMD 0.184, One-hot x0.5 0.137, Binary 0.132
+  best per reduction: PCA90-whiten 0.229, none 0.229, PCA95 0.229, PCA90 0.205, PCA80 0.204
+
+DBSCAN
+  baseline (one-hot):    One-hot x1.0 + none (29-D), min_samples=5, eps=p90 (1.730)  ->  fair 0.074 (+/-0.012) | sil29 0.072 | 7 clusters, smallest 0.0%, noise 4% | ARI n/a | closest column HasChildren (ARI 0.25)
+  encoding exp. v1:      One-hot x1.0 + none (29-D), min_samples=5, eps=p90 (1.730)  ->  fair 0.074 (+/-0.012) | sil29 0.072 | 7 clusters, smallest 0.0%, noise 4% | ARI n/a | closest column HasChildren (ARI 0.25)
+  GRID WINNER (any k):   Frequency + PCA95 (11-D), min_samples=20, eps=p90 (2.123)  ->  fair 0.214 (+/-0.003) | sil29 0.026 | 5 clusters, smallest 2.2%, noise 3% | ARI 0.99 | closest column Meal (ARI 0.48)
+  best TRIVIAL split:    One-hot x1.0 + PCA90-whiten, min_samples=20, eps=p98 (2.919) -> fair 0.211 | sil29 0.324 | = HasChildren (ARI 1.00)  [excluded]
+  best per encoding:  Frequency 0.217, Label 0.194, One-hot x1.0 0.119, One-hot x0.5 0.108, Binary 0.102
+  best per reduction: none 0.217, PCA95 0.214, PCA90 0.182, PCA90-whiten 0.114, PCA80 0.108
+
+HDBSCAN (extra)
+  GRID WINNER (any k):   FAMD + PCA80 (17-D), min_cluster_size=250  ->  fair 0.175 (+/-0.006) | sil29 0.113 | 2 clusters, smallest 4.9%, noise 22% | ARI 0.96 | closest column MarketSegment (ARI 0.21)
+  best TRIVIAL split:    One-hot x1.0 + PCA80, min_cluster_size=100 -> fair 0.211 | sil29 0.324 | = HasChildren (ARI 1.00)  [excluded]
+  best per encoding:  FAMD 0.184, One-hot x0.5 0.081
+  best per reduction: PCA90 0.184, PCA90-whiten 0.182, PCA80 0.175, none 0.160, PCA95 0.159
+
+K-Prototypes (extra)
+  GRID WINNER (any k):   none (mixed) + - (11-D), k=3  ->  fair 0.120 (+/-0.002) | sil29 0.196 | 3 clusters, smallest 8.9%, noise 0% | ARI 0.88 | closest column HasChildren (ARI 0.27)
+  GRID WINNER (k>=3):    none (mixed) + - (11-D), k=3  ->  fair 0.120 (+/-0.002) | sil29 0.196 | 3 clusters, smallest 8.9%, noise 0% | ARI 0.88 | closest column HasChildren (ARI 0.27)
+  best per encoding:  none (mixed) 0.120
+  best per reduction: - 0.120
+
+Gower* (biased, not eligible): best Agglomerative k=2 fair 0.238
+
+runtime 1583s, 1263 runs. Full table: grid_results.csv
