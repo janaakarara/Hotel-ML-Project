@@ -1,7 +1,7 @@
-"""Train and evaluate a Random Forest classifier for IsCanceled."""
 from __future__ import annotations
 import json
 from pathlib import Path
+import sys
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -32,6 +32,9 @@ from sklearn.model_selection import (
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 
+ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 from config import ARTIFACTS_DIR, DATA_FILE, RANDOM_STATE, TARGET_CLASSIFICATION
 from pipeline.preprocess import preprocess
 
@@ -39,7 +42,7 @@ from pipeline.preprocess import preprocess
 TEST_SIZE = 0.20
 CV_FOLDS = 5
 N_ESTIMATORS = 500
-MODEL_NAME = "random_forest_classifier"
+MODEL_NAME = "random_forest_classifier1.0"
 
 
 def build_model_pipeline(
@@ -269,7 +272,7 @@ def main() -> None:
     print("\nFull classification report:")
     print(report_text)
 
-    cm_path = artifacts_dir / f"{MODEL_NAME}_confusion_matrix.png"
+    cm_path = artifacts_dir /"classification"/"randomforest"/ f"{MODEL_NAME}_confusion_matrix.png"
     fig, ax = plt.subplots(figsize=(6, 5))
     ConfusionMatrixDisplay.from_predictions(
         y_test,
@@ -284,7 +287,7 @@ def main() -> None:
     fig.savefig(cm_path, dpi=150, bbox_inches="tight")
     plt.close(fig)
 
-    roc_path = artifacts_dir / f"{MODEL_NAME}_roc_curve.png"
+    roc_path = artifacts_dir /"classification"/"randomforest"/ f"{MODEL_NAME}_roc_curve.png"
     fig, ax = plt.subplots(figsize=(6, 5))
     RocCurveDisplay.from_predictions(
         y_test, y_probability, ax=ax, name="Random Forest"
@@ -304,7 +307,7 @@ def main() -> None:
     fig.savefig(roc_path, dpi=150, bbox_inches="tight")
     plt.close(fig)
 
-    pr_path = artifacts_dir / f"{MODEL_NAME}_pr_curve.png"
+    pr_path = artifacts_dir /"classification"/"randomforest"/ f"{MODEL_NAME}_pr_curve.png"
     fig, ax = plt.subplots(figsize=(6, 5))
     PrecisionRecallDisplay.from_predictions(
         y_test, y_probability, ax=ax, name="Random Forest"
@@ -322,7 +325,7 @@ def main() -> None:
         numeric_features,
         categorical_features,
     )
-    model_path = artifacts_dir / f"{MODEL_NAME}.joblib"
+    model_path = artifacts_dir /"classification"/"randomforest"/ f"{MODEL_NAME}.joblib"
     joblib.dump(model, model_path)
 
     metrics_payload = {
@@ -347,7 +350,7 @@ def main() -> None:
             output_dict=True,
         ),
     }
-    metrics_path = artifacts_dir / f"{MODEL_NAME}_metrics.json"
+    metrics_path = artifacts_dir /"classification"/"randomforest"/ f"{MODEL_NAME}_metrics.json"
     metrics_path.write_text(
         json.dumps(metrics_payload, indent=2),
         encoding="utf-8",

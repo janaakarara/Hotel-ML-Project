@@ -1,6 +1,7 @@
-
-artifacts/*.joblib
-artifacts/*.pkl
+venv/
+.venv/
+*.joblib
+*.pkl
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
