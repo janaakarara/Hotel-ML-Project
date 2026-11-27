@@ -21,4 +21,3 @@ Files are named after the step that made them. Read top to bottom = pipeline ord
 | 6 | h2_clustering_stage5_frequency.csv + stage5_frequency_maps.json | frequency, 12 columns, month as sin/cos (recommended) |
 | 6 | h2_clustering_stage5_freq.csv + stage5_freq_encoding.json | frequency, older version, 11 columns, month as raw 1-12. Feeds the PCA file |
 | 7 | h2_clustering_pca90.csv + pca90_metadata.json | PCA keeping 90% variance, 8 columns |
-| - | stage6_decisions.md, stage6_weights.json, stage6_row_index.csv | idea to split family / non-family. No script, not used by any model |
