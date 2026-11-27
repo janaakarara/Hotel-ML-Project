@@ -1,61 +1,86 @@
 {
-  "model": "Ridge",
-  "best_params": {
-    "model__regressor__alpha": 3.0
+  "name": "ridge",
+  "regressor": "Ridge(random_state=42)",
+  "config": {
+    "data": "data\\processed\\h2_clean_v2_dedup.csv",
+    "artifact_dir": "artifacts",
+    "split": "group",
+    "test_size": 0.2,
+    "folds": 5,
+    "seed": 42,
+    "n_jobs": -1,
+    "pca": null,
+    "min_frequency": null,
+    "log_target": null,
+    "min_adr": 10.0,
+    "max_adr": 1000.0,
+    "keep_zero_guest": false,
+    "show_plots": false,
+    "alpha": 1.0,
+    "family": "linear",
+    "log_target_used": true,
+    "estimator_kwargs": {
+      "alpha": 1.0
+    }
   },
   "baseline_cv_metrics": {
-    "cv_mae": 15.334356014645579,
-    "cv_mae_std": 0.185522651933351,
-    "cv_rmse": 21.88798466876026,
-    "cv_rmse_std": 0.37917407442680967,
-    "cv_r2": 0.6933482541722141,
-    "cv_r2_std": 0.00931877531307503,
-    "sec": 7.393742561340332
-  },
-  "tuned_cv_metrics": {
-    "cv_mae": 15.33354055128828,
-    "cv_mae_std": 0.18602686557786574,
-    "cv_rmse": 21.887151532235116,
-    "cv_rmse_std": 0.3798590966037023,
-    "cv_r2": 0.6933717047359983,
-    "cv_r2_std": 0.009326536671424536,
-    "sec": 13.768560409545898
+    "cv_mae": 13.57242863448675,
+    "cv_mae_std": 0.1831784324795092,
+    "train_mae": 13.309101769927532,
+    "cv_rmse": 20.066221661433406,
+    "cv_rmse_std": 0.3124891763555539,
+    "train_rmse": 19.72390645459697,
+    "cv_r2": 0.7386233717715645,
+    "cv_r2_std": 0.0131818429870984,
+    "train_r2": 0.7477590507693392,
+    "fit_sec": 1.6250157356262207
   },
   "test_metrics": {
-    "mae": 15.446330935681264,
-    "rmse": 22.19278633784767,
-    "r2": 0.6846262836526096
+    "mae": 13.555792667857405,
+    "rmse": 19.66800805480719,
+    "r2": 0.7509812939868251,
+    "fit_sec": 1.3705254000378773
   },
-  "n_train": 41829,
-  "n_test": 10458,
-  "strict_mode": false,
-  "numeric_features": [
+  "n_train": 41754,
+  "n_test": 10439,
+  "split_mode": "group",
+  "input_columns": [
     "LeadTime",
-    "LogLeadTime",
     "ArrivalDateYear",
+    "ArrivalDateMonth",
+    "ArrivalDateWeekNumber",
+    "ArrivalDateDayOfMonth",
     "StaysInWeekendNights",
     "StaysInWeekNights",
-    "TotalNights",
-    "WeekendShare",
     "Adults",
     "Children",
     "Babies",
-    "TotalGuests",
-    "HasChildren",
+    "Meal",
+    "Country",
+    "MarketSegment",
+    "DistributionChannel",
     "IsRepeatedGuest",
     "PreviousCancellations",
     "PreviousBookingsNotCanceled",
-    "HasCompany",
-    "month_sin",
-    "month_cos",
-    "dow_sin",
-    "dow_cos",
-    "week_sin",
-    "week_cos",
-    "RequiredCarParkingSpaces",
-    "TotalOfSpecialRequests"
+    "ReservedRoomType",
+    "DepositType",
+    "Agent",
+    "Company",
+    "CustomerType"
   ],
-  "categorical_features": [
+  "required_raw_columns": [
+    "ArrivalDateYear",
+    "ArrivalDateMonth",
+    "ArrivalDateDayOfMonth",
+    "StaysInWeekendNights",
+    "StaysInWeekNights",
+    "Adults",
+    "Children",
+    "Babies",
+    "LeadTime",
+    "IsRepeatedGuest",
+    "PreviousCancellations",
+    "PreviousBookingsNotCanceled",
     "Meal",
     "Country",
     "MarketSegment",
@@ -63,16 +88,22 @@
     "ReservedRoomType",
     "DepositType",
     "CustomerType",
-    "Agent"
+    "Agent",
+    "Company"
   ],
+  "n_features_out": 186,
   "excluded_columns": [
     "ReservationStatus",
     "ReservationStatusDate",
     "IsCanceled",
     "AssignedRoomType",
     "BookingChanges",
-    "DaysInWaitingList"
+    "DaysInWaitingList",
+    "RequiredCarParkingSpaces",
+    "TotalOfSpecialRequests"
   ],
+  "data_sha256": "7e13f4810903952055da046c58365d1c12c2824a3a2ae6f5d23e3333c5b2bb7b",
+  "git_commit": "20962f474a348bc7f1a2fbdb2ac9d180da01c443",
   "sklearn_version": "1.9.1",
-  "trained_at": "2026-11-23T16:12:38.291688+00:00"
+  "trained_at": "2026-11-27T18:04:17.273346+00:00"
 }

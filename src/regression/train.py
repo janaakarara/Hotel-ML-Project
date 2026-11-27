@@ -61,7 +61,7 @@ METRICS = ("mae", "rmse", "r2")
 # --------------------------------------------------------------------------
 # Data loading and leakage audit
 # --------------------------------------------------------------------------
-def load_dataset(path: Path, strict: bool = False
+def load_dataset(path: Path, strict: bool = True
                  ) -> tuple[pd.DataFrame, pd.Series]:
     """Load the clean CSV and return ``(X, y)`` after the leakage audit.
  
