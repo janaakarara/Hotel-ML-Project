@@ -20,12 +20,12 @@ Usage (from the repo root):
 Writes:
   artifacts/gmm_untuned_model.joblib            (fitted pipeline; ignored by git)
   artifacts/gmm_untuned_metadata.json
-  outputs/tables/clustering_gmm_untuned_metrics.csv
-  outputs/tables/clustering_gmm_untuned_profiles.csv
-  outputs/tables/clustering_gmm_untuned_covariance.csv
-  outputs/figures/clustering_gmm_untuned_pca_2d.png
-  outputs/figures/clustering_gmm_untuned_profiles.png
-  outputs/figures/clustering_gmm_untuned_cov_eigenvalues.png
+  outputs/gmm/clustering_gmm_untuned_metrics.csv
+  outputs/gmm/clustering_gmm_untuned_profiles.csv
+  outputs/gmm/clustering_gmm_untuned_covariance.csv
+  outputs/gmm/clustering_gmm_untuned_pca_2d.png
+  outputs/gmm/clustering_gmm_untuned_profiles.png
+  outputs/gmm/clustering_gmm_untuned_cov_eigenvalues.png
 """
 import argparse
 import json
@@ -341,8 +341,8 @@ def base_arg_parser(description):
     ap.add_argument("--raw", default="data/processed/h2_clustering_stage2.csv")
     ap.add_argument("--profile-cols", default="data/processed/h2_clustering_profile_cols.csv")
     ap.add_argument("--artifacts-dir", default="artifacts")
-    ap.add_argument("--figures-dir", default="outputs/figures")
-    ap.add_argument("--tables-dir", default="outputs/tables")
+    ap.add_argument("--figures-dir", default="outputs/gmm")
+    ap.add_argument("--tables-dir", default="outputs/gmm")
     return ap
 
 

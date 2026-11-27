@@ -9,7 +9,7 @@ their most common category, because their variance is capped by 1 - sum(p_k^2).
 Usage (from the repo root):
   python src/03_encoding/stage5a_feature_balance_check.py
 Reads:  data/processed/h2_clustering_stage5.csv
-Writes: outputs/figures/stage5a_balance_<tag>.png, outputs/tables/stage5a_balance_<tag>.csv
+Writes: outputs/05_encoding_balance/stage5a_balance_<tag>.png, outputs/05_encoding_balance/stage5a_balance_<tag>.csv
 """
 import argparse
 from pathlib import Path
@@ -30,7 +30,7 @@ def main():
     ap.add_argument("--tag", default="current")
     ap.add_argument("--unscaled-flag", action="store_true")
     a = ap.parse_args()
-    fig_dir, tab_dir = Path("outputs/figures"), Path("outputs/tables")
+    fig_dir, tab_dir = Path("outputs/05_encoding_balance"), Path("outputs/05_encoding_balance")
     fig_dir.mkdir(parents=True, exist_ok=True); tab_dir.mkdir(parents=True, exist_ok=True)
 
     df = pd.read_csv(a.input)

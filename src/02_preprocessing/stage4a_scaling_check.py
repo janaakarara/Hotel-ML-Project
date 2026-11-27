@@ -6,10 +6,10 @@ HasChildren is a 0/1 flag and is left out of this comparison. It is standardized
 Usage (from the repo root):
   python src/02_preprocessing/stage4a_scaling_check.py
 Reads:  data/processed/h2_clustering_stage3.csv
-Writes: outputs/figures/stage4a_scaling_distributions.png   (big: every column x every scaler)
-        outputs/figures/stage4a_scaling_spread.png          (spread of each column before and after)
-        outputs/tables/stage4a_scaling_summary.csv
-        outputs/tables/stage4a_scaling_ranking.csv       (which scaler is best, and the score)
+Writes: outputs/04_scaling/stage4a_scaling_distributions.png   (big: every column x every scaler)
+        outputs/04_scaling/stage4a_scaling_spread.png          (spread of each column before and after)
+        outputs/04_scaling/stage4a_scaling_summary.csv
+        outputs/04_scaling/stage4a_scaling_ranking.csv       (which scaler is best, and the score)
 """
 import argparse
 from pathlib import Path
@@ -102,16 +102,16 @@ def main():
     ap.add_argument("--out", default="outputs")
     a = ap.parse_args()
     out = Path(a.out)
-    (out / "figures").mkdir(parents=True, exist_ok=True)
-    (out / "tables").mkdir(parents=True, exist_ok=True)
+    (out / "04_scaling").mkdir(parents=True, exist_ok=True)
+    (out / "04_scaling").mkdir(parents=True, exist_ok=True)
     df = pd.read_csv(a.input)
     print(f"rows={len(df)} columns={df.shape[1]}")
 
     rank, best = ranking(df)
-    rank.to_csv(out / "tables/stage4a_scaling_ranking.csv", index=False)
-    summary = distributions_figure(df, out / "figures/stage4a_scaling_distributions.png", best)
-    summary.to_csv(out / "tables/stage4a_scaling_summary.csv", index=False)
-    spread_figure(summary, out / "figures/stage4a_scaling_spread.png", best)
+    rank.to_csv(out / "04_scaling/stage4a_scaling_ranking.csv", index=False)
+    summary = distributions_figure(df, out / "04_scaling/stage4a_scaling_distributions.png", best)
+    summary.to_csv(out / "04_scaling/stage4a_scaling_summary.csv", index=False)
+    spread_figure(summary, out / "04_scaling/stage4a_scaling_spread.png", best)
     print("\n=== WHICH SCALER GIVES THE MOST EQUAL SPREAD? (1.0 = perfectly equal, lower is better) ===")
     print(rank.to_string(index=False))
     print("BEST:", best)

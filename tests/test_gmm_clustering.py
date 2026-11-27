@@ -26,7 +26,7 @@ RAW = ROOT / "data/processed/h2_clustering_stage2.csv"
 PREP_PARAMS = ROOT / "artifacts/clustering_preprocessor_params.json"
 UNTUNED_MODEL = ROOT / "artifacts/gmm_untuned_model.joblib"
 TUNED_MODEL = ROOT / "artifacts/gmm_tuned_model.joblib"
-COMP_CSV = ROOT / "outputs/tables/clustering_gmm_comparison.csv"
+COMP_CSV = ROOT / "outputs/gmm/clustering_gmm_comparison.csv"
 
 _ready = STAGE5.exists() and UNTUNED_MODEL.exists() and TUNED_MODEL.exists() and COMP_CSV.exists()
 if pytest is not None:

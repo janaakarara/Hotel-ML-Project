@@ -237,7 +237,7 @@ def main():
     ap.add_argument("--k-max", type=int, default=12)
     ap.add_argument("--n-jobs", type=int, default=-1)
     ap.add_argument("--reuse-search", action="store_true",
-                    help="reuse outputs/tables/clustering_gmm_tuning_search.csv instead of refitting the grid")
+                    help="reuse outputs/gmm/clustering_gmm_tuning_search.csv instead of refitting the grid")
     args = ap.parse_args()
     art_dir, fig_dir, tab_dir = make_dirs(args.artifacts_dir, args.figures_dir, args.tables_dir)
 

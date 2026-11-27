@@ -4,7 +4,7 @@ Everything here is NUMERIC + GRAPHS. No column is dropped by this script: it onl
 You decide the drops by reading the printed tables and the figures.
 
 Usage: python src/02_preprocessing/stage2a_redundancy_check.py --input data/processed/h2_clustering_stage1.csv
-Writes: outputs/tables/stage2a_*.csv and outputs/figures/stage2a_*.png
+Writes: outputs/02_redundancy/stage2a_*.csv and outputs/02_redundancy/stage2a_*.png
 """
 import argparse
 from pathlib import Path
@@ -96,14 +96,14 @@ def main():
     ap.add_argument("--input", default="data/processed/h2_clustering_stage1.csv")
     ap.add_argument("--out", default="outputs")
     a = ap.parse_args()
-    out = Path(a.out); (out / "tables").mkdir(parents=True, exist_ok=True); (out / "figures").mkdir(parents=True, exist_ok=True)
+    out = Path(a.out); (out / "02_redundancy").mkdir(parents=True, exist_ok=True); (out / "02_redundancy").mkdir(parents=True, exist_ok=True)
     df = pd.read_csv(a.input, dtype={"Agent": str})
     num, cat = split_columns(df)
     print(f"rows={len(df)}  numeric={len(num)}  categorical={len(cat)}")
 
     # 1) near-constant
     ct = constancy_table(df)
-    ct.to_csv(out / "tables/stage2a_constancy.csv", index=False)
+    ct.to_csv(out / "02_redundancy/stage2a_constancy.csv", index=False)
     print("\n=== 1) NEAR-CONSTANT CHECK (top_share = share of the most common value) ===")
     print(ct.to_string(index=False))
     fig, ax = plt.subplots(figsize=(8, 7))
@@ -111,28 +111,28 @@ def main():
     ax.barh(s.column, s.top_share, color=np.where(s.top_share >= NEAR_CONST, "tab:red", "tab:blue"))
     ax.axvline(NEAR_CONST, ls="--", c="k"); ax.set_xlabel("share of most common value")
     ax.set_title("Near-constant check (red = flagged)"); fig.tight_layout()
-    fig.savefig(out / "figures/stage2a_constancy.png", dpi=130); plt.close(fig)
+    fig.savefig(out / "02_redundancy/stage2a_constancy.png", dpi=130); plt.close(fig)
 
     # 2a) numeric vs numeric: Spearman
     sp = df[num].corr(method="spearman")
-    sp.round(3).to_csv(out / "tables/stage2a_spearman.csv")
-    heat(sp, "Spearman correlation (numeric)", out / "figures/stage2a_spearman.png", -1, 1, "coolwarm")
+    sp.round(3).to_csv(out / "02_redundancy/stage2a_spearman.csv")
+    heat(sp, "Spearman correlation (numeric)", out / "02_redundancy/stage2a_spearman.png", -1, 1, "coolwarm")
 
     # 2b) categorical vs categorical: Cramer's V
     cv = pd.DataFrame(index=cat, columns=cat, dtype=float)
     for i, x in enumerate(cat):
         for y in cat[i:]:
             cv.loc[x, y] = cv.loc[y, x] = 1.0 if x == y else cramers_v(df[x], df[y])
-    cv.round(3).to_csv(out / "tables/stage2a_cramers_v.csv")
-    heat(cv, "Cramer's V (categorical)", out / "figures/stage2a_cramers_v.png")
+    cv.round(3).to_csv(out / "02_redundancy/stage2a_cramers_v.csv")
+    heat(cv, "Cramer's V (categorical)", out / "02_redundancy/stage2a_cramers_v.png")
 
     # 2c) numeric vs categorical: eta
     et = pd.DataFrame({c: {n: eta(df[n], df[c]) for n in num} for c in cat})
-    et.round(3).to_csv(out / "tables/stage2a_eta.csv")
-    heat(et, "Correlation ratio eta (numeric by category)", out / "figures/stage2a_eta.png")
+    et.round(3).to_csv(out / "02_redundancy/stage2a_eta.csv")
+    heat(et, "Correlation ratio eta (numeric by category)", out / "02_redundancy/stage2a_eta.png")
 
     flags = pd.DataFrame(flag_pairs(sp, "spearman", True) + flag_pairs(cv, "cramers_v", True) + flag_pairs(et, "eta", False))
-    flags.to_csv(out / "tables/stage2a_flagged_pairs.csv", index=False)
+    flags.to_csv(out / "02_redundancy/stage2a_flagged_pairs.csv", index=False)
     print(f"\n=== 2) REDUNDANT PAIRS (association >= {HIGH_CORR}) ===")
     print(flags.sort_values("value", ascending=False).to_string(index=False) if len(flags) else "none")
 

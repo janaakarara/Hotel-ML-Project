@@ -29,7 +29,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--input", default="data/processed/h2_clustering_stage1.csv")
     ap.add_argument("--output", default="data/processed/h2_clustering_stage2.csv")
-    ap.add_argument("--report", default="outputs/tables/stage2_drop_decisions.md")
+    ap.add_argument("--report", default="outputs/02_redundancy/stage2_drop_decisions.md")
     a = ap.parse_args()
 
     df = pd.read_csv(a.input, dtype={"Agent": str})

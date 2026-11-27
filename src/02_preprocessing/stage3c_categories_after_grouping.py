@@ -6,9 +6,9 @@ Usage (from the repo root):
   python src/02_preprocessing/stage3c_categories_after_grouping.py
 Reads:  data/processed/h2_clustering_stage3.csv
         data/processed/stage3b_country_group_profile.csv   (written by stage 3b)
-Writes: outputs/figures/stage3c_categories_after_grouping.png   (share of every category, all 5 columns)
-        outputs/figures/stage3c_country_group_profile.png       (do the 4 Country groups differ?)
-        outputs/tables/stage3c_category_shares.csv
+Writes: outputs/03_skew_and_categories/stage3c_categories_after_grouping.png   (share of every category, all 5 columns)
+        outputs/03_skew_and_categories/stage3c_country_group_profile.png       (do the 4 Country groups differ?)
+        outputs/03_skew_and_categories/stage3c_category_shares.csv
 """
 import argparse
 from pathlib import Path
@@ -30,8 +30,8 @@ def main():
     ap.add_argument("--out", default="outputs")
     a = ap.parse_args()
     out = Path(a.out)
-    (out / "figures").mkdir(parents=True, exist_ok=True)
-    (out / "tables").mkdir(parents=True, exist_ok=True)
+    (out / "03_skew_and_categories").mkdir(parents=True, exist_ok=True)
+    (out / "03_skew_and_categories").mkdir(parents=True, exist_ok=True)
     df = pd.read_csv(a.input)
 
     # ---- figure 1: every category column after grouping ----
@@ -60,9 +60,9 @@ def main():
                   fontsize=14, va="center")
     fig.suptitle("Categorical columns after grouping (clustering input, 52,817 rows)", fontsize=20)
     fig.tight_layout()
-    fig.savefig(out / "figures/stage3c_categories_after_grouping.png", dpi=100, bbox_inches="tight")
+    fig.savefig(out / "03_skew_and_categories/stage3c_categories_after_grouping.png", dpi=100, bbox_inches="tight")
     plt.close(fig)
-    pd.DataFrame(rows).to_csv(out / "tables/stage3c_category_shares.csv", index=False)
+    pd.DataFrame(rows).to_csv(out / "03_skew_and_categories/stage3c_category_shares.csv", index=False)
 
     # ---- figure 2: do the Country groups differ? ----
     prof = pd.read_csv(a.profile, index_col=0).reindex(COUNTRY_ORDER)
@@ -78,12 +78,12 @@ def main():
         ax.tick_params(axis="x", rotation=25, labelsize=12)
     fig.suptitle("Country groups: lead time separates them, stay length and children barely do", fontsize=16)
     fig.tight_layout()
-    fig.savefig(out / "figures/stage3c_country_group_profile.png", dpi=100, bbox_inches="tight")
+    fig.savefig(out / "03_skew_and_categories/stage3c_country_group_profile.png", dpi=100, bbox_inches="tight")
     plt.close(fig)
 
     print("\n=== CATEGORY SHARES AFTER GROUPING (% of rows) ===")
     print(pd.DataFrame(rows).to_string(index=False))
-    print("\nSaved figures in", out / "figures")
+    print("\nSaved figures in", out / "03_skew_and_categories")
 
 
 if __name__ == "__main__":

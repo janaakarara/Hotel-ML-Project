@@ -5,10 +5,10 @@ Only MEASURES and DRAWS. No column is changed. You decide what to do by reading 
 Usage (from the repo root):
   python src/02_preprocessing/stage3a_distributions_check.py
 Reads:  data/processed/h2_clustering_stage2.csv
-Writes: outputs/figures/stage3a_numeric_skew.png        (big: every column x every method, best option in red)
-        outputs/figures/stage3a_categorical_shares.png
-        outputs/tables/stage3a_numeric_skew.csv
-        outputs/tables/stage3a_rare_categories.csv
+Writes: outputs/03_skew_and_categories/stage3a_numeric_skew.png        (big: every column x every method, best option in red)
+        outputs/03_skew_and_categories/stage3a_categorical_shares.png
+        outputs/03_skew_and_categories/stage3a_numeric_skew.csv
+        outputs/03_skew_and_categories/stage3a_rare_categories.csv
 """
 import argparse
 from pathlib import Path
@@ -110,18 +110,18 @@ def main():
     ap.add_argument("--out", default="outputs")
     a = ap.parse_args()
     out = Path(a.out)
-    (out / "figures").mkdir(parents=True, exist_ok=True)
-    (out / "tables").mkdir(parents=True, exist_ok=True)
+    (out / "03_skew_and_categories").mkdir(parents=True, exist_ok=True)
+    (out / "03_skew_and_categories").mkdir(parents=True, exist_ok=True)
     df = pd.read_csv(a.input)
     print(f"rows={len(df)} columns={df.shape[1]}")
 
-    sk = numeric_figure(df, out / "figures/stage3a_numeric_skew.png")
-    sk.to_csv(out / "tables/stage3a_numeric_skew.csv", index=False)
+    sk = numeric_figure(df, out / "03_skew_and_categories/stage3a_numeric_skew.png")
+    sk.to_csv(out / "03_skew_and_categories/stage3a_numeric_skew.csv", index=False)
     print("\n=== SKEW OF EVERY METHOD (under 0.5 balanced, over 1 HIGH) ===")
     print(sk.to_string(index=False))
 
-    cat = categorical_figure(df, out / "figures/stage3a_categorical_shares.png")
-    cat.to_csv(out / "tables/stage3a_rare_categories.csv", index=False)
+    cat = categorical_figure(df, out / "03_skew_and_categories/stage3a_categorical_shares.png")
+    cat.to_csv(out / "03_skew_and_categories/stage3a_rare_categories.csv", index=False)
     print("\n=== RARE CATEGORIES (under 1% of rows) ===")
     print(cat.drop(columns=["rare_values"]).to_string(index=False))
 
