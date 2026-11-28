@@ -348,54 +348,6 @@ def base_arg_parser(description):
     return ap
 
 
-# ---------------------------------------------------------------- main
-def main():
-    args = base_arg_parser("Untuned baseline GMM (scikit-learn defaults, k=3).").parse_args()
-    art_dir, fig_dir, tab_dir = make_dirs(args.artifacts_dir, args.figures_dir, args.tables_dir)
-
-    X_df, X, raw_df, prof_df = load_data(args.features, args.raw, args.profile_cols)
-    sil_idx = silhouette_sample_idx(len(X))
-    print(f"Untuned GMM {BASELINE_PARAMS} on {X.shape[0]} bookings x {X.shape[1]} features")
-
-    pipe = Pipeline([("reduce", "passthrough"), ("gmm", GaussianMixture(**BASELINE_PARAMS))])
-    t0 = time.perf_counter()
-    pipe.fit(X)
-    fit_time = time.perf_counter() - t0
-
-    metrics, labels, probs = summarize_model(pipe, X, sil_idx, fit_time, "untuned_baseline")
-    gmm = pipe.named_steps["gmm"]
-    n_zero, data_eigs = data_zero_eigenvalues(X)
-    cov_diag = covariance_diagnostics(gmm)
-    metrics["data_zero_eigenvalues"] = n_zero
-    metrics["max_condition_number"] = float(cov_diag["condition_number"].max())
-    metrics["min_eig_at_floor_per_component"] = int(cov_diag[FLOOR_COL].min())
-    profiles = build_cluster_profiles(raw_df, prof_df, labels, probs)
-
-    joblib.dump(pipe, art_dir / "gmm_untuned_model.joblib")
-    (art_dir / "gmm_untuned_metadata.json").write_text(json.dumps(
-        {"params": BASELINE_PARAMS, "feature_names": list(X_df.columns), "metrics": metrics}, indent=2), encoding="utf-8")
-    pd.DataFrame([metrics]).to_csv(tab_dir / "clustering_gmm_untuned_metrics.csv", index=False)
-    profiles.to_csv(tab_dir / "clustering_gmm_untuned_profiles.csv", index=False)
-    cov_diag.to_csv(tab_dir / "clustering_gmm_untuned_covariance.csv", index=False)
-    np.save(tab_dir / "labels.npy", labels)
-
-    tag = f"GMM untuned baseline (raw {X.shape[1]}-D, k=3, full, reg_covar=1e-6)"
-    plot_pca_2d(X, labels, pipe, fig_dir / "clustering_gmm_untuned_pca_2d.png", tag)
-    plot_cluster_profiles(profiles, fig_dir / "clustering_gmm_untuned_profiles.png", tag + ": cluster profiles")
-    plot_cov_eigenvalues(gmm, data_eigs, fig_dir / "clustering_gmm_untuned_cov_eigenvalues.png",
-                         f"{tag}: covariance eigenvalues\nThe data itself has {n_zero} zero eigenvalues "
-                         f"(each one-hot group sums to a constant), so full covariances hit the reg_covar floor")
-
-    print("\n========== UNTUNED BASELINE GMM ==========")
-    for k, v in metrics.items():
-        print(f"  {k:32s}: {v}")
-    print("\nCovariance diagnostics:")
-    print(cov_diag.to_string(index=False))
-    print("\nCluster profiles:")
-    print(profiles[["Cluster", "Count", "Share_Pct", "LeadTime_Mean", "TotalNights_Mean", "HasChildren_Pct",
-                    "Top_MarketSegment", "PostHoc_ADR_Mean", "PostHoc_CancelRate_Pct"]].to_string(index=False))
-
-
 def main_12d():
     """GMM baseline on the 12-D frequency matrix (scikit-learn defaults, k=3). Same ruler as every other model."""
     import sys as _s
@@ -416,3 +368,4 @@ def main_12d():
 
 if __name__ == "__main__":
     main_12d()
+

@@ -7,4 +7,3 @@ davies-bouldin (non-noise): 1.7722 | calinski-harabasz (non-noise): 4786.1
 closest single column: ARI 0.46 (Meal) | NMI 0.52 (Meal)
 best eps=2.0, min_samples=150
 WARNING: no config passed the single-column guard (NMI < 0.5). Reported the near-miss with the lowest NMI; its clusters are largely driven by one input column. It may also contain clusters under 2% of rows (check cluster sizes). Do not present as a real segmentation.
-NOTE: winner is at the edge of the eps grid

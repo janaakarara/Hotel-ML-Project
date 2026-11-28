@@ -12,7 +12,7 @@ from sklearn.neighbors import NearestNeighbors
 import common as C
 X, SEED = C.X, C.SEED
 OUT = HERE / "outputs"; OUT.mkdir(exist_ok=True)
-EPS_GRID = [0.75, 1.0, 1.25, 1.5, 1.75, 2.0]
+EPS_GRID = [0.75, 1.0, 1.25, 1.5, 1.75, 2.0, 2.25, 2.5]
 MS_GRID = [15, 25, 50, 100, 150]
 
 def ev(eps, ms):
@@ -50,5 +50,6 @@ plt.legend(); plt.title("DBSCAN tuned: k-distance"); plt.tight_layout(); plt.sav
 p = PCA(n_components=2, random_state=SEED).fit_transform(X[C.SIL_IDX]); l = lab[C.SIL_IDX]; n = l == -1
 plt.figure(figsize=(7, 6)); plt.scatter(p[n, 0], p[n, 1], s=3, c="lightgray"); plt.scatter(p[~n, 0], p[~n, 1], s=3, c=l[~n] % 10, cmap="tab10")
 plt.title("DBSCAN tuned: 2-D PCA (plot only)"); plt.tight_layout(); plt.savefig(OUT / "pca.png", dpi=150); plt.close()
+
 
 

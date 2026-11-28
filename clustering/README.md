@@ -34,3 +34,5 @@ These thresholds were chosen by the team, not taken from a reference.
 
 Each outputs/ folder: results.txt, labels.npy (-1 = DBSCAN noise), cluster_profiles.csv, plots.
 Trained model files (.joblib) are ignored by git and must not be in the submission ZIP.
+
+Note: the K-Means tuned search applies the ARI < 0.9 check only; its chosen model also has NMI 0.40 (< 0.5).
