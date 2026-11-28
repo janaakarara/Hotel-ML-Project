@@ -39,4 +39,4 @@ File guide: data/processed/README.md (datasets) and outputs/README.md (figures a
 - K-Means baseline silhouette is 0.1549 in its own results.txt (10k sample) and 0.1563 in comparison.csv (common ruler); both are correct for their sample.
 - DBSCAN baseline: its results.txt reports 0.2814 (computed by the baseline script itself); comparison.csv re-scores every model on the same ruler with noise counted as its own group, which gives -0.1934 (47% noise, 2,098 clusters). Use the comparison.csv value when ranking models.
 
-Submitted commit SHA (code state): eff0361
+Submitted commit SHA (code state): 22fc90f
