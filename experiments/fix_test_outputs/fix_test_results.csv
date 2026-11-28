@@ -1,0 +1,61 @@
+variant,algo,k,gower_sil,min_share,stability,max_nmi,nmi_col,kids_nmi,valid
+current,kmeans,3,0.1911,8.9,0.667,0.5,HasChildren,0.5,False
+current,kmeans,4,0.1909,8.9,0.683,0.5,Meal,0.38,False
+current,kmeans,5,0.1826,8.9,0.994,0.4,Meal,0.33,True
+current,kmeans,6,0.176,8.9,0.999,0.35,Meal,0.29,True
+current,kmeans,7,0.1347,8.9,0.799,0.33,Meal,0.27,False
+current,agglomerative,3,0.186,15.7,0.498,0.55,CustomerType,0.19,False
+current,agglomerative,4,0.2076,8.9,0.399,0.5,CustomerType,0.41,False
+current,agglomerative,5,0.1971,8.9,0.547,0.42,CustomerType,0.34,False
+current,agglomerative,6,0.1522,8.9,0.79,0.37,CustomerType,0.29,False
+current,agglomerative,7,0.1372,6.7,0.71,0.35,CustomerType,0.27,False
+kids x0.5,kmeans,3,0.1833,22.3,0.992,0.6,Meal,0.03,False
+kids x0.5,kmeans,4,0.1716,16.0,0.715,0.46,CustomerType,0.02,False
+kids x0.5,kmeans,5,0.1589,15.6,0.997,0.39,CustomerType,0.02,True
+kids x0.5,kmeans,6,0.1184,11.2,0.88,0.36,Meal,0.02,True
+kids x0.5,kmeans,7,0.1203,9.6,0.695,0.33,Meal,0.02,False
+kids x0.5,agglomerative,3,0.1926,16.3,0.376,0.61,CustomerType,0.02,False
+kids x0.5,agglomerative,4,0.1907,16.3,0.58,0.48,CustomerType,0.02,False
+kids x0.5,agglomerative,5,0.1514,15.4,0.725,0.42,CustomerType,0.02,False
+kids x0.5,agglomerative,6,0.142,5.9,0.697,0.4,CustomerType,0.03,False
+kids x0.5,agglomerative,7,0.1256,5.9,0.688,0.38,CustomerType,0.03,False
+kids x0.25,kmeans,3,0.1822,22.3,0.653,0.59,Meal,0.02,False
+kids x0.25,kmeans,4,0.1709,16.0,0.761,0.46,CustomerType,0.02,False
+kids x0.25,kmeans,5,0.1596,15.6,0.998,0.39,Meal,0.02,True
+kids x0.25,kmeans,6,0.1185,11.2,0.88,0.36,Meal,0.02,True
+kids x0.25,kmeans,7,0.1294,9.2,0.682,0.37,Meal,0.02,False
+kids x0.25,agglomerative,3,0.1726,16.3,0.3,0.62,CustomerType,0.01,False
+kids x0.25,agglomerative,4,0.1511,15.7,0.402,0.5,CustomerType,0.01,False
+kids x0.25,agglomerative,5,0.1313,15.7,0.691,0.42,CustomerType,0.02,False
+kids x0.25,agglomerative,6,0.1191,8.2,0.699,0.39,CustomerType,0.02,False
+kids x0.25,agglomerative,7,0.1123,5.9,0.636,0.37,CustomerType,0.02,False
+no kids,kmeans,3,0.1823,22.3,0.987,0.6,Meal,0.02,False
+no kids,kmeans,4,0.1702,16.0,0.992,0.46,CustomerType,0.01,True
+no kids,kmeans,5,0.1591,15.6,0.996,0.39,Meal,0.02,True
+no kids,kmeans,6,0.1184,11.2,0.88,0.36,Meal,0.02,True
+no kids,kmeans,7,0.1193,9.5,0.673,0.34,Meal,0.02,False
+no kids,agglomerative,3,0.1955,16.3,0.304,0.61,CustomerType,0.02,False
+no kids,agglomerative,4,0.1769,16.3,0.614,0.48,CustomerType,0.02,False
+no kids,agglomerative,5,0.1421,15.7,0.74,0.42,CustomerType,0.02,False
+no kids,agglomerative,6,0.1507,6.3,0.743,0.39,CustomerType,0.02,False
+no kids,agglomerative,7,0.0938,6.3,0.737,0.37,CustomerType,0.02,False
+meal ordinal,kmeans,3,0.168,30.2,0.72,0.37,ReservedRoomType,0.12,False
+meal ordinal,kmeans,4,0.1969,8.9,0.628,0.41,ReservedRoomType,0.38,False
+meal ordinal,kmeans,5,0.1934,8.9,0.774,0.39,Meal,0.33,False
+meal ordinal,kmeans,6,0.1887,8.9,0.997,0.36,ReservedRoomType,0.29,True
+meal ordinal,kmeans,7,0.1543,8.9,0.784,0.33,ReservedRoomType,0.27,False
+meal ordinal,agglomerative,3,0.1956,8.9,0.331,0.5,HasChildren,0.5,False
+meal ordinal,agglomerative,4,0.1951,8.9,0.426,0.5,CustomerType,0.41,False
+meal ordinal,agglomerative,5,0.189,8.9,0.649,0.42,CustomerType,0.33,False
+meal ordinal,agglomerative,6,0.163,8.9,0.799,0.37,CustomerType,0.29,False
+meal ordinal,agglomerative,7,0.1563,8.4,0.711,0.35,CustomerType,0.27,False
+kids0.5+meal,kmeans,3,0.1838,27.6,0.998,0.47,ReservedRoomType,0.03,True
+kids0.5+meal,kmeans,4,0.1358,15.6,0.747,0.44,CustomerType,0.02,False
+kids0.5+meal,kmeans,5,0.17,15.0,0.998,0.38,Meal,0.03,True
+kids0.5+meal,kmeans,6,0.1391,11.7,0.999,0.35,Meal,0.02,True
+kids0.5+meal,kmeans,7,0.1635,9.7,0.655,0.35,ReservedRoomType,0.03,False
+kids0.5+meal,agglomerative,3,0.1911,16.3,0.838,0.6,CustomerType,0.02,False
+kids0.5+meal,agglomerative,4,0.1823,16.3,0.509,0.49,CustomerType,0.03,False
+kids0.5+meal,agglomerative,5,0.1542,16.2,0.814,0.42,CustomerType,0.03,True
+kids0.5+meal,agglomerative,6,0.1497,7.1,0.732,0.39,CustomerType,0.03,False
+kids0.5+meal,agglomerative,7,0.1373,6.1,0.76,0.38,CustomerType,0.03,False

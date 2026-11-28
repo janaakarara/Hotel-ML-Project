@@ -1,0 +1,19 @@
+BEST VALID CONFIGURATION PER VARIANT (fair score = Gower silhouette on original columns, higher = better)
+
+--- kmeans ---
+current        k=5  gower 0.1826 | smallest 8.9% | stability 0.994 | closest column Meal (NMI 0.4) | HasChildren NMI 0.33
+kids x0.5      k=5  gower 0.1589 | smallest 15.6% | stability 0.997 | closest column CustomerType (NMI 0.39) | HasChildren NMI 0.02
+kids x0.25     k=5  gower 0.1596 | smallest 15.6% | stability 0.998 | closest column Meal (NMI 0.39) | HasChildren NMI 0.02
+no kids        k=4  gower 0.1702 | smallest 16.0% | stability 0.992 | closest column CustomerType (NMI 0.46) | HasChildren NMI 0.01
+meal ordinal   k=6  gower 0.1887 | smallest 8.9% | stability 0.997 | closest column ReservedRoomType (NMI 0.36) | HasChildren NMI 0.29
+kids0.5+meal   k=3  gower 0.1838 | smallest 27.6% | stability 0.998 | closest column ReservedRoomType (NMI 0.47) | HasChildren NMI 0.03
+
+--- agglomerative ---
+current        NO VALID k. best near-miss k=4 gower 0.2076 | smallest 8.9% | stability 0.399 | NMI 0.5 (CustomerType)
+kids x0.5      NO VALID k. best near-miss k=3 gower 0.1926 | smallest 16.3% | stability 0.376 | NMI 0.61 (CustomerType)
+kids x0.25     NO VALID k. best near-miss k=3 gower 0.1726 | smallest 16.3% | stability 0.3 | NMI 0.62 (CustomerType)
+no kids        NO VALID k. best near-miss k=3 gower 0.1955 | smallest 16.3% | stability 0.304 | NMI 0.61 (CustomerType)
+meal ordinal   NO VALID k. best near-miss k=3 gower 0.1956 | smallest 8.9% | stability 0.331 | NMI 0.5 (HasChildren)
+kids0.5+meal   k=5  gower 0.1542 | smallest 16.2% | stability 0.814 | closest column CustomerType (NMI 0.42) | HasChildren NMI 0.03
+
+Full table: fix_test_results.csv   (settings: k=[3, 4, 5, 6, 7], agglomerative sample=6000, gower rows=3000)
