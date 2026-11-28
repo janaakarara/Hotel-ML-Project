@@ -1,0 +1,4 @@
+cluster,rows,share_pct,lead_time_mean,nights_mean,adults_mean,pct_children,top_MarketSegment,top_Country,top_Meal,top_CustomerType,top_ReservedRoomType,posthoc_adr_mean,posthoc_cancel_rate_pct
+0,36564,69.23,77.25,3.18,1.88,0.0,Online TA,PRT,BB,Transient,A,107.83,28.18
+1,12053,22.82,77.45,3.03,1.89,4.21,Online TA,PRT,SC,Transient,A,108.93,34.56
+2,4200,7.95,84.42,3.32,1.97,100.0,Online TA,PRT,BB,Transient,A,154.49,34.98

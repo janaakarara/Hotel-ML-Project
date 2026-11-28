@@ -1,0 +1,7 @@
+feature_space,model_dims,n_components,covariance_type,reg_covar,n_init,converged,bic_model_space,n_free_parameters,n_clusters_found,min_cluster_share_pct,max_cluster_share_pct,silhouette,davies_bouldin,calinski_harabasz,stability_ari_mean,stability_ari_min,selected
+frequency_12d,12,5,spherical,0.0001,10,True,1617120.07,69,5,8.91,42.1,0.1638,1.8141,6987.09,0.9861,0.9644,True
+frequency_12d,12,8,full,1e-06,10,True,-793153.32,727,8,2.03,35.81,0.1535,2.0857,4576.11,0.5615,0.5006,False
+frequency_12d,12,7,full,0.01,10,True,819007.51,636,7,4.02,36.44,0.1419,2.0989,5057.55,0.5987,0.4485,False
+frequency_12d,12,2,diag,0.1,10,True,1545380.1,49,2,32.82,67.18,0.1382,2.6207,6658.08,0.3546,0.0019,False
+frequency_12d,12,12,full,0.1,10,True,1155299.09,1091,12,1.57,15.99,0.1313,1.9852,3983.81,0.6889,0.6127,False
+frequency_12d,12,9,full,0.0001,10,True,-68636.79,818,9,0.91,25.87,0.1306,2.6208,4264.56,0.6711,0.4744,False

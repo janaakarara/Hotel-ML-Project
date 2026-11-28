@@ -1,0 +1,9 @@
+GMM BASELINE (12-D)
+settings: {'n_components': 3, 'covariance_type': 'full', 'reg_covar': 1e-06, 'n_init': 1, 'init_params': 'kmeans', 'max_iter': 100, 'random_state': 42}
+input: 12-D frequency matrix (no PCA)
+rows: 52817 | cluster sizes (noise incl. if any): [36564, 12053, 4200] | noise %: 0.00
+silhouette (common ruler, 10k fixed sample, noise = own group): 0.1476
+davies-bouldin (non-noise): 2.0598 | calinski-harabasz (non-noise): 6036.9
+closest single column: ARI 0.74 (Meal) | NMI 0.74 (Meal)
+BIC: 487029.3 | AIC: 484615.4 | converged: True (n_iter 7) | fit time: 0.5s
+mean max posterior: 1.000

@@ -33,7 +33,7 @@ def main():
     ap.add_argument("--input", default="data/processed/h2_clustering_stage4.csv")
     ap.add_argument("--out", default="data/processed")
     ap.add_argument("--encoding", choices=["onehot", "frequency"], default="onehot")
-    ap.add_argument("--cat-weight", type=float, default=1.0, help="one-hot only")
+    ap.add_argument("--cat-weight", type=float, default=0.5, help="one-hot only (0.5 = the weight used for the current stage5.csv)")
     a = ap.parse_args()
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)

@@ -1,4 +1,4 @@
-﻿from pathlib import Path
+from pathlib import Path
 import numpy as np
 import pandas as pd
 import matplotlib
@@ -38,6 +38,13 @@ else:
 print("\n".join(lines))
 (OUT / "results.txt").write_text("\n".join(lines), encoding="utf-8")
 np.save(OUT / "labels.npy", labels)
+import sys
+sys.path.insert(0, str(ROOT / "clustering"))
+import common as C
+_note = f"\nHONEST SCORE (common ruler, noise counted as its own group): silhouette {C.common_silhouette(labels):.4f} | noise {100 * (~keep).mean():.2f}%\nWARNING: the non-noise silhouette above ignores noise points and is not comparable with other models."
+with open(OUT / "results.txt", "a", encoding="utf-8") as _f:
+    _f.write(_note)
+print(_note)
 
 # k-distance curve for min_samples=5: shows where the default eps sits
 kd = np.sort(NearestNeighbors(n_neighbors=5, n_jobs=-1).fit(X).kneighbors(X)[0][:, -1])

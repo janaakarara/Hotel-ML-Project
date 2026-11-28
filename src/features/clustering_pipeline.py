@@ -52,8 +52,9 @@ def _month(v):
 class ClusteringPreprocessor(BaseEstimator, TransformerMixin):
     """cat_weight multiplies the one-hot columns (1.0 = no change)."""
 
-    def __init__(self, cat_weight=1.0):
+    def __init__(self, cat_weight=1.0, encoding="frequency"):
         self.cat_weight = cat_weight
+        self.encoding = encoding
 
     # ---------- steps that need no fitting ----------
     @staticmethod
@@ -92,8 +93,17 @@ class ClusteringPreprocessor(BaseEstimator, TransformerMixin):
         self.mean_ = {c: float(num[c].mean()) for c in NUMERIC_OUT}
         self.std_ = {c: float(num[c].std(ddof=0)) for c in NUMERIC_OUT}
         self.categories_ = {c: sorted(g[c].unique().tolist()) for c in CATEGORICAL}
-        self.feature_names_ = (NUMERIC_OUT + ["ArrivalMonth_sin", "ArrivalMonth_cos"]
-                               + [f"{c}_{v}" for c in CATEGORICAL for v in self.categories_[c]])
+        self.freq_ = {c: {k: float(v) for k, v in g[c].value_counts(normalize=True).items()} for c in CATEGORICAL}
+        self.freq_stats_ = {}
+        for c in CATEGORICAL:
+            s = g[c].map(self.freq_[c])
+            self.freq_stats_[c] = (float(s.mean()), float(s.std()))
+        if self.encoding == "frequency":
+            self.feature_names_ = (["Adults"] + CATEGORICAL + ["LeadTime_yj", "StaysInWeekNights_yj",
+                                   "StaysInWeekendNights_sqrt", "HasChildren", "ArrivalMonth_sin", "ArrivalMonth_cos"])
+        else:
+            self.feature_names_ = (NUMERIC_OUT + ["ArrivalMonth_sin", "ArrivalMonth_cos"]
+                                   + [f"{c}_{v}" for c in CATEGORICAL for v in self.categories_[c]])
         return self
 
     def transform(self, X):
@@ -105,8 +115,12 @@ class ClusteringPreprocessor(BaseEstimator, TransformerMixin):
         out["ArrivalMonth_sin"] = np.sin(angle)
         out["ArrivalMonth_cos"] = np.cos(angle)
         for c in CATEGORICAL:
-            for v in self.categories_[c]:          # a value not seen in fit gives all zeros
-                out[f"{c}_{v}"] = (g[c] == v).astype(int).values * self.cat_weight
+            if self.encoding == "frequency":      # share of the category in the training data, z-scored; unseen category = share 0
+                m, s = self.freq_stats_[c]
+                out[c] = (g[c].map(self.freq_[c]).fillna(0.0).values - m) / s
+            else:
+                for v in self.categories_[c]:      # a value not seen in fit gives all zeros
+                    out[f"{c}_{v}"] = (g[c] == v).astype(int).values * self.cat_weight
         return out[self.feature_names_]
 
     def get_feature_names_out(self, input_features=None):
@@ -114,6 +128,7 @@ class ClusteringPreprocessor(BaseEstimator, TransformerMixin):
 
     def to_dict(self):
         """Readable copy of everything that was learned (for the report)."""
-        return {"cat_weight": self.cat_weight, "yeo_johnson_lambda": self.lambdas_,
+        return {"encoding": self.encoding, "cat_weight": self.cat_weight, "frequency_maps": self.freq_,
+                "frequency_stats": self.freq_stats_, "yeo_johnson_lambda": self.lambdas_,
                 "scaler_mean": self.mean_, "scaler_std": self.std_,
                 "categories": self.categories_, "feature_names": self.feature_names_}

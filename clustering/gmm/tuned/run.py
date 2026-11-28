@@ -1,7 +1,7 @@
 """Tuned (hyperparameter-optimised) Gaussian Mixture Model for Task C (clustering).
 
 Search space
-  feature space   : preprocessed PCA-90 features (8-D from stage5b_pca.py)
+  feature space   : frequency-encoded features (12-D, no PCA)
   n_components k  : 2 .. 12
   covariance_type : full, tied, diag, spherical
   reg_covar       : 1e-6, 1e-4, 1e-2, 1e-1
@@ -44,6 +44,7 @@ from sklearn.exceptions import ConvergenceWarning
 from sklearn.metrics import adjusted_rand_score
 from sklearn.mixture import GaussianMixture
 from sklearn.pipeline import Pipeline
+from clustering import common as CM
 
 from clustering.gmm.baseline.run import (
     PALETTE, RANDOM_STATE, FLOOR_COL, base_arg_parser, build_cluster_profiles, cluster_metrics,
@@ -51,10 +52,10 @@ from clustering.gmm.baseline.run import (
     plot_cluster_profiles, plot_cov_eigenvalues, plot_pca_2d, silhouette_sample_idx, summarize_model,
 )
 
-DEFAULT_FEATURES = "data/processed/h2_clustering_pca90.csv"
+DEFAULT_FEATURES = "data/processed/h2_clustering_stage5_frequency.csv"
 DEFAULT_RAW = "data/processed/h2_clustering_stage2.csv"
 
-SPACES = {"preprocessed_pca90": None}
+SPACES = {"frequency_12d": None}
 COV_TYPES = ["full", "tied", "diag", "spherical"]
 REG_COVARS = [1e-6, 1e-4, 1e-2, 1e-1]
 MIN_SHARE_PCT = 2.0
@@ -63,7 +64,7 @@ STABILITY_SEEDS = [1, 2, 3, 4, 5]
 STABILITY_MIN_ARI = 0.80
 COV_STYLE = {"full": ("#2F5DA8", "o", "-"), "tied": ("#2E8B57", "s", "-"),
              "diag": ("#C8433B", "^", "--"), "spherical": ("#E08E2B", "D", "--")}
-SPACE_STYLE = {"preprocessed_pca90": ("#2F5DA8", "s")}
+SPACE_STYLE = {"frequency_12d": ("#2F5DA8", "s")}
 
 
 def make_gmm(k, cov, reg, n_init, seed=RANDOM_STATE, max_iter=300):
@@ -85,6 +86,10 @@ def _fit_one(space, Z, X, sil_idx, k, cov, reg, n_init):
            "aic_model_space": round(float(gmm.aic(Z)), 2), "fit_time_sec": round(elapsed, 3)}
     row.update(cluster_metrics(X, labels, sil_idx))
     row["valid"] = bool(row["converged"] and row["n_clusters_found"] == k and row["min_cluster_share_pct"] >= MIN_SHARE_PCT)
+    if row["valid"]:
+        dep = CM.dependence(labels)
+        row["max_nmi"], row["max_nmi_col"] = round(dep["nmi"], 3), dep["nmi_col"]
+        row["valid"] = not CM.is_single_column(dep)
     return row
 
 
@@ -232,7 +237,7 @@ def plot_dashboard(bic_choice, shortlist, chosen, comp, out_path):
 # ---------------------------------------------------------------- main
 def main():
     ap = base_arg_parser("Hyperparameter-tuned GMM.")
-    ap.set_defaults(features=DEFAULT_FEATURES, raw=DEFAULT_RAW)
+    ap.set_defaults(features=DEFAULT_FEATURES, raw=DEFAULT_RAW, artifacts_dir="clustering/gmm/tuned/outputs", figures_dir="clustering/gmm/tuned/outputs", tables_dir="clustering/gmm/tuned/outputs")
     ap.add_argument("--k-min", type=int, default=2)
     ap.add_argument("--k-max", type=int, default=12)
     ap.add_argument("--n-jobs", type=int, default=-1)
@@ -324,6 +329,10 @@ def main():
     pd.DataFrame([metrics]).to_csv(tab_dir / "clustering_gmm_tuned_metrics.csv", index=False)
     profiles.to_csv(tab_dir / "clustering_gmm_tuned_profiles.csv", index=False)
     cov_diag.to_csv(tab_dir / "clustering_gmm_tuned_covariance.csv", index=False)
+    extra = [f"stability ARI (5 seeds): {chosen['stability_ari_mean']:.3f}"]
+    if stable.empty:
+        extra.append("WARNING: no shortlisted model reached stability 0.8; most stable one reported. Do not present as a good model.")
+    CM.write_results(tab_dir, "GMM TUNED (12-D)", f"k={k}, covariance_type={cov}, reg_covar={reg:g}", labels, extra)
 
     untuned_csv = tab_dir / "clustering_gmm_untuned_metrics.csv"
     parts = [pd.read_csv(untuned_csv)] if untuned_csv.exists() else []

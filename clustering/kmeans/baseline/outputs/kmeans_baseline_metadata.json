@@ -7,22 +7,26 @@
     "random_state": 42
   },
   "feature_names": [
-    "PC1",
-    "PC2",
-    "PC3",
-    "PC4",
-    "PC5",
-    "PC6",
-    "PC7",
-    "PC8"
+    "Adults",
+    "MarketSegment",
+    "Meal",
+    "Country",
+    "CustomerType",
+    "ReservedRoomType",
+    "LeadTime_yj",
+    "StaysInWeekNights_yj",
+    "StaysInWeekendNights_sqrt",
+    "HasChildren",
+    "ArrivalMonth_sin",
+    "ArrivalMonth_cos"
   ],
   "dataset_shape": [
     52817,
-    8
+    12
   ],
-  "training_time_sec": 9.555,
-  "inertia": 491092.06,
-  "n_iter": 8,
+  "training_time_sec": 0.492,
+  "inertia": 458510.83,
+  "n_iter": 21,
   "stability_seeds": [
     0,
     1,
@@ -31,28 +35,28 @@
     4
   ],
   "seed_ari_vs_seed42": {
-    "0": 0.9952,
-    "1": 0.9972,
-    "2": 0.9965,
-    "3": 0.9994,
-    "4": 0.9984
+    "0": 0.9992,
+    "1": 0.4087,
+    "2": 0.9985,
+    "3": 0.9981,
+    "4": 0.9713
   },
-  "seed_ari_mean": 0.9973,
-  "seed_ari_min": 0.9952,
+  "seed_ari_mean": 0.8752,
+  "seed_ari_min": 0.4087,
   "cluster_counts": {
-    "0": 14572,
-    "1": 21198,
-    "2": 17047
+    "0": 30395,
+    "1": 17715,
+    "2": 4707
   },
   "cluster_pcts": {
-    "0": 27.59,
-    "1": 40.13,
-    "2": 32.28
+    "0": 57.55,
+    "1": 33.54,
+    "2": 8.91
   },
   "metrics": {
     "configuration": "untuned_baseline",
     "feature_space": "raw",
-    "model_dims": 8,
+    "model_dims": 12,
     "pca_variance_kept": 1.0,
     "n_components": 3,
     "covariance_type": null,
@@ -61,27 +65,27 @@
     "n_init": 10,
     "max_iter": 300,
     "converged": true,
-    "n_iter": 8,
-    "n_free_parameters": 24,
+    "n_iter": 21,
+    "n_free_parameters": 36,
     "n_clusters_found": 3,
-    "min_cluster_share_pct": 27.59,
-    "max_cluster_share_pct": 40.13,
-    "silhouette": 0.2034,
-    "davies_bouldin": 1.5785,
-    "calinski_harabasz": 23522.19,
+    "min_cluster_share_pct": 8.91,
+    "max_cluster_share_pct": 57.55,
+    "silhouette": 0.1549,
+    "davies_bouldin": 2.1476,
+    "calinski_harabasz": 6968.58,
     "bic_model_space": null,
     "aic_model_space": null,
     "mean_log_likelihood": null,
     "mean_max_posterior": null,
     "mean_normalised_entropy": null,
-    "cluster_shares_pct": "{\"0\": 27.59, \"1\": 40.13, \"2\": 32.28}",
-    "training_time_sec": 9.555,
+    "cluster_shares_pct": "{\"0\": 57.55, \"1\": 33.54, \"2\": 8.91}",
+    "training_time_sec": 0.492,
     "data_zero_eigenvalues": 0,
     "max_condition_number": null,
     "min_eig_at_floor_per_component": null,
-    "inertia": 491092.06,
-    "seed_ari_mean": 0.9973,
-    "seed_ari_min": 0.9952,
-    "cluster_counts": "{\"0\": 14572, \"1\": 21198, \"2\": 17047}"
+    "inertia": 458510.83,
+    "seed_ari_mean": 0.8752,
+    "seed_ari_min": 0.4087,
+    "cluster_counts": "{\"0\": 30395, \"1\": 17715, \"2\": 4707}"
   }
 }

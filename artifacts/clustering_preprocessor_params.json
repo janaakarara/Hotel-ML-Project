@@ -1,5 +1,62 @@
 {
-  "cat_weight": 0.5,
+  "encoding": "frequency",
+  "cat_weight": 1.0,
+  "frequency_maps": {
+    "MarketSegment": {
+      "Online TA": 0.6559251756063389,
+      "Offline TA/TO": 0.1361493458545544,
+      "Direct": 0.10324327394588863,
+      "Groups": 0.04951057424692807,
+      "Corporate": 0.041710055474563114,
+      "Other": 0.013461574871726906
+    },
+    "Meal": {
+      "BB": 0.7717969593123426,
+      "SC": 0.17554953897419392,
+      "HB/FB": 0.05265350171346347
+    },
+    "Country": {
+      "Rest of Europe": 0.3560785353200674,
+      "Latin Europe": 0.26054111365658783,
+      "Portugal": 0.24393661131832553,
+      "Outside Europe": 0.13944373970501922
+    },
+    "CustomerType": {
+      "Transient": 0.8365109718461858,
+      "Transient-Party/Group": 0.13586534638468675,
+      "Contract": 0.027623681769127363
+    },
+    "ReservedRoomType": {
+      "A": 0.7126682696858966,
+      "D": 0.20287028797546244,
+      "F": 0.03307647159058637,
+      "E": 0.027434348789215593,
+      "B": 0.014749039135126948,
+      "Other": 0.009201582823712062
+    }
+  },
+  "frequency_stats": {
+    "MarketSegment": [
+      0.4638058936738743,
+      0.26628907674499824
+    ],
+    "Meal": [
+      0.6292605782805196,
+      0.2632967002353408
+    ],
+    "Country": [
+      0.2736232221054885,
+      0.07204974841653544
+    ],
+    "CustomerType": [
+      0.7189730661617635,
+      0.26637793368849433
+    ],
+    "ReservedRoomType": [
+      0.5512013161085791,
+      0.25797287027639315
+    ]
+  },
   "yeo_johnson_lambda": {
     "LeadTime_yj": 0.25400961265172267,
     "StaysInWeekNights_yj": 0.18011401008938194
@@ -54,33 +111,16 @@
   },
   "feature_names": [
     "Adults",
+    "MarketSegment",
+    "Meal",
+    "Country",
+    "CustomerType",
+    "ReservedRoomType",
     "LeadTime_yj",
     "StaysInWeekNights_yj",
     "StaysInWeekendNights_sqrt",
     "HasChildren",
     "ArrivalMonth_sin",
-    "ArrivalMonth_cos",
-    "MarketSegment_Corporate",
-    "MarketSegment_Direct",
-    "MarketSegment_Groups",
-    "MarketSegment_Offline TA/TO",
-    "MarketSegment_Online TA",
-    "MarketSegment_Other",
-    "Meal_BB",
-    "Meal_HB/FB",
-    "Meal_SC",
-    "Country_Latin Europe",
-    "Country_Outside Europe",
-    "Country_Portugal",
-    "Country_Rest of Europe",
-    "CustomerType_Contract",
-    "CustomerType_Transient",
-    "CustomerType_Transient-Party/Group",
-    "ReservedRoomType_A",
-    "ReservedRoomType_B",
-    "ReservedRoomType_D",
-    "ReservedRoomType_E",
-    "ReservedRoomType_F",
-    "ReservedRoomType_Other"
+    "ArrivalMonth_cos"
   ]
 }

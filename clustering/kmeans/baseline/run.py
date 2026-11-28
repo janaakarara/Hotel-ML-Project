@@ -132,7 +132,7 @@ def plot_pca_2d(X, labels, centers, out_path, title):
 
 def main():
     ap = argparse.ArgumentParser(description="Untuned baseline K-Means (k=3, scikit-learn defaults otherwise).")
-    ap.add_argument("--features", default="data/processed/h2_clustering_stage5.csv")
+    ap.add_argument("--features", default="data/processed/h2_clustering_stage5_frequency.csv")
     ap.add_argument("--raw", default="data/processed/h2_clustering_stage2.csv")
     ap.add_argument("--profile-cols", default="data/processed/h2_clustering_profile_cols.csv")
     ap.add_argument("--output-dir", default="clustering/kmeans/baseline/outputs")

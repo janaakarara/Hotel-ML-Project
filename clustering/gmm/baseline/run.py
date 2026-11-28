@@ -1,4 +1,4 @@
-"""Untuned (baseline) Gaussian Mixture Model for Task C (clustering).
+﻿"""Untuned (baseline) Gaussian Mixture Model for Task C (clustering).
 
 Baseline = scikit-learn's GaussianMixture defaults, with only the number of components fixed to 3:
   covariance_type='full', reg_covar=1e-6, n_init=1, init_params='kmeans', max_iter=100,
@@ -44,6 +44,8 @@ from sklearn.metrics import calinski_harabasz_score, davies_bouldin_score, silho
 from sklearn.mixture import GaussianMixture
 from sklearn.pipeline import Pipeline
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 from src.features.country_groups import country_group
 
 RANDOM_STATE = 42
@@ -268,7 +270,7 @@ def plot_pca_2d(X, labels, pipe, out_path, title):
         ax.scatter(*mean_2d, s=220, color=color, edgecolors="black", linewidths=1.8, marker="X", zorder=5)
     ax.set_xlabel(f"PC1 ({var1:.1f}% of variance)")
     ax.set_ylabel(f"PC2 ({var2:.1f}% of variance)")
-    ax.set_title(f"{title}\nX = Gaussian means; solid / dashed = 1σ / 2σ ellipses. "
+    ax.set_title(f"{title}\nX = Gaussian means; solid / dashed = 1Ïƒ / 2Ïƒ ellipses. "
                  f"This view keeps only {var1 + var2:.1f}% of the variance: clusters that overlap here "
                  f"may still separate in the other dimensions.", loc="left", fontsize=10, fontweight="bold")
     ax.legend(frameon=True, facecolor="white", edgecolor="#CCCCCC", loc="best")
@@ -337,12 +339,12 @@ def make_dirs(*paths):
 
 def base_arg_parser(description):
     ap = argparse.ArgumentParser(description=description)
-    ap.add_argument("--features", default="data/processed/h2_clustering_stage5.csv")
+    ap.add_argument("--features", default="data/processed/h2_clustering_stage5_frequency.csv")
     ap.add_argument("--raw", default="data/processed/h2_clustering_stage2.csv")
     ap.add_argument("--profile-cols", default="data/processed/h2_clustering_profile_cols.csv")
-    ap.add_argument("--artifacts-dir", default="artifacts")
-    ap.add_argument("--figures-dir", default="outputs/gmm")
-    ap.add_argument("--tables-dir", default="outputs/gmm")
+    ap.add_argument("--artifacts-dir", default="clustering/gmm/baseline/outputs")
+    ap.add_argument("--figures-dir", default="clustering/gmm/baseline/outputs")
+    ap.add_argument("--tables-dir", default="clustering/gmm/baseline/outputs")
     return ap
 
 
@@ -375,6 +377,7 @@ def main():
     pd.DataFrame([metrics]).to_csv(tab_dir / "clustering_gmm_untuned_metrics.csv", index=False)
     profiles.to_csv(tab_dir / "clustering_gmm_untuned_profiles.csv", index=False)
     cov_diag.to_csv(tab_dir / "clustering_gmm_untuned_covariance.csv", index=False)
+    np.save(tab_dir / "labels.npy", labels)
 
     tag = f"GMM untuned baseline (raw {X.shape[1]}-D, k=3, full, reg_covar=1e-6)"
     plot_pca_2d(X, labels, pipe, fig_dir / "clustering_gmm_untuned_pca_2d.png", tag)
@@ -393,5 +396,23 @@ def main():
                     "Top_MarketSegment", "PostHoc_ADR_Mean", "PostHoc_CancelRate_Pct"]].to_string(index=False))
 
 
+def main_12d():
+    """GMM baseline on the 12-D frequency matrix (scikit-learn defaults, k=3). Same ruler as every other model."""
+    import sys as _s
+    _s.path.insert(0, str(Path(__file__).resolve().parents[2]))
+    import common as C
+    out = Path(__file__).resolve().parent / "outputs"; out.mkdir(exist_ok=True)
+    params = dict(n_components=3, covariance_type="full", reg_covar=1e-6, n_init=1, init_params="kmeans",
+                  max_iter=100, random_state=C.SEED)
+    t0 = time.perf_counter(); g = GaussianMixture(**params).fit(C.X); dt = time.perf_counter() - t0
+    lab = g.predict(C.X); post = g.predict_proba(C.X)
+    extra = [f"BIC: {g.bic(C.X):.1f} | AIC: {g.aic(C.X):.1f} | converged: {g.converged_} (n_iter {g.n_iter_}) | fit time: {dt:.1f}s",
+             f"mean max posterior: {post.max(axis=1).mean():.3f}"]
+    C.write_results(out, "GMM BASELINE (12-D)", str(params), lab, extra)
+    p2 = PCA(n_components=2, random_state=C.SEED).fit_transform(C.X[C.SIL_IDX])
+    plt.figure(figsize=(7, 6)); plt.scatter(p2[:, 0], p2[:, 1], s=3, c=lab[C.SIL_IDX], cmap="tab10")
+    plt.title("GMM baseline: 2-D PCA (plot only)"); plt.tight_layout(); plt.savefig(out / "pca.png", dpi=150); plt.close()
+
+
 if __name__ == "__main__":
-    main()
+    main_12d()

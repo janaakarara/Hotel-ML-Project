@@ -1,4 +1,4 @@
-﻿"""Fit the clustering preprocessor on the training data, save it, and prove it matches the stage files.
+"""Fit the clustering preprocessor on the training data, save it, and prove it matches the stage files.
 
 Usage (from the repo root):
   python -m src.features.fit_clustering_pipeline
@@ -19,7 +19,8 @@ from src.features.clustering_pipeline import ClusteringPreprocessor
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--input", default="data/processed/h2_clustering_stage2.csv")
-    ap.add_argument("--check", default="data/processed/h2_clustering_stage5.csv")
+    ap.add_argument("--check", default=None)
+    ap.add_argument("--encoding", choices=["frequency", "onehot"], default="frequency")
     ap.add_argument("--out", default="artifacts")
     ap.add_argument("--cat-weight", type=float, default=1.0)
     a = ap.parse_args()
@@ -27,7 +28,7 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
 
     df = pd.read_csv(a.input)
-    prep = ClusteringPreprocessor(cat_weight=a.cat_weight).fit(df)
+    prep = ClusteringPreprocessor(cat_weight=a.cat_weight, encoding=a.encoding).fit(df)
     Z = prep.transform(df)
     joblib.dump(prep, out / "clustering_preprocessor.joblib")
     (out / "clustering_preprocessor_params.json").write_text(json.dumps(prep.to_dict(), indent=2), encoding="utf-8")
@@ -39,8 +40,9 @@ def main():
     assert np.allclose(again.values, Z.head(100).values), "reloaded object gives different numbers"
     print("reload check: OK")
 
-    if a.cat_weight == 1.0 and Path(a.check).exists():
-        ref = pd.read_csv(a.check)
+    check_path = a.check or ("data/processed/h2_clustering_stage5_frequency.csv" if a.encoding == "frequency" else "data/processed/h2_clustering_stage5.csv")
+    if (a.encoding == "frequency" or a.cat_weight == 1.0) and Path(check_path).exists():
+        ref = pd.read_csv(check_path)
         assert list(Z.columns) == list(ref.columns), "column names or order differ from the stage file"
         diff = float(np.abs(Z.values - ref.values).max())
         print(f"stage-file check: max difference = {diff:.2e}")

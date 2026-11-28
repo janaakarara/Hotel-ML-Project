@@ -1,3 +1,2 @@
 configuration,feature_space,model_dims,n_components,covariance_type,reg_covar,n_init,n_free_parameters,silhouette,davies_bouldin,calinski_harabasz,bic_model_space,mean_max_posterior,mean_normalised_entropy,max_condition_number,min_cluster_share_pct,max_cluster_share_pct,training_time_sec
-untuned_baseline,raw,11,3,full,1e-06,1,233,0.1253,2.474,3459.66,387451.53,1.0,0.0,9495968.223952806,8.91,75.39,3.263
-tuned,preprocessed_pca90,11,10,spherical,1e-06,20,129,0.1187,1.8507,7854.26,1687590.99,0.9015,0.113,1.0,4.52,18.12,27.597
+tuned,frequency_12d,12,5,spherical,0.0001,20,69,0.1638,1.8141,6987.09,1617120.07,0.9469,0.0899,1.0,8.91,42.1,12.333

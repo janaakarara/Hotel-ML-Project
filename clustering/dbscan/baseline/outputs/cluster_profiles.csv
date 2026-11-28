@@ -1,0 +1,2100 @@
+cluster,rows,share_pct,lead_time_mean,nights_mean,adults_mean,pct_children,top_MarketSegment,top_Country,top_Meal,top_CustomerType,top_ReservedRoomType,posthoc_adr_mean,posthoc_cancel_rate_pct
+-1,24995,47.32,77.13,3.47,1.88,15.97,Online TA,PRT,BB,Transient,A,118.58,29.66
+0,29,0.05,149.41,4.24,2.0,0.0,Online TA,PRT,BB,Transient,A,90.49,48.28
+1,45,0.09,139.51,6.82,2.0,0.0,Online TA,PRT,BB,Transient,A,94.02,55.56
+2,34,0.06,80.21,2.0,2.0,0.0,Online TA,PRT,BB,Transient,A,111.18,52.94
+3,29,0.05,123.28,3.0,2.0,0.0,Online TA,PRT,BB,Transient,A,103.62,58.62
+4,16,0.03,116.12,5.0,2.0,0.0,Online TA,PRT,BB,Transient,A,88.96,50.0
+5,10,0.02,119.1,2.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,74.6,50.0
+6,34,0.06,102.21,3.0,2.0,0.0,Online TA,PRT,BB,Transient,A,114.79,47.06
+7,21,0.04,115.76,3.0,2.0,0.0,Online TA,PRT,BB,Transient,A,87.27,52.38
+8,5,0.01,16.0,4.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,36.0,0.0
+9,23,0.04,95.26,2.0,2.0,0.0,Online TA,PRT,BB,Transient,A,107.78,52.17
+10,24,0.05,111.54,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,114.14,41.67
+11,23,0.04,133.74,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,90.59,34.78
+12,13,0.02,14.77,2.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,88.23,30.77
+13,13,0.02,142.46,5.23,2.0,0.0,Online TA,PRT,BB,Transient,A,92.33,61.54
+14,36,0.07,24.89,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,102.5,19.44
+15,13,0.02,106.46,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,81.07,38.46
+16,5,0.01,81.6,10.2,2.0,0.0,Online TA,PRT,BB,Transient,A,68.86,80.0
+17,11,0.02,114.82,3.0,2.0,0.0,Offline TA/TO,ITA,HB,Transient-Party,A,92.18,54.55
+18,7,0.01,92.29,1.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,80.91,57.14
+19,8,0.02,127.5,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,95.14,62.5
+20,8,0.02,46.5,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,69.49,50.0
+21,5,0.01,0.6,1.0,2.0,0.0,Direct,PRT,SC,Transient,A,44.8,20.0
+22,12,0.02,127.0,4.17,2.0,0.0,Online TA,FRA,BB,Transient,D,120.48,58.33
+23,49,0.09,61.63,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,119.16,38.78
+24,5,0.01,123.0,2.0,1.0,0.0,Online TA,PRT,BB,Transient,A,73.16,80.0
+25,8,0.02,29.25,2.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,54.06,0.0
+26,6,0.01,25.0,2.0,3.0,0.0,Groups,PRT,BB,Transient-Party,A,99.12,16.67
+27,7,0.01,26.29,2.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,76.14,28.57
+28,11,0.02,17.73,4.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,62.0,18.18
+29,14,0.03,104.29,2.0,2.0,0.0,Online TA,FRA,SC,Transient,A,101.61,35.71
+30,45,0.09,80.02,2.0,2.0,0.0,Online TA,ESP,SC,Transient,A,122.04,44.44
+31,6,0.01,22.17,2.0,2.0,0.0,Direct,PRT,BB,Transient,A,105.53,33.33
+32,5,0.01,132.0,1.0,2.0,0.0,Groups,PRT,HB,Transient-Party,A,90.0,0.0
+33,8,0.02,7.62,1.0,1.0,0.0,Corporate,PRT,BB,Transient-Party,A,76.12,25.0
+34,12,0.02,60.92,1.0,2.0,100.0,Online TA,FRA,BB,Transient,A,138.62,25.0
+35,13,0.02,88.31,2.0,3.0,0.0,Online TA,PRT,BB,Transient,D,146.9,30.77
+36,11,0.02,2.91,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,95.29,18.18
+37,30,0.06,93.8,3.0,2.0,0.0,Online TA,DEU,BB,Transient,A,116.08,23.33
+38,7,0.01,3.71,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,65.57,14.29
+39,7,0.01,1.0,2.0,2.0,0.0,Direct,ESP,BB,Transient,A,95.19,0.0
+40,60,0.11,8.83,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,72.13,15.0
+41,6,0.01,0.83,1.0,2.0,0.0,Direct,PRT,BB,Transient,E,124.5,16.67
+42,8,0.02,142.0,3.0,2.0,0.0,Online TA,PRT,BB,Transient-Party,A,91.58,50.0
+43,9,0.02,107.67,3.0,2.0,0.0,Online TA,BRA,BB,Transient,A,115.17,33.33
+44,7,0.01,116.29,6.43,2.0,100.0,Online TA,FRA,BB,Transient,A,100.24,42.86
+45,40,0.08,165.62,6.78,2.0,0.0,Online TA,GBR,SC,Transient,A,95.99,42.5
+46,21,0.04,124.14,3.0,2.0,0.0,Online TA,PRT,SC,Transient,A,111.04,42.86
+47,20,0.04,114.1,2.0,2.0,0.0,Online TA,DEU,BB,Transient,A,118.62,30.0
+48,65,0.12,3.51,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,91.96,13.85
+49,8,0.02,130.12,3.0,1.0,0.0,Offline TA/TO,ITA,HB,Transient-Party,A,58.91,12.5
+50,21,0.04,136.57,3.0,2.0,0.0,Offline TA/TO,ITA,HB,Transient-Party,A,91.44,42.86
+51,8,0.02,5.75,3.0,2.0,0.0,Offline TA/TO,ITA,HB,Transient-Party,A,75.28,25.0
+52,6,0.01,3.83,3.0,1.0,0.0,Offline TA/TO,ITA,HB,Transient-Party,A,52.79,16.67
+53,22,0.04,184.05,5.0,2.0,0.0,Online TA,DEU,BB,Transient,A,99.84,36.36
+54,56,0.11,171.43,6.95,2.0,0.0,Online TA,FRA,BB,Transient,A,99.62,46.43
+55,15,0.03,125.87,3.0,2.0,0.0,Online TA,DEU,BB,Transient,A,120.3,26.67
+56,15,0.03,1.8,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,110.82,6.67
+57,47,0.09,91.38,3.0,2.0,0.0,Online TA,PRT,BB,Transient,A,115.02,46.81
+58,17,0.03,166.41,5.35,2.0,0.0,Online TA,FRA,BB,Transient,A,103.31,58.82
+59,17,0.03,7.06,2.0,2.0,0.0,Direct,PRT,BB,Transient,A,91.21,23.53
+60,61,0.12,43.87,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,122.45,22.95
+61,18,0.03,44.17,2.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,63.0,22.22
+62,6,0.01,42.5,2.0,3.0,0.0,Groups,ESP,BB,Transient-Party,A,84.0,0.0
+63,14,0.03,0.93,1.0,2.0,0.0,Direct,PRT,BB,Transient,D,153.43,14.29
+64,54,0.1,5.7,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,53.77,7.41
+65,67,0.13,89.94,2.0,2.0,0.0,Online TA,FRA,BB,Transient,A,122.63,25.37
+66,7,0.01,44.57,2.0,1.0,0.0,Groups,ESP,BB,Transient-Party,A,8.57,0.0
+67,8,0.02,0.38,3.0,2.0,0.0,Online TA,FRA,BB,Contract,A,121.83,0.0
+68,5,0.01,0.4,1.0,1.0,0.0,Online TA,PRT,BB,Contract,A,96.6,0.0
+69,8,0.02,0.75,1.0,2.0,0.0,Online TA,USA,SC,Transient,A,113.25,12.5
+70,20,0.04,5.55,1.0,2.0,0.0,Online TA,PRT,BB,Contract,A,102.1,20.0
+71,38,0.07,107.32,3.0,2.0,0.0,Online TA,PRT,BB,Transient,A,112.21,55.26
+72,48,0.09,102.08,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,118.65,35.42
+73,36,0.07,111.64,5.0,2.0,0.0,Online TA,FRA,BB,Transient,A,106.19,30.56
+74,63,0.12,41.79,1.0,2.0,0.0,Online TA,FRA,SC,Transient,A,126.52,22.22
+75,9,0.02,2.0,2.0,2.0,0.0,Direct,PRT,BB,Transient,A,74.67,11.11
+76,5,0.01,38.4,3.0,2.0,0.0,Groups,PRT,HB,Transient-Party,A,86.0,40.0
+77,30,0.06,70.93,2.0,2.0,0.0,Online TA,FRA,BB,Transient,A,128.94,40.0
+78,24,0.05,169.54,6.71,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,83.06,50.0
+79,33,0.06,120.91,6.91,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,90.25,3.03
+80,5,0.01,2.2,1.0,2.0,100.0,Online TA,PRT,BB,Transient,F,198.6,20.0
+81,27,0.05,17.19,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,122.44,25.93
+82,20,0.04,132.9,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,110.91,45.0
+83,37,0.07,14.14,1.0,2.0,0.0,Online TA,PRT,SC,Transient,A,105.93,21.62
+84,15,0.03,44.13,2.0,2.0,0.0,Groups,ESP,BB,Transient-Party,A,62.0,13.33
+85,8,0.02,48.62,2.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,37.5,12.5
+86,7,0.01,3.57,2.0,2.0,0.0,Online TA,PRT,SC,Transient,A,131.66,14.29
+87,5,0.01,3.6,3.0,2.0,0.0,Direct,PRT,BB,Transient,A,96.51,40.0
+88,10,0.02,5.7,4.0,2.0,0.0,Online TA,ESP,BB,Contract,A,106.05,10.0
+89,5,0.01,0.8,4.0,2.0,0.0,Online TA,FRA,SC,Transient,A,113.53,0.0
+90,28,0.05,149.75,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,114.69,42.86
+91,7,0.01,5.71,5.29,2.0,0.0,Online TA,PRT,BB,Contract,A,91.83,42.86
+92,31,0.06,5.19,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,55.13,22.58
+93,61,0.12,75.2,2.0,2.0,0.0,Online TA,ESP,SC,Transient,A,126.52,31.15
+94,5,0.01,0.4,4.2,2.0,0.0,Direct,PRT,BB,Transient,A,98.96,20.0
+95,39,0.07,151.97,4.21,2.0,0.0,Online TA,FRA,BB,Transient,A,111.02,51.28
+96,37,0.07,97.03,1.0,2.0,0.0,Online TA,GBR,BB,Transient,A,126.3,27.03
+97,9,0.02,174.33,3.0,2.0,0.0,Online TA,GBR,BB,Transient-Party,A,104.56,0.0
+98,47,0.09,144.79,3.0,2.0,0.0,Online TA,DEU,BB,Transient,A,119.83,27.66
+99,7,0.01,5.57,6.43,2.0,0.0,Online TA,FRA,BB,Contract,A,100.38,0.0
+100,5,0.01,39.0,2.0,2.0,0.0,Offline TA/TO,PRT,HB,Transient-Party,A,106.0,40.0
+101,5,0.01,39.0,2.0,2.0,0.0,Offline TA/TO,DEU,HB,Transient-Party,A,109.0,0.0
+102,33,0.06,81.58,2.0,2.0,0.0,Online TA,GBR,BB,Transient,A,125.16,24.24
+103,9,0.02,6.0,3.0,2.0,0.0,Online TA,PRT,BB,Contract,A,98.74,22.22
+104,38,0.07,146.63,4.0,2.0,0.0,Online TA,GBR,BB,Transient,A,113.94,18.42
+105,6,0.01,48.33,4.0,2.0,0.0,Groups,ESP,BB,Transient-Party,A,86.0,16.67
+106,10,0.02,5.6,7.0,2.0,0.0,Direct,PRT,BB,Transient,A,93.75,30.0
+107,11,0.02,2.55,1.0,1.0,0.0,Direct,PRT,BB,Transient,A,64.68,27.27
+108,10,0.02,5.3,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,132.85,30.0
+109,5,0.01,5.8,4.0,2.0,0.0,Direct,PRT,BB,Transient,A,98.38,40.0
+110,6,0.01,9.0,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,132.29,33.33
+111,5,0.01,147.4,5.2,2.0,0.0,Direct,FRA,HB,Transient,A,128.84,20.0
+112,12,0.02,6.58,2.0,2.0,0.0,Online TA,PRT,BB,Contract,A,95.92,25.0
+113,7,0.01,4.86,4.29,2.0,0.0,Online TA,PRT,BB,Contract,A,94.5,0.0
+114,4,0.01,12.0,5.0,2.0,0.0,Online TA,ESP,BB,Transient,A,113.25,0.0
+115,11,0.02,9.91,3.0,1.0,0.0,Corporate,PRT,BB,Transient,A,63.64,9.09
+116,9,0.02,8.11,3.0,2.0,0.0,Direct,PRT,BB,Transient,A,113.99,33.33
+117,36,0.07,72.83,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,128.9,27.78
+118,35,0.07,142.14,4.23,2.0,0.0,Online TA,FRA,SC,Transient,A,124.11,60.0
+119,12,0.02,175.17,1.0,2.0,0.0,Groups,PRT,BB,Transient,A,64.81,75.0
+120,16,0.03,70.75,2.0,2.0,100.0,Online TA,ESP,BB,Transient,F,218.69,43.75
+121,8,0.02,2.12,1.0,2.0,100.0,Direct,PRT,BB,Transient,A,104.72,0.0
+122,19,0.04,20.53,1.0,2.0,100.0,Online TA,FRA,BB,Transient,F,216.67,36.84
+123,6,0.01,23.17,1.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,89.75,33.33
+124,22,0.04,20.73,1.0,2.0,0.0,Online TA,GBR,SC,Transient,A,120.67,22.73
+125,5,0.01,50.0,4.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,48.0,20.0
+126,43,0.08,3.49,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,112.99,16.28
+127,67,0.13,18.07,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,83.22,14.93
+128,17,0.03,11.94,1.0,2.0,0.0,Online TA,PRT,BB,Contract,A,116.91,35.29
+129,32,0.06,125.28,3.0,2.0,0.0,Online TA,GBR,BB,Transient,A,114.53,25.0
+130,12,0.02,5.17,3.0,1.0,0.0,Corporate,PRT,BB,Transient,A,70.72,0.0
+131,17,0.03,14.76,3.0,2.0,0.0,Online TA,PRT,BB,Contract,A,119.29,23.53
+132,15,0.03,3.27,1.0,1.0,0.0,Online TA,PRT,BB,Transient,A,153.61,20.0
+133,24,0.05,31.58,1.0,2.0,0.0,Online TA,GBR,BB,Transient,A,125.12,0.0
+134,17,0.03,3.53,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,87.21,17.65
+135,6,0.01,21.33,2.0,2.0,0.0,Online TA,USA,BB,Transient,A,110.46,16.67
+136,6,0.01,63.0,3.0,2.0,0.0,Groups,BRA,BB,Transient-Party,A,60.0,0.0
+137,15,0.03,47.6,3.0,2.0,0.0,Online TA,PRT,BB,Transient,A,100.42,26.67
+138,6,0.01,65.17,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,84.42,50.0
+139,18,0.03,12.39,2.0,2.0,0.0,Online TA,PRT,BB,Contract,A,131.5,27.78
+140,11,0.02,17.0,2.0,2.0,0.0,Online TA,BEL,BB,Contract,A,113.63,0.0
+141,7,0.01,21.57,2.0,1.0,0.0,Online TA,SWE,BB,Contract,A,101.96,0.0
+142,6,0.01,23.0,3.0,2.0,0.0,Online TA,DEU,BB,Contract,A,116.74,0.0
+143,6,0.01,19.33,4.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,97.88,16.67
+144,6,0.01,22.33,5.0,2.0,0.0,Online TA,PRT,BB,Contract,A,112.92,33.33
+145,6,0.01,9.17,6.5,2.0,0.0,Online TA,FRA,BB,Contract,A,127.86,16.67
+146,19,0.04,68.53,1.0,2.0,0.0,Offline TA/TO,PRT,HB,Transient-Party,A,112.01,15.79
+147,11,0.02,59.36,1.0,1.0,0.0,Offline TA/TO,PRT,HB,Transient-Party,A,84.02,9.09
+148,7,0.01,11.57,1.0,1.0,0.0,Online TA,PRT,BB,Contract,A,120.71,57.14
+149,24,0.05,67.29,2.0,2.0,0.0,Offline TA/TO,PRT,HB,Transient-Party,A,100.52,29.17
+150,15,0.03,68.0,2.0,1.0,0.0,Offline TA/TO,PRT,HB,Transient-Party,A,75.53,13.33
+151,5,0.01,1.4,1.0,2.0,0.0,Offline TA/TO,ITA,HB,Transient-Party,A,110.12,20.0
+152,6,0.01,17.33,4.0,2.0,0.0,Online TA,PRT,BB,Contract,A,150.96,33.33
+153,7,0.01,22.71,3.0,2.0,0.0,Online TA,PRT,BB,Contract,A,115.26,42.86
+154,12,0.02,3.17,1.0,2.0,0.0,Corporate,PRT,BB,Transient-Party,A,123.0,16.67
+155,35,0.07,22.91,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,137.07,20.0
+156,15,0.03,3.8,1.0,2.0,0.0,Direct,PRT,BB,Transient,B,108.08,6.67
+157,30,0.06,30.07,1.0,2.0,0.0,Online TA,GBR,SC,Transient,A,119.52,20.0
+158,6,0.01,9.17,2.0,2.0,0.0,Online TA,GBR,SC,Transient,A,132.3,16.67
+159,6,0.01,21.0,2.0,2.0,0.0,Online TA,PRT,BB,Transient,A,123.26,16.67
+160,7,0.01,52.86,2.0,2.0,0.0,Online TA,CHE,BB,Transient,A,117.95,14.29
+161,5,0.01,3.2,4.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,24.0,40.0
+162,21,0.04,65.95,4.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,79.57,14.29
+163,15,0.03,8.33,4.0,2.0,0.0,Groups,ESP,BB,Transient-Party,A,114.67,0.0
+164,11,0.02,65.82,4.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,71.82,0.0
+165,9,0.02,17.67,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,129.63,33.33
+166,5,0.01,20.6,6.4,2.0,0.0,Online TA,PRT,BB,Transient,D,116.92,20.0
+167,14,0.03,54.43,4.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,88.45,0.0
+168,9,0.02,1.22,2.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,69.11,33.33
+169,9,0.02,54.67,2.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,81.11,22.22
+170,25,0.05,7.52,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,81.29,20.0
+171,5,0.01,27.8,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,97.4,60.0
+172,9,0.02,0.44,2.0,2.0,0.0,Direct,PRT,BB,Transient,A,134.72,11.11
+173,7,0.01,39.14,2.0,2.0,0.0,Online TA,BRA,BB,Transient,A,132.42,14.29
+174,9,0.02,2.22,3.0,1.0,0.0,Corporate,PRT,BB,Transient,A,87.78,22.22
+175,32,0.06,118.91,4.0,2.0,0.0,Online TA,GBR,BB,Transient,A,119.94,40.62
+176,11,0.02,19.0,4.0,2.0,0.0,Online TA,PRT,BB,Contract,A,120.49,27.27
+177,6,0.01,10.83,4.0,2.0,0.0,Online TA,GBR,BB,Contract,A,143.6,0.0
+178,30,0.06,25.43,2.0,2.0,0.0,Direct,PRT,BB,Transient,A,112.62,26.67
+179,25,0.05,39.8,2.0,2.0,0.0,Online TA,PRT,BB,Transient,D,152.71,44.0
+180,5,0.01,16.0,4.0,2.0,0.0,Online TA,ESP,BB,Contract,A,116.85,20.0
+181,14,0.03,12.64,1.0,2.0,0.0,Online TA,PRT,BB,Transient,D,168.66,14.29
+182,44,0.08,72.93,2.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,83.8,31.82
+183,9,0.02,2.11,2.0,1.0,0.0,Corporate,FRA,BB,Transient-Party,A,71.67,11.11
+184,25,0.05,78.56,2.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,62.48,12.0
+185,33,0.06,110.03,2.0,2.0,0.0,Online TA,DEU,BB,Transient,A,119.05,9.09
+186,11,0.02,25.73,2.0,2.0,0.0,Online TA,FRA,BB,Transient,A,132.42,36.36
+187,5,0.01,66.6,3.0,1.0,0.0,Corporate,FRA,BB,Transient-Party,A,96.2,20.0
+188,10,0.02,27.9,2.0,2.0,0.0,Online TA,CHN,SC,Transient,A,118.67,40.0
+189,5,0.01,168.0,2.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,30.0,0.0
+190,7,0.01,168.0,2.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,51.43,42.86
+191,7,0.01,69.86,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,81.76,42.86
+192,14,0.03,149.43,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,87.36,35.71
+193,23,0.04,156.0,4.0,2.0,0.0,Online TA,GBR,BB,Transient,A,106.84,21.74
+194,11,0.02,250.64,1.0,2.0,0.0,Offline TA/TO,ITA,HB,Transient-Party,A,106.66,9.09
+195,8,0.02,28.62,1.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,112.39,12.5
+196,14,0.03,42.93,3.0,2.0,0.0,Online TA,PRT,BB,Transient,A,125.52,42.86
+197,11,0.02,48.36,5.0,2.0,0.0,Online TA,PRT,BB,Transient,A,111.78,36.36
+198,27,0.05,178.41,6.93,2.0,0.0,Online TA,GBR,BB,Transient,A,106.51,25.93
+199,8,0.02,137.62,3.0,2.0,0.0,Offline TA/TO,BRA,BB,Transient-Party,A,129.25,0.0
+200,7,0.01,13.71,4.0,2.0,0.0,Online TA,ESP,BB,Transient,D,127.96,42.86
+201,8,0.02,18.25,4.0,2.0,0.0,Online TA,PRT,BB,Transient,A,134.9,37.5
+202,5,0.01,67.4,1.0,1.0,0.0,Online TA,PRT,BB,Transient,A,79.8,60.0
+203,5,0.01,40.8,2.0,1.0,0.0,Online TA,PRT,BB,Contract,A,108.2,20.0
+204,7,0.01,153.14,4.0,2.0,0.0,Online TA,PRT,BB,Transient,A,108.58,14.29
+205,22,0.04,197.41,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,95.13,45.45
+206,10,0.02,199.8,3.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,78.92,20.0
+207,7,0.01,71.14,3.0,2.0,0.0,Online TA,ESP,BB,Transient,D,134.86,57.14
+208,7,0.01,31.71,1.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,91.31,14.29
+209,8,0.02,0.5,1.0,2.0,0.0,Direct,BRA,BB,Transient,A,147.19,12.5
+210,22,0.04,109.18,3.0,2.0,0.0,Online TA,DEU,BB,Transient,A,125.74,22.73
+211,5,0.01,91.6,3.0,2.0,0.0,Online TA,PRT,BB,Transient,A,123.15,40.0
+212,10,0.02,31.4,3.0,2.0,0.0,Offline TA/TO,GBR,BB,Transient,A,101.37,0.0
+213,5,0.01,77.0,6.4,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,95.24,40.0
+214,17,0.03,67.24,5.0,2.0,0.0,Online TA,DEU,BB,Transient,D,131.87,17.65
+215,12,0.02,133.25,5.0,2.0,0.0,Online TA,DEU,BB,Transient,A,119.29,25.0
+216,19,0.04,49.47,4.0,2.0,0.0,Online TA,GBR,BB,Transient,D,122.49,26.32
+217,5,0.01,24.0,4.0,2.0,100.0,Online TA,PRT,BB,Transient,F,208.84,40.0
+218,5,0.01,48.0,3.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient-Party,A,90.0,0.0
+219,5,0.01,90.4,1.0,1.0,0.0,Groups,PRT,BB,Transient,A,146.0,100.0
+220,8,0.02,30.75,1.0,2.0,0.0,Online TA,USA,BB,Transient,A,116.17,12.5
+221,17,0.03,30.24,2.0,2.0,0.0,Online TA,GBR,BB,Transient,A,130.63,11.76
+222,17,0.03,41.76,2.0,2.0,0.0,Online TA,PRT,BB,Contract,A,103.62,35.29
+223,10,0.02,36.1,2.0,2.0,0.0,Direct,PRT,BB,Transient,A,88.7,50.0
+224,22,0.04,30.55,3.0,2.0,0.0,Online TA,PRT,BB,Contract,A,116.62,36.36
+225,12,0.02,40.17,3.0,2.0,0.0,Online TA,BEL,BB,Contract,A,98.69,0.0
+226,10,0.02,45.4,4.0,2.0,0.0,Online TA,PRT,BB,Transient,A,117.16,20.0
+227,28,0.05,125.14,4.0,2.0,0.0,Online TA,DEU,BB,Transient,A,103.2,39.29
+228,44,0.08,21.27,1.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,95.12,18.18
+229,9,0.02,195.89,1.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,112.22,0.0
+230,20,0.04,179.35,2.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,108.5,25.0
+231,10,0.02,77.2,2.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,75.5,0.0
+232,31,0.06,107.13,3.0,2.0,0.0,Online TA,GBR,BB,Transient,A,101.06,25.81
+233,31,0.06,126.97,4.0,2.0,0.0,Online TA,DEU,BB,Transient,A,101.51,32.26
+234,5,0.01,112.2,4.0,2.0,0.0,Direct,PRT,BB,Transient,A,82.62,80.0
+235,11,0.02,43.73,4.0,2.0,0.0,Online TA,PRT,BB,Contract,A,96.33,63.64
+236,5,0.01,198.0,2.0,2.0,0.0,Groups,FRA,BB,Transient-Party,A,60.0,20.0
+237,5,0.01,51.8,3.0,2.0,0.0,Online TA,ITA,BB,Contract,A,98.05,40.0
+238,7,0.01,79.43,1.0,2.0,0.0,Online TA,DEU,BB,Transient,A,96.34,14.29
+239,36,0.07,134.39,3.0,2.0,0.0,Online TA,DEU,BB,Transient,A,108.99,30.56
+240,5,0.01,37.4,5.0,2.0,0.0,Online TA,PRT,BB,Contract,A,107.32,80.0
+241,41,0.08,12.51,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,82.54,14.63
+242,19,0.04,69.37,2.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,64.16,15.79
+243,5,0.01,88.0,2.0,2.0,0.0,Offline TA/TO,ITA,HB,Transient-Party,A,100.98,0.0
+244,8,0.02,34.88,3.0,2.0,0.0,Online TA,PRT,BB,Contract,A,102.48,37.5
+245,8,0.02,118.62,4.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,78.44,0.0
+246,5,0.01,36.8,5.0,2.0,0.0,Online TA,FRA,BB,Contract,A,100.9,0.0
+247,8,0.02,48.75,4.0,2.0,0.0,Online TA,IRL,BB,Contract,A,93.14,0.0
+248,19,0.04,22.11,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,122.37,26.32
+249,6,0.01,102.33,2.0,1.0,0.0,Offline TA/TO,PRT,HB,Transient-Party,A,86.58,66.67
+250,13,0.02,37.62,3.0,2.0,0.0,Online TA,PRT,BB,Transient,A,109.91,46.15
+251,16,0.03,72.88,2.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,70.09,18.75
+252,16,0.03,30.19,2.0,2.0,0.0,Online TA,PRT,SC,Transient,A,114.19,37.5
+253,8,0.02,116.38,4.12,2.0,0.0,Online TA,PRT,BB,Transient,A,89.94,12.5
+254,16,0.03,68.38,3.0,2.0,0.0,Online TA,BEL,BB,Transient,A,111.07,31.25
+255,7,0.01,210.0,4.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,67.55,0.0
+256,17,0.03,40.65,3.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,77.48,23.53
+257,19,0.04,36.11,2.0,2.0,0.0,Online TA,PRT,BB,Transient,A,125.03,21.05
+258,5,0.01,44.2,3.0,2.0,0.0,Online TA,NLD,BB,Contract,A,98.45,0.0
+259,27,0.05,123.07,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,102.79,22.22
+260,12,0.02,30.0,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,85.4,16.67
+261,6,0.01,215.0,4.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient-Party,A,71.38,16.67
+262,5,0.01,83.6,2.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,36.0,40.0
+263,7,0.01,39.57,2.0,2.0,0.0,Online TA,ESP,BB,Transient,A,114.27,42.86
+264,8,0.02,31.25,2.0,2.0,0.0,Online TA,PRT,BB,Contract,A,105.12,50.0
+265,5,0.01,36.2,3.0,2.0,0.0,Online TA,AUS,BB,Transient,A,117.5,0.0
+266,16,0.03,93.94,3.0,2.0,0.0,Online TA,GBR,BB,Transient,D,116.56,31.25
+267,8,0.02,43.0,4.0,2.0,0.0,Online TA,PRT,BB,Contract,A,100.96,50.0
+268,5,0.01,216.8,4.0,2.0,0.0,Online TA,MKD,BB,Transient-Party,A,95.37,40.0
+269,13,0.02,36.69,4.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,92.49,23.08
+270,8,0.02,53.38,1.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,66.38,37.5
+271,8,0.02,40.12,3.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,92.59,0.0
+272,26,0.05,154.27,4.08,2.0,0.0,Online TA,DEU,BB,Transient,A,98.97,34.62
+273,8,0.02,37.12,4.12,2.0,0.0,Online TA,DEU,BB,Contract,A,99.89,0.0
+274,18,0.03,212.56,5.0,2.0,0.0,Online TA,DEU,BB,Transient,A,91.86,27.78
+275,9,0.02,215.44,6.67,2.0,0.0,Online TA,DEU,BB,Transient,A,99.1,44.44
+276,16,0.03,98.12,1.0,2.0,0.0,Online TA,BRA,BB,Transient,A,107.9,12.5
+277,7,0.01,102.0,2.0,2.0,0.0,Offline TA/TO,DEU,HB,Transient-Party,A,109.0,0.0
+278,5,0.01,102.0,2.0,1.0,0.0,Offline TA/TO,DEU,HB,Transient-Party,A,87.0,0.0
+279,11,0.02,75.45,2.0,2.0,0.0,Online TA,GBR,BB,Transient,D,125.34,36.36
+280,9,0.02,229.22,4.0,2.0,0.0,Online TA,PRT,BB,Transient,A,84.29,66.67
+281,10,0.02,270.5,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,63.87,40.0
+282,16,0.03,93.31,4.0,2.0,0.0,Online TA,CHE,BB,Transient,D,123.13,25.0
+283,40,0.08,10.95,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,96.4,30.0
+284,8,0.02,67.12,1.0,2.0,0.0,Online TA,DEU,BB,Transient,A,115.61,25.0
+285,8,0.02,69.12,4.0,2.0,0.0,Online TA,GBR,SC,Transient,A,101.2,37.5
+286,14,0.03,34.0,2.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,86.82,28.57
+287,12,0.02,60.75,4.67,2.0,0.0,Online TA,DEU,BB,Transient,D,124.24,41.67
+288,15,0.03,48.53,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,86.16,26.67
+289,10,0.02,44.7,2.0,2.0,0.0,Online TA,GBR,SC,Transient,A,109.58,40.0
+290,21,0.04,49.14,2.0,2.0,0.0,Online TA,PRT,BB,Transient,A,100.3,47.62
+291,8,0.02,92.38,3.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,65.75,25.0
+292,12,0.02,94.67,3.0,1.0,0.0,Groups,FRA,BB,Transient-Party,A,57.17,25.0
+293,12,0.02,50.5,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,D,68.67,0.0
+294,5,0.01,108.0,3.0,2.0,0.0,Groups,JPN,BB,Transient-Party,A,69.0,0.0
+295,7,0.01,230.43,2.0,2.0,0.0,Groups,FRA,BB,Transient-Party,A,72.43,28.57
+296,20,0.04,51.9,4.2,2.0,0.0,Online TA,ITA,BB,Transient,A,86.75,35.0
+297,20,0.04,49.1,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,104.28,40.0
+298,43,0.08,39.02,2.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,60.93,9.3
+299,23,0.04,50.7,3.0,2.0,0.0,Online TA,NLD,BB,Transient,A,105.61,21.74
+300,8,0.02,120.62,1.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,78.62,50.0
+301,7,0.01,140.0,3.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,65.0,0.0
+302,7,0.01,140.0,3.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,75.0,28.57
+303,6,0.01,69.83,3.0,2.0,0.0,Offline TA/TO,GBR,BB,Transient,A,75.02,0.0
+304,15,0.03,98.0,3.0,1.0,0.0,Groups,HUN,BB,Transient-Party,A,70.0,0.0
+305,6,0.01,57.67,3.0,2.0,0.0,Online TA,PRT,BB,Contract,A,85.14,33.33
+306,10,0.02,94.3,3.0,1.0,0.0,Groups,IND,BB,Transient-Party,A,70.0,0.0
+307,8,0.02,93.38,4.0,1.0,0.0,Groups,DZA,BB,Transient-Party,A,70.0,0.0
+308,5,0.01,98.0,4.0,1.0,0.0,Groups,HRV,BB,Transient-Party,A,70.0,0.0
+309,6,0.01,79.5,4.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,70.0,50.0
+310,5,0.01,98.0,4.0,2.0,0.0,Groups,JOR,BB,Transient-Party,A,75.0,0.0
+311,7,0.01,78.71,3.0,2.0,0.0,Online TA,NLD,BB,Transient,A,89.34,28.57
+312,35,0.07,44.09,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,88.5,8.57
+313,48,0.09,23.12,1.0,2.0,0.0,Online TA,PRT,SC,Transient,A,86.15,25.0
+314,28,0.05,43.86,2.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,65.73,10.71
+315,30,0.06,45.3,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,88.33,33.33
+316,5,0.01,135.0,3.0,2.0,0.0,Groups,ESP,BB,Transient-Party,A,63.8,0.0
+317,5,0.01,98.8,3.0,2.0,0.0,Online TA,PRT,BB,Contract,A,79.04,40.0
+318,28,0.05,46.5,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,79.17,7.14
+319,5,0.01,129.6,4.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient-Party,A,70.2,0.0
+320,24,0.05,42.58,2.0,2.0,0.0,Online TA,FRA,BB,Transient,A,103.33,50.0
+321,5,0.01,4.6,1.0,1.0,0.0,Online TA,PRT,BB,Transient,A,84.27,0.0
+322,8,0.02,112.62,3.0,2.0,0.0,Online TA,PRT,BB,Contract,A,81.27,50.0
+323,30,0.06,4.53,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,82.58,20.0
+324,9,0.02,5.0,1.0,1.0,0.0,Online TA,PRT,BB,Transient,A,87.62,22.22
+325,5,0.01,5.6,1.0,1.0,0.0,Online TA,UKR,BB,Transient,A,99.2,0.0
+326,17,0.03,45.65,4.12,2.0,0.0,Online TA,FRA,BB,Transient,A,92.38,41.18
+327,27,0.05,50.7,3.0,2.0,0.0,Online TA,PRT,BB,Transient,A,98.86,40.74
+328,10,0.02,20.0,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,94.64,20.0
+329,6,0.01,1.83,1.0,2.0,100.0,Online TA,PRT,BB,Transient,F,182.92,16.67
+330,26,0.05,30.38,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,102.74,38.46
+331,5,0.01,115.6,1.0,2.0,0.0,Online TA,NLD,BB,Transient,A,87.17,60.0
+332,18,0.03,30.39,3.0,2.0,0.0,Online TA,ESP,BB,Transient,A,91.78,22.22
+333,20,0.04,41.4,4.0,2.0,0.0,Offline TA/TO,ESP,BB,Transient,A,76.81,30.0
+334,13,0.02,29.54,4.0,2.0,0.0,Online TA,DEU,BB,Transient,A,87.75,38.46
+335,5,0.01,15.0,4.0,2.0,0.0,Direct,FRA,BB,Transient-Party,A,75.2,0.0
+336,14,0.03,32.79,4.0,2.0,0.0,Online TA,ESP,BB,Transient,D,113.54,35.71
+337,19,0.04,120.58,3.0,2.0,0.0,Offline TA/TO,ITA,BB,Transient-Party,A,73.31,26.32
+338,9,0.02,20.78,4.0,2.0,0.0,Online TA,AUT,BB,Transient,D,120.35,33.33
+339,13,0.02,24.0,2.0,2.0,0.0,Online TA,PRT,BB,Transient,D,118.33,46.15
+340,5,0.01,11.2,2.0,2.0,0.0,Online TA,DEU,BB,Transient,D,129.16,60.0
+341,25,0.05,31.96,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,90.1,48.0
+342,41,0.08,8.07,1.0,2.0,0.0,Online TA,PRT,SC,Transient,A,78.13,24.39
+343,12,0.02,66.0,2.0,2.0,0.0,Online TA,CHN,SC,Transient,A,78.37,58.33
+344,22,0.04,35.95,3.0,2.0,0.0,Online TA,ESP,BB,Transient,A,87.65,31.82
+345,41,0.08,11.49,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,93.13,26.83
+346,7,0.01,5.14,1.0,2.0,0.0,Online TA,GBR,BB,Transient,A,93.38,14.29
+347,19,0.04,20.37,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,86.57,21.05
+348,17,0.03,28.06,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,69.16,5.88
+349,5,0.01,1.6,1.0,2.0,0.0,Online TA,SAU,SC,Transient,A,73.07,20.0
+350,6,0.01,1.17,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,97.35,0.0
+351,11,0.02,4.73,1.0,1.0,0.0,Online TA,ESP,BB,Transient,A,86.51,0.0
+352,16,0.03,10.0,2.0,2.0,0.0,Online TA,PRT,SC,Transient,A,80.47,37.5
+353,17,0.03,35.41,3.0,2.0,0.0,Online TA,GBR,BB,Transient,A,91.15,29.41
+354,34,0.06,12.97,1.0,1.0,0.0,Online TA,PRT,BB,Transient,A,82.53,17.65
+355,28,0.05,20.11,2.0,2.0,0.0,Online TA,ESP,SC,Transient,A,81.23,46.43
+356,6,0.01,1.67,1.0,1.0,0.0,Online TA,GBR,BB,Transient,A,85.82,33.33
+357,8,0.02,3.38,3.0,2.0,0.0,Online TA,PRT,SC,Transient,A,83.94,0.0
+358,21,0.04,27.33,4.05,2.0,0.0,Online TA,FRA,BB,Transient,A,85.4,42.86
+359,24,0.05,22.33,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,91.72,45.83
+360,23,0.04,28.87,4.0,2.0,0.0,Online TA,ITA,BB,Transient,A,87.21,47.83
+361,9,0.02,45.67,6.44,2.0,0.0,Online TA,BRA,BB,Transient,A,81.9,33.33
+362,34,0.06,24.12,2.0,2.0,0.0,Online TA,PRT,BB,Transient,A,90.89,32.35
+363,12,0.02,7.83,1.0,2.0,0.0,Online TA,DEU,SC,Transient,A,75.67,16.67
+364,8,0.02,17.12,2.0,2.0,0.0,Online TA,FRA,BB,Transient,A,102.95,37.5
+365,8,0.02,10.75,3.0,2.0,0.0,Online TA,ITA,SC,Transient,A,76.73,25.0
+366,15,0.03,30.73,4.0,2.0,0.0,Online TA,DEU,BB,Transient,A,76.96,13.33
+367,37,0.07,6.3,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,73.81,10.81
+368,7,0.01,4.0,2.0,1.0,0.0,Online TA,DEU,BB,Transient,A,83.83,0.0
+369,8,0.02,38.12,4.25,2.0,0.0,Online TA,DEU,BB,Transient,A,83.28,25.0
+370,10,0.02,1.6,1.0,2.0,0.0,Direct,PRT,SC,Transient,A,94.5,10.0
+371,10,0.02,3.3,1.0,1.0,0.0,Online TA,PRT,SC,Transient,A,78.26,30.0
+372,19,0.04,28.0,4.0,2.0,0.0,Online TA,FRA,SC,Transient,A,81.8,26.32
+373,9,0.02,5.67,2.0,2.0,0.0,Online TA,BRA,BB,Transient,A,81.89,11.11
+374,9,0.02,12.67,3.0,2.0,0.0,Online TA,USA,BB,Transient,A,93.13,22.22
+375,66,0.12,3.32,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,67.79,9.09
+376,5,0.01,11.0,3.0,2.0,0.0,Online TA,DEU,BB,Transient,A,84.51,40.0
+377,13,0.02,16.38,4.0,2.0,0.0,Online TA,FRA,SC,Transient,A,78.35,53.85
+378,9,0.02,2.33,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,83.91,0.0
+379,8,0.02,151.0,2.0,1.0,0.0,Offline TA/TO,CZE,BB,Transient-Party,A,70.88,0.0
+380,10,0.02,151.0,2.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,71.8,10.0
+381,16,0.03,55.25,2.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,70.97,37.5
+382,5,0.01,151.0,3.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,76.33,60.0
+383,13,0.02,151.0,3.0,1.0,0.0,Offline TA/TO,RUS,BB,Transient-Party,A,70.92,0.0
+384,5,0.01,0.8,1.0,2.0,0.0,Direct,NLD,BB,Transient,A,92.6,20.0
+385,10,0.02,2.2,1.0,1.0,0.0,Direct,DEU,BB,Transient,A,81.7,30.0
+386,13,0.02,28.31,2.0,2.0,0.0,Online TA,BEL,BB,Transient,A,89.32,46.15
+387,6,0.01,58.83,5.0,2.0,0.0,Online TA,BEL,BB,Transient,A,77.94,16.67
+388,7,0.01,38.29,4.0,2.0,0.0,Online TA,GBR,BB,Transient,A,76.27,0.0
+389,35,0.07,5.77,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,66.03,8.57
+390,5,0.01,28.2,3.0,2.0,0.0,Online TA,ESP,SC,Transient,A,96.1,60.0
+391,7,0.01,55.71,3.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,66.38,28.57
+392,7,0.01,22.43,5.43,2.0,0.0,Online TA,DEU,SC,Transient,A,65.21,28.57
+393,7,0.01,6.86,2.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,62.43,14.29
+394,5,0.01,34.6,3.0,2.0,0.0,Online TA,BEL,SC,Transient,A,92.81,40.0
+395,14,0.03,36.21,4.0,2.0,0.0,Online TA,GBR,BB,Transient,A,83.64,50.0
+396,6,0.01,20.67,7.0,2.0,0.0,Online TA,USA,SC,Transient,A,74.67,100.0
+397,86,0.16,4.74,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,67.49,11.63
+398,28,0.05,22.71,2.0,2.0,0.0,Direct,PRT,BB,Transient,A,72.31,25.0
+399,19,0.04,28.21,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,90.31,21.05
+400,5,0.01,23.2,3.0,2.0,0.0,Online TA,BRA,BB,Transient,A,83.75,40.0
+401,58,0.11,8.03,1.0,2.0,0.0,Online TA,PRT,SC,Transient,A,84.65,20.69
+402,10,0.02,19.4,1.0,1.0,0.0,Online TA,CHN,BB,Transient,A,81.77,60.0
+403,16,0.03,11.31,1.0,2.0,0.0,Online TA,BRA,SC,Transient,A,77.62,31.25
+404,15,0.03,29.33,2.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,70.2,26.67
+405,9,0.02,58.56,3.0,2.0,0.0,Online TA,CHN,SC,Transient,A,70.75,77.78
+406,28,0.05,43.36,3.0,2.0,0.0,Online TA,GBR,BB,Transient,A,88.63,28.57
+407,11,0.02,23.55,3.0,2.0,0.0,Online TA,DEU,BB,Transient,D,106.94,27.27
+408,26,0.05,35.42,4.0,2.0,0.0,Online TA,FRA,SC,Transient,A,75.79,38.46
+409,9,0.02,46.67,5.0,2.0,0.0,Online TA,FRA,BB,Transient,A,78.76,44.44
+410,7,0.01,35.29,1.0,2.0,0.0,Online TA,USA,BB,Transient,A,88.7,28.57
+411,50,0.09,4.88,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,75.22,16.0
+412,45,0.09,21.11,2.0,2.0,0.0,Online TA,PRT,SC,Transient,A,83.43,33.33
+413,34,0.06,33.82,2.0,2.0,0.0,Online TA,PRT,BB,Transient,A,91.14,35.29
+414,11,0.02,12.45,2.0,3.0,0.0,Online TA,ESP,BB,Transient,D,143.5,54.55
+415,30,0.06,43.43,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,84.44,20.0
+416,18,0.03,48.72,4.0,2.0,0.0,Online TA,GBR,BB,Transient,D,93.18,27.78
+417,28,0.05,34.46,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,83.68,28.57
+418,18,0.03,50.72,5.0,2.0,0.0,Online TA,GBR,BB,Transient,A,77.08,5.56
+419,40,0.08,10.48,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,91.99,25.0
+420,6,0.01,1.33,1.0,1.0,0.0,Online TA,PRT,SC,Transient,A,61.55,33.33
+421,6,0.01,38.67,2.0,2.0,0.0,Online TA,BRA,SC,Transient,A,73.5,83.33
+422,11,0.02,14.36,2.0,1.0,0.0,Online TA,ESP,BB,Transient,A,87.45,18.18
+423,35,0.07,51.8,4.0,2.0,0.0,Online TA,GBR,BB,Transient,A,81.75,34.29
+424,15,0.03,25.47,4.0,2.0,0.0,Online TA,GBR,SC,Transient,A,74.14,20.0
+425,13,0.02,40.77,3.0,2.0,0.0,Direct,DEU,BB,Transient,A,73.31,0.0
+426,14,0.03,30.57,3.0,1.0,0.0,Online TA,GBR,BB,Transient,A,83.71,57.14
+427,17,0.03,30.12,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,82.89,17.65
+428,6,0.01,33.33,5.17,2.0,0.0,Online TA,FRA,SC,Transient,A,82.27,33.33
+429,13,0.02,21.38,2.0,1.0,0.0,Online TA,DEU,BB,Transient,A,87.21,15.38
+430,12,0.02,30.17,4.08,2.0,0.0,Online TA,GBR,SC,Transient,A,72.78,16.67
+431,8,0.02,33.5,4.38,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,76.66,0.0
+432,5,0.01,0.4,1.0,2.0,0.0,Complementary,PRT,BB,Transient,E,72.2,20.0
+433,24,0.05,6.62,1.0,1.0,0.0,Online TA,PRT,BB,Transient,A,85.91,12.5
+434,21,0.04,29.67,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,87.77,28.57
+435,7,0.01,25.29,4.29,2.0,0.0,Online TA,BRA,SC,Transient,A,69.76,85.71
+436,8,0.02,40.75,5.0,2.0,0.0,Online TA,FRA,BB,Transient,A,82.48,25.0
+437,32,0.06,39.09,2.0,2.0,0.0,Online TA,DEU,BB,Transient,A,87.5,18.75
+438,20,0.04,29.85,4.0,2.0,0.0,Online TA,GBR,SC,Transient,A,76.76,20.0
+439,5,0.01,37.8,4.0,2.0,0.0,Offline TA/TO,CZE,BB,Transient,A,60.1,0.0
+440,8,0.02,41.38,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,77.27,37.5
+441,11,0.02,24.45,5.0,2.0,0.0,Online TA,GBR,SC,Transient,A,76.75,45.45
+442,17,0.03,32.41,2.0,2.0,0.0,Online TA,CHN,SC,Transient,A,79.52,52.94
+443,25,0.05,35.4,2.0,2.0,0.0,Online TA,GBR,SC,Transient,A,81.71,28.0
+444,7,0.01,15.29,2.0,2.0,0.0,Online TA,GBR,BB,Transient,D,107.59,57.14
+445,21,0.04,30.95,3.0,2.0,0.0,Online TA,ESP,SC,Transient,A,80.21,42.86
+446,17,0.03,43.65,3.0,2.0,0.0,Online TA,DEU,BB,Transient,A,92.04,35.29
+447,16,0.03,38.88,3.0,2.0,0.0,Online TA,DEU,SC,Transient,A,80.24,37.5
+448,19,0.04,8.16,1.0,2.0,0.0,Direct,PRT,BB,Transient,D,85.05,10.53
+449,17,0.03,48.12,2.0,2.0,0.0,Online TA,FRA,BB,Transient,A,84.45,35.29
+450,9,0.02,44.33,3.0,2.0,0.0,Online TA,PRT,SC,Transient,A,73.4,55.56
+451,8,0.02,59.25,3.0,2.0,0.0,Online TA,DEU,BB,Transient,D,101.71,25.0
+452,26,0.05,48.23,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,75.51,11.54
+453,14,0.03,40.64,3.0,2.0,0.0,Online TA,GBR,BB,Transient,A,92.49,21.43
+454,7,0.01,22.29,3.0,2.0,0.0,Online TA,CHN,BB,Transient,A,85.32,14.29
+455,9,0.02,26.44,5.0,2.0,0.0,Online TA,FRA,BB,Transient,D,95.05,33.33
+456,21,0.04,5.43,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,65.14,4.76
+457,8,0.02,40.88,2.0,2.0,0.0,Online TA,CHE,SC,Transient,A,76.69,37.5
+458,28,0.05,32.04,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,72.31,17.86
+459,7,0.01,8.86,3.0,3.0,0.0,Online TA,FRA,BB,Transient,D,143.62,57.14
+460,14,0.03,10.0,1.0,2.0,0.0,Corporate,PRT,BB,Transient-Party,A,78.87,7.14
+461,15,0.03,115.33,1.0,1.0,0.0,Corporate,PRT,BB,Transient-Party,A,72.93,33.33
+462,9,0.02,120.22,1.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,63.22,22.22
+463,44,0.08,8.95,1.0,1.0,0.0,Corporate,PRT,BB,Transient-Party,A,71.49,15.91
+464,7,0.01,26.86,1.0,2.0,0.0,Online TA,GBR,SC,Transient,A,83.31,28.57
+465,10,0.02,27.6,2.0,2.0,0.0,Online TA,DEU,BB,Transient,A,94.09,20.0
+466,15,0.03,31.0,4.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,76.51,0.0
+467,5,0.01,27.0,1.0,2.0,0.0,Online TA,FRA,BB,Transient,A,95.46,40.0
+468,15,0.03,35.13,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,89.47,33.33
+469,10,0.02,20.0,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,80.86,30.0
+470,7,0.01,48.57,5.0,2.0,0.0,Online TA,FRA,SC,Transient,A,69.95,42.86
+471,12,0.02,39.5,6.58,2.0,0.0,Direct,DEU,BB,Transient,A,65.5,8.33
+472,8,0.02,11.25,1.0,1.0,0.0,Online TA,PRT,BB,Transient,A,83.28,25.0
+473,17,0.03,29.76,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,70.52,5.88
+474,7,0.01,13.71,3.0,1.0,0.0,Online TA,FRA,BB,Transient,A,88.02,57.14
+475,27,0.05,8.41,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,71.26,18.52
+476,14,0.03,39.86,4.14,2.0,0.0,Online TA,ROU,BB,Transient,A,86.69,28.57
+477,13,0.02,37.15,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,74.49,53.85
+478,6,0.01,38.83,4.0,2.0,0.0,Online TA,ITA,SC,Transient,A,71.52,33.33
+479,10,0.02,11.0,2.0,2.0,0.0,Direct,PRT,BB,Transient,D,77.01,10.0
+480,9,0.02,24.33,3.0,2.0,0.0,Online TA,GBR,BB,Transient,D,89.65,22.22
+481,6,0.01,23.0,3.0,2.0,0.0,Online TA,ESP,BB,Transient,D,106.32,50.0
+482,8,0.02,115.5,4.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,66.38,62.5
+483,6,0.01,115.0,5.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,70.33,33.33
+484,14,0.03,28.86,6.36,2.0,0.0,Online TA,DEU,BB,Transient,A,85.33,35.71
+485,17,0.03,116.0,3.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,65.63,52.94
+486,44,0.08,31.05,1.0,2.0,0.0,Online TA,PRT,SC,Transient,A,88.63,31.82
+487,32,0.06,7.97,1.0,1.0,0.0,Corporate,PRT,BB,Transient-Party,A,93.88,12.5
+488,34,0.06,46.74,2.0,2.0,0.0,Online TA,FRA,BB,Transient,A,100.05,41.18
+489,7,0.01,6.57,3.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,65.43,28.57
+490,14,0.03,42.21,4.14,2.0,0.0,Online TA,FRA,BB,Transient,D,99.28,28.57
+491,20,0.04,87.6,4.0,2.0,0.0,Online TA,ITA,SC,Transient,A,78.46,50.0
+492,15,0.03,81.4,4.07,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,72.73,20.0
+493,11,0.02,48.27,4.0,2.0,0.0,Online TA,DEU,BB,Transient,D,100.14,45.45
+494,29,0.05,69.1,4.03,2.0,0.0,Online TA,FRA,BB,Transient,A,87.3,34.48
+495,16,0.03,31.19,1.0,2.0,0.0,Online TA,GBR,BB,Transient,A,92.98,43.75
+496,99,0.19,3.8,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,74.68,9.09
+497,25,0.05,41.0,2.0,1.0,0.0,Corporate,PRT,BB,Transient-Party,A,74.02,12.0
+498,43,0.08,46.23,2.0,2.0,0.0,Online TA,FRA,SC,Transient,A,89.11,39.53
+499,11,0.02,20.18,2.0,2.0,100.0,Online TA,ESP,BB,Transient,A,125.11,63.64
+500,9,0.02,52.67,3.0,2.0,0.0,Online TA,BRA,SC,Transient,A,86.46,44.44
+501,69,0.13,91.13,3.0,2.0,0.0,Online TA,DEU,BB,Transient,A,91.96,34.78
+502,8,0.02,10.0,3.0,2.0,0.0,Online TA,ESP,BB,Transient,D,127.34,37.5
+503,52,0.1,70.15,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,81.09,34.62
+504,42,0.08,108.0,4.12,2.0,0.0,Online TA,DEU,BB,Transient,A,82.49,40.48
+505,6,0.01,75.83,2.0,2.0,0.0,Online TA,BRA,BB,Transient,A,86.1,66.67
+506,39,0.07,50.41,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,105.3,41.03
+507,8,0.02,35.38,3.0,1.0,0.0,Online TA,NLD,BB,Transient,A,91.23,37.5
+508,11,0.02,26.0,3.0,3.0,0.0,Online TA,ESP,BB,Transient,D,152.38,45.45
+509,21,0.04,67.14,3.0,2.0,0.0,Online TA,FRA,BB,Transient,D,100.19,47.62
+510,39,0.07,58.28,3.0,2.0,0.0,Online TA,GBR,BB,Transient,D,101.94,30.77
+511,31,0.06,56.29,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,93.44,29.03
+512,27,0.05,60.56,4.0,2.0,0.0,Online TA,DEU,SC,Transient,A,74.01,48.15
+513,22,0.04,51.55,4.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,74.08,18.18
+514,26,0.05,48.81,5.0,2.0,0.0,Online TA,GBR,BB,Transient,A,86.33,26.92
+515,17,0.03,64.0,5.0,2.0,0.0,Online TA,FRA,BB,Transient,A,84.16,11.76
+516,21,0.04,52.0,2.0,2.0,0.0,Online TA,ESP,BB,Transient,D,114.0,57.14
+517,5,0.01,51.4,2.0,2.0,0.0,Online TA,BEL,BB,Transient-Party,A,81.92,0.0
+518,37,0.07,53.81,2.0,2.0,0.0,Online TA,GBR,SC,Transient,A,80.79,29.73
+519,32,0.06,57.66,2.0,2.0,0.0,Online TA,DEU,BB,Transient,A,97.52,31.25
+520,31,0.06,96.87,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,79.34,38.71
+521,46,0.09,86.76,3.0,2.0,0.0,Online TA,DEU,BB,Transient,A,89.56,36.96
+522,38,0.07,79.34,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,92.27,36.84
+523,21,0.04,30.24,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,91.44,38.1
+524,42,0.08,96.21,4.0,2.0,0.0,Online TA,DEU,BB,Transient,A,86.12,40.48
+525,39,0.07,20.41,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,103.77,35.9
+526,9,0.02,50.44,2.0,2.0,0.0,Online TA,FRA,BB,Transient,D,106.53,44.44
+527,9,0.02,40.89,3.0,2.0,0.0,Online TA,ITA,BB,Transient,D,109.41,44.44
+528,11,0.02,44.45,3.0,2.0,0.0,Online TA,ITA,SC,Transient,A,75.1,18.18
+529,7,0.01,65.71,3.0,2.0,0.0,Online TA,GBR,BB,Transient,D,101.07,42.86
+530,17,0.03,81.65,3.0,2.0,0.0,Online TA,BEL,BB,Transient,A,92.74,41.18
+531,35,0.07,53.97,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,87.07,14.29
+532,23,0.04,53.17,5.0,2.0,0.0,Online TA,GBR,BB,Transient,D,97.43,13.04
+533,7,0.01,46.14,7.14,2.0,0.0,Online TA,BRA,SC,Transient,A,70.82,85.71
+534,15,0.03,77.93,6.67,2.0,0.0,Online TA,FRA,BB,Transient,A,84.75,53.33
+535,18,0.03,54.89,6.44,2.0,0.0,Online TA,DEU,BB,Transient,D,96.31,16.67
+536,32,0.06,61.12,3.0,2.0,0.0,Online TA,IRL,BB,Transient,D,103.71,28.12
+537,58,0.11,71.59,4.0,2.0,0.0,Online TA,DEU,BB,Transient,A,83.93,10.34
+538,11,0.02,72.64,5.09,2.0,0.0,Online TA,FRA,BB,Transient,A,80.4,36.36
+539,9,0.02,66.0,5.11,2.0,0.0,Online TA,GBR,SC,Transient,A,70.77,33.33
+540,49,0.09,59.47,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,78.81,26.53
+541,9,0.02,61.89,3.0,3.0,0.0,Online TA,GBR,BB,Transient,D,134.6,44.44
+542,24,0.05,81.17,6.62,2.0,0.0,Online TA,DEU,BB,Transient,A,83.22,20.83
+543,17,0.03,65.18,2.0,2.0,0.0,Online TA,CHN,SC,Transient,A,77.3,35.29
+544,30,0.06,62.2,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,91.36,33.33
+545,20,0.04,65.0,4.25,2.0,0.0,Online TA,GBR,SC,Transient,A,70.83,30.0
+546,18,0.03,91.44,5.11,2.0,0.0,Online TA,DEU,BB,Transient,A,87.27,38.89
+547,25,0.05,35.6,1.0,2.0,0.0,Online TA,GBR,SC,Transient,A,83.74,40.0
+548,19,0.04,3.74,1.0,2.0,0.0,Online TA,USA,SC,Transient,A,87.0,10.53
+549,21,0.04,34.76,4.0,2.0,0.0,Online TA,FRA,BB,Transient,D,97.27,42.86
+550,19,0.04,62.68,5.0,2.0,0.0,Online TA,DEU,SC,Transient,A,69.22,21.05
+551,6,0.01,42.67,3.0,2.0,0.0,Online TA,ARG,SC,Transient,A,78.66,83.33
+552,7,0.01,45.57,3.0,3.0,0.0,Online TA,ESP,BB,Transient,D,135.91,100.0
+553,23,0.04,87.61,3.0,2.0,0.0,Offline TA/TO,GBR,BB,Transient,A,69.37,0.0
+554,17,0.03,61.24,4.0,2.0,0.0,Online TA,ITA,SC,Transient,A,74.41,29.41
+555,13,0.02,51.92,4.0,2.0,0.0,Online TA,BRA,BB,Transient,D,93.6,46.15
+556,8,0.02,63.88,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,75.49,12.5
+557,20,0.04,64.45,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,97.81,35.0
+558,9,0.02,54.44,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,79.36,11.11
+559,15,0.03,74.47,4.0,2.0,0.0,Online TA,DEU,SC,Transient,A,74.25,46.67
+560,16,0.03,37.25,4.0,2.0,0.0,Online TA,FRA,BB,Transient,D,97.73,43.75
+561,20,0.04,73.3,6.55,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,68.07,0.0
+562,28,0.05,48.29,4.0,2.0,0.0,Online TA,DEU,BB,Transient,D,97.31,28.57
+563,5,0.01,39.6,2.0,2.0,0.0,Online TA,GBR,BB,Transient,A,102.4,40.0
+564,16,0.03,4.38,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,79.37,0.0
+565,34,0.06,59.94,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,72.05,23.53
+566,8,0.02,62.12,1.0,2.0,0.0,Online TA,BRA,SC,Transient,A,76.22,50.0
+567,10,0.02,56.9,3.0,2.0,0.0,Online TA,BRA,BB,Transient,A,88.14,30.0
+568,13,0.02,55.69,5.15,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,73.14,7.69
+569,9,0.02,16.11,2.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,76.67,33.33
+570,9,0.02,57.11,3.0,2.0,0.0,Online TA,BRA,BB,Transient,D,106.17,44.44
+571,10,0.02,63.5,4.0,3.0,0.0,Online TA,RUS,BB,Transient,D,135.43,80.0
+572,22,0.04,58.32,4.0,2.0,0.0,Online TA,FRA,SC,Transient,A,77.43,54.55
+573,31,0.06,68.77,4.0,2.0,0.0,Online TA,DEU,BB,Transient,D,96.36,41.94
+574,10,0.02,33.8,2.0,2.0,0.0,Online TA,GBR,BB,Transient,D,113.37,40.0
+575,7,0.01,44.14,6.29,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,80.94,42.86
+576,5,0.01,48.6,2.0,3.0,0.0,Online TA,IRL,BB,Transient,D,134.1,40.0
+577,5,0.01,85.4,2.0,2.0,0.0,Online TA,FRA,BB,Transient,A,90.57,40.0
+578,5,0.01,52.4,3.0,3.0,0.0,Online TA,ITA,BB,Transient,D,137.04,40.0
+579,5,0.01,43.2,4.0,3.0,0.0,Online TA,ESP,BB,Transient,D,133.13,40.0
+580,20,0.04,1.45,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,79.5,5.0
+581,28,0.05,66.29,4.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,70.96,28.57
+582,14,0.03,56.14,6.79,2.0,0.0,Online TA,FRA,BB,Transient,D,96.21,35.71
+583,6,0.01,1.0,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,98.14,16.67
+584,6,0.01,53.0,4.0,2.0,100.0,Online TA,GBR,BB,Transient,A,103.19,33.33
+585,6,0.01,91.67,6.33,2.0,0.0,Online TA,USA,BB,Transient,A,84.01,50.0
+586,32,0.06,3.84,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,62.61,18.75
+587,7,0.01,33.14,1.0,2.0,100.0,Online TA,ESP,BB,Transient,A,131.11,85.71
+588,36,0.07,49.14,2.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,80.41,38.89
+589,7,0.01,48.0,2.0,3.0,0.0,Online TA,ESP,BB,Transient,D,147.44,28.57
+590,8,0.02,58.75,2.0,3.0,0.0,Online TA,GBR,BB,Transient,D,148.82,12.5
+591,16,0.03,49.75,3.0,2.0,0.0,Online TA,FRA,BB,Transient,D,113.73,50.0
+592,8,0.02,56.0,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,71.23,25.0
+593,17,0.03,63.0,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,73.54,11.76
+594,5,0.01,0.2,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,97.4,0.0
+595,7,0.01,66.57,2.0,2.0,0.0,Online TA,BRA,SC,Transient,A,78.27,71.43
+596,8,0.02,59.75,2.0,2.0,0.0,Online TA,IRL,SC,Transient,A,82.62,25.0
+597,8,0.02,0.75,1.0,2.0,0.0,Direct,PRT,SC,Transient,A,93.28,25.0
+598,45,0.09,17.6,2.0,1.0,0.0,Direct,PRT,BB,Transient,A,64.36,8.89
+599,25,0.05,43.48,2.0,2.0,0.0,Online TA,FRA,BB,Transient,D,136.21,52.0
+600,36,0.07,86.92,2.0,2.0,0.0,Direct,PRT,BB,Transient,A,80.67,38.89
+601,6,0.01,3.83,2.0,2.0,0.0,Online TA,PRT,BB,Transient,A,127.9,16.67
+602,26,0.05,73.38,2.0,2.0,0.0,Online TA,ITA,BB,Transient,A,104.43,57.69
+603,33,0.06,106.97,2.0,2.0,0.0,Online TA,DEU,BB,Transient,A,107.42,33.33
+604,15,0.03,99.4,2.0,2.0,0.0,Online TA,GBR,BB,Transient,D,134.26,53.33
+605,34,0.06,56.38,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,112.8,35.29
+606,5,0.01,92.8,3.0,2.0,0.0,Online TA,BRA,SC,Transient,A,99.72,40.0
+607,46,0.09,86.22,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,105.79,56.52
+608,25,0.05,116.08,3.0,2.0,0.0,Online TA,GBR,BB,Transient,D,124.62,60.0
+609,14,0.03,69.29,3.0,3.0,0.0,Online TA,ITA,BB,Transient,D,158.44,42.86
+610,25,0.05,83.36,4.0,2.0,0.0,Online TA,GBR,SC,Transient,A,101.66,40.0
+611,37,0.07,87.27,4.0,2.0,0.0,Online TA,DEU,BB,Transient,A,103.86,16.22
+612,26,0.05,93.0,4.0,2.0,0.0,Online TA,FRA,SC,Transient,A,107.67,65.38
+613,8,0.02,66.62,4.0,3.0,0.0,Online TA,FRA,BB,Transient,D,160.86,50.0
+614,28,0.05,95.75,5.0,2.0,0.0,Online TA,GBR,BB,Transient,D,122.85,42.86
+615,41,0.08,119.44,5.0,2.0,0.0,Online TA,DEU,BB,Transient,A,102.92,34.15
+616,8,0.02,61.88,5.0,2.0,0.0,Online TA,BRA,BB,Transient,A,96.11,37.5
+617,23,0.04,96.74,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,109.64,56.52
+618,24,0.05,3.83,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,99.26,16.67
+619,8,0.02,31.75,1.0,2.0,100.0,Online TA,FRA,BB,Transient,F,206.81,62.5
+620,10,0.02,41.9,1.0,2.0,0.0,Online TA,ESP,BB,Transient,D,126.77,40.0
+621,32,0.06,15.59,1.0,2.0,0.0,Online TA,PRT,SC,Transient,A,109.96,21.88
+622,36,0.07,62.17,1.0,2.0,0.0,Online TA,DEU,SC,Transient,A,105.16,33.33
+623,13,0.02,53.23,2.0,2.0,0.0,Online TA,GBR,BB,Transient,A,121.65,38.46
+624,6,0.01,55.83,2.0,1.0,0.0,Online TA,GBR,BB,Transient,A,100.6,50.0
+625,24,0.05,90.67,2.0,2.0,0.0,Online TA,GBR,SC,Transient,A,102.45,37.5
+626,14,0.03,36.43,2.0,2.0,0.0,Online TA,USA,SC,Transient,A,107.91,78.57
+627,6,0.01,23.0,3.0,1.0,0.0,Online TA,GBR,SC,Transient,A,125.68,66.67
+628,42,0.08,89.02,3.0,2.0,0.0,Online TA,GBR,BB,Transient,A,106.45,28.57
+629,23,0.04,69.43,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,112.6,39.13
+630,31,0.06,79.42,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,103.45,54.84
+631,17,0.03,109.88,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,87.62,23.53
+632,25,0.05,113.88,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,105.14,56.0
+633,7,0.01,24.0,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,123.01,42.86
+634,11,0.02,103.45,6.55,2.0,0.0,Online TA,FRA,BB,Transient,A,97.76,18.18
+635,5,0.01,83.6,1.0,2.0,0.0,Online TA,BRA,BB,Transient,A,98.37,60.0
+636,7,0.01,24.43,2.0,2.0,0.0,Online TA,ITA,BB,Transient,A,115.11,28.57
+637,7,0.01,67.29,3.0,2.0,100.0,Online TA,GBR,BB,Transient,F,181.36,42.86
+638,16,0.03,77.88,3.0,2.0,0.0,Online TA,GBR,BB,Transient,D,122.1,50.0
+639,8,0.02,77.0,3.0,3.0,0.0,Online TA,DEU,BB,Transient,D,168.4,37.5
+640,34,0.06,79.35,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,115.21,41.18
+641,10,0.02,66.2,3.0,2.0,0.0,Online TA,PRT,BB,Transient,D,122.45,50.0
+642,18,0.03,69.89,4.0,2.0,0.0,Offline TA/TO,GBR,BB,Transient,A,92.71,0.0
+643,7,0.01,92.29,6.43,2.0,0.0,Online TA,USA,BB,Transient,D,112.64,57.14
+644,15,0.03,19.07,1.0,2.0,0.0,Online TA,BRA,SC,Transient,A,100.16,33.33
+645,6,0.01,41.83,1.0,2.0,0.0,Online TA,ITA,SC,Transient,A,105.35,33.33
+646,28,0.05,97.79,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,88.58,28.57
+647,31,0.06,58.35,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,104.37,41.94
+648,8,0.02,63.62,4.0,2.0,0.0,Online TA,FRA,BB,Transient,D,120.26,50.0
+649,36,0.07,80.72,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,100.97,38.89
+650,43,0.08,99.37,4.0,2.0,0.0,Online TA,DEU,BB,Transient,A,101.66,16.28
+651,11,0.02,100.0,5.27,2.0,0.0,Online TA,GBR,SC,Transient,A,95.17,45.45
+652,18,0.03,4.39,1.0,1.0,0.0,Online TA,FRA,BB,Transient,A,111.95,5.56
+653,16,0.03,91.5,4.12,2.0,0.0,Online TA,DEU,BB,Transient,D,112.0,43.75
+654,11,0.02,87.36,4.18,3.0,0.0,Online TA,BEL,BB,Transient,D,157.59,63.64
+655,19,0.04,83.79,4.05,2.0,0.0,Online TA,ITA,BB,Transient,A,97.06,26.32
+656,6,0.01,55.0,1.0,2.0,0.0,Offline TA/TO,PRT,HB,Transient-Party,A,104.0,16.67
+657,46,0.09,79.22,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,113.37,30.43
+658,5,0.01,70.2,3.0,3.0,0.0,Online TA,ITA,BB,Transient,A,129.03,40.0
+659,42,0.08,62.38,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,113.53,40.48
+660,7,0.01,77.29,3.0,2.0,0.0,Online TA,BRA,BB,Transient,A,111.47,28.57
+661,14,0.03,70.43,4.14,2.0,0.0,Online TA,FRA,BB,Transient,D,113.42,64.29
+662,26,0.05,112.88,4.08,2.0,0.0,Online TA,DEU,BB,Transient,A,102.71,26.92
+663,10,0.02,91.4,4.1,2.0,0.0,Direct,DEU,BB,Transient,A,92.22,0.0
+664,14,0.03,51.29,1.0,1.0,0.0,Online TA,GBR,BB,Transient,A,100.56,35.71
+665,16,0.03,2.31,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,105.75,6.25
+666,25,0.05,29.72,2.0,2.0,0.0,Online TA,GBR,SC,Transient,A,118.06,28.0
+667,11,0.02,69.82,3.0,2.0,100.0,Online TA,ESP,BB,Transient,F,186.74,63.64
+668,21,0.04,81.1,3.0,2.0,0.0,Online TA,ITA,BB,Transient,D,121.11,38.1
+669,24,0.05,116.04,6.75,2.0,0.0,Online TA,DEU,BB,Transient,A,93.6,25.0
+670,9,0.02,101.67,6.89,2.0,0.0,Online TA,DEU,SC,Transient,A,98.3,44.44
+671,56,0.11,5.34,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,74.99,17.86
+672,25,0.05,59.84,1.0,2.0,0.0,Online TA,DEU,BB,Transient,A,118.33,4.0
+673,14,0.03,133.64,2.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,67.86,35.71
+674,28,0.05,44.21,2.0,2.0,0.0,Online TA,PRT,SC,Transient,A,115.7,42.86
+675,49,0.09,117.33,3.0,2.0,0.0,Online TA,DEU,BB,Transient,A,110.14,34.69
+676,8,0.02,91.5,4.0,2.0,0.0,Online TA,BRA,BB,Transient,A,106.38,75.0
+677,30,0.06,85.0,4.0,2.0,0.0,Online TA,GBR,BB,Transient,D,122.08,50.0
+678,11,0.02,178.73,2.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,70.0,54.55
+679,11,0.02,95.27,2.0,2.0,0.0,Online TA,FRA,BB,Transient,A,106.98,45.45
+680,5,0.01,77.6,3.0,2.0,0.0,Online TA,DEU,BB,Transient-Party,A,95.7,0.0
+681,10,0.02,43.5,5.0,3.0,0.0,Online TA,FRA,BB,Transient,D,151.35,30.0
+682,10,0.02,39.8,2.0,2.0,0.0,Online TA,USA,SC,Transient,A,101.61,80.0
+683,8,0.02,39.0,2.0,2.0,0.0,Online TA,FRA,SC,Transient,A,110.62,62.5
+684,8,0.02,93.88,3.0,2.0,0.0,Direct,GBR,BB,Transient,A,91.15,25.0
+685,5,0.01,23.8,4.0,2.0,0.0,Online TA,BRA,SC,Transient,A,118.22,40.0
+686,20,0.04,95.35,6.75,2.0,0.0,Online TA,DEU,BB,Transient,D,121.2,45.0
+687,10,0.02,4.1,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,86.92,50.0
+688,5,0.01,48.2,2.0,2.0,0.0,Online TA,BRA,BB,Transient,A,110.16,60.0
+689,25,0.05,82.92,4.0,2.0,0.0,Online TA,DEU,SC,Transient,A,99.63,36.0
+690,10,0.02,58.0,4.0,3.0,0.0,Online TA,FRA,BB,Transient,D,152.11,30.0
+691,12,0.02,81.75,5.33,2.0,0.0,Online TA,DEU,BB,Transient,A,97.06,33.33
+692,7,0.01,90.43,5.57,2.0,0.0,Online TA,FRA,BB,Transient,A,96.14,14.29
+693,15,0.03,92.67,5.27,2.0,0.0,Online TA,DEU,BB,Transient,D,125.98,60.0
+694,7,0.01,65.71,1.0,1.0,0.0,Online TA,ESP,BB,Transient,A,106.91,71.43
+695,30,0.06,82.8,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,104.73,36.67
+696,11,0.02,78.64,4.18,2.0,0.0,Online TA,FRA,SC,Transient,A,92.26,81.82
+697,10,0.02,104.9,4.0,2.0,0.0,Online TA,GBR,SC,Transient,A,96.95,40.0
+698,7,0.01,122.14,1.0,2.0,0.0,Groups,PRT,HB,Transient-Party,A,93.43,28.57
+699,20,0.04,39.15,1.0,2.0,0.0,Online TA,USA,SC,Transient,A,105.29,30.0
+700,22,0.04,108.55,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,93.7,50.0
+701,9,0.02,111.22,3.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient,A,86.39,100.0
+702,29,0.05,83.28,3.0,2.0,0.0,Online TA,GBR,BB,Transient,D,124.76,31.03
+703,46,0.09,114.93,3.0,2.0,0.0,Online TA,GBR,BB,Transient,A,111.06,36.96
+704,7,0.01,105.0,4.0,2.0,0.0,Direct,PRT,BB,Transient-Party,A,87.85,42.86
+705,23,0.04,54.57,4.0,2.0,0.0,Online TA,FRA,SC,Transient,A,110.45,34.78
+706,24,0.05,89.5,4.0,2.0,0.0,Online TA,DEU,BB,Transient,D,116.23,41.67
+707,5,0.01,71.8,6.8,2.0,0.0,Online TA,FRA,BB,Transient,D,108.85,40.0
+708,14,0.03,67.21,2.0,2.0,0.0,Online TA,ISR,BB,Transient,A,113.52,21.43
+709,16,0.03,98.75,5.0,2.0,0.0,Online TA,DEU,SC,Transient,A,100.13,43.75
+710,4,0.01,3.25,2.0,2.0,0.0,Online TA,USA,SC,Transient,A,116.75,50.0
+711,6,0.01,106.5,4.0,2.0,0.0,Online TA,FRA,BB,Transient,B,94.25,16.67
+712,9,0.02,88.44,4.0,2.0,100.0,Online TA,FRA,BB,Transient,A,128.88,33.33
+713,23,0.04,126.26,5.0,2.0,0.0,Online TA,FRA,BB,Transient,A,102.21,21.74
+714,10,0.02,82.7,5.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,88.0,10.0
+715,8,0.02,64.5,3.0,2.0,0.0,Online TA,CHN,SC,Transient,A,98.67,50.0
+716,15,0.03,5.33,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,88.59,26.67
+717,5,0.01,269.0,4.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,77.32,60.0
+718,7,0.01,267.86,4.0,2.0,0.0,Offline TA/TO,ISL,BB,Transient-Party,A,88.14,0.0
+719,21,0.04,41.9,2.0,2.0,0.0,Online TA,CHN,SC,Transient,A,113.93,47.62
+720,6,0.01,53.33,2.0,2.0,0.0,Direct,PRT,BB,Transient,D,121.32,16.67
+721,11,0.02,72.82,5.0,2.0,0.0,Online TA,FRA,BB,Transient,D,123.98,18.18
+722,18,0.03,95.33,1.0,2.0,0.0,Online TA,BRA,BB,Transient,A,113.72,27.78
+723,8,0.02,59.38,2.0,3.0,0.0,Online TA,ESP,BB,Transient,D,169.65,62.5
+724,19,0.04,106.21,3.0,2.0,0.0,Online TA,FRA,BB,Transient,D,123.43,57.89
+725,6,0.01,63.0,4.0,2.0,0.0,Online TA,FRA,BB,Transient,D,109.59,16.67
+726,15,0.03,3.53,1.0,1.0,0.0,Direct,PRT,BB,Transient,D,103.89,20.0
+727,25,0.05,67.16,2.0,2.0,0.0,Online TA,ESP,SC,Transient,A,107.58,48.0
+728,6,0.01,2.5,1.0,2.0,0.0,Online TA,PRT,SC,Transient,A,94.09,16.67
+729,7,0.01,145.71,4.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,112.31,42.86
+730,5,0.01,12.4,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,107.0,60.0
+731,5,0.01,28.6,1.0,3.0,0.0,Online TA,FRA,BB,Transient,D,161.14,40.0
+732,13,0.02,106.31,4.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,83.87,38.46
+733,9,0.02,1.22,1.0,1.0,0.0,Corporate,PRT,BB,Transient-Party,A,60.44,11.11
+734,12,0.02,86.92,4.0,3.0,0.0,Online TA,DEU,BB,Transient,D,163.96,50.0
+735,5,0.01,8.8,2.0,3.0,0.0,Online TA,FRA,BB,Transient,D,176.4,20.0
+736,11,0.02,43.36,3.0,2.0,100.0,Online TA,ESP,BB,Transient,F,203.45,36.36
+737,10,0.02,85.0,2.0,2.0,0.0,Online TA,FRA,BB,Transient,D,129.18,40.0
+738,16,0.03,95.88,3.0,3.0,0.0,Online TA,FRA,BB,Transient,D,164.61,56.25
+739,7,0.01,5.14,1.0,1.0,0.0,Online TA,DEU,BB,Transient,A,118.53,14.29
+740,5,0.01,113.0,2.0,2.0,0.0,Online TA,GBR,BB,Transient,A,106.4,40.0
+741,32,0.06,88.19,3.0,2.0,0.0,Online TA,DEU,BB,Transient,A,127.41,34.38
+742,27,0.05,81.44,3.0,2.0,0.0,Online TA,GBR,BB,Transient,D,140.89,33.33
+743,9,0.02,83.22,3.0,3.0,0.0,Online TA,GBR,BB,Transient,D,174.77,55.56
+744,13,0.02,57.15,3.0,2.0,0.0,Online TA,BRA,BB,Transient,A,127.11,46.15
+745,43,0.08,103.35,4.0,2.0,0.0,Online TA,GBR,BB,Transient,D,132.99,34.88
+746,20,0.04,62.75,4.0,2.0,0.0,Online TA,FRA,BB,Transient,D,142.28,35.0
+747,23,0.04,73.17,4.0,2.0,0.0,Online TA,GBR,SC,Transient,A,117.36,47.83
+748,41,0.08,110.02,4.0,2.0,0.0,Online TA,DEU,BB,Transient,A,121.64,19.51
+749,17,0.03,101.82,6.71,2.0,0.0,Online TA,DEU,BB,Transient,D,133.06,58.82
+750,15,0.03,3.8,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,81.24,26.67
+751,5,0.01,108.6,2.0,2.0,0.0,Online TA,FRA,SC,Transient-Party,A,109.26,0.0
+752,31,0.06,60.61,2.0,2.0,0.0,Online TA,FRA,BB,Transient,A,130.34,41.94
+753,6,0.01,106.5,3.0,3.0,0.0,Online TA,ITA,BB,Transient,D,171.8,66.67
+754,29,0.05,108.69,3.0,2.0,0.0,Online TA,DEU,BB,Transient,D,137.76,34.48
+755,26,0.05,87.73,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,130.79,53.85
+756,40,0.08,151.93,4.0,2.0,0.0,Online TA,DEU,BB,Transient,A,117.54,22.5
+757,21,0.04,112.38,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,117.31,52.38
+758,35,0.07,119.26,4.0,2.0,0.0,Online TA,GBR,SC,Transient,A,115.59,57.14
+759,10,0.02,122.2,4.0,2.0,0.0,Online TA,FRA,SC,Transient,A,98.1,50.0
+760,10,0.02,101.2,4.0,2.0,0.0,Online TA,FRA,BB,Transient,D,125.09,20.0
+761,10,0.02,107.4,5.0,2.0,0.0,Online TA,NOR,SC,Transient,A,107.25,40.0
+762,5,0.01,70.4,2.0,2.0,0.0,Online TA,USA,BB,Transient,D,153.2,80.0
+763,22,0.04,84.45,2.0,2.0,0.0,Online TA,BRA,SC,Transient,A,124.91,54.55
+764,8,0.02,97.75,3.0,2.0,0.0,Online TA,BRA,BB,Transient,A,119.72,50.0
+765,30,0.06,132.5,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,101.73,63.33
+766,36,0.07,150.06,4.03,2.0,0.0,Online TA,DEU,BB,Transient,A,114.82,44.44
+767,16,0.03,102.44,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,115.46,12.5
+768,15,0.03,67.6,1.0,2.0,0.0,Online TA,GBR,BB,Transient,D,154.57,40.0
+769,31,0.06,134.19,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,124.31,22.58
+770,8,0.02,91.25,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,100.0,50.0
+771,20,0.04,154.0,4.0,2.0,0.0,Online TA,CHE,BB,Transient,D,127.13,35.0
+772,18,0.03,122.94,5.22,2.0,0.0,Online TA,DEU,BB,Transient,A,122.03,22.22
+773,15,0.03,131.87,6.4,2.0,0.0,Online TA,DEU,BB,Transient,A,119.75,20.0
+774,5,0.01,304.6,1.0,1.0,0.0,Groups,PRT,BB,Transient,A,64.12,100.0
+775,32,0.06,292.28,3.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,86.07,37.5
+776,59,0.11,152.49,3.0,2.0,0.0,Online TA,DEU,BB,Transient,A,121.54,25.42
+777,5,0.01,129.6,3.0,2.0,0.0,Online TA,NLD,BB,Transient-Party,A,104.22,0.0
+778,12,0.02,113.5,3.0,1.0,0.0,Online TA,DEU,BB,Transient,A,120.02,33.33
+779,25,0.05,20.0,1.0,2.0,0.0,Online TA,PRT,BB,Transient,D,165.35,44.0
+780,42,0.08,122.6,2.0,2.0,0.0,Groups,PRT,BB,Transient,A,102.4,71.43
+781,36,0.07,140.08,2.0,2.0,0.0,Online TA,GBR,BB,Transient,A,123.14,44.44
+782,26,0.05,136.35,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,123.46,38.46
+783,56,0.11,108.25,3.0,2.0,0.0,Online TA,DEU,BB,Transient,D,146.55,28.57
+784,21,0.04,81.33,5.0,2.0,0.0,Online TA,DEU,BB,Transient,A,115.32,28.57
+785,19,0.04,56.95,1.0,2.0,0.0,Online TA,GBR,BB,Transient,A,137.55,31.58
+786,43,0.08,38.49,1.0,2.0,0.0,Online TA,PRT,SC,Transient,A,127.41,58.14
+787,35,0.07,59.06,2.0,2.0,0.0,Online TA,ESP,SC,Transient,A,124.83,51.43
+788,21,0.04,60.43,2.0,2.0,0.0,Online TA,ESP,BB,Transient,D,157.14,52.38
+789,15,0.03,128.33,2.0,2.0,0.0,Online TA,FRA,BB,Transient,A,119.8,60.0
+790,7,0.01,19.86,2.0,2.0,100.0,Online TA,GBR,BB,Transient,F,231.26,42.86
+791,35,0.07,146.86,2.0,2.0,0.0,Online TA,GBR,SC,Transient,A,117.91,51.43
+792,28,0.05,73.93,2.0,2.0,0.0,Online TA,GBR,BB,Transient,D,151.33,46.43
+793,12,0.02,97.58,3.0,3.0,0.0,Online TA,DEU,BB,Transient,D,166.8,50.0
+794,23,0.04,57.17,3.0,2.0,0.0,Online TA,FRA,BB,Transient,D,144.65,43.48
+795,6,0.01,94.17,3.0,2.0,100.0,Online TA,FRA,BB,Transient,F,203.93,66.67
+796,18,0.03,110.56,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,120.76,33.33
+797,32,0.06,80.94,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,117.33,34.38
+798,19,0.04,9.26,1.0,1.0,0.0,Online TA,PRT,BB,Transient,A,129.42,15.79
+799,13,0.02,119.38,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,121.28,46.15
+800,19,0.04,126.63,1.0,2.0,0.0,Online TA,USA,BB,Transient,A,130.5,47.37
+801,12,0.02,10.42,1.0,1.0,0.0,Online TA,GBR,BB,Transient,A,132.19,8.33
+802,33,0.06,15.79,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,132.3,27.27
+803,15,0.03,56.93,2.0,2.0,0.0,Online TA,USA,SC,Transient,A,117.92,33.33
+804,13,0.02,57.23,2.0,2.0,0.0,Online TA,FRA,SC,Transient,A,117.08,53.85
+805,9,0.02,104.11,3.0,2.0,0.0,Direct,GBR,BB,Transient-Party,A,103.78,11.11
+806,18,0.03,76.11,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,135.5,27.78
+807,10,0.02,134.5,3.0,2.0,0.0,Online TA,FRA,BB,Transient,D,127.48,30.0
+808,15,0.03,95.07,2.0,2.0,0.0,Online TA,GBR,BB,Transient,A,133.16,46.67
+809,19,0.04,93.21,4.0,2.0,0.0,Online TA,FRA,SC,Transient,A,120.32,36.84
+810,16,0.03,72.88,5.0,2.0,0.0,Online TA,FRA,BB,Transient,D,138.31,31.25
+811,7,0.01,104.86,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,126.7,42.86
+812,11,0.02,12.09,3.0,2.0,0.0,Online TA,FRA,BB,Transient,D,154.8,36.36
+813,12,0.02,124.83,6.83,2.0,0.0,Online TA,FRA,BB,Transient,A,115.67,16.67
+814,8,0.02,2.12,1.0,2.0,0.0,Online TA,PRT,SC,Transient,A,86.18,12.5
+815,12,0.02,125.67,2.0,2.0,0.0,Online TA,GBR,SC,Transient,A,113.13,41.67
+816,44,0.08,127.25,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,118.67,40.91
+817,42,0.08,122.64,3.0,2.0,0.0,Online TA,DEU,BB,Transient,A,124.41,30.95
+818,14,0.03,36.57,3.0,2.0,0.0,Online TA,CN,SC,Transient,A,141.15,57.14
+819,24,0.05,93.12,4.0,2.0,0.0,Online TA,NLD,BB,Transient,D,138.47,16.67
+820,24,0.05,10.88,1.0,1.0,0.0,Online TA,PRT,SC,Transient,A,116.37,25.0
+821,13,0.02,30.38,4.15,2.0,0.0,Online TA,FRA,BB,Transient,D,144.69,30.77
+822,6,0.01,117.0,6.67,2.0,0.0,Online TA,DEU,SC,Transient,A,111.2,66.67
+823,19,0.04,96.32,5.0,2.0,0.0,Online TA,DEU,BB,Transient,D,138.53,47.37
+824,9,0.02,20.56,1.0,1.0,0.0,Online TA,JPN,BB,Transient,A,126.64,33.33
+825,37,0.07,122.35,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,100.39,40.54
+826,11,0.02,251.55,2.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,82.59,18.18
+827,19,0.04,109.21,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,90.07,31.58
+828,10,0.02,64.9,3.0,2.0,0.0,Direct,DEU,BB,Transient,A,110.58,20.0
+829,21,0.04,4.81,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,87.01,4.76
+830,7,0.01,103.86,4.0,2.0,0.0,Online TA,CHN,SC,Transient,A,117.27,57.14
+831,34,0.06,10.94,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,105.06,17.65
+832,5,0.01,69.4,2.0,2.0,0.0,Corporate,PRT,BB,Transient-Party,A,127.0,60.0
+833,53,0.1,129.64,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,118.43,39.62
+834,17,0.03,47.41,3.0,2.0,0.0,Online TA,USA,SC,Transient,A,127.27,70.59
+835,7,0.01,94.86,3.0,3.0,0.0,Online TA,PRT,BB,Transient,D,166.78,28.57
+836,27,0.05,14.37,1.0,1.0,0.0,Corporate,PRT,BB,Transient-Party,A,98.82,14.81
+837,8,0.02,19.88,1.0,2.0,0.0,Online TA,ISR,BB,Transient,D,144.85,25.0
+838,35,0.07,44.63,1.0,2.0,0.0,Online TA,USA,SC,Transient,A,126.2,17.14
+839,6,0.01,25.83,1.0,2.0,0.0,Direct,PRT,BB,Transient,D,156.17,50.0
+840,6,0.01,27.17,2.0,1.0,0.0,Offline TA/TO,FRA,BB,Transient-Party,A,118.33,33.33
+841,24,0.05,94.29,3.0,2.0,0.0,Online TA,FRA,BB,Transient,D,142.51,41.67
+842,24,0.05,9.04,1.0,1.0,0.0,Corporate,PRT,BB,Transient,D,100.27,12.5
+843,5,0.01,198.0,1.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,65.0,60.0
+844,9,0.02,2.44,1.0,2.0,0.0,Direct,PRT,BB,Transient,D,125.5,22.22
+845,13,0.02,92.23,2.0,2.0,0.0,Online TA,GBR,BB,Transient,D,139.03,30.77
+846,6,0.01,28.83,2.0,2.0,0.0,Online TA,CHN,BB,Transient,D,151.96,83.33
+847,19,0.04,92.37,5.0,2.0,0.0,Online TA,FRA,BB,Transient,A,116.41,26.32
+848,28,0.05,87.39,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,121.99,35.71
+849,9,0.02,111.56,6.89,2.0,0.0,Online TA,FRA,BB,Transient,D,128.91,55.56
+850,12,0.02,10.42,1.0,1.0,0.0,Online TA,PRT,BB,Transient,A,120.5,33.33
+851,9,0.02,85.33,2.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,101.11,33.33
+852,6,0.01,9.17,3.0,1.0,0.0,Online TA,DEU,BB,Transient,A,123.38,16.67
+853,81,0.15,8.07,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,83.58,8.64
+854,7,0.01,135.57,2.0,1.0,0.0,Groups,PRT,BB,Transient,A,122.71,71.43
+855,11,0.02,15.27,2.0,2.0,0.0,Online TA,FRA,BB,Transient,A,141.12,18.18
+856,8,0.02,86.38,4.12,2.0,100.0,Online TA,FRA,BB,Transient,F,217.14,62.5
+857,5,0.01,82.0,4.2,2.0,0.0,Online TA,USA,BB,Transient,D,125.39,60.0
+858,14,0.03,107.71,5.29,2.0,0.0,Online TA,DEU,BB,Transient,D,133.56,21.43
+859,5,0.01,334.6,3.0,1.0,0.0,Groups,AUT,BB,Transient-Party,A,80.27,0.0
+860,5,0.01,331.8,3.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,60.0,20.0
+861,13,0.02,368.92,3.0,2.0,0.0,Groups,GBR,BB,Transient-Party,A,111.64,0.0
+862,8,0.02,150.88,3.0,2.0,100.0,Online TA,AUT,BB,Transient,F,198.11,87.5
+863,9,0.02,109.11,3.0,2.0,0.0,Online TA,DEU,BB,Transient,E,168.9,55.56
+864,8,0.02,105.75,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,96.77,50.0
+865,11,0.02,63.55,3.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,101.73,36.36
+866,5,0.01,18.2,3.0,2.0,0.0,Direct,USA,BB,Transient,A,124.05,40.0
+867,11,0.02,50.36,1.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,97.27,27.27
+868,6,0.01,18.17,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,124.14,33.33
+869,78,0.15,5.26,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,86.29,20.51
+870,44,0.08,31.64,1.0,2.0,0.0,Online TA,PRT,SC,Transient,A,116.93,29.55
+871,42,0.08,47.62,1.0,2.0,0.0,Online TA,GBR,SC,Transient,A,118.96,26.19
+872,15,0.03,62.4,2.0,2.0,0.0,Online TA,CHN,SC,Transient,A,117.97,60.0
+873,5,0.01,17.4,2.0,3.0,0.0,Online TA,FRA,BB,Transient,D,179.59,60.0
+874,17,0.03,80.24,2.0,2.0,0.0,Online TA,NLD,BB,Transient,D,141.15,35.29
+875,67,0.13,117.22,3.0,2.0,0.0,Online TA,GBR,BB,Transient,A,118.57,32.84
+876,25,0.05,52.04,3.0,2.0,0.0,Online TA,AUS,SC,Transient,A,121.49,72.0
+877,21,0.04,93.52,3.0,2.0,0.0,Online TA,FRA,BB,Transient,D,140.21,47.62
+878,9,0.02,118.11,4.11,2.0,0.0,Online TA,FRA,BB,Transient,D,134.75,66.67
+879,19,0.04,141.68,4.05,2.0,0.0,Online TA,GBR,BB,Transient,A,111.5,36.84
+880,5,0.01,344.0,1.0,1.0,0.0,Groups,PRT,BB,Transient,A,59.0,100.0
+881,10,0.02,146.8,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,113.37,70.0
+882,10,0.02,63.9,1.0,2.0,0.0,Online TA,BRA,BB,Transient,D,147.13,60.0
+883,30,0.06,50.47,1.0,2.0,0.0,Online TA,DEU,BB,Transient,A,122.21,13.33
+884,32,0.06,12.03,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,115.1,25.0
+885,45,0.09,150.62,2.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,100.76,60.0
+886,24,0.05,141.17,2.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,94.12,29.17
+887,33,0.06,65.94,2.0,2.0,0.0,Online TA,FRA,SC,Transient,A,121.72,39.39
+888,10,0.02,118.7,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,99.39,30.0
+889,22,0.04,108.32,3.0,3.0,0.0,Online TA,FRA,BB,Transient,D,172.78,63.64
+890,28,0.05,87.54,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,114.0,46.43
+891,31,0.06,126.26,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,109.06,51.61
+892,50,0.09,114.04,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,112.78,40.0
+893,11,0.02,132.55,3.0,3.0,0.0,Online TA,GBR,BB,Transient,D,163.44,36.36
+894,38,0.07,84.29,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,119.91,44.74
+895,10,0.02,76.2,3.0,2.0,100.0,Online TA,ITA,BB,Transient,F,231.66,50.0
+896,37,0.07,100.08,3.0,2.0,0.0,Online TA,GBR,BB,Transient,D,143.86,35.14
+897,6,0.01,101.0,4.0,2.0,0.0,Online TA,FRA,BB,Transient,D,131.5,16.67
+898,33,0.06,82.82,4.0,2.0,0.0,Online TA,GBR,SC,Transient,A,117.83,36.36
+899,22,0.04,135.0,5.0,2.0,0.0,Online TA,DEU,BB,Transient,A,110.12,27.27
+900,19,0.04,206.21,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,100.11,26.32
+901,8,0.02,51.38,3.0,3.0,0.0,Online TA,ESP,BB,Transient,D,154.47,12.5
+902,19,0.04,91.0,3.0,2.0,0.0,Online TA,FRA,BB,Transient,D,136.6,57.89
+903,18,0.03,106.39,3.0,2.0,0.0,Online TA,GBR,BB,Transient,D,138.43,55.56
+904,29,0.05,124.31,4.0,2.0,0.0,Online TA,GBR,BB,Transient,A,118.39,31.03
+905,40,0.08,6.72,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,99.69,20.0
+906,7,0.01,53.43,2.0,3.0,0.0,Online TA,FRA,BB,Transient,D,156.83,28.57
+907,12,0.02,101.33,2.0,2.0,0.0,Online TA,GBR,BB,Transient,D,148.83,41.67
+908,25,0.05,67.36,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,115.3,32.0
+909,6,0.01,135.67,3.0,2.0,0.0,Online TA,PRT,BB,Transient,A,118.45,0.0
+910,7,0.01,152.71,7.29,3.0,0.0,Online TA,POL,BB,Transient,D,152.36,71.43
+911,17,0.03,160.18,6.82,2.0,0.0,Direct,DEU,BB,Transient,A,96.03,11.76
+912,14,0.03,29.57,1.0,2.0,0.0,Corporate,PRT,BB,Transient-Party,A,107.1,64.29
+913,7,0.01,43.43,2.0,2.0,0.0,Online TA,USA,BB,Transient,A,123.53,57.14
+914,11,0.02,17.36,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,76.64,9.09
+915,49,0.09,104.1,2.0,2.0,0.0,Online TA,DEU,BB,Transient,A,125.75,30.61
+916,29,0.05,64.17,2.0,2.0,0.0,Online TA,PRT,BB,Transient,A,127.31,34.48
+917,10,0.02,193.4,4.1,2.0,0.0,Online TA,DEU,BB,Transient,D,131.13,30.0
+918,40,0.08,47.7,1.0,2.0,0.0,Online TA,USA,SC,Transient,A,113.59,25.0
+919,16,0.03,33.69,1.0,2.0,0.0,Online TA,JPN,BB,Transient,A,109.29,25.0
+920,9,0.02,42.67,1.0,3.0,0.0,Online TA,CHN,BB,Transient,D,146.02,66.67
+921,7,0.01,99.14,3.0,2.0,0.0,Online TA,AUS,BB,Transient,A,110.95,57.14
+922,13,0.02,49.23,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,114.12,38.46
+923,17,0.03,112.71,4.0,2.0,0.0,Online TA,DEU,BB,Transient,D,139.28,58.82
+924,22,0.04,156.5,6.77,2.0,0.0,Online TA,GBR,BB,Transient,A,116.49,27.27
+925,23,0.04,48.0,2.0,2.0,0.0,Online TA,PRT,BB,Transient,D,140.16,52.17
+926,53,0.1,80.85,2.0,2.0,0.0,Online TA,GBR,SC,Transient,A,115.8,41.51
+927,5,0.01,118.8,3.0,2.0,0.0,Online TA,AUS,BB,Transient,A,129.18,80.0
+928,15,0.03,48.6,3.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,66.13,13.33
+929,13,0.02,69.38,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,116.9,46.15
+930,39,0.07,108.31,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,117.9,46.15
+931,12,0.02,109.08,2.0,2.0,0.0,Online TA,PRT,BB,Transient,A,123.94,41.67
+932,8,0.02,22.5,3.0,2.0,0.0,Online TA,ESP,BB,Transient,A,119.4,37.5
+933,23,0.04,94.96,4.0,2.0,0.0,Online TA,GBR,BB,Transient,D,140.75,21.74
+934,14,0.03,81.14,2.0,2.0,0.0,Online TA,BRA,BB,Transient,A,125.39,35.71
+935,24,0.05,97.96,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,119.2,12.5
+936,6,0.01,19.67,4.0,2.0,0.0,Online TA,FRA,BB,Transient,D,144.7,16.67
+937,30,0.06,94.47,4.0,2.0,0.0,Online TA,DEU,BB,Transient,A,114.49,26.67
+938,8,0.02,110.88,6.88,2.0,0.0,Online TA,FRA,SC,Transient,A,120.52,37.5
+939,15,0.03,118.87,4.13,2.0,0.0,Online TA,GBR,SC,Transient,A,118.07,53.33
+940,10,0.02,152.7,4.1,2.0,0.0,Online TA,PRT,BB,Transient,A,109.2,50.0
+941,13,0.02,123.08,6.62,2.0,0.0,Online TA,FRA,BB,Transient,A,114.66,30.77
+942,18,0.03,13.0,1.0,1.0,0.0,Online TA,DEU,BB,Transient,A,119.93,11.11
+943,6,0.01,70.0,2.0,3.0,0.0,Online TA,ESP,BB,Transient,D,159.12,50.0
+944,5,0.01,261.4,2.0,2.0,0.0,Offline TA/TO,PRT,HB,Transient-Party,A,112.6,40.0
+945,27,0.05,105.96,3.0,2.0,0.0,Direct,DEU,BB,Transient,A,109.03,11.11
+946,8,0.02,56.25,1.0,2.0,0.0,Online TA,PRT,BB,Transient,D,133.18,62.5
+947,10,0.02,136.4,4.0,3.0,0.0,Online TA,IRL,BB,Transient,D,172.65,30.0
+948,20,0.04,125.2,5.0,2.0,0.0,Online TA,GBR,BB,Transient,D,129.51,40.0
+949,19,0.04,186.47,6.95,2.0,0.0,Online TA,DEU,BB,Transient,D,123.3,31.58
+950,32,0.06,102.06,3.0,2.0,0.0,Online TA,GBR,BB,Transient,A,123.33,31.25
+951,32,0.06,110.09,6.88,2.0,0.0,Online TA,GBR,SC,Transient,A,118.47,40.62
+952,17,0.03,59.94,2.0,2.0,0.0,Online TA,GBR,SC,Transient,A,115.9,29.41
+953,25,0.05,86.4,3.0,2.0,0.0,Online TA,GBR,BB,Transient,A,128.4,32.0
+954,12,0.02,60.42,3.0,2.0,0.0,Online TA,FRA,BB,Transient,D,138.67,33.33
+955,15,0.03,72.6,4.0,2.0,0.0,Online TA,PRT,BB,Transient,A,115.15,33.33
+956,25,0.05,118.48,4.0,2.0,0.0,Online TA,GBR,SC,Transient,A,111.7,24.0
+957,11,0.02,106.09,5.0,2.0,0.0,Online TA,FRA,BB,Transient,A,117.87,18.18
+958,5,0.01,57.0,1.0,2.0,0.0,Online TA,FRA,BB,Transient,A,96.86,40.0
+959,16,0.03,96.69,2.0,2.0,0.0,Online TA,DEU,BB,Transient,A,122.38,31.25
+960,5,0.01,34.0,2.0,2.0,0.0,Online TA,USA,BB,Transient,D,133.56,40.0
+961,18,0.03,163.22,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,104.99,77.78
+962,17,0.03,112.29,4.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,91.55,35.29
+963,13,0.02,174.15,6.77,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,89.53,53.85
+964,5,0.01,18.8,2.0,2.0,0.0,Corporate,PRT,BB,Transient-Party,A,102.0,20.0
+965,15,0.03,162.33,2.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,97.25,13.33
+966,11,0.02,7.45,2.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,94.55,9.09
+967,13,0.02,65.92,1.0,2.0,0.0,Online TA,DEU,BB,Transient,A,109.03,38.46
+968,5,0.01,84.2,1.0,2.0,0.0,Online TA,TUR,BB,Transient,A,106.24,40.0
+969,5,0.01,28.4,2.0,2.0,0.0,Online TA,FRA,BB,Transient,A,96.12,20.0
+970,5,0.01,31.6,3.0,2.0,0.0,Online TA,DEU,BB,Transient,D,152.21,60.0
+971,16,0.03,71.69,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,105.04,43.75
+972,20,0.04,25.35,1.0,2.0,0.0,Online TA,PRT,SC,Transient,A,112.2,25.0
+973,9,0.02,53.44,3.0,2.0,0.0,Online TA,AUS,SC,Transient,A,121.1,22.22
+974,5,0.01,100.8,4.0,1.0,0.0,Online TA,FRA,BB,Transient,A,107.46,80.0
+975,15,0.03,80.8,4.0,2.0,0.0,Online TA,FRA,SC,Transient,A,118.44,60.0
+976,7,0.01,39.71,2.0,1.0,0.0,Online TA,IRL,SC,Transient,A,115.89,57.14
+977,10,0.02,166.1,4.1,3.0,0.0,Online TA,GBR,BB,Transient,D,154.82,30.0
+978,8,0.02,33.38,1.0,2.0,100.0,Online TA,MOZ,BB,Transient,A,148.15,62.5
+979,42,0.08,92.81,2.0,2.0,0.0,Online TA,GBR,SC,Transient,A,115.71,35.71
+980,21,0.04,124.67,2.0,3.0,0.0,Online TA,DEU,BB,Transient,D,153.78,28.57
+981,11,0.02,135.64,2.0,2.0,0.0,Online TA,PRT,BB,Transient,D,120.98,54.55
+982,5,0.01,130.8,3.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient,A,55.0,100.0
+983,45,0.09,119.04,4.0,2.0,0.0,Online TA,GBR,BB,Transient,A,111.9,37.78
+984,55,0.1,194.58,6.93,2.0,0.0,Online TA,GBR,BB,Transient,A,102.08,41.82
+985,17,0.03,151.71,1.0,2.0,0.0,Online TA,PRT,SC,Transient,A,98.92,41.18
+986,8,0.02,54.62,1.0,3.0,0.0,Online TA,HKG,BB,Transient,D,159.1,37.5
+987,6,0.01,62.33,2.0,3.0,0.0,Online TA,GBR,BB,Transient,D,156.17,66.67
+988,22,0.04,111.05,2.0,2.0,0.0,Online TA,DEU,BB,Transient,A,120.06,36.36
+989,7,0.01,5.57,2.0,2.0,0.0,Online TA,PRT,SC,Transient,A,126.92,57.14
+990,41,0.08,131.9,3.0,2.0,0.0,Online TA,GBR,BB,Transient,A,111.56,29.27
+991,7,0.01,27.14,4.0,2.0,0.0,Online TA,IRN,SC,Transient,A,124.64,85.71
+992,16,0.03,140.19,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,107.57,25.0
+993,24,0.05,142.75,6.67,2.0,0.0,Online TA,GBR,BB,Transient,D,122.19,29.17
+994,6,0.01,154.5,2.0,2.0,0.0,Online TA,DEU,BB,Transient,A,107.34,50.0
+995,11,0.02,100.18,3.0,2.0,0.0,Online TA,USA,SC,Transient,A,107.49,63.64
+996,13,0.02,99.62,4.0,3.0,0.0,Online TA,FRA,BB,Transient,D,148.25,15.38
+997,21,0.04,127.67,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,105.42,66.67
+998,9,0.02,99.78,3.0,3.0,0.0,Online TA,FRA,BB,Transient,D,159.59,55.56
+999,22,0.04,150.59,4.0,2.0,0.0,Online TA,GBR,BB,Transient,A,106.51,50.0
+1000,23,0.04,159.48,4.0,2.0,0.0,Online TA,GBR,SC,Transient,A,90.8,30.43
+1001,7,0.01,111.43,5.14,3.0,0.0,Online TA,GBR,BB,Transient,D,153.09,14.29
+1002,6,0.01,150.17,5.83,2.0,0.0,Online TA,ISR,BB,Transient,D,117.34,83.33
+1003,20,0.04,191.2,4.2,2.0,0.0,Online TA,GBR,BB,Transient,A,100.38,50.0
+1004,12,0.02,162.17,6.75,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,80.85,25.0
+1005,16,0.03,88.81,1.0,2.0,0.0,Online TA,USA,SC,Transient,A,105.51,43.75
+1006,48,0.09,79.35,1.0,2.0,0.0,Online TA,DEU,SC,Transient,A,110.7,25.0
+1007,14,0.03,154.86,4.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,82.91,57.14
+1008,21,0.04,187.71,4.05,2.0,0.0,Online TA,GBR,SC,Transient,A,89.44,42.86
+1009,9,0.02,95.56,4.0,3.0,0.0,Online TA,FRA,BB,Transient,D,153.58,33.33
+1010,8,0.02,143.88,4.0,2.0,0.0,Online TA,ESP,SC,Transient,A,100.92,62.5
+1011,9,0.02,83.0,4.11,2.0,0.0,Online TA,GBR,BB,Transient,D,131.66,55.56
+1012,24,0.05,105.38,1.0,2.0,0.0,Online TA,GBR,BB,Transient,A,118.83,20.83
+1013,6,0.01,379.5,2.0,2.0,0.0,Groups,PRT,BB,Transient,A,63.0,100.0
+1014,9,0.02,175.11,2.0,2.0,100.0,Online TA,GBR,BB,Transient,F,196.37,11.11
+1015,23,0.04,90.96,1.0,3.0,0.0,Online TA,BEL,BB,Transient,D,164.02,30.43
+1016,34,0.06,153.15,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,105.03,44.12
+1017,10,0.02,131.0,4.0,2.0,0.0,Online TA,FRA,BB,Transient,D,128.92,30.0
+1018,5,0.01,180.6,5.0,2.0,0.0,Online TA,GBR,BB,Transient-Party,A,96.31,60.0
+1019,11,0.02,203.64,6.91,2.0,100.0,Online TA,BEL,BB,Transient,A,120.26,63.64
+1020,33,0.06,11.42,1.0,2.0,0.0,Online TA,PRT,SC,Transient,A,122.22,45.45
+1021,5,0.01,162.2,1.0,2.0,100.0,Online TA,ITA,BB,Transient,F,173.7,40.0
+1022,13,0.02,168.08,2.0,2.0,0.0,Online TA,AUS,BB,Transient,A,115.02,23.08
+1023,22,0.04,119.09,2.0,2.0,0.0,Online TA,GBR,BB,Transient,D,132.2,45.45
+1024,6,0.01,111.67,2.0,2.0,100.0,Online TA,GBR,BB,Transient,A,127.5,50.0
+1025,19,0.04,80.32,3.0,3.0,0.0,Online TA,GBR,BB,Transient,D,173.89,42.11
+1026,9,0.02,128.11,3.0,2.0,0.0,Online TA,GBR,BB,Transient,D,138.71,33.33
+1027,17,0.03,137.24,5.0,2.0,0.0,Online TA,BEL,BB,Transient,D,127.71,47.06
+1028,7,0.01,16.71,3.0,2.0,0.0,Online TA,PRT,SC,Transient,A,126.4,57.14
+1029,7,0.01,93.43,4.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,82.04,28.57
+1030,16,0.03,163.19,6.75,3.0,0.0,Online TA,GBR,BB,Transient,D,156.12,43.75
+1031,18,0.03,80.22,1.0,2.0,0.0,Online TA,USA,SC,Transient,A,102.38,33.33
+1032,10,0.02,110.7,2.0,2.0,0.0,Online TA,FRA,SC,Transient,A,109.48,20.0
+1033,21,0.04,164.76,4.0,3.0,0.0,Online TA,IRL,BB,Transient,D,148.88,57.14
+1034,7,0.01,156.57,5.43,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,88.67,57.14
+1035,22,0.04,153.82,5.23,2.0,0.0,Online TA,DEU,BB,Transient,A,110.51,31.82
+1036,18,0.03,192.61,5.22,2.0,0.0,Online TA,GBR,SC,Transient,A,95.21,55.56
+1037,5,0.01,218.8,4.0,2.0,0.0,Online TA,PRT,BB,Transient-Party,B,92.09,0.0
+1038,18,0.03,167.78,6.83,2.0,0.0,Online TA,FRA,SC,Transient,A,104.04,50.0
+1039,17,0.03,166.18,4.06,3.0,0.0,Online TA,GBR,BB,Transient,D,150.17,35.29
+1040,11,0.02,98.36,2.0,2.0,100.0,Online TA,PRT,BB,Transient,A,129.15,18.18
+1041,18,0.03,113.33,3.0,2.0,0.0,Online TA,GBR,BB,Transient,D,142.07,44.44
+1042,31,0.06,186.97,3.0,2.0,0.0,Online TA,DEU,BB,Transient,A,111.98,41.94
+1043,19,0.04,137.16,3.0,3.0,0.0,Online TA,DEU,BB,Transient,D,150.16,21.05
+1044,19,0.04,142.05,3.0,3.0,0.0,Online TA,FRA,BB,Transient,D,154.26,57.89
+1045,5,0.01,210.6,1.0,2.0,0.0,Online TA,CHE,BB,Transient-Party,B,87.44,0.0
+1046,21,0.04,142.67,5.0,2.0,0.0,Online TA,DEU,BB,Transient,A,113.44,28.57
+1047,13,0.02,179.08,1.0,2.0,100.0,Online TA,DEU,BB,Transient,A,119.78,46.15
+1048,11,0.02,184.64,2.0,2.0,0.0,Groups,ITA,HB,Transient-Party,A,109.18,9.09
+1049,6,0.01,124.67,3.0,2.0,0.0,Online TA,CN,BB,Transient,D,134.8,50.0
+1050,6,0.01,129.0,3.0,2.0,100.0,Online TA,FRA,BB,Transient,A,124.13,50.0
+1051,38,0.07,156.21,4.0,2.0,0.0,Online TA,GBR,SC,Transient,A,96.69,31.58
+1052,7,0.01,221.29,4.0,2.0,100.0,Online TA,BEL,BB,Transient,F,182.43,57.14
+1053,28,0.05,129.18,7.18,3.0,0.0,Online TA,FRA,BB,Transient,D,143.11,28.57
+1054,21,0.04,132.57,7.0,2.0,0.0,Online TA,FRA,BB,Transient,D,123.48,38.1
+1055,9,0.02,150.44,2.0,2.0,0.0,Online TA,DEU,SC,Transient,A,99.59,33.33
+1056,15,0.03,141.8,4.0,2.0,0.0,Online TA,FRA,SC,Transient,A,97.76,53.33
+1057,22,0.04,98.55,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,111.94,36.36
+1058,13,0.02,123.92,4.0,3.0,0.0,Online TA,ESP,BB,Transient,D,148.98,23.08
+1059,11,0.02,149.64,4.0,2.0,0.0,Direct,PRT,BB,Transient,A,92.31,18.18
+1060,32,0.06,118.97,4.0,2.0,0.0,Online TA,FRA,SC,Transient,A,107.68,46.88
+1061,9,0.02,130.67,5.56,3.0,0.0,Online TA,FRA,BB,Transient,D,143.57,33.33
+1062,6,0.01,156.83,3.0,2.0,0.0,Online TA,FRA,BB,Transient,D,118.78,50.0
+1063,8,0.02,27.88,3.0,2.0,0.0,Online TA,GBR,BB,Transient,A,142.55,37.5
+1064,8,0.02,95.0,2.0,3.0,0.0,Online TA,CHN,BB,Transient,D,148.73,25.0
+1065,10,0.02,160.1,3.0,2.0,100.0,Online TA,ROU,BB,Transient,A,131.37,30.0
+1066,14,0.03,155.43,5.29,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,76.86,0.0
+1067,6,0.01,301.33,2.0,2.0,0.0,Offline TA/TO,PRT,HB,Transient-Party,A,109.65,33.33
+1068,6,0.01,92.33,3.0,2.0,0.0,Online TA,BEN,BB,Transient,D,138.85,100.0
+1069,14,0.03,67.64,2.0,3.0,0.0,Online TA,PRT,BB,Transient,D,161.55,42.86
+1070,22,0.04,266.82,2.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,62.97,81.82
+1071,5,0.01,185.4,5.0,2.0,0.0,Online TA,BRA,BB,Transient,A,107.63,100.0
+1072,10,0.02,114.0,1.0,3.0,0.0,Online TA,PRT,BB,Transient,D,153.03,60.0
+1073,5,0.01,119.4,4.0,2.0,0.0,Online TA,BRA,BB,Transient,A,96.42,40.0
+1074,7,0.01,134.43,5.0,2.0,0.0,Online TA,FRA,BB,Transient,D,125.54,57.14
+1075,11,0.02,6.91,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,135.27,18.18
+1076,8,0.02,118.5,5.0,2.0,0.0,Offline TA/TO,ITA,BB,Transient,A,93.36,37.5
+1077,13,0.02,36.31,1.0,2.0,0.0,Online TA,IRL,SC,Transient,A,116.53,30.77
+1078,15,0.03,206.07,2.0,2.0,0.0,Online TA,GBR,SC,Transient,A,96.92,46.67
+1079,10,0.02,132.2,3.0,2.0,100.0,Online TA,DEU,BB,Transient,F,187.54,20.0
+1080,6,0.01,150.33,3.0,2.0,100.0,Online TA,FRA,BB,Transient,A,122.01,16.67
+1081,15,0.03,91.8,2.0,2.0,0.0,Online TA,USA,SC,Transient,A,110.29,40.0
+1082,7,0.01,102.86,3.0,2.0,100.0,Online TA,PRT,BB,Transient,A,121.0,14.29
+1083,9,0.02,134.78,5.0,2.0,0.0,Online TA,GBR,BB,Transient,D,133.49,44.44
+1084,15,0.03,118.6,3.0,2.0,0.0,Online TA,GBR,BB,Transient,D,135.51,26.67
+1085,24,0.05,107.79,4.0,3.0,0.0,Online TA,BEL,BB,Transient,D,154.86,16.67
+1086,5,0.01,164.4,4.0,2.0,0.0,Online TA,PRT,BB,Transient,D,111.56,60.0
+1087,10,0.02,101.0,1.0,3.0,0.0,Online TA,BRA,BB,Transient,D,148.29,20.0
+1088,13,0.02,185.15,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,91.55,61.54
+1089,6,0.01,0.83,1.0,2.0,0.0,Online TA,USA,SC,Transient,A,89.56,16.67
+1090,28,0.05,127.57,3.0,2.0,0.0,Online TA,DEU,BB,Transient,A,118.29,32.14
+1091,10,0.02,142.3,3.0,2.0,0.0,Online TA,ESP,SC,Transient,A,110.57,10.0
+1092,16,0.03,183.88,4.0,2.0,0.0,Online TA,DEU,BB,Transient,A,108.57,31.25
+1093,15,0.03,148.67,4.0,2.0,0.0,Online TA,FRA,SC,Transient,A,104.91,73.33
+1094,9,0.02,95.22,4.0,3.0,0.0,Online TA,DEU,BB,Transient,D,145.77,55.56
+1095,24,0.05,126.58,4.0,2.0,0.0,Online TA,GBR,SC,Transient,A,113.3,41.67
+1096,11,0.02,27.91,4.0,2.0,0.0,Online TA,DEU,BB,Transient,A,128.82,36.36
+1097,11,0.02,165.45,5.27,3.0,0.0,Online TA,CHE,BB,Transient,D,154.25,45.45
+1098,12,0.02,175.17,5.25,2.0,0.0,Online TA,DEU,BB,Transient,A,100.35,25.0
+1099,9,0.02,171.78,5.56,2.0,100.0,Online TA,FRA,BB,Transient,A,136.36,66.67
+1100,16,0.03,142.38,7.06,3.0,0.0,Online TA,GRC,BB,Transient,D,157.02,75.0
+1101,5,0.01,194.8,7.0,2.0,100.0,Online TA,FRA,HB,Transient,A,171.02,100.0
+1102,32,0.06,142.72,6.84,3.0,0.0,Online TA,FRA,BB,Transient,D,159.22,37.5
+1103,23,0.04,124.22,2.0,3.0,0.0,Online TA,ESP,BB,Transient,D,159.8,39.13
+1104,19,0.04,148.84,3.0,2.0,0.0,Online TA,NLD,BB,Transient,D,131.13,63.16
+1105,8,0.02,189.0,3.0,2.0,100.0,Online TA,DEU,BB,Transient,A,135.98,50.0
+1106,21,0.04,110.33,3.0,3.0,0.0,Online TA,FRA,BB,Transient,D,171.24,38.1
+1107,34,0.06,163.29,4.09,2.0,0.0,Online TA,DEU,BB,Transient,A,113.49,44.12
+1108,14,0.03,134.0,4.36,2.0,0.0,Online TA,ITA,BB,Transient,D,146.74,57.14
+1109,18,0.03,170.44,7.0,2.0,100.0,Online TA,FRA,BB,Transient,A,133.26,50.0
+1110,7,0.01,167.29,3.0,2.0,0.0,Online TA,NLD,BB,Transient,B,127.47,57.14
+1111,10,0.02,173.2,3.0,2.0,100.0,Online TA,ESP,BB,Transient,A,129.91,60.0
+1112,17,0.03,155.82,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,89.93,47.06
+1113,27,0.05,126.41,4.04,3.0,0.0,Online TA,ITA,BB,Transient,D,152.74,81.48
+1114,29,0.05,149.79,6.93,2.0,0.0,Online TA,FRA,BB,Transient,D,125.16,55.17
+1115,39,0.07,172.51,6.82,2.0,0.0,Online TA,FRA,SC,Transient,A,117.07,64.1
+1116,5,0.01,402.2,2.0,2.0,0.0,Groups,PRT,BB,Transient,A,62.6,100.0
+1117,50,0.09,103.04,2.0,2.0,0.0,Online TA,GBR,SC,Transient,A,118.83,38.0
+1118,12,0.02,122.0,2.0,2.0,0.0,Online TA,GBR,BB,Transient,D,119.63,33.33
+1119,29,0.05,142.48,3.0,3.0,0.0,Online TA,GBR,BB,Transient,D,171.93,55.17
+1120,6,0.01,186.83,4.0,2.0,100.0,Online TA,FRA,BB,Transient,A,133.09,33.33
+1121,22,0.04,123.59,5.0,2.0,0.0,Online TA,FRA,SC,Transient,A,126.58,45.45
+1122,5,0.01,169.2,6.8,3.0,0.0,Online TA,FRA,BB,Transient,A,142.54,40.0
+1123,5,0.01,242.2,3.0,2.0,0.0,Online TA,DEU,BB,Transient-Party,A,102.76,0.0
+1124,8,0.02,104.5,1.0,3.0,0.0,Online TA,FRA,BB,Transient,D,182.99,62.5
+1125,9,0.02,170.0,2.0,2.0,0.0,Online TA,DEU,SC,Transient,A,105.12,77.78
+1126,12,0.02,110.67,2.0,2.0,0.0,Online TA,FRA,BB,Transient,D,140.83,41.67
+1127,6,0.01,12.17,3.0,2.0,0.0,Online TA,DEU,BB,Transient,A,147.26,16.67
+1128,5,0.01,57.2,4.0,3.0,0.0,Online TA,BRA,BB,Transient,D,176.86,60.0
+1129,11,0.02,176.09,5.0,2.0,0.0,Direct,GBR,BB,Transient,A,89.0,27.27
+1130,5,0.01,33.4,5.0,2.0,0.0,Direct,GBR,BB,Transient,A,93.78,20.0
+1131,43,0.08,167.72,7.02,2.0,0.0,Online TA,DEU,BB,Transient,A,109.39,44.19
+1132,8,0.02,189.62,3.0,2.0,100.0,Online TA,DEU,BB,Transient,A,136.84,50.0
+1133,5,0.01,210.6,3.0,2.0,100.0,Online TA,FRA,BB,Transient,F,194.39,60.0
+1134,14,0.03,133.14,3.0,2.0,0.0,Online TA,ESP,SC,Transient,A,111.81,50.0
+1135,7,0.01,168.0,4.0,2.0,0.0,Online TA,FRA,BB,Transient,D,133.61,42.86
+1136,6,0.01,196.0,4.0,2.0,0.0,Online TA,LUX,BB,Transient-Party,A,105.88,0.0
+1137,9,0.02,8.33,1.0,2.0,0.0,Online TA,GBR,SC,Transient,A,126.78,33.33
+1138,12,0.02,120.42,3.0,2.0,0.0,Online TA,PRT,BB,Transient,D,142.76,58.33
+1139,20,0.04,143.15,3.0,3.0,0.0,Online TA,FRA,BB,Transient,D,162.89,60.0
+1140,31,0.06,142.52,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,110.89,48.39
+1141,8,0.02,158.38,4.0,2.0,0.0,Online TA,FRA,BB,Transient,D,130.93,62.5
+1142,9,0.02,176.0,4.0,2.0,100.0,Online TA,GBR,BB,Transient,A,133.78,66.67
+1143,8,0.02,152.12,6.88,1.0,0.0,Online TA,FRA,BB,Transient,A,103.58,75.0
+1144,33,0.06,126.67,4.03,2.0,0.0,Online TA,GBR,SC,Transient,A,108.97,45.45
+1145,7,0.01,39.0,2.0,2.0,0.0,Online TA,CHN,BB,Transient,A,139.13,42.86
+1146,11,0.02,114.64,2.0,2.0,0.0,Online TA,ESP,BB,Transient,D,132.15,27.27
+1147,17,0.03,65.53,2.0,2.0,0.0,Online TA,USA,SC,Transient,A,122.77,58.82
+1148,28,0.05,114.18,6.79,2.0,0.0,Online TA,GBR,BB,Transient,D,132.66,39.29
+1149,8,0.02,130.75,5.0,2.0,0.0,Online TA,ITA,BB,Transient,D,125.06,50.0
+1150,14,0.03,163.36,5.0,2.0,0.0,Online TA,GBR,SC,Transient,A,108.96,50.0
+1151,14,0.03,137.57,5.0,3.0,0.0,Online TA,FRA,BB,Transient,D,160.52,42.86
+1152,20,0.04,118.95,4.0,2.0,0.0,Online TA,FRA,SC,Transient,A,119.73,50.0
+1153,10,0.02,150.5,4.0,2.0,0.0,Online TA,GBR,BB,Transient,D,121.68,50.0
+1154,5,0.01,178.8,2.0,2.0,0.0,Online TA,ISR,BB,Transient,A,98.11,60.0
+1155,13,0.02,140.15,2.0,2.0,0.0,Online TA,FRA,SC,Transient,A,120.37,46.15
+1156,22,0.04,110.18,1.0,2.0,100.0,Online TA,NLD,BB,Transient,F,220.97,18.18
+1157,14,0.03,141.43,3.0,3.0,0.0,Online TA,DEU,BB,Transient,D,156.15,28.57
+1158,5,0.01,119.0,5.0,2.0,100.0,Online TA,ESP,BB,Transient,A,132.89,40.0
+1159,6,0.01,49.67,3.0,3.0,0.0,Online TA,CHN,BB,Transient,D,160.67,83.33
+1160,14,0.03,89.79,4.0,2.0,0.0,Online TA,GBR,SC,Transient,A,117.38,71.43
+1161,9,0.02,156.33,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,73.91,55.56
+1162,16,0.03,13.69,3.0,2.0,0.0,Online TA,ESP,SC,Transient,A,145.37,18.75
+1163,19,0.04,95.16,4.0,3.0,0.0,Online TA,FRA,BB,Transient,D,167.32,42.11
+1164,13,0.02,127.54,5.46,2.0,0.0,Online TA,FRA,BB,Transient,D,132.95,38.46
+1165,5,0.01,155.0,5.6,2.0,0.0,Online TA,ESP,SC,Transient,A,119.33,20.0
+1166,18,0.03,100.33,2.0,2.0,100.0,Online TA,ESP,BB,Transient,A,152.46,44.44
+1167,12,0.02,128.83,2.0,3.0,0.0,Online TA,GBR,BB,Transient,D,172.73,41.67
+1168,13,0.02,232.54,2.0,2.0,100.0,Online TA,GBR,BB,Transient,A,127.35,46.15
+1169,14,0.03,136.29,5.21,3.0,0.0,Online TA,ESP,BB,Transient,D,142.86,28.57
+1170,7,0.01,161.0,1.0,2.0,0.0,Online TA,DEU,BB,Transient,D,118.44,28.57
+1171,6,0.01,113.5,2.0,3.0,0.0,Online TA,BRA,BB,Transient,D,157.4,66.67
+1172,13,0.02,142.62,3.0,2.0,0.0,Online TA,FRA,BB,Transient,D,128.77,46.15
+1173,16,0.03,117.0,1.0,3.0,0.0,Online TA,GBR,BB,Transient,D,166.83,37.5
+1174,11,0.02,129.55,5.0,2.0,0.0,Online TA,GBR,BB,Transient,D,124.07,36.36
+1175,6,0.01,188.83,5.0,2.0,100.0,Online TA,BEL,BB,Transient,F,206.07,33.33
+1176,24,0.05,186.04,6.62,2.0,0.0,Online TA,GBR,SC,Transient,A,98.04,50.0
+1177,8,0.02,149.75,1.0,2.0,0.0,Online TA,DEU,SC,Transient,A,104.38,25.0
+1178,13,0.02,123.38,4.0,3.0,0.0,Online TA,GBR,BB,Transient,D,166.83,23.08
+1179,6,0.01,22.83,2.0,2.0,0.0,Online TA,GBR,SC,Transient,A,136.92,50.0
+1180,7,0.01,228.14,3.0,2.0,0.0,Online TA,BEL,SC,Transient,A,103.67,57.14
+1181,18,0.03,154.61,3.0,3.0,0.0,Online TA,BEL,BB,Transient,D,156.68,33.33
+1182,8,0.02,175.25,3.0,2.0,0.0,Online TA,GBR,BB,Transient,D,142.09,50.0
+1183,30,0.06,110.8,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,119.65,63.33
+1184,20,0.04,162.6,3.0,2.0,0.0,Offline TA/TO,GBR,BB,Transient,A,81.7,10.0
+1185,5,0.01,178.2,4.0,2.0,0.0,Online TA,ISR,BB,Transient,A,103.08,60.0
+1186,6,0.01,50.33,1.0,2.0,0.0,Online TA,USA,SC,Transient,A,135.88,66.67
+1187,6,0.01,15.33,3.0,2.0,0.0,Online TA,GBR,BB,Transient,D,165.89,50.0
+1188,6,0.01,164.67,4.0,2.0,0.0,Online TA,GEO,SC,Transient,A,96.15,50.0
+1189,6,0.01,168.17,5.0,3.0,0.0,Online TA,GBR,BB,Transient,D,157.33,50.0
+1190,5,0.01,135.2,3.0,3.0,0.0,Online TA,ESP,BB,Transient,D,153.9,60.0
+1191,7,0.01,56.86,3.0,2.0,0.0,Direct,ESP,BB,Transient,A,106.84,42.86
+1192,11,0.02,33.64,1.0,2.0,0.0,Online TA,DEU,BB,Transient,A,112.35,27.27
+1193,7,0.01,198.57,6.86,2.0,100.0,Online TA,ROU,BB,Transient,A,129.57,57.14
+1194,5,0.01,96.6,2.0,2.0,100.0,Online TA,FRA,BB,Transient,A,153.06,60.0
+1195,13,0.02,97.38,3.0,2.0,0.0,Offline TA/TO,GBR,BB,Transient,A,85.08,30.77
+1196,10,0.02,35.8,1.0,2.0,100.0,Online TA,FRA,BB,Transient,A,157.77,30.0
+1197,5,0.01,198.2,4.0,2.0,0.0,Online TA,BEL,BB,Transient-Party,A,93.16,0.0
+1198,10,0.02,386.6,1.0,1.0,0.0,Groups,PRT,BB,Transient,A,93.5,100.0
+1199,13,0.02,331.85,2.0,2.0,0.0,Groups,PRT,BB,Transient,A,67.85,92.31
+1200,19,0.04,83.79,3.0,2.0,0.0,Online TA,GBR,BB,Transient,D,137.79,36.84
+1201,7,0.01,211.14,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,112.4,42.86
+1202,7,0.01,93.71,4.0,2.0,0.0,Online TA,FRA,BB,Transient,D,145.9,42.86
+1203,30,0.06,22.5,1.0,2.0,0.0,Online TA,USA,SC,Transient,A,111.43,23.33
+1204,27,0.05,21.85,1.0,2.0,0.0,Online TA,PRT,SC,Transient,A,131.77,33.33
+1205,12,0.02,6.0,1.0,1.0,0.0,Online TA,PRT,SC,Transient,A,137.32,25.0
+1206,8,0.02,88.0,2.0,3.0,0.0,Online TA,ESP,BB,Transient,D,161.78,37.5
+1207,12,0.02,48.58,2.0,2.0,0.0,Online TA,BRA,BB,Transient,D,142.11,58.33
+1208,8,0.02,53.5,3.0,2.0,0.0,Online TA,ESP,BB,Transient,D,125.66,37.5
+1209,8,0.02,65.5,3.0,2.0,0.0,Online TA,GBR,BB,Transient,D,132.74,12.5
+1210,13,0.02,51.38,4.0,2.0,0.0,Online TA,GBR,BB,Transient,D,135.2,46.15
+1211,7,0.01,168.57,7.14,2.0,0.0,Online TA,FRA,BB,Transient,A,115.59,57.14
+1212,21,0.04,36.48,1.0,2.0,0.0,Online TA,GBR,SC,Transient,A,105.57,28.57
+1213,9,0.02,0.78,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,89.78,11.11
+1214,8,0.02,154.88,4.0,2.0,0.0,Online TA,BEL,SC,Transient,A,117.44,50.0
+1215,10,0.02,58.1,6.8,2.0,0.0,Online TA,GBR,BB,Transient,D,137.69,30.0
+1216,11,0.02,136.73,3.0,2.0,0.0,Online TA,DEU,SC,Transient,A,108.53,63.64
+1217,11,0.02,16.09,2.0,2.0,0.0,Online TA,ESP,SC,Transient,A,130.29,27.27
+1218,6,0.01,72.17,6.67,2.0,0.0,Online TA,FRA,BB,Transient,D,139.33,66.67
+1219,4,0.01,229.75,1.0,2.0,0.0,Online TA,DEU,BB,Transient,A,105.72,25.0
+1220,8,0.02,65.25,3.0,2.0,0.0,Online TA,BRA,BB,Transient,D,136.57,37.5
+1221,5,0.01,147.8,3.0,2.0,0.0,Online TA,IRL,SC,Transient,A,111.34,60.0
+1222,5,0.01,227.6,5.0,2.0,0.0,Online TA,PRT,BB,Transient,A,97.58,80.0
+1223,7,0.01,63.71,1.0,2.0,0.0,Online TA,DEU,BB,Transient,D,144.51,71.43
+1224,16,0.03,34.19,2.0,2.0,0.0,Online TA,GBR,SC,Transient,A,127.82,12.5
+1225,12,0.02,113.5,2.0,3.0,0.0,Online TA,DEU,BB,Transient,D,166.05,16.67
+1226,14,0.03,217.93,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,94.58,78.57
+1227,15,0.03,28.73,3.0,2.0,0.0,Online TA,BEL,BB,Transient,A,143.65,33.33
+1228,6,0.01,35.67,4.0,2.0,0.0,Online TA,FRA,BB,Transient,D,145.18,66.67
+1229,6,0.01,74.83,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,118.46,16.67
+1230,7,0.01,1.43,1.0,2.0,0.0,Direct,PRT,SC,Transient,A,135.75,14.29
+1231,5,0.01,15.2,1.0,2.0,0.0,Online TA,CN,SC,Transient,A,108.8,40.0
+1232,8,0.02,30.12,1.0,2.0,0.0,Online TA,PRT,SC,Transient,A,96.08,50.0
+1233,12,0.02,22.83,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,98.48,8.33
+1234,5,0.01,32.0,3.0,2.0,0.0,Online TA,IRL,BB,Transient,D,144.37,80.0
+1235,5,0.01,95.2,3.0,3.0,0.0,Online TA,FRA,BB,Transient,D,157.68,60.0
+1236,7,0.01,141.29,5.43,2.0,0.0,Online TA,GBR,BB,Transient,A,128.24,71.43
+1237,7,0.01,196.29,4.0,2.0,0.0,Online TA,GBR,BB,Transient,A,118.45,42.86
+1238,6,0.01,40.0,4.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,110.0,16.67
+1239,5,0.01,46.4,3.0,2.0,100.0,Online TA,GBR,BB,Transient,F,207.9,80.0
+1240,14,0.03,107.0,5.5,2.0,0.0,Online TA,GBR,BB,Transient,D,135.56,64.29
+1241,6,0.01,19.5,2.0,1.0,0.0,Online TA,ESP,SC,Transient,A,142.33,33.33
+1242,10,0.02,66.9,2.0,2.0,0.0,Online TA,GBR,BB,Transient,D,156.47,30.0
+1243,5,0.01,67.4,4.0,3.0,0.0,Online TA,ITA,BB,Transient,D,152.78,20.0
+1244,16,0.03,353.94,2.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,63.41,68.75
+1245,11,0.02,330.73,2.0,2.0,0.0,Offline TA/TO,ITA,HB,Transient-Party,A,104.27,18.18
+1246,10,0.02,324.0,2.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,63.5,60.0
+1247,9,0.02,25.56,2.0,2.0,0.0,Online TA,GBR,SC,Transient,A,100.04,11.11
+1248,5,0.01,39.4,2.0,2.0,0.0,Online TA,CHN,SC,Transient,A,103.14,60.0
+1249,5,0.01,147.2,5.8,3.0,0.0,Online TA,GBR,BB,Transient,D,157.11,100.0
+1250,5,0.01,164.0,4.0,2.0,0.0,Online TA,GBR,SC,Transient,A,109.02,40.0
+1251,7,0.01,24.57,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,121.19,14.29
+1252,5,0.01,47.2,5.0,2.0,0.0,Online TA,FRA,BB,Transient,D,130.81,20.0
+1253,9,0.02,25.33,2.0,2.0,0.0,Online TA,USA,BB,Transient,A,116.27,33.33
+1254,6,0.01,3.17,2.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,104.48,16.67
+1255,5,0.01,36.6,2.0,2.0,0.0,Online TA,CHN,SC,Transient,A,116.88,80.0
+1256,6,0.01,228.33,3.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient-Party,A,98.92,0.0
+1257,98,0.19,9.45,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,77.58,14.29
+1258,10,0.02,4.5,1.0,2.0,0.0,Direct,PRT,BB,Transient,E,92.4,30.0
+1259,5,0.01,269.4,3.0,2.0,0.0,Groups,PRT,HB,Transient-Party,A,94.0,80.0
+1260,6,0.01,167.83,3.0,2.0,0.0,Online TA,BEL,SC,Transient,A,97.45,50.0
+1261,10,0.02,221.8,3.0,2.0,0.0,Online TA,ITA,BB,Transient,A,95.8,80.0
+1262,8,0.02,53.88,1.0,2.0,0.0,Online TA,CHN,SC,Transient,A,102.05,50.0
+1263,12,0.02,17.0,3.0,2.0,0.0,Online TA,ESP,SC,Transient,A,122.71,50.0
+1264,15,0.03,35.87,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,119.79,26.67
+1265,7,0.01,119.86,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,94.86,57.14
+1266,5,0.01,18.4,3.0,2.0,0.0,Online TA,CHN,SC,Transient,A,116.91,100.0
+1267,7,0.01,42.57,4.0,2.0,0.0,Online TA,ESP,SC,Transient,A,107.84,85.71
+1268,5,0.01,234.0,3.0,1.0,0.0,Corporate,PRT,BB,Transient-Party,E,106.0,100.0
+1269,5,0.01,50.4,4.0,2.0,0.0,Online TA,PRT,BB,Transient,D,122.79,60.0
+1270,29,0.05,99.17,3.0,2.0,0.0,Online TA,GBR,BB,Transient,D,123.86,62.07
+1271,10,0.02,48.0,3.0,2.0,0.0,Online TA,CHN,BB,Transient,D,134.33,80.0
+1272,5,0.01,184.6,4.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,88.02,100.0
+1273,8,0.02,69.25,1.0,2.0,0.0,Online TA,CN,SC,Transient,A,110.18,62.5
+1274,8,0.02,54.62,2.0,2.0,0.0,Online TA,CHN,BB,Transient,D,123.26,50.0
+1275,7,0.01,0.43,2.0,2.0,0.0,Direct,PRT,BB,Transient,A,79.97,42.86
+1276,6,0.01,46.67,2.0,1.0,0.0,Online TA,GBR,BB,Transient,A,109.41,50.0
+1277,21,0.04,61.62,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,108.2,19.05
+1278,17,0.03,23.76,1.0,2.0,0.0,Online TA,PRT,SC,Transient,A,114.55,29.41
+1279,9,0.02,460.33,2.0,2.0,0.0,Groups,PRT,BB,Transient,A,63.67,100.0
+1280,7,0.01,145.0,3.0,3.0,0.0,Online TA,ITA,BB,Transient,D,140.4,71.43
+1281,12,0.02,56.42,3.0,2.0,0.0,Online TA,FRA,BB,Transient,D,131.71,58.33
+1282,16,0.03,112.25,4.0,3.0,0.0,Online TA,DEU,BB,Transient,D,146.59,31.25
+1283,8,0.02,135.5,2.0,3.0,0.0,Online TA,GBR,BB,Transient,D,150.18,25.0
+1284,14,0.03,52.36,2.0,2.0,0.0,Online TA,FRA,BB,Transient,D,138.66,42.86
+1285,6,0.01,206.33,2.0,2.0,0.0,Online TA,PRT,BB,Transient,A,97.82,33.33
+1286,8,0.02,146.12,3.0,3.0,0.0,Online TA,GBR,BB,Transient,D,140.29,37.5
+1287,6,0.01,118.0,3.0,2.0,0.0,Online TA,BRA,BB,Transient,A,115.7,33.33
+1288,9,0.02,53.78,4.0,2.0,0.0,Online TA,GBR,BB,Transient,D,130.89,33.33
+1289,5,0.01,32.6,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,D,83.48,20.0
+1290,16,0.03,83.12,5.0,2.0,0.0,Online TA,GBR,BB,Transient,D,122.62,25.0
+1291,5,0.01,103.6,1.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,120.0,100.0
+1292,5,0.01,102.8,1.0,2.0,0.0,Online TA,FRA,SC,Transient,A,108.0,60.0
+1293,16,0.03,25.5,4.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,86.99,12.5
+1294,5,0.01,256.8,5.0,2.0,0.0,Online TA,DEU,BB,Transient,A,97.6,40.0
+1295,5,0.01,184.4,1.0,1.0,0.0,Online TA,FRA,SC,Transient,A,93.28,80.0
+1296,11,0.02,144.27,1.0,2.0,0.0,Online TA,FRA,SC,Transient,A,103.42,100.0
+1297,8,0.02,15.62,2.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,109.88,25.0
+1298,8,0.02,60.62,2.0,2.0,0.0,Online TA,CHN,SC,Transient,A,101.49,37.5
+1299,10,0.02,25.1,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,D,86.06,10.0
+1300,25,0.05,29.48,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,86.96,20.0
+1301,12,0.02,80.75,6.5,2.0,0.0,Online TA,DEU,BB,Transient,D,124.44,25.0
+1302,7,0.01,225.71,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,89.5,71.43
+1303,5,0.01,60.8,6.6,2.0,0.0,Online TA,FRA,BB,Transient,D,111.97,80.0
+1304,6,0.01,184.33,3.0,2.0,0.0,Online TA,DEU,BB,Transient,D,112.65,66.67
+1305,6,0.01,18.17,3.0,1.0,0.0,Corporate,PRT,BB,Transient,A,67.67,33.33
+1306,5,0.01,12.0,4.0,2.0,0.0,Online TA,DEU,SC,Transient,A,113.3,20.0
+1307,9,0.02,94.22,4.0,3.0,0.0,Online TA,CHE,BB,Transient,D,148.9,33.33
+1308,8,0.02,55.88,2.0,3.0,0.0,Online TA,DEU,BB,Transient,D,150.24,25.0
+1309,11,0.02,30.91,3.0,2.0,0.0,Online TA,NLD,SC,Transient,A,122.31,36.36
+1310,5,0.01,126.4,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,98.7,80.0
+1311,9,0.02,1.56,1.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient,D,91.22,44.44
+1312,6,0.01,210.17,4.0,2.0,0.0,Online TA,DEU,SC,Transient,A,85.91,16.67
+1313,7,0.01,214.57,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,97.56,57.14
+1314,5,0.01,70.6,4.0,2.0,0.0,Online TA,PRT,BB,Transient,D,106.41,20.0
+1315,6,0.01,195.5,2.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,95.0,50.0
+1316,5,0.01,66.8,1.0,3.0,0.0,Online TA,DEU,BB,Transient,D,157.46,20.0
+1317,7,0.01,149.14,4.0,2.0,0.0,Online TA,IRL,SC,Transient,A,91.1,57.14
+1318,5,0.01,112.4,4.0,2.0,0.0,Direct,GBR,BB,Transient,D,109.33,20.0
+1319,5,0.01,70.6,3.0,2.0,0.0,Online TA,FRA,BB,Transient,D,118.77,40.0
+1320,5,0.01,15.0,3.0,1.0,0.0,Online TA,BIH,BB,Transient,A,117.01,20.0
+1321,18,0.03,7.61,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,82.22,16.67
+1322,5,0.01,214.0,4.0,2.0,0.0,Online TA,GBR,SC,Transient,A,94.57,60.0
+1323,5,0.01,96.0,3.0,2.0,100.0,Online TA,LUX,BB,Transient,F,170.4,40.0
+1324,24,0.05,23.71,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,88.35,25.0
+1325,28,0.05,83.61,4.04,2.0,0.0,Online TA,DEU,BB,Transient,A,90.71,35.71
+1326,5,0.01,1.0,1.0,1.0,0.0,Direct,SWE,BB,Transient,A,117.8,20.0
+1327,8,0.02,25.38,1.0,1.0,0.0,Online TA,POL,SC,Transient,A,111.55,12.5
+1328,32,0.06,74.53,3.0,2.0,0.0,Online TA,GBR,BB,Transient,A,92.39,21.88
+1329,29,0.05,25.97,1.0,1.0,0.0,Online TA,ESP,BB,Transient,A,97.28,24.14
+1330,10,0.02,43.0,1.0,2.0,0.0,Online TA,CHN,SC,Transient,A,79.81,30.0
+1331,25,0.05,48.64,2.0,2.0,0.0,Online TA,PRT,SC,Transient,A,92.18,36.0
+1332,8,0.02,43.75,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,96.98,25.0
+1333,20,0.04,41.35,1.0,2.0,0.0,Online TA,PRT,SC,Transient,A,97.29,40.0
+1334,12,0.02,95.08,1.0,2.0,0.0,Online TA,GBR,SC,Transient,A,79.46,33.33
+1335,9,0.02,47.56,3.0,2.0,0.0,Online TA,NLD,SC,Transient,A,88.29,44.44
+1336,17,0.03,41.88,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,105.09,41.18
+1337,16,0.03,49.5,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,82.2,6.25
+1338,19,0.04,70.58,2.0,2.0,0.0,Online TA,GBR,SC,Transient,A,89.14,47.37
+1339,17,0.03,47.29,3.0,1.0,0.0,Online TA,LUX,BB,Transient,A,121.71,47.06
+1340,26,0.05,5.92,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,81.93,23.08
+1341,8,0.02,133.75,2.0,2.0,0.0,Online TA,GBR,SC,Transient,A,78.58,50.0
+1342,20,0.04,34.9,4.0,2.0,0.0,Online TA,PRT,BB,Transient,A,103.14,25.0
+1343,12,0.02,59.92,4.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,110.63,25.0
+1344,12,0.02,41.5,4.0,2.0,0.0,Online TA,ITA,SC,Transient,A,86.88,33.33
+1345,7,0.01,55.14,2.0,2.0,0.0,Online TA,USA,BB,Transient,A,116.11,14.29
+1346,21,0.04,7.67,1.0,1.0,0.0,Corporate,PRT,BB,Transient-Party,A,68.67,9.52
+1347,6,0.01,22.67,2.0,2.0,0.0,Online TA,GBR,BB,Transient,D,119.73,33.33
+1348,5,0.01,62.4,2.0,2.0,0.0,Online TA,FRA,BB,Transient,D,106.32,40.0
+1349,20,0.04,60.9,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,91.24,45.0
+1350,5,0.01,44.6,3.0,1.0,0.0,Online TA,PRT,BB,Transient,A,141.17,40.0
+1351,9,0.02,28.67,4.0,2.0,0.0,Online TA,GBR,SC,Transient,A,78.83,44.44
+1352,21,0.04,21.05,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,105.8,19.05
+1353,6,0.01,54.17,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,63.12,50.0
+1354,9,0.02,81.0,2.0,2.0,0.0,Online TA,PRT,BB,Transient,A,100.52,44.44
+1355,9,0.02,55.67,3.0,2.0,0.0,Online TA,ITA,SC,Transient,A,86.67,55.56
+1356,15,0.03,50.53,4.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,78.82,13.33
+1357,9,0.02,134.0,4.0,2.0,0.0,Online TA,POL,BB,Transient,A,93.85,44.44
+1358,14,0.03,79.79,6.36,2.0,0.0,Online TA,DEU,SC,Transient,A,89.38,57.14
+1359,8,0.02,44.0,4.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,D,71.22,25.0
+1360,20,0.04,73.4,2.0,2.0,0.0,Online TA,DEU,BB,Transient,A,95.31,20.0
+1361,11,0.02,55.64,3.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,63.47,27.27
+1362,10,0.02,36.2,4.0,2.0,0.0,Online TA,ESP,SC,Transient,A,84.14,30.0
+1363,73,0.14,7.95,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,70.09,13.7
+1364,11,0.02,36.73,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,89.62,18.18
+1365,12,0.02,63.67,5.0,2.0,0.0,Online TA,DEU,BB,Transient,A,85.28,16.67
+1366,14,0.03,44.71,4.0,2.0,0.0,Online TA,FRA,SC,Transient,A,73.16,21.43
+1367,14,0.03,52.57,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,75.71,7.14
+1368,5,0.01,104.6,3.0,2.0,0.0,Online TA,BRA,SC,Transient,A,77.62,100.0
+1369,14,0.03,37.36,5.0,2.0,0.0,Online TA,FRA,BB,Transient,A,94.64,28.57
+1370,28,0.05,10.07,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,65.75,14.29
+1371,12,0.02,41.92,3.0,2.0,0.0,Online TA,BEL,SC,Transient,A,98.57,8.33
+1372,8,0.02,44.25,4.0,2.0,0.0,Online TA,ROU,SC,Transient,A,83.34,12.5
+1373,5,0.01,308.0,3.0,2.0,0.0,Online TA,NOR,BB,Transient-Party,A,80.24,20.0
+1374,11,0.02,9.82,4.0,2.0,0.0,Online TA,BEL,BB,Transient,A,94.62,18.18
+1375,5,0.01,1.2,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,57.6,20.0
+1376,26,0.05,53.12,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,78.49,7.69
+1377,15,0.03,30.87,2.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,63.73,20.0
+1378,5,0.01,524.0,1.0,1.0,0.0,Groups,PRT,BB,Transient,A,51.4,100.0
+1379,5,0.01,524.0,2.0,2.0,0.0,Groups,PRT,BB,Transient,A,62.8,100.0
+1380,10,0.02,29.7,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,92.55,70.0
+1381,18,0.03,51.44,4.0,2.0,0.0,Online TA,FRA,SC,Transient,A,85.01,55.56
+1382,7,0.01,61.86,4.0,2.0,0.0,Online TA,DEU,SC,Transient,A,70.95,28.57
+1383,5,0.01,114.8,2.0,2.0,0.0,Online TA,ITA,SC,Transient,A,79.2,60.0
+1384,15,0.03,48.0,2.0,2.0,0.0,Online TA,GBR,SC,Transient,A,87.08,46.67
+1385,9,0.02,50.44,3.0,2.0,0.0,Online TA,ITA,SC,Transient,A,83.11,77.78
+1386,5,0.01,125.4,3.0,2.0,0.0,Online TA,ITA,BB,Transient,A,91.44,40.0
+1387,19,0.04,42.32,4.0,2.0,0.0,Online TA,ESP,SC,Transient,A,81.35,57.89
+1388,6,0.01,28.5,4.0,2.0,0.0,Online TA,USA,SC,Transient,A,68.69,66.67
+1389,13,0.02,81.69,4.0,3.0,0.0,Online TA,ESP,BB,Transient,D,124.94,69.23
+1390,6,0.01,19.33,6.17,2.0,0.0,Online TA,ITA,BB,Transient,A,93.61,66.67
+1391,9,0.02,32.11,5.0,2.0,0.0,Online TA,FRA,BB,Transient,A,77.94,22.22
+1392,7,0.01,99.71,4.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,72.87,28.57
+1393,11,0.02,76.18,3.0,2.0,100.0,Online TA,ESP,BB,Transient,A,114.49,81.82
+1394,5,0.01,282.0,3.0,2.0,0.0,Online TA,ITA,BB,Transient,A,82.49,60.0
+1395,78,0.15,9.62,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,68.45,7.69
+1396,14,0.03,83.71,3.0,2.0,0.0,Online TA,ITA,SC,Transient,A,92.08,64.29
+1397,5,0.01,98.6,4.0,2.0,100.0,Online TA,ESP,BB,Transient,A,102.1,100.0
+1398,6,0.01,80.33,4.17,3.0,0.0,Online TA,ESP,BB,Transient,D,126.91,50.0
+1399,6,0.01,257.83,4.17,2.0,0.0,Online TA,DEU,SC,Transient,A,71.76,66.67
+1400,6,0.01,97.17,5.0,2.0,0.0,Online TA,ITA,SC,Transient,A,95.7,83.33
+1401,8,0.02,74.75,3.0,2.0,100.0,Online TA,ESP,BB,Transient,F,167.0,75.0
+1402,7,0.01,84.43,3.0,3.0,0.0,Online TA,PRT,BB,Transient,D,132.24,42.86
+1403,5,0.01,63.4,3.0,2.0,0.0,Online TA,AUT,BB,Transient,A,103.09,40.0
+1404,4,0.01,41.0,2.0,2.0,0.0,Online TA,PRT,SC,Transient,A,85.8,75.0
+1405,10,0.02,23.8,1.0,2.0,0.0,Direct,PRT,BB,Transient-Party,A,87.3,50.0
+1406,19,0.04,4.89,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,67.86,0.0
+1407,7,0.01,5.43,1.0,1.0,0.0,Online TA,ESP,SC,Transient,A,77.48,28.57
+1408,7,0.01,2.43,1.0,2.0,0.0,Complementary,PRT,BB,Transient,G,24.71,28.57
+1409,6,0.01,59.33,3.0,2.0,0.0,Offline TA/TO,LUX,BB,Transient,A,81.73,33.33
+1410,27,0.05,11.04,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,72.3,18.52
+1411,6,0.01,214.67,4.0,2.0,0.0,Online TA,ESP,SC,Transient,A,71.42,66.67
+1412,7,0.01,264.14,6.71,2.0,0.0,Online TA,CHE,BB,Transient,A,70.39,57.14
+1413,10,0.02,63.1,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,81.43,20.0
+1414,10,0.02,165.5,4.0,3.0,0.0,Online TA,ESP,BB,Transient,D,113.89,70.0
+1415,14,0.03,68.86,5.07,2.0,0.0,Online TA,PRT,BB,Transient,A,97.2,71.43
+1416,9,0.02,53.44,6.89,2.0,0.0,Online TA,ROU,BB,Transient,A,85.7,33.33
+1417,10,0.02,262.2,4.0,2.0,0.0,Online TA,ESP,BB,Transient,A,76.51,70.0
+1418,5,0.01,156.0,7.2,2.0,100.0,Online TA,BRA,BB,Transient,A,111.45,80.0
+1419,6,0.01,1.33,1.0,2.0,100.0,Direct,PRT,BB,Transient,F,110.04,33.33
+1420,5,0.01,14.0,5.0,2.0,0.0,Online TA,ESP,BB,Transient,D,108.42,40.0
+1421,6,0.01,207.0,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,139.45,16.67
+1422,6,0.01,45.33,2.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,65.0,33.33
+1423,9,0.02,46.67,4.0,2.0,0.0,Online TA,DEU,SC,Transient,A,70.57,33.33
+1424,5,0.01,67.2,4.0,2.0,0.0,Online TA,ITA,SC,Transient,A,74.06,80.0
+1425,10,0.02,71.0,3.0,2.0,0.0,Online TA,NLD,BB,Transient,A,90.67,50.0
+1426,5,0.01,35.8,5.0,2.0,0.0,Online TA,FRA,BB,Transient,A,74.73,20.0
+1427,14,0.03,27.93,4.0,2.0,0.0,Online TA,ITA,BB,Transient,A,86.72,42.86
+1428,5,0.01,42.8,5.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,67.6,20.0
+1429,5,0.01,14.0,5.0,2.0,0.0,Online TA,BRA,BB,Transient,A,78.58,20.0
+1430,9,0.02,56.0,6.22,2.0,0.0,Online TA,GBR,BB,Transient,A,84.25,44.44
+1431,6,0.01,17.83,4.0,2.0,0.0,Online TA,FRA,BB,Transient,D,97.82,50.0
+1432,5,0.01,7.4,1.0,2.0,0.0,Online TA,PRT,BB,Transient,D,103.86,40.0
+1433,5,0.01,9.0,4.0,2.0,0.0,Online TA,MAR,BB,Transient,A,85.26,40.0
+1434,9,0.02,50.89,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,74.17,22.22
+1435,5,0.01,126.2,1.0,2.0,0.0,Online TA,GBR,BB,Transient,A,93.45,80.0
+1436,5,0.01,115.2,2.0,1.0,0.0,Online TA,PRT,BB,Transient,A,75.11,60.0
+1437,7,0.01,281.0,4.0,2.0,0.0,Online TA,BRA,BB,Transient,A,76.09,85.71
+1438,5,0.01,15.2,20.0,2.0,100.0,Online TA,AGO,BB,Transient,F,152.43,100.0
+1439,5,0.01,25.4,4.0,2.0,0.0,Online TA,AGO,BB,Transient,A,79.64,40.0
+1440,7,0.01,70.57,2.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,75.27,28.57
+1441,5,0.01,44.2,1.0,2.0,0.0,Online TA,KOR,BB,Transient,A,96.16,40.0
+1442,6,0.01,23.33,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,74.5,16.67
+1443,4,0.01,175.0,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,93.55,50.0
+1444,12,0.02,34.0,6.5,2.0,0.0,Online TA,FRA,HB,Transient,A,94.46,41.67
+1445,9,0.02,2.11,3.0,1.0,0.0,Corporate,PRT,BB,Transient,A,59.43,11.11
+1446,8,0.02,15.38,3.0,2.0,0.0,Online TA,PRT,BB,Transient,D,100.97,25.0
+1447,14,0.03,27.21,4.0,2.0,0.0,Online TA,FRA,SC,Transient,A,79.12,42.86
+1448,5,0.01,13.0,6.6,2.0,0.0,Online TA,FRA,BB,Transient,A,86.08,40.0
+1449,6,0.01,16.83,7.0,2.0,0.0,Online TA,FRA,BB,Transient,D,105.07,33.33
+1450,6,0.01,18.0,2.0,2.0,0.0,Online TA,ESP,SC,Transient,A,84.47,50.0
+1451,6,0.01,24.33,4.0,2.0,100.0,Online TA,NLD,BB,Transient,F,188.6,33.33
+1452,5,0.01,11.6,7.0,3.0,0.0,Online TA,DEU,BB,Transient,D,132.98,40.0
+1453,5,0.01,17.4,4.0,3.0,0.0,Online TA,GBR,BB,Transient,D,131.58,60.0
+1454,6,0.01,67.83,4.0,2.0,100.0,Online TA,BEL,BB,Transient,F,148.33,66.67
+1455,14,0.03,12.57,1.0,2.0,0.0,Online TA,GBR,BB,Transient,A,94.62,14.29
+1456,13,0.02,0.31,1.0,2.0,0.0,Direct,PRT,SC,Transient,A,95.0,7.69
+1457,7,0.01,82.57,4.0,2.0,0.0,Groups,ESP,BB,Transient-Party,A,66.86,14.29
+1458,7,0.01,30.29,2.0,2.0,0.0,Online TA,CHN,BB,Transient,A,90.25,28.57
+1459,11,0.02,23.64,4.55,2.0,0.0,Online TA,GBR,BB,Transient,D,96.25,27.27
+1460,10,0.02,56.4,4.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,73.64,10.0
+1461,14,0.03,21.86,4.0,3.0,0.0,Online TA,FRA,BB,Transient,D,129.62,28.57
+1462,5,0.01,37.2,4.0,2.0,0.0,Online TA,FRA,BB,Transient,D,99.03,80.0
+1463,5,0.01,23.6,1.0,1.0,0.0,Online TA,GBR,BB,Transient,A,88.6,20.0
+1464,7,0.01,1.86,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,79.63,14.29
+1465,5,0.01,615.0,1.0,1.0,0.0,Groups,PRT,BB,Transient,A,59.0,100.0
+1466,5,0.01,615.0,2.0,2.0,0.0,Groups,PRT,BB,Transient,A,62.0,100.0
+1467,11,0.02,45.64,5.0,2.0,0.0,Online TA,FRA,BB,Transient,D,92.62,27.27
+1468,7,0.01,60.29,2.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,68.0,14.29
+1469,5,0.01,29.0,5.0,2.0,0.0,Online TA,PRT,SC,Transient,A,76.74,40.0
+1470,9,0.02,3.56,1.0,1.0,0.0,Online TA,FRA,BB,Transient,A,83.62,11.11
+1471,5,0.01,194.8,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,95.64,60.0
+1472,5,0.01,57.2,5.0,2.0,0.0,Online TA,SWE,BB,Transient,D,103.56,60.0
+1473,11,0.02,72.91,3.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,67.0,9.09
+1474,5,0.01,11.2,1.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,89.0,20.0
+1475,5,0.01,20.8,2.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,158.43,20.0
+1476,21,0.04,8.1,1.0,1.0,0.0,Online TA,ESP,BB,Transient,A,94.71,19.05
+1477,25,0.05,12.4,1.0,1.0,0.0,Online TA,GBR,BB,Transient,A,96.44,16.0
+1478,6,0.01,90.5,5.0,2.0,0.0,Online TA,ITA,SC,Transient,A,80.84,50.0
+1479,5,0.01,52.6,2.0,2.0,100.0,Online TA,ESP,BB,Transient,F,181.53,60.0
+1480,5,0.01,48.8,4.0,2.0,0.0,Online TA,BRA,BB,Transient,A,82.21,20.0
+1481,7,0.01,62.14,5.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,80.35,28.57
+1482,7,0.01,43.57,5.0,2.0,0.0,Online TA,FRA,BB,Transient,D,103.17,28.57
+1483,6,0.01,43.83,4.0,3.0,0.0,Online TA,IRL,BB,Transient,E,126.16,50.0
+1484,6,0.01,31.83,2.0,2.0,0.0,Offline TA/TO,FRA,BB,Contract,A,68.0,16.67
+1485,14,0.03,2.71,1.0,1.0,0.0,Corporate,PRT,BB,Transient,D,85.69,7.14
+1486,16,0.03,4.81,3.0,1.0,0.0,Corporate,PRT,BB,Transient,A,60.06,18.75
+1487,11,0.02,82.45,4.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,72.44,9.09
+1488,5,0.01,182.0,3.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,94.08,60.0
+1489,9,0.02,73.67,4.0,3.0,0.0,Online TA,DEU,BB,Transient,D,151.75,22.22
+1490,5,0.01,78.0,6.8,3.0,0.0,Online TA,BEL,BB,Transient,D,155.29,60.0
+1491,9,0.02,103.78,2.0,2.0,0.0,Online TA,GBR,SC,Transient,A,99.07,33.33
+1492,8,0.02,107.12,2.0,2.0,0.0,Direct,PRT,BB,Transient,A,93.72,12.5
+1493,20,0.04,110.55,4.0,2.0,0.0,Direct,PRT,BB,Transient,A,101.96,35.0
+1494,10,0.02,69.8,4.0,2.0,0.0,Direct,DEU,BB,Transient,A,91.88,20.0
+1495,6,0.01,69.33,2.0,3.0,0.0,Online TA,GBR,BB,Transient,D,156.15,16.67
+1496,16,0.03,80.62,3.0,3.0,0.0,Online TA,BEL,BB,Transient,D,160.95,37.5
+1497,18,0.03,16.22,1.0,1.0,0.0,Online TA,DEU,SC,Transient,A,103.37,11.11
+1498,13,0.02,89.38,2.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,79.35,7.69
+1499,8,0.02,76.75,3.0,3.0,0.0,Online TA,FRA,BB,Transient,D,160.28,25.0
+1500,7,0.01,182.29,2.0,2.0,0.0,Online TA,IRL,SC,Transient,A,89.86,57.14
+1501,6,0.01,21.83,3.0,2.0,0.0,Online TA,BRA,SC,Transient,A,119.33,66.67
+1502,7,0.01,109.0,5.0,3.0,0.0,Online TA,DEU,BB,Transient,D,164.51,42.86
+1503,7,0.01,36.57,2.0,2.0,0.0,Online TA,GBR,BB,Transient,A,116.48,28.57
+1504,10,0.02,109.9,5.0,2.0,0.0,Direct,GBR,BB,Transient,A,97.5,20.0
+1505,6,0.01,139.5,6.67,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,88.06,50.0
+1506,5,0.01,143.6,1.0,2.0,0.0,Online TA,BRA,BB,Transient,D,132.3,60.0
+1507,5,0.01,201.8,3.0,2.0,100.0,Online TA,DEU,BB,Transient,A,133.32,60.0
+1508,5,0.01,21.2,3.0,2.0,0.0,Online TA,ESP,BB,Transient,E,204.4,80.0
+1509,9,0.02,174.44,3.0,3.0,0.0,Online TA,IRL,BB,Transient,D,160.61,33.33
+1510,12,0.02,110.83,4.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,94.62,41.67
+1511,5,0.01,77.4,4.0,2.0,0.0,Online TA,GBR,BB,Transient,E,162.9,40.0
+1512,6,0.01,83.0,4.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,100.0,83.33
+1513,10,0.02,14.7,3.0,2.0,0.0,Online TA,FRA,BB,Transient,D,126.84,10.0
+1514,8,0.02,20.38,1.0,2.0,0.0,Online TA,USA,SC,Transient,A,117.08,25.0
+1515,5,0.01,49.0,3.0,3.0,0.0,Online TA,ITA,BB,Transient,G,204.1,40.0
+1516,6,0.01,174.5,3.0,2.0,0.0,Online TA,USA,SC,Transient,A,106.23,83.33
+1517,12,0.02,117.75,4.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,104.97,41.67
+1518,6,0.01,103.83,5.17,2.0,0.0,Online TA,BRA,BB,Transient,A,131.26,33.33
+1519,11,0.02,14.82,3.0,2.0,0.0,Online TA,FRA,BB,Transient,A,151.44,36.36
+1520,12,0.02,125.0,4.0,2.0,0.0,Online TA,FRA,SC,Transient,A,112.7,66.67
+1521,31,0.06,49.87,1.0,2.0,0.0,Online TA,GBR,SC,Transient,A,123.25,12.9
+1522,22,0.04,125.14,4.0,2.0,0.0,Online TA,DEU,SC,Transient,A,125.12,45.45
+1523,5,0.01,99.8,3.0,3.0,0.0,Online TA,DEU,BB,Transient,D,168.9,20.0
+1524,17,0.03,68.06,4.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,95.9,5.88
+1525,7,0.01,326.71,1.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,83.19,57.14
+1526,16,0.03,63.31,2.0,3.0,0.0,Online TA,ITA,BB,Transient,D,180.37,25.0
+1527,29,0.05,124.48,3.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,99.69,3.45
+1528,7,0.01,235.29,3.0,2.0,0.0,Groups,FRA,BB,Transient-Party,A,90.0,28.57
+1529,6,0.01,79.5,3.0,2.0,0.0,Online TA,GBR,BB,Transient,E,173.96,33.33
+1530,8,0.02,59.25,3.0,2.0,0.0,Online TA,ISR,BB,Transient,D,139.92,62.5
+1531,11,0.02,89.27,4.0,3.0,0.0,Online TA,GBR,BB,Transient,D,161.49,27.27
+1532,7,0.01,89.14,2.0,2.0,0.0,Online TA,FRA,BB,Transient,D,139.76,28.57
+1533,15,0.03,123.4,4.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,99.46,40.0
+1534,11,0.02,22.45,1.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,108.09,54.55
+1535,5,0.01,88.6,5.0,2.0,0.0,Direct,AUT,BB,Transient,D,119.24,20.0
+1536,20,0.04,5.4,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,55.74,10.0
+1537,6,0.01,365.67,1.0,2.0,0.0,Groups,PRT,BB,Transient,A,85.68,100.0
+1538,8,0.02,81.88,1.0,2.0,0.0,Offline TA/TO,CN,BB,Transient,A,103.84,25.0
+1539,6,0.01,99.0,5.0,2.0,0.0,Online TA,BRA,SC,Transient,A,111.12,50.0
+1540,8,0.02,94.0,2.0,2.0,0.0,Direct,GBR,BB,Transient,A,109.57,12.5
+1541,9,0.02,72.22,2.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,94.87,22.22
+1542,9,0.02,93.11,3.0,2.0,0.0,Online TA,USA,SC,Transient,A,122.54,44.44
+1543,11,0.02,102.91,4.0,2.0,0.0,Offline TA/TO,GBR,BB,Transient,A,97.25,9.09
+1544,5,0.01,36.0,1.0,2.0,0.0,Online TA,IRL,SC,Transient,A,122.94,20.0
+1545,5,0.01,211.6,4.0,2.0,0.0,Online TA,BRA,SC,Transient,A,108.41,100.0
+1546,5,0.01,198.2,4.0,2.0,0.0,Online TA,ESP,BB,Transient,D,135.5,80.0
+1547,9,0.02,115.56,5.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,91.59,33.33
+1548,22,0.04,3.77,1.0,1.0,0.0,Online TA,PRT,SC,Transient,A,121.63,9.09
+1549,5,0.01,159.6,4.0,2.0,0.0,Online TA,USA,BB,Transient,A,107.25,40.0
+1550,9,0.02,127.0,3.0,3.0,0.0,Online TA,GBR,BB,Transient,D,175.93,55.56
+1551,7,0.01,77.43,2.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,101.96,57.14
+1552,12,0.02,121.92,4.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,101.3,41.67
+1553,28,0.05,5.86,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,69.41,10.71
+1554,6,0.01,287.67,4.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,98.33,33.33
+1555,5,0.01,280.8,4.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,70.16,40.0
+1556,10,0.02,145.0,4.0,3.0,0.0,Online TA,BEL,BB,Transient,D,163.25,50.0
+1557,5,0.01,77.6,2.0,2.0,0.0,Online TA,ISR,SC,Transient,A,110.42,20.0
+1558,6,0.01,24.67,4.0,2.0,0.0,Online TA,BRA,SC,Transient,A,133.09,66.67
+1559,23,0.04,5.78,1.0,1.0,0.0,Online TA,PRT,BB,Transient,A,125.98,8.7
+1560,8,0.02,32.38,1.0,2.0,0.0,Online TA,GBR,BB,Transient,D,158.18,25.0
+1561,5,0.01,39.6,3.0,2.0,0.0,Online TA,ARG,BB,Transient,D,117.55,40.0
+1562,5,0.01,145.6,3.0,2.0,0.0,Online TA,IRL,BB,Transient,E,160.68,40.0
+1563,8,0.02,122.62,5.0,2.0,0.0,Online TA,GBR,SC,Transient,A,113.14,25.0
+1564,7,0.01,78.43,2.0,2.0,0.0,Direct,BEL,BB,Transient,A,102.63,28.57
+1565,6,0.01,71.33,3.0,3.0,0.0,Online TA,DEU,BB,Transient,D,183.1,16.67
+1566,5,0.01,169.0,5.0,2.0,0.0,Groups,PRT,BB,Transient,A,115.56,40.0
+1567,7,0.01,34.86,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,104.61,28.57
+1568,10,0.02,21.7,1.0,1.0,0.0,Online TA,GBR,SC,Transient,A,112.98,20.0
+1569,10,0.02,190.5,4.0,2.0,0.0,Groups,PRT,BB,Transient,A,109.27,70.0
+1570,13,0.02,151.31,3.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,99.19,7.69
+1571,7,0.01,5.43,2.0,2.0,0.0,Online TA,PRT,BB,Transient,A,117.43,14.29
+1572,10,0.02,152.7,5.3,2.0,0.0,Online TA,GBR,SC,Transient,A,90.2,10.0
+1573,6,0.01,136.0,5.67,2.0,0.0,Online TA,HRV,BB,Transient,D,134.23,16.67
+1574,13,0.02,24.62,2.0,1.0,0.0,Online TA,DEU,BB,Transient,A,112.52,7.69
+1575,6,0.01,3.33,2.0,1.0,0.0,Online TA,PRT,BB,Transient,A,104.28,33.33
+1576,5,0.01,109.6,3.0,2.0,100.0,Online TA,PRT,HB,Transient,A,181.8,40.0
+1577,5,0.01,158.2,3.0,2.0,0.0,Online TA,USA,BB,Transient,D,129.81,60.0
+1578,8,0.02,109.38,1.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,98.75,12.5
+1579,10,0.02,47.4,1.0,2.0,0.0,Online TA,BRA,SC,Transient,A,111.02,20.0
+1580,15,0.03,96.13,4.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,98.78,6.67
+1581,6,0.01,84.33,2.0,3.0,0.0,Online TA,GBR,BB,Transient,D,165.17,83.33
+1582,5,0.01,127.6,2.0,2.0,100.0,Online TA,NOR,BB,Transient,F,214.71,60.0
+1583,10,0.02,131.0,5.0,2.0,0.0,Direct,GBR,BB,Transient,A,92.52,10.0
+1584,6,0.01,139.67,1.0,2.0,0.0,Online TA,BEL,BB,Transient,D,131.55,50.0
+1585,10,0.02,106.1,2.0,2.0,0.0,Online TA,USA,SC,Transient,A,111.64,50.0
+1586,7,0.01,467.43,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,109.43,85.71
+1587,8,0.02,129.0,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,81.23,25.0
+1588,5,0.01,468.8,3.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,34.27,40.0
+1589,6,0.01,178.83,4.0,2.0,100.0,Direct,BEL,BB,Transient,F,194.26,16.67
+1590,12,0.02,171.75,4.0,3.0,0.0,Online TA,BRA,BB,Transient,D,157.52,41.67
+1591,8,0.02,128.25,4.0,2.0,0.0,Online TA,DEU,BB,Transient,D,133.74,50.0
+1592,18,0.03,130.83,5.0,2.0,0.0,Online TA,GBR,SC,Transient,A,108.97,33.33
+1593,11,0.02,173.91,1.0,2.0,0.0,Online TA,NLD,BB,Transient,A,109.06,18.18
+1594,10,0.02,125.2,5.7,2.0,0.0,Online TA,FRA,BB,Transient,D,110.46,40.0
+1595,16,0.03,88.38,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,114.84,31.25
+1596,5,0.01,40.2,3.0,3.0,0.0,Online TA,TUR,BB,Transient,D,178.93,80.0
+1597,6,0.01,120.67,3.0,2.0,0.0,Online TA,ITA,BB,Transient,D,144.99,50.0
+1598,4,0.01,9.5,4.0,2.0,0.0,Online TA,DEU,SC,Transient,A,121.09,25.0
+1599,6,0.01,18.83,4.0,2.0,0.0,Online TA,ESP,BB,Transient,A,132.97,16.67
+1600,5,0.01,139.8,3.0,2.0,0.0,Online TA,MAC,SC,Transient,A,96.65,40.0
+1601,9,0.02,155.56,3.0,2.0,0.0,Direct,DEU,BB,Transient,A,87.72,11.11
+1602,6,0.01,198.0,4.0,2.0,0.0,Online TA,GBR,BB,Transient,D,119.12,83.33
+1603,7,0.01,144.71,6.71,2.0,0.0,Online TA,IRL,BB,Transient,E,157.06,71.43
+1604,5,0.01,462.2,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,99.07,80.0
+1605,20,0.04,74.0,1.0,2.0,100.0,Online TA,NOR,BB,Transient,F,219.57,15.0
+1606,7,0.01,137.14,3.0,2.0,0.0,Online TA,FRA,BB,Transient,D,134.54,71.43
+1607,8,0.02,13.25,2.0,2.0,0.0,Online TA,MOZ,BB,Transient,A,128.61,25.0
+1608,17,0.03,25.0,2.0,2.0,0.0,Online TA,GBR,SC,Transient,A,124.76,35.29
+1609,20,0.04,138.95,3.0,3.0,0.0,Online TA,DEU,BB,Transient,D,156.79,30.0
+1610,8,0.02,165.62,3.0,2.0,0.0,Online TA,CN,BB,Transient,A,112.38,25.0
+1611,11,0.02,9.09,1.0,2.0,0.0,Online TA,FRA,SC,Transient,A,112.98,9.09
+1612,5,0.01,114.6,2.0,3.0,0.0,Online TA,USA,BB,Transient,D,157.36,40.0
+1613,10,0.02,146.2,4.2,2.0,0.0,Offline TA/TO,BEL,BB,Transient,A,87.34,10.0
+1614,7,0.01,168.43,3.0,2.0,100.0,Online TA,DEU,BB,Transient,A,132.99,14.29
+1615,5,0.01,109.4,1.0,2.0,0.0,Online TA,PRT,BB,Transient,D,134.18,80.0
+1616,9,0.02,174.78,4.0,2.0,100.0,Online TA,DNK,BB,Transient,A,133.47,11.11
+1617,7,0.01,146.57,4.14,3.0,0.0,Online TA,GBR,BB,Transient,D,164.69,42.86
+1618,5,0.01,208.0,1.0,2.0,0.0,Groups,FRA,HB,Transient-Party,A,150.6,20.0
+1619,10,0.02,2.9,1.0,3.0,0.0,Online TA,PRT,BB,Transient,D,221.0,20.0
+1620,12,0.02,131.58,4.0,3.0,0.0,Online TA,FRA,BB,Transient,D,161.99,33.33
+1621,11,0.02,143.73,2.0,3.0,0.0,Online TA,BEL,BB,Transient,D,173.81,27.27
+1622,9,0.02,176.22,2.0,2.0,100.0,Online TA,DEU,BB,Transient,A,130.01,11.11
+1623,5,0.01,479.0,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,112.67,60.0
+1624,11,0.02,137.55,4.0,2.0,0.0,Online TA,DNK,BB,Transient,D,143.66,45.45
+1625,8,0.02,170.38,3.0,2.0,100.0,Online TA,FRA,BB,Transient,A,136.83,25.0
+1626,6,0.01,12.83,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,137.45,16.67
+1627,8,0.02,49.88,3.0,2.0,0.0,Online TA,GBR,SC,Transient,A,133.71,50.0
+1628,6,0.01,167.5,7.0,2.0,0.0,Direct,PRT,HB,Transient,A,133.14,66.67
+1629,5,0.01,106.0,4.2,2.0,0.0,Online TA,GBR,BB,Transient,D,129.12,20.0
+1630,8,0.02,204.88,4.0,2.0,100.0,Online TA,GBR,BB,Transient,A,128.59,25.0
+1631,5,0.01,241.0,6.8,2.0,0.0,Online TA,AUS,BB,Transient,A,113.48,80.0
+1632,6,0.01,158.33,3.0,2.0,100.0,Online TA,FRA,BB,Transient,F,204.99,50.0
+1633,11,0.02,147.18,2.0,2.0,100.0,Online TA,GBR,BB,Transient,F,208.68,9.09
+1634,7,0.01,198.29,7.14,2.0,100.0,Online TA,BEL,BB,Transient,F,195.08,28.57
+1635,8,0.02,213.0,4.0,1.0,0.0,Groups,PRT,HB,Transient-Party,A,104.88,12.5
+1636,11,0.02,303.0,2.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,62.22,100.0
+1637,6,0.01,358.17,2.0,2.0,0.0,Groups,PRT,BB,Contract,A,73.33,83.33
+1638,8,0.02,276.0,2.0,2.0,0.0,Groups,PRT,BB,Contract,A,62.0,100.0
+1639,8,0.02,304.0,2.0,2.0,0.0,Groups,PRT,BB,Contract,A,62.0,100.0
+1640,6,0.01,1.33,1.0,1.0,0.0,Complementary,PRT,BB,Transient,D,41.33,0.0
+1641,5,0.01,0.2,2.0,1.0,0.0,Direct,PRT,BB,Transient,A,78.3,0.0
+1642,7,0.01,2.0,1.0,1.0,0.0,Complementary,PRT,BB,Transient,E,71.91,0.0
+1643,8,0.02,170.38,3.0,1.0,0.0,Offline TA/TO,USA,BB,Transient-Party,A,111.25,0.0
+1644,9,0.02,188.89,3.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,86.67,0.0
+1645,5,0.01,271.0,2.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,36.0,40.0
+1646,7,0.01,310.57,2.0,1.0,0.0,Offline TA/TO,PRT,HB,Transient-Party,A,75.0,28.57
+1647,11,0.02,238.27,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,65.86,27.27
+1648,5,0.01,184.4,5.2,1.0,0.0,Online TA,GBR,BB,Transient,A,79.86,0.0
+1649,10,0.02,2.3,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,58.2,60.0
+1650,21,0.04,2.1,1.0,1.0,0.0,Corporate,PRT,BB,Transient-Party,A,42.14,4.76
+1651,12,0.02,6.75,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,74.05,8.33
+1652,23,0.04,5.91,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,71.87,4.35
+1653,6,0.01,0.0,3.0,1.0,0.0,Corporate,PRT,BB,Transient,A,77.39,0.0
+1654,14,0.03,4.5,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,69.41,7.14
+1655,12,0.02,5.17,3.0,1.0,0.0,Corporate,PRT,BB,Transient,A,84.24,0.0
+1656,11,0.02,12.73,3.0,1.0,0.0,Corporate,PRT,BB,Transient,A,75.05,0.0
+1657,20,0.04,9.25,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,66.55,0.0
+1658,8,0.02,2.38,3.0,1.0,0.0,Corporate,PRT,BB,Transient,A,88.0,12.5
+1659,6,0.01,5.17,3.0,1.0,0.0,Corporate,PRT,BB,Transient,A,67.33,0.0
+1660,11,0.02,3.36,3.0,1.0,0.0,Corporate,PRT,BB,Transient,A,68.33,0.0
+1661,16,0.03,4.5,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,80.28,6.25
+1662,6,0.01,5.33,3.0,1.0,0.0,Corporate,PRT,BB,Transient,A,65.0,0.0
+1663,14,0.03,3.43,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,81.14,7.14
+1664,5,0.01,0.2,1.0,1.0,0.0,Direct,BRA,BB,Transient,A,131.13,0.0
+1665,6,0.01,2.83,1.0,2.0,100.0,Online TA,PRT,BB,Transient,A,122.55,0.0
+1666,5,0.01,255.8,1.0,1.0,0.0,Offline TA/TO,ITA,HB,Transient-Party,A,88.2,0.0
+1667,8,0.02,221.75,3.0,1.0,0.0,Offline TA/TO,SWE,BB,Transient-Party,A,70.75,0.0
+1668,8,0.02,0.38,1.0,2.0,0.0,Direct,PRT,BB,Transient,G,61.12,0.0
+1669,10,0.02,3.5,1.0,1.0,0.0,Direct,PRT,BB,Transient,E,110.12,0.0
+1670,7,0.01,2.0,1.0,1.0,0.0,Complementary,PRT,BB,Transient,E,78.07,0.0
+1671,5,0.01,7.6,2.0,2.0,0.0,Corporate,PRT,BB,Transient,A,78.08,60.0
+1672,5,0.01,11.6,3.0,2.0,0.0,Online TA,PRT,BB,Contract,D,142.33,80.0
+1673,9,0.02,12.33,3.0,1.0,0.0,Direct,PRT,BB,Transient,A,96.41,11.11
+1674,10,0.02,16.0,5.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,170.0,10.0
+1675,6,0.01,12.0,1.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,91.33,16.67
+1676,7,0.01,8.29,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,97.86,0.0
+1677,5,0.01,14.0,2.0,1.0,0.0,Groups,DNK,BB,Transient-Party,A,135.6,0.0
+1678,5,0.01,3.8,2.0,1.0,0.0,Online TA,PRT,BB,Transient,A,104.03,40.0
+1679,5,0.01,13.8,3.0,2.0,0.0,Direct,PRT,BB,Transient,A,134.14,0.0
+1680,6,0.01,17.5,3.0,1.0,0.0,Groups,ITA,BB,Transient-Party,A,170.0,0.0
+1681,7,0.01,16.29,4.0,1.0,0.0,Groups,GBR,BB,Transient-Party,A,170.0,0.0
+1682,5,0.01,16.6,4.0,1.0,0.0,Groups,PRT,BB,Transient-Party,A,170.0,0.0
+1683,9,0.02,0.44,2.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,112.56,11.11
+1684,9,0.02,4.56,1.0,1.0,0.0,Online TA,PRT,BB,Transient,A,116.71,22.22
+1685,6,0.01,9.0,1.0,1.0,0.0,Offline TA/TO,ESP,BB,Transient-Party,A,80.5,0.0
+1686,6,0.01,4.0,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,89.97,0.0
+1687,6,0.01,19.67,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,120.99,0.0
+1688,6,0.01,0.17,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,105.67,0.0
+1689,7,0.01,0.43,1.0,1.0,0.0,Direct,PRT,BB,Transient,E,82.0,0.0
+1690,11,0.02,21.64,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,D,95.73,0.0
+1691,6,0.01,4.33,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,68.17,0.0
+1692,13,0.02,9.15,1.0,1.0,0.0,Corporate,PRT,BB,Transient-Party,A,66.15,7.69
+1693,7,0.01,28.0,2.0,1.0,0.0,Online TA,PRT,BB,Contract,A,101.26,57.14
+1694,13,0.02,5.85,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,78.54,0.0
+1695,10,0.02,2.9,3.0,1.0,0.0,Corporate,PRT,BB,Transient,A,75.98,0.0
+1696,8,0.02,4.38,2.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,90.5,0.0
+1697,7,0.01,13.29,1.0,1.0,0.0,Corporate,GBR,BB,Transient,A,110.43,0.0
+1698,5,0.01,12.0,4.0,2.0,0.0,Corporate,PRT,BB,Transient-Party,A,100.0,0.0
+1699,5,0.01,1.6,3.0,2.0,0.0,Online TA,ESP,BB,Transient,A,151.86,0.0
+1700,5,0.01,1.8,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,77.85,0.0
+1701,11,0.02,23.55,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,86.11,9.09
+1702,5,0.01,2.6,1.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,94.0,20.0
+1703,16,0.03,84.0,4.0,2.0,0.0,Offline TA/TO,IRL,BB,Transient,A,86.4,0.0
+1704,6,0.01,13.0,2.0,1.0,0.0,Corporate,SWE,BB,Transient-Party,A,114.17,0.0
+1705,7,0.01,28.57,4.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,D,81.21,14.29
+1706,5,0.01,2.4,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,D,102.52,0.0
+1707,5,0.01,33.0,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Group,D,78.78,0.0
+1708,13,0.02,2.08,1.0,1.0,0.0,Corporate,PRT,BB,Transient,A,67.69,0.0
+1709,8,0.02,32.25,6.88,2.0,0.0,Direct,FRA,BB,Transient,A,88.46,12.5
+1710,9,0.02,31.67,1.0,2.0,0.0,Online TA,PRT,BB,Contract,A,111.33,22.22
+1711,5,0.01,26.2,5.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,D,103.79,0.0
+1712,7,0.01,0.0,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,60.43,0.0
+1713,5,0.01,15.2,3.0,1.0,0.0,Direct,GRC,BB,Transient,A,100.6,0.0
+1714,5,0.01,3.6,1.0,2.0,0.0,Online TA,USA,SC,Transient,A,112.36,20.0
+1715,5,0.01,25.8,3.0,2.0,0.0,Online TA,BRA,SC,Transient,A,111.11,60.0
+1716,6,0.01,0.83,2.0,2.0,0.0,Online TA,PRT,SC,Transient,A,118.63,0.0
+1717,5,0.01,1.4,2.0,1.0,0.0,Corporate,ESP,BB,Transient-Party,A,92.8,0.0
+1718,5,0.01,10.6,1.0,2.0,0.0,Online TA,PRT,BB,Transient,D,149.6,40.0
+1719,6,0.01,48.17,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,D,68.67,16.67
+1720,5,0.01,44.4,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Group,D,60.0,0.0
+1721,8,0.02,47.62,4.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,D,62.28,12.5
+1722,6,0.01,48.17,5.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,D,60.0,0.0
+1723,5,0.01,6.6,4.0,2.0,0.0,Online TA,ESP,BB,Transient,A,102.23,0.0
+1724,5,0.01,1.6,1.0,2.0,0.0,Online TA,PRT,BB,Contract,A,100.6,20.0
+1725,10,0.02,52.5,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,D,66.99,0.0
+1726,6,0.01,1.17,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,85.33,0.0
+1727,6,0.01,1.0,2.0,1.0,0.0,Online TA,PRT,BB,Transient,A,87.43,0.0
+1728,11,0.02,2.09,1.0,2.0,0.0,Direct,PRT,BB,Transient,D,81.56,27.27
+1729,6,0.01,2.17,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,83.72,0.0
+1730,5,0.01,3.6,1.0,1.0,0.0,Online TA,ESP,BB,Contract,A,95.4,20.0
+1731,8,0.02,31.0,4.25,2.0,0.0,Direct,DEU,BB,Transient,A,70.97,0.0
+1732,7,0.01,54.43,4.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,D,62.57,14.29
+1733,10,0.02,44.8,4.1,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,77.84,0.0
+1734,10,0.02,39.0,4.0,2.0,0.0,Online TA,BEL,BB,Transient,D,92.74,0.0
+1735,5,0.01,3.6,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,79.16,60.0
+1736,5,0.01,32.8,2.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,80.6,20.0
+1737,13,0.02,33.08,3.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,58.83,30.77
+1738,6,0.01,74.0,4.0,2.0,0.0,Online TA,PRT,BB,Contract,A,108.3,33.33
+1739,5,0.01,1.8,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,76.0,0.0
+1740,5,0.01,73.0,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient-Party,A,85.67,0.0
+1741,8,0.02,53.38,3.0,2.0,0.0,Offline TA/TO,GBR,BB,Transient,A,81.09,0.0
+1742,5,0.01,5.0,2.0,1.0,0.0,Corporate,PRT,BB,Transient,A,79.6,0.0
+1743,5,0.01,8.2,2.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,39.0,40.0
+1744,6,0.01,76.0,4.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,D,95.75,0.0
+1745,6,0.01,9.83,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,67.04,0.0
+1746,12,0.02,0.67,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,51.83,16.67
+1747,7,0.01,13.14,5.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,76.24,14.29
+1748,5,0.01,6.8,2.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient,D,89.2,40.0
+1749,5,0.01,23.0,3.0,2.0,0.0,Offline TA/TO,ITA,HB,Transient-Party,A,108.6,20.0
+1750,7,0.01,27.29,2.0,2.0,0.0,Corporate,PRT,BB,Transient-Party,A,82.14,0.0
+1751,5,0.01,6.2,4.0,2.0,0.0,Direct,FRA,BB,Transient,A,84.8,0.0
+1752,3,0.01,136.67,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,75.0,33.33
+1753,7,0.01,4.14,3.0,1.0,0.0,Corporate,PRT,BB,Transient,A,71.08,14.29
+1754,7,0.01,54.71,3.0,2.0,0.0,Online TA,DEU,BB,Transient,A,90.63,14.29
+1755,9,0.02,44.0,3.0,2.0,0.0,Groups,PRT,HB,Transient-Party,A,98.0,0.0
+1756,5,0.01,6.0,2.0,2.0,0.0,Corporate,PRT,BB,Transient,A,76.1,0.0
+1757,5,0.01,5.2,4.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,63.1,0.0
+1758,7,0.01,60.14,5.0,2.0,0.0,Online TA,DEU,BB,Transient,A,80.08,0.0
+1759,6,0.01,63.83,3.0,2.0,0.0,Direct,FRA,BB,Transient,D,95.49,0.0
+1760,5,0.01,56.2,3.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient,A,64.8,20.0
+1761,9,0.02,35.0,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,65.22,0.0
+1762,8,0.02,65.62,2.0,1.0,0.0,Groups,DEU,BB,Transient-Party,A,77.25,0.0
+1763,7,0.01,13.29,4.29,2.0,0.0,Online TA,GBR,SC,Transient,A,68.61,0.0
+1764,8,0.02,34.0,1.0,1.0,0.0,Groups,ESP,BB,Transient-Party,A,73.0,0.0
+1765,5,0.01,63.0,1.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,81.4,0.0
+1766,6,0.01,13.33,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,87.01,0.0
+1767,10,0.02,4.1,1.0,1.0,0.0,Online TA,NLD,BB,Transient,A,83.68,0.0
+1768,5,0.01,0.2,1.0,1.0,0.0,Complementary,PRT,BB,Transient,D,9.0,0.0
+1769,9,0.02,32.56,2.0,2.0,0.0,Corporate,PRT,BB,Transient-Party,A,78.33,0.0
+1770,8,0.02,3.0,1.0,2.0,0.0,Online TA,PRT,SC,Transient-Party,A,83.25,0.0
+1771,9,0.02,2.67,1.0,1.0,0.0,Corporate,PRT,BB,Transient,D,98.06,11.11
+1772,9,0.02,22.56,2.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,68.78,11.11
+1773,9,0.02,4.22,1.0,2.0,0.0,Online TA,PRT,BB,Transient,D,109.0,11.11
+1774,6,0.01,31.67,5.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,64.56,0.0
+1775,10,0.02,18.6,5.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,76.52,0.0
+1776,9,0.02,29.33,3.0,2.0,0.0,Offline TA/TO,GBR,BB,Transient,A,79.97,0.0
+1777,8,0.02,41.75,6.5,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,70.38,0.0
+1778,5,0.01,5.0,1.0,2.0,100.0,Online TA,PRT,BB,Transient,A,111.4,40.0
+1779,8,0.02,1.5,1.0,1.0,0.0,Offline TA/TO,PRT,SC,Transient,A,88.71,0.0
+1780,5,0.01,116.0,3.0,1.0,0.0,Offline TA/TO,GNB,BB,Transient-Party,A,75.8,0.0
+1781,6,0.01,115.5,4.0,1.0,0.0,Offline TA/TO,MOZ,BB,Transient-Party,A,63.29,0.0
+1782,12,0.02,0.42,1.0,1.0,0.0,Online TA,PRT,SC,Transient,A,84.93,0.0
+1783,5,0.01,8.6,1.0,1.0,0.0,Online TA,PRT,BB,Transient-Party,A,95.2,0.0
+1784,5,0.01,20.0,4.0,2.0,0.0,Online TA,GBR,BB,Transient,D,97.09,20.0
+1785,27,0.05,83.89,3.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,64.19,0.0
+1786,5,0.01,43.0,3.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,69.94,20.0
+1787,9,0.02,70.78,3.0,2.0,0.0,Offline TA/TO,GBR,BB,Transient,A,89.87,0.0
+1788,26,0.05,62.5,5.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,67.68,0.0
+1789,5,0.01,1.2,1.0,1.0,0.0,Direct,USA,SC,Transient,A,86.4,0.0
+1790,5,0.01,0.4,1.0,2.0,0.0,Direct,ROU,BB,Transient,A,97.8,0.0
+1791,7,0.01,4.14,1.0,1.0,0.0,Corporate,PRT,BB,Transient,D,102.57,14.29
+1792,6,0.01,1.5,1.0,2.0,0.0,Direct,PRT,BB,Transient,E,165.33,33.33
+1793,6,0.01,44.17,2.0,2.0,0.0,Direct,DEU,BB,Transient,A,79.52,0.0
+1794,5,0.01,133.0,3.0,2.0,0.0,Offline TA/TO,USA,BB,Transient-Party,A,75.9,0.0
+1795,7,0.01,68.29,3.0,2.0,0.0,Online TA,USA,BB,Transient,A,87.42,14.29
+1796,7,0.01,44.0,3.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,78.7,0.0
+1797,6,0.01,40.67,2.0,2.0,0.0,Online TA,FRA,BB,Transient,A,103.15,0.0
+1798,6,0.01,30.83,3.0,2.0,0.0,Groups,AUT,BB,Transient-Party,A,87.72,0.0
+1799,5,0.01,68.0,4.0,2.0,0.0,Direct,GBR,BB,Transient,D,85.31,0.0
+1800,5,0.01,30.0,2.0,1.0,0.0,Online TA,GBR,BB,Transient,A,89.0,40.0
+1801,7,0.01,4.0,2.0,1.0,0.0,Online TA,PRT,BB,Transient,A,91.94,0.0
+1802,7,0.01,71.0,4.29,2.0,0.0,Offline TA/TO,ROU,BB,Transient,A,71.4,0.0
+1803,5,0.01,12.0,1.0,2.0,0.0,Direct,PRT,BB,Transient,A,83.2,40.0
+1804,10,0.02,1.5,1.0,2.0,0.0,Online TA,FRA,SC,Transient,A,86.08,0.0
+1805,6,0.01,6.0,3.0,1.0,0.0,Aviation,PRT,BB,Transient,A,102.0,0.0
+1806,5,0.01,1.2,2.0,2.0,0.0,Online TA,AUS,SC,Transient,A,93.0,0.0
+1807,5,0.01,5.6,2.0,3.0,0.0,Online TA,ESP,BB,Transient,D,157.2,20.0
+1808,11,0.02,64.91,4.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,72.3,0.0
+1809,5,0.01,33.0,4.0,3.0,0.0,Online TA,DEU,BB,Transient,D,136.02,80.0
+1810,5,0.01,49.2,2.0,2.0,0.0,Direct,RUS,BB,Transient,A,86.56,0.0
+1811,5,0.01,116.6,2.0,2.0,0.0,Groups,FRA,BB,Transient-Party,A,100.2,0.0
+1812,6,0.01,14.83,2.0,1.0,0.0,Online TA,DEU,SC,Transient,A,83.63,0.0
+1813,5,0.01,90.4,5.2,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,77.48,0.0
+1814,6,0.01,47.33,3.0,1.0,0.0,Online TA,GBR,BB,Transient,A,91.6,83.33
+1815,9,0.02,12.22,1.0,1.0,0.0,Online TA,CHN,SC,Transient,A,101.56,0.0
+1816,5,0.01,0.4,1.0,1.0,0.0,Direct,GRC,BB,Transient,A,117.4,0.0
+1817,5,0.01,72.2,4.0,3.0,0.0,Offline TA/TO,FRA,BB,Transient,A,115.01,0.0
+1818,7,0.01,21.29,1.0,1.0,0.0,Direct,GBR,BB,Transient,A,112.87,0.0
+1819,5,0.01,1.4,2.0,2.0,0.0,Online TA,GBR,BB,Transient,A,117.25,0.0
+1820,6,0.01,84.33,1.0,2.0,0.0,Online TA,GBR,BB,Transient,D,120.85,0.0
+1821,5,0.01,76.4,4.4,2.0,0.0,Online TA,USA,BB,Transient,D,123.57,20.0
+1822,5,0.01,0.0,1.0,2.0,0.0,Direct,DEU,BB,Transient,A,109.0,0.0
+1823,6,0.01,151.0,2.0,1.0,0.0,Offline TA/TO,FRA,BB,Transient-Party,A,68.33,0.0
+1824,23,0.04,97.87,3.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,86.27,0.0
+1825,10,0.02,137.8,4.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient-Party,A,116.2,0.0
+1826,6,0.01,15.17,1.0,1.0,0.0,Online TA,FRA,BB,Transient,A,99.17,50.0
+1827,7,0.01,89.43,6.57,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,89.22,0.0
+1828,7,0.01,15.14,1.0,2.0,0.0,Online TA,FRA,BB,Transient,A,122.51,0.0
+1829,14,0.03,143.21,4.0,2.0,0.0,Direct,FRA,BB,Transient,A,94.05,7.14
+1830,9,0.02,161.78,4.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,93.34,0.0
+1831,14,0.03,106.14,3.0,2.0,0.0,Offline TA/TO,BEL,BB,Transient,A,95.38,0.0
+1832,5,0.01,0.8,2.0,2.0,0.0,Direct,PRT,BB,Transient,A,141.6,0.0
+1833,11,0.02,13.55,1.0,3.0,0.0,Online TA,PRT,BB,Transient,D,196.27,18.18
+1834,8,0.02,1.5,1.0,2.0,0.0,Online TA,DEU,SC,Transient,A,102.22,0.0
+1835,4,0.01,0.25,1.0,2.0,0.0,Online TA,USA,SC,Transient,A,71.68,0.0
+1836,9,0.02,83.78,2.0,2.0,0.0,Direct,NLD,BB,Transient,A,99.22,11.11
+1837,12,0.02,7.92,1.0,1.0,0.0,Online TA,DEU,SC,Transient,A,105.29,8.33
+1838,5,0.01,13.2,2.0,1.0,0.0,Online TA,NLD,BB,Transient,A,104.13,0.0
+1839,8,0.02,99.88,5.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,89.21,0.0
+1840,6,0.01,16.33,2.0,2.0,0.0,Online TA,FRA,BB,Transient,D,139.3,0.0
+1841,5,0.01,16.8,2.0,2.0,0.0,Online TA,CHE,SC,Transient,A,132.8,0.0
+1842,5,0.01,86.6,3.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,60.5,0.0
+1843,5,0.01,16.6,4.0,2.0,0.0,Offline TA/TO,BEL,BB,Transient,A,96.33,0.0
+1844,5,0.01,16.8,4.0,2.0,0.0,Online TA,FRA,BB,Transient,A,105.3,0.0
+1845,5,0.01,77.8,4.0,2.0,100.0,Online TA,DEU,BB,Transient,A,148.56,0.0
+1846,5,0.01,86.6,2.0,2.0,0.0,Groups,CN,BB,Transient-Party,A,71.0,0.0
+1847,5,0.01,15.0,1.0,1.0,0.0,Direct,NLD,BB,Transient,A,131.2,0.0
+1848,20,0.04,49.8,2.0,1.0,0.0,Corporate,GBR,BB,Transient-Party,A,130.0,0.0
+1849,7,0.01,54.29,2.0,1.0,0.0,Corporate,TUR,BB,Transient-Party,A,130.0,0.0
+1850,8,0.02,18.88,1.0,1.0,0.0,Online TA,NLD,BB,Transient,D,144.3,12.5
+1851,5,0.01,63.4,2.0,1.0,0.0,Online TA,GBR,SC,Transient,A,98.16,0.0
+1852,6,0.01,95.0,3.0,2.0,0.0,Online TA,NLD,BB,Transient-Party,D,163.15,0.0
+1853,5,0.01,16.2,4.0,1.0,0.0,Offline TA/TO,FRA,BB,Transient-Party,A,65.2,0.0
+1854,9,0.02,5.22,2.0,2.0,0.0,Offline TA/TO,ITA,HB,Transient-Party,A,105.78,0.0
+1855,5,0.01,70.0,1.0,2.0,0.0,Online TA,GBR,BB,Transient,A,135.54,40.0
+1856,7,0.01,5.14,2.0,2.0,0.0,Corporate,URY,BB,Transient-Party,A,110.0,0.0
+1857,5,0.01,138.8,3.0,2.0,0.0,Direct,PRT,BB,Transient,D,110.79,60.0
+1858,8,0.02,61.38,2.0,1.0,0.0,Groups,CHE,BB,Transient-Party,A,120.5,0.0
+1859,5,0.01,1.8,1.0,2.0,0.0,Direct,USA,BB,Transient,A,124.8,0.0
+1860,4,0.01,20.5,4.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,119.06,25.0
+1861,7,0.01,51.43,3.0,1.0,0.0,Online TA,NLD,BB,Transient,D,119.91,0.0
+1862,5,0.01,147.2,5.4,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,98.86,20.0
+1863,18,0.03,120.33,2.0,2.0,0.0,Direct,GBR,BB,Transient,A,108.25,5.56
+1864,6,0.01,0.5,1.0,1.0,0.0,Aviation,GBR,BB,Transient,A,101.0,0.0
+1865,13,0.02,7.46,1.0,2.0,0.0,Online TA,PRT,BB,Transient,A,114.38,0.0
+1866,12,0.02,138.83,3.0,1.0,0.0,Offline TA/TO,FRA,BB,Transient-Party,A,110.24,0.0
+1867,11,0.02,247.0,2.0,2.0,0.0,Offline TA/TO,DEU,HB,Transient-Party,A,114.27,0.0
+1868,6,0.01,118.0,2.0,1.0,0.0,Offline TA/TO,DEU,BB,Transient-Party,A,110.0,0.0
+1869,5,0.01,118.0,2.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,111.8,0.0
+1870,15,0.03,121.13,3.0,1.0,0.0,Offline TA/TO,POL,BB,Transient-Party,A,102.09,0.0
+1871,7,0.01,21.43,1.0,2.0,0.0,Corporate,TUR,BB,Transient-Party,A,96.85,0.0
+1872,6,0.01,119.17,3.0,2.0,0.0,Online TA,BEL,BB,Transient-Party,A,125.23,0.0
+1873,5,0.01,156.6,4.0,2.0,0.0,Online TA,USA,SC,Transient,A,106.53,20.0
+1874,13,0.02,118.92,4.0,1.0,0.0,Offline TA/TO,RUS,BB,Transient-Party,A,110.0,0.0
+1875,5,0.01,132.6,4.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,107.0,0.0
+1876,6,0.01,123.0,4.33,2.0,0.0,Direct,GBR,BB,Transient,A,90.71,16.67
+1877,5,0.01,2.0,1.0,2.0,0.0,Online TA,PRT,BB,Transient,D,140.8,0.0
+1878,5,0.01,2.4,1.0,2.0,0.0,Direct,PRT,BB,Transient,D,131.5,0.0
+1879,5,0.01,57.0,3.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient-Party,A,75.33,0.0
+1880,7,0.01,170.57,3.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,90.18,28.57
+1881,11,0.02,49.27,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,121.06,0.0
+1882,12,0.02,261.25,2.0,2.0,0.0,Offline TA/TO,DEU,HB,Transient-Party,A,114.75,0.0
+1883,5,0.01,261.4,2.0,1.0,0.0,Offline TA/TO,DEU,HB,Transient-Party,A,89.4,0.0
+1884,6,0.01,150.0,3.0,2.0,0.0,Offline TA/TO,FRA,HB,Transient-Party,A,82.5,0.0
+1885,6,0.01,164.83,4.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,90.1,0.0
+1886,3,0.01,67.33,6.33,2.0,0.0,Online TA,AUT,BB,Transient,D,145.49,0.0
+1887,5,0.01,46.0,3.0,1.0,0.0,Online TA,FRA,BB,Transient,A,110.7,0.0
+1888,17,0.03,189.24,2.0,1.0,0.0,Offline TA/TO,SRB,BB,Transient-Party,A,96.99,0.0
+1889,9,0.02,200.22,1.0,2.0,0.0,Offline TA/TO,GBR,BB,Transient,A,84.51,11.11
+1890,5,0.01,50.8,1.0,1.0,0.0,Corporate,PRT,BB,Transient-Party,A,100.03,40.0
+1891,8,0.02,187.12,2.0,2.0,0.0,Online TA,GBR,BB,Transient-Party,A,107.54,0.0
+1892,7,0.01,5.29,1.0,1.0,0.0,Online TA,PRT,BB,Transient,A,125.25,0.0
+1893,6,0.01,4.83,1.0,1.0,0.0,Online TA,DEU,BB,Transient,A,123.57,0.0
+1894,13,0.02,152.0,5.0,2.0,0.0,Direct,BEL,BB,Transient,A,87.21,0.0
+1895,19,0.04,165.11,3.0,2.0,0.0,Offline TA/TO,GBR,BB,Transient,A,87.72,0.0
+1896,5,0.01,15.0,3.0,2.0,0.0,Online TA,ESP,BB,Transient,A,162.2,40.0
+1897,8,0.02,141.5,2.0,2.0,0.0,Direct,GBR,BB,Transient,A,97.56,0.0
+1898,21,0.04,165.43,6.86,2.0,0.0,Offline TA/TO,GBR,BB,Transient,A,80.76,0.0
+1899,7,0.01,146.0,4.0,2.0,0.0,Offline TA/TO,IRL,BB,Transient,A,82.96,0.0
+1900,5,0.01,101.4,5.0,2.0,0.0,Online TA,PRT,SC,Transient,A,111.16,40.0
+1901,5,0.01,0.8,1.0,2.0,0.0,Online TA,DEU,BB,Transient,A,146.6,0.0
+1902,14,0.03,140.43,5.0,3.0,0.0,Online TA,GBR,BB,Transient,D,151.85,0.0
+1903,16,0.03,116.25,4.0,2.0,0.0,Offline TA/TO,GBR,BB,Transient,A,83.49,0.0
+1904,5,0.01,155.6,2.0,2.0,100.0,Online TA,SWE,BB,Transient-Party,A,128.7,0.0
+1905,5,0.01,78.4,1.0,3.0,0.0,Online TA,AUT,BB,Transient,D,171.88,0.0
+1906,5,0.01,96.8,2.0,2.0,100.0,Direct,BRA,BB,Transient,E,182.34,0.0
+1907,7,0.01,148.71,3.0,2.0,0.0,Offline TA/TO,GBR,BB,Transient,A,80.06,0.0
+1908,8,0.02,192.0,3.0,2.0,100.0,Online TA,DEU,BB,Transient,F,167.15,0.0
+1909,5,0.01,1.2,1.0,1.0,0.0,Online TA,PRT,SC,Transient,A,104.12,0.0
+1910,8,0.02,16.25,2.0,1.0,0.0,Online TA,NLD,BB,Transient,A,129.91,0.0
+1911,13,0.02,373.69,2.0,2.0,0.0,Offline TA/TO,DEU,HB,Transient-Party,A,116.82,0.0
+1912,7,0.01,1.14,1.0,2.0,0.0,Online TA,USA,SC,Transient,A,100.9,14.29
+1913,9,0.02,9.44,1.0,2.0,0.0,Online TA,NLD,BB,Transient,A,125.78,11.11
+1914,5,0.01,63.6,3.0,2.0,100.0,Online TA,FIN,BB,Transient,A,131.46,0.0
+1915,9,0.02,131.11,3.0,2.0,0.0,Direct,GBR,BB,Transient,D,108.76,0.0
+1916,8,0.02,377.25,2.0,2.0,0.0,Offline TA/TO,DEU,HB,Transient-Party,A,117.62,0.0
+1917,6,0.01,341.67,2.0,1.0,0.0,Offline TA/TO,DEU,HB,Transient-Party,A,79.58,0.0
+1918,7,0.01,0.86,1.0,2.0,0.0,Direct,PRT,SC,Transient,A,129.89,0.0
+1919,7,0.01,35.57,1.0,2.0,0.0,Online TA,FRA,BB,Transient,D,156.64,28.57
+1920,7,0.01,1.71,1.0,2.0,0.0,Online TA,FRA,BB,Transient,D,154.73,0.0
+1921,5,0.01,225.4,3.0,2.0,100.0,Online TA,NLD,BB,Transient,F,196.54,0.0
+1922,7,0.01,154.43,4.43,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,90.83,14.29
+1923,5,0.01,92.0,7.0,3.0,0.0,Online TA,BRA,BB,Transient,D,141.41,60.0
+1924,8,0.02,136.88,4.62,2.0,100.0,Online TA,ROU,BB,Transient,A,133.9,12.5
+1925,10,0.02,174.5,5.3,2.0,0.0,Offline TA/TO,NLD,BB,Transient,A,83.97,0.0
+1926,9,0.02,153.33,5.44,2.0,0.0,Direct,PRT,BB,Transient,A,93.94,22.22
+1927,7,0.01,107.0,6.86,2.0,0.0,Offline TA/TO,DEU,BB,Transient,D,97.55,0.0
+1928,5,0.01,5.4,3.0,3.0,0.0,Online TA,ESP,BB,Transient,D,200.65,0.0
+1929,5,0.01,98.0,3.0,2.0,0.0,Online TA,ITA,BB,Transient,D,131.98,40.0
+1930,5,0.01,89.0,3.0,2.0,0.0,Online TA,GBR,BB,Transient,D,143.76,20.0
+1931,6,0.01,172.83,4.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,89.68,0.0
+1932,13,0.02,153.69,4.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,82.88,0.0
+1933,6,0.01,221.0,1.0,1.0,0.0,Offline TA/TO,DEU,HB,Transient-Party,A,73.0,0.0
+1934,5,0.01,1.8,1.0,2.0,100.0,Direct,PRT,BB,Transient,D,144.78,20.0
+1935,5,0.01,177.0,3.0,2.0,100.0,Online TA,DEU,BB,Transient,A,133.02,40.0
+1936,5,0.01,131.2,5.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,95.91,0.0
+1937,6,0.01,41.17,2.0,2.0,0.0,Online TA,CHE,BB,Transient,A,150.3,0.0
+1938,6,0.01,24.67,2.0,2.0,0.0,Direct,PRT,BB,Transient,A,90.33,0.0
+1939,5,0.01,171.2,3.0,2.0,0.0,Offline TA/TO,AUT,BB,Transient,A,89.19,0.0
+1940,10,0.02,402.2,2.0,2.0,0.0,Offline TA/TO,DEU,HB,Transient-Party,A,118.64,0.0
+1941,5,0.01,38.6,4.0,3.0,0.0,Online TA,NLD,BB,Transient,D,165.65,0.0
+1942,8,0.02,354.25,2.0,1.0,0.0,Offline TA/TO,DEU,HB,Transient-Party,A,71.06,0.0
+1943,5,0.01,3.0,2.0,2.0,0.0,Online TA,NLD,SC,Transient,A,122.4,20.0
+1944,9,0.02,130.0,4.0,2.0,0.0,Offline TA/TO,GBR,BB,Transient,A,86.95,0.0
+1945,5,0.01,173.4,3.0,2.0,0.0,Offline TA/TO,CZE,BB,Transient-Party,A,94.45,0.0
+1946,8,0.02,164.38,5.75,2.0,0.0,Online TA,DEU,BB,Transient,D,134.74,37.5
+1947,5,0.01,161.4,1.0,3.0,0.0,Online TA,GBR,BB,Transient,D,157.98,80.0
+1948,5,0.01,40.4,3.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,81.58,0.0
+1949,8,0.02,168.0,2.0,2.0,0.0,Offline TA/TO,GBR,BB,Transient,A,84.9,12.5
+1950,5,0.01,6.2,1.0,1.0,0.0,Direct,ESP,BB,Transient,D,103.2,0.0
+1951,6,0.01,6.67,2.0,1.0,0.0,Offline TA/TO,PRT,BB,Transient,D,128.67,16.67
+1952,5,0.01,209.6,4.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient-Party,A,89.01,0.0
+1953,6,0.01,237.67,2.0,2.0,0.0,Groups,ITA,HB,Transient-Party,A,88.0,0.0
+1954,7,0.01,125.0,3.0,2.0,0.0,Offline TA/TO,GBR,BB,Transient,A,86.19,0.0
+1955,5,0.01,188.0,3.0,2.0,0.0,Online TA,DEU,BB,Transient-Party,A,122.16,0.0
+1956,8,0.02,21.25,2.0,2.0,0.0,Online TA,GBR,BB,Transient,A,116.4,0.0
+1957,8,0.02,140.62,6.88,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,92.16,0.0
+1958,8,0.02,24.75,1.0,1.0,0.0,Online TA,BRA,SC,Transient,A,100.42,0.0
+1959,5,0.01,4.2,1.0,1.0,0.0,Online TA,FRA,BB,Transient,A,124.12,0.0
+1960,6,0.01,24.5,2.0,2.0,0.0,Online TA,PRT,BB,Transient,A,133.11,16.67
+1961,5,0.01,12.8,2.0,2.0,0.0,Online TA,PRT,SC,Transient,A,96.68,20.0
+1962,5,0.01,39.8,3.0,1.0,0.0,Groups,DEU,BB,Transient-Party,A,101.6,0.0
+1963,4,0.01,190.75,1.0,2.0,0.0,Online TA,FRA,BB,Transient,A,102.53,50.0
+1964,6,0.01,188.67,3.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,88.14,0.0
+1965,7,0.01,56.86,4.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,111.68,42.86
+1966,8,0.02,274.12,3.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient-Party,A,103.44,0.0
+1967,5,0.01,295.2,4.0,2.0,0.0,Offline TA/TO,ITA,HB,Transient-Party,A,105.3,0.0
+1968,5,0.01,39.0,1.0,1.0,0.0,Online TA,DEU,BB,Transient,A,131.5,0.0
+1969,7,0.01,269.43,4.0,2.0,0.0,Online TA,PRT,BB,Transient,A,94.32,0.0
+1970,5,0.01,43.0,1.0,2.0,0.0,Online TA,DEU,BB,Transient,A,117.99,20.0
+1971,5,0.01,26.4,3.0,2.0,0.0,Online TA,CHN,SC,Transient,A,104.24,40.0
+1972,5,0.01,112.4,3.0,2.0,0.0,Offline TA/TO,USA,BB,Transient,A,85.6,0.0
+1973,6,0.01,100.0,4.0,2.0,0.0,Offline TA/TO,ITA,HB,Transient-Party,A,140.0,0.0
+1974,5,0.01,8.6,3.0,2.0,0.0,Online TA,FRA,BB,Transient,D,173.84,20.0
+1975,5,0.01,22.8,2.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,68.0,0.0
+1976,5,0.01,0.0,2.0,2.0,0.0,Online TA,ESP,BB,Transient,A,65.41,0.0
+1977,5,0.01,39.6,3.0,2.0,0.0,Online TA,CHE,SC,Transient,A,107.48,20.0
+1978,5,0.01,2.0,3.0,1.0,0.0,Online TA,USA,BB,Transient,A,123.47,0.0
+1979,6,0.01,3.33,1.0,1.0,0.0,Online TA,PRT,SC,Transient,A,101.56,16.67
+1980,5,0.01,30.2,3.0,2.0,0.0,Offline TA/TO,IRL,BB,Transient,A,89.83,0.0
+1981,5,0.01,6.2,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,157.45,20.0
+1982,5,0.01,49.4,5.0,2.0,0.0,Online TA,CHE,SC,Transient,A,95.98,20.0
+1983,6,0.01,110.5,2.0,1.0,0.0,Corporate,POL,BB,Transient-Party,A,114.87,0.0
+1984,10,0.02,24.7,2.0,1.0,0.0,Offline TA/TO,GBR,BB,Transient,A,114.45,0.0
+1985,7,0.01,193.86,7.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,83.01,0.0
+1986,5,0.01,60.6,1.0,2.0,0.0,Online TA,DEU,SC,Transient,A,102.06,60.0
+1987,5,0.01,4.8,2.0,1.0,0.0,Aviation,ITA,BB,Transient,D,113.2,20.0
+1988,5,0.01,103.0,5.0,3.0,0.0,Online TA,DEU,BB,Transient,D,137.2,20.0
+1989,9,0.02,318.56,5.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient-Party,A,74.89,0.0
+1990,5,0.01,0.6,1.0,1.0,0.0,Online TA,CHN,SC,Transient,A,112.0,0.0
+1991,8,0.02,296.12,3.0,1.0,0.0,Offline TA/TO,FRA,BB,Transient-Party,A,68.17,0.0
+1992,5,0.01,377.0,2.0,2.0,0.0,Offline TA/TO,DEU,HB,Transient-Party,A,114.4,0.0
+1993,5,0.01,7.2,2.0,1.0,0.0,Corporate,CZE,BB,Transient,A,98.0,0.0
+1994,5,0.01,71.4,1.0,1.0,0.0,Offline TA/TO,DEU,BB,Transient-Party,A,62.5,0.0
+1995,5,0.01,34.4,1.0,2.0,0.0,Online TA,SWE,SC,Transient,A,109.0,20.0
+1996,5,0.01,219.6,2.0,2.0,0.0,Online TA,EST,BB,Transient,A,102.64,20.0
+1997,6,0.01,134.5,4.0,2.0,0.0,Online TA,PRT,BB,Transient,D,107.47,66.67
+1998,5,0.01,2.0,1.0,1.0,0.0,Online TA,GBR,BB,Transient,A,114.0,0.0
+1999,5,0.01,182.8,4.0,3.0,0.0,Online TA,ITA,BB,Transient,D,125.34,20.0
+2000,5,0.01,18.8,3.0,2.0,0.0,Offline TA/TO,NLD,BB,Transient,A,98.77,0.0
+2001,6,0.01,51.17,3.0,2.0,0.0,Online TA,FRA,SC,Transient,A,107.89,33.33
+2002,7,0.01,67.14,1.0,2.0,0.0,Online TA,DEU,BB,Transient,A,107.37,0.0
+2003,7,0.01,41.86,3.0,2.0,0.0,Online TA,GBR,BB,Transient,D,101.89,14.29
+2004,5,0.01,39.8,4.2,2.0,0.0,Online TA,CHN,BB,Transient,A,98.31,0.0
+2005,5,0.01,203.2,3.0,2.0,0.0,Offline TA/TO,GBR,BB,Transient,A,74.91,0.0
+2006,16,0.03,214.0,3.0,1.0,0.0,Groups,MKD,BB,Transient,A,74.3,0.0
+2007,5,0.01,4.6,1.0,1.0,0.0,Corporate,PRT,BB,Transient,D,98.2,20.0
+2008,5,0.01,79.0,4.0,1.0,0.0,Online TA,DNK,BB,Transient,D,139.58,0.0
+2009,6,0.01,30.17,3.0,1.0,0.0,Groups,BEL,BB,Transient-Party,A,88.33,0.0
+2010,5,0.01,13.6,4.0,1.0,0.0,Online TA,PRT,BB,Transient,A,106.8,40.0
+2011,8,0.02,36.38,5.0,1.0,0.0,Online TA,DEU,BB,Transient,A,140.5,0.0
+2012,18,0.03,70.61,4.0,2.0,0.0,Online TA,POL,BB,Transient,A,113.08,0.0
+2013,8,0.02,30.25,6.62,2.0,0.0,Online TA,DEU,BB,Transient,A,78.24,0.0
+2014,6,0.01,61.83,5.0,2.0,0.0,Online TA,FRA,BB,Transient,A,88.67,0.0
+2015,24,0.05,215.0,2.0,1.0,0.0,Groups,NLD,BB,Transient,A,75.0,0.0
+2016,12,0.02,215.0,2.0,1.0,0.0,Groups,ESP,BB,Transient,A,75.0,0.0
+2017,7,0.01,62.71,1.0,2.0,0.0,Online TA,USA,SC,Transient,A,75.59,14.29
+2018,5,0.01,22.6,7.0,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,61.73,0.0
+2019,5,0.01,76.6,3.0,3.0,0.0,Offline TA/TO,FRA,BB,Transient,A,98.68,0.0
+2020,5,0.01,19.2,3.0,2.0,0.0,Online TA,PRT,BB,Transient,D,112.49,40.0
+2021,5,0.01,44.2,2.0,2.0,0.0,Online TA,DEU,BB,Transient,A,97.6,40.0
+2022,6,0.01,8.17,2.0,2.0,0.0,Offline TA/TO,ESP,BB,Transient,A,66.97,0.0
+2023,9,0.02,29.0,1.0,2.0,0.0,Offline TA/TO,BRA,BB,Transient-Party,A,65.0,0.0
+2024,6,0.01,27.17,1.0,1.0,0.0,Offline TA/TO,BRA,BB,Transient-Party,A,61.67,0.0
+2025,2,0.0,129.0,6.0,2.0,0.0,Online TA,FIN,BB,Transient,A,86.7,50.0
+2026,5,0.01,243.6,4.2,2.0,0.0,Online TA,PRT,BB,Transient,A,86.4,60.0
+2027,6,0.01,7.67,4.0,2.0,0.0,Online TA,PRT,SC,Transient,A,84.56,16.67
+2028,8,0.02,23.5,6.0,2.0,0.0,Offline TA/TO,BRA,BB,Transient-Party,A,70.0,0.0
+2029,5,0.01,283.0,5.0,1.0,0.0,Offline TA/TO,SWE,BB,Transient-Party,A,60.0,0.0
+2030,8,0.02,11.12,4.0,2.0,0.0,Online TA,FRA,BB,Transient,D,102.66,12.5
+2031,5,0.01,12.4,6.4,2.0,0.0,Online TA,FRA,BB,Transient,A,79.07,0.0
+2032,6,0.01,34.0,1.0,1.0,0.0,Groups,MEX,BB,Transient-Party,A,75.0,0.0
+2033,8,0.02,5.0,1.0,2.0,0.0,Online TA,BRA,SC,Transient,A,82.51,0.0
+2034,9,0.02,29.0,3.0,1.0,0.0,Groups,DNK,BB,Transient-Party,A,65.0,0.0
+2035,6,0.01,2.5,3.0,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,77.73,0.0
+2036,5,0.01,6.2,2.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,72.94,20.0
+2037,6,0.01,0.83,1.0,1.0,0.0,Online TA,USA,SC,Transient,A,77.93,0.0
+2038,5,0.01,25.6,5.2,2.0,0.0,Online TA,FIN,BB,Transient,A,84.54,20.0
+2039,6,0.01,5.0,4.0,1.0,0.0,Corporate,PRT,BB,Transient,A,86.32,0.0
+2040,5,0.01,8.8,2.0,2.0,0.0,Online TA,DEU,SC,Transient,A,85.2,20.0
+2041,5,0.01,3.0,2.0,1.0,0.0,Online TA,PRT,BB,Transient,A,86.24,20.0
+2042,4,0.01,8.5,1.0,2.0,0.0,Direct,PRT,SC,Transient,A,147.25,0.0
+2043,5,0.01,75.2,3.0,2.0,100.0,Online TA,GBR,BB,Transient,A,117.04,40.0
+2044,5,0.01,31.8,5.2,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,71.0,0.0
+2045,5,0.01,7.4,2.0,2.0,0.0,Online TA,ESP,SC,Transient,A,88.2,40.0
+2046,5,0.01,41.6,4.0,3.0,0.0,Online TA,BEL,BB,Transient,D,126.37,20.0
+2047,6,0.01,151.0,2.0,2.0,0.0,Groups,ISR,BB,Transient-Party,A,90.0,0.0
+2048,5,0.01,145.4,2.0,1.0,0.0,Groups,ISR,BB,Transient-Party,A,75.0,0.0
+2049,5,0.01,148.2,2.0,2.0,0.0,Groups,PRT,BB,Transient-Party,A,92.0,0.0
+2050,4,0.01,22.5,2.0,2.0,0.0,Online TA,ITA,BB,Transient,A,108.5,50.0
+2051,5,0.01,68.8,3.0,3.0,0.0,Offline TA/TO,ITA,BB,Transient,A,111.42,20.0
+2052,6,0.01,138.83,5.0,2.0,0.0,Online TA,BRA,BB,Transient,A,83.12,0.0
+2053,8,0.02,57.88,2.0,1.0,0.0,Offline TA/TO,GBR,BB,Transient-Party,A,103.75,0.0
+2054,6,0.01,45.67,1.0,1.0,0.0,Corporate,GBR,BB,Transient-Party,A,108.33,0.0
+2055,5,0.01,5.2,4.0,2.0,0.0,Online TA,DEU,SC,Transient,A,131.44,0.0
+2056,5,0.01,78.6,5.2,2.0,0.0,Offline TA/TO,FRA,BB,Transient,A,85.7,20.0
+2057,5,0.01,46.2,1.0,3.0,0.0,Online TA,DEU,BB,Transient,D,159.54,40.0
+2058,5,0.01,114.4,3.0,2.0,0.0,Online TA,ITA,BB,Transient-Party,A,102.98,20.0
+2059,5,0.01,3.2,1.0,1.0,0.0,Online TA,FRA,SC,Transient,A,101.31,0.0
+2060,5,0.01,62.8,3.0,2.0,0.0,Online TA,ARG,SC,Transient,A,113.94,40.0
+2061,5,0.01,97.4,3.0,2.0,0.0,Offline TA/TO,GBR,SC,Transient,A,79.92,0.0
+2062,5,0.01,83.6,3.0,2.0,0.0,Online TA,IND,BB,Transient,D,135.06,40.0
+2063,5,0.01,42.6,3.0,1.0,0.0,Corporate,PRT,BB,Transient-Party,A,89.47,0.0
+2064,5,0.01,105.0,4.0,2.0,0.0,Direct,FRA,BB,Transient,D,126.17,20.0
+2065,6,0.01,21.0,1.0,1.0,0.0,Online TA,POL,SC,Transient,A,111.7,33.33
+2066,8,0.02,64.12,6.25,2.0,0.0,Online TA,FRA,SC,Transient,A,123.9,37.5
+2067,6,0.01,14.0,1.0,1.0,0.0,Aviation,ESP,BB,Transient-Party,D,142.5,50.0
+2068,6,0.01,111.0,6.67,2.0,0.0,Offline TA/TO,DEU,BB,Transient,A,97.41,16.67
+2069,5,0.01,88.2,3.0,1.0,0.0,Online TA,DEU,BB,Transient,D,139.26,40.0
+2070,5,0.01,6.0,3.0,1.0,0.0,Groups,KOR,BB,Transient-Party,A,110.0,0.0
+2071,5,0.01,6.0,3.0,1.0,0.0,Groups,SWE,BB,Transient-Party,A,110.0,0.0
+2072,6,0.01,47.0,3.0,2.0,0.0,Offline TA/TO,ITA,HB,Transient-Party,A,164.0,0.0
+2073,7,0.01,403.0,3.0,2.0,0.0,Groups,AUS,BB,Transient-Party,A,112.67,0.0
+2074,5,0.01,19.8,2.0,2.0,0.0,Online TA,USA,BB,Transient,A,128.47,40.0
+2075,5,0.01,2.6,4.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,94.2,40.0
+2076,7,0.01,442.0,3.0,2.0,0.0,Groups,GBR,BB,Transient-Party,A,116.24,0.0
+2077,6,0.01,14.33,2.0,1.0,0.0,Online TA,GBR,BB,Transient,A,113.71,16.67
+2078,5,0.01,38.4,2.0,2.0,0.0,Online TA,CHL,BB,Transient,D,144.08,0.0
+2079,8,0.02,42.5,4.12,2.0,0.0,Online TA,GBR,BB,Transient,A,153.39,0.0
+2080,5,0.01,59.8,2.0,2.0,0.0,Offline TA/TO,BRA,BB,Transient,A,106.99,0.0
+2081,6,0.01,404.67,3.0,2.0,0.0,Groups,GBR,BB,Transient-Party,A,112.67,0.0
+2082,5,0.01,149.0,1.0,2.0,0.0,Corporate,USA,HB,Transient-Party,A,154.0,0.0
+2083,5,0.01,468.8,3.0,2.0,0.0,Offline TA/TO,GBR,BB,Transient-Party,A,112.67,0.0
+2084,7,0.01,377.86,2.0,1.0,0.0,Groups,DEU,HB,Transient-Party,A,92.79,0.0
+2085,5,0.01,111.2,2.0,2.0,0.0,Offline TA/TO,PRT,BB,Transient,A,91.8,40.0
+2086,5,0.01,15.0,4.0,2.0,0.0,Online TA,FRA,SC,Transient,A,124.9,20.0
+2087,7,0.01,459.0,3.0,2.0,0.0,Offline TA/TO,GBR,BB,Transient-Party,A,112.67,0.0
+2088,5,0.01,459.4,3.0,2.0,0.0,Offline TA/TO,CN,BB,Transient-Party,A,112.67,0.0
+2089,5,0.01,3.6,1.0,2.0,0.0,Online TA,DEU,BB,Transient,D,163.4,20.0
+2090,5,0.01,146.2,2.0,2.0,100.0,Online TA,GBR,BB,Transient,F,192.26,20.0
+2091,5,0.01,8.0,1.0,2.0,0.0,Direct,GBR,BB,Transient,A,82.46,0.0
+2092,5,0.01,242.4,3.0,2.0,100.0,Online TA,DEU,BB,Transient,F,159.13,20.0
+2093,5,0.01,146.8,2.0,2.0,0.0,Direct,BEL,BB,Transient,A,87.89,0.0
+2094,5,0.01,180.8,2.0,2.0,0.0,Online TA,DEU,BB,Transient,A,119.38,40.0
+2095,4,0.01,13.25,1.0,2.0,0.0,Online TA,BRA,SC,Transient,A,121.75,50.0
+2096,5,0.01,223.4,3.0,2.0,100.0,Online TA,NLD,BB,Transient,F,190.8,20.0
+2097,6,0.01,253.67,3.0,2.0,0.0,Online TA,DEU,BB,Transient-Party,A,106.5,0.0

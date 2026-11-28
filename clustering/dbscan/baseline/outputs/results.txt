@@ -6,3 +6,5 @@ silhouette (non-noise only): 0.2814
 davies-bouldin: 1.0714
 calinski-harabasz: 387.6
 note: scores ignore noise points and are not comparable with a method that labels every row
+HONEST SCORE (common ruler, noise counted as its own group): silhouette -0.1934 | noise 47.32%
+WARNING: the non-noise silhouette above ignores noise points and is not comparable with other models.

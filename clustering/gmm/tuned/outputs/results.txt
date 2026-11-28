@@ -1,0 +1,8 @@
+GMM TUNED (12-D)
+settings: k=5, covariance_type=spherical, reg_covar=0.0001
+input: 12-D frequency matrix (no PCA)
+rows: 52817 | cluster sizes (noise incl. if any): [8310, 4704, 9472, 22234, 8097] | noise %: 0.00
+silhouette (common ruler, 10k fixed sample, noise = own group): 0.1672
+davies-bouldin (non-noise): 1.8141 | calinski-harabasz (non-noise): 6987.1
+closest single column: ARI 0.27 (Meal) | NMI 0.41 (CustomerType)
+stability ARI (5 seeds): 0.986
