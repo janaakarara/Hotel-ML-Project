@@ -1,9 +1,9 @@
-# outputs: where each figure and table is
+﻿# outputs: where each figure and table is
 
 One folder per pipeline step. The figure (png) and the table (csv) of the same analysis sit side by side
 and share a name. Model results are not here: each model writes next to its own script
 (`clustering/<model>/<baseline or tuned>/outputs`), and the encoding comparison is in
-`src/04_encoding_comparison/outputs`.
+`experiments/comparing_experiments/outputs`.
 
 | Folder | Made by | What it shows / decision it supports |
 |---|---|---|
@@ -15,3 +15,4 @@ and share a name. Model results are not here: each model writes next to its own 
 | `gmm/subclusters/` | `experiments/gmm_subclusters.py` | side analysis: cluster means and sub-groups of the largest GMM cluster (not part of the main pipeline) |
 
 Naming: `stageNx_<what>` = pipeline step N, part x. Run order is in the root `README.md`.
+

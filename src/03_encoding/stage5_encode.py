@@ -1,4 +1,4 @@
-"""Stage 5: encoding. Month as sin/cos, categorical columns as one-hot (default) or frequency.
+﻿"""Stage 5: encoding. Month as sin/cos, categorical columns as one-hot (default) or frequency.
 
 --encoding onehot (default, unchanged behaviour)
     MarketSegment, Meal, Country, CustomerType, ReservedRoomType -> one-hot (0/1), all levels kept.
@@ -6,7 +6,7 @@
     Writes data/processed/h2_clustering_stage5.csv
 --encoding frequency
     Each categorical column becomes ONE column: how common its category is (share of rows), then z-scored
-    like the numeric columns. Winner of src/04_encoding_comparison for Agglomerative (and a tie for DBSCAN).
+    like the numeric columns. Winner of experiments/comparing_experiments for Agglomerative (and a tie for DBSCAN).
     Writes data/processed/h2_clustering_stage5_frequency.csv   (the one-hot file is left untouched)
 
 ArrivalDateMonth (1-12) -> ArrivalMonth_sin, ArrivalMonth_cos in both modes.
@@ -74,3 +74,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

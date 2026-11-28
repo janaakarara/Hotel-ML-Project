@@ -20,13 +20,15 @@ Run everything from the project root, in this order. Every script has working de
 | 4 | Group categories, fix skew | `stage3a_distributions_check.py`, `stage3b_group_and_fix_skew.py`, `stage3c_categories_after_grouping.py` (all in src/02_preprocessing) | ...stage3.csv | stage3a_categorical_shares, stage3a_numeric_skew |
 | 5 | Scale numbers | `stage4a_scaling_check.py`, `stage4b_apply_scaling.py` | ...stage4.csv | stage4a_scaling_spread, stage4a_scaling_distributions |
 | 6 | Encode categories | `python src/03_encoding/stage5_encode.py --encoding frequency` (add nothing for one-hot) | ...stage5_frequency.csv | step 7 below |
-| 7 | Compare encodings, all models | `python src/04_encoding_comparison/run_all_models.py` then `run_grid.py` | src/04_encoding_comparison/outputs | all_models_encoding_comparison.png, grid/grid_final_comparison.png |
+| 7 | Compare encodings, all models | `python experiments/comparing_experiments/run_all_models.py` then `run_grid.py` | experiments/comparing_experiments/outputs | all_models_encoding_comparison.png, grid/grid_final_comparison.png |
 | 8 | Models (baseline, then tuned) | `python clustering/<kmeans or gmm or agglomerative or dbscan>/<baseline or tuned>/run.py` | clustering/*/outputs | per-model figures in each outputs folder |
 | 9 | Cluster profiles and comparison table | `python clustering/make_profiles.py` then `python clustering/compare_all.py` | clustering/comparison.csv, cluster_profiles.csv | silhouette on one common ruler |
 
-Other folders: `src/features` = reusable preprocessing object for the app, `experiments` = side experiments.
+Other folders: `src/features` = reusable preprocessing object for the app, `experiments/comparing_experiments` = the encoding comparison for every algorithm (step 7); other side experiments live in `experiments`.
 
 Known limitations: cluster structure in this data is weak (best silhouette about 0.17); the tuned DBSCAN has no valid segmentation; Agglomerative is fitted on a 10k sample. Details are in clustering/README.md and the clustering report.
 
 File guide: data/processed/README.md (datasets) and outputs/README.md (figures and tables).
+
+
 

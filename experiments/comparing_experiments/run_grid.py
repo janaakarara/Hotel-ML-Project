@@ -1,4 +1,4 @@
-"""Encoding x dimensionality-reduction x hyper-parameter grid for the 4 clustering models (+ 2 extra methods).
+﻿"""Encoding x dimensionality-reduction x hyper-parameter grid for the 4 clustering models (+ 2 extra methods).
 
 Why: the tuned GMM (one-hot, PCA 90% -> 7-D, k=2) reports silhouette 0.3231, the encoding experiment reports 0.20 for
 Frequency. Those numbers are NOT on the same scale (different metric AND different k), so here every combination is
@@ -23,8 +23,8 @@ Top 5 by fair score are re-run
 with 5 other seeds (K-Means / GMM / K-Prototypes) or 5 other 10k samples (Agglomerative / DBSCAN / HDBSCAN);
 winner = highest fair score with mean ARI >= 0.80. Done twice: any k, and k >= 3 (k=2 is favoured by silhouette).
 
-Run from the project root:  python src/04_encoding_comparison/run_grid.py
-Outputs in src/04_encoding_comparison/outputs/grid/
+Run from the project root:  python experiments/comparing_experiments/run_grid.py
+Outputs in experiments/comparing_experiments/outputs/grid/
 """
 import sys
 import time
@@ -266,3 +266,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
