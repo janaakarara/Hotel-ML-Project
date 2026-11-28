@@ -1,0 +1,173 @@
+[INFO] h2_clean.csv shape  -> (53036, 31)
+[INFO] h2_clustering_stage1.csv shape  -> (52817, 22)
+[INFO] h2_clustering_stage2.csv shape  -> (52817, 11)
+[INFO] h2_clustering_stage3.csv shape  -> (52817, 11)
+[INFO] h2_clustering_stage4.csv shape  -> (52817, 11)
+[INFO] h2_clustering_stage5_frequency.csv shape  -> (52817, 12)
+[PASS] stage1 rows equal stage5 rows  -> 52817 vs 52817
+[PASS] stage2 rows equal stage5 rows  -> 52817 vs 52817
+[PASS] stage3 rows equal stage5 rows  -> 52817 vs 52817
+[PASS] stage4 rows equal stage5 rows  -> 52817 vs 52817
+[PASS] stage5 has 12 columns  -> 12
+[PASS] stage5 has no NaN
+[PASS] stage5 columns are z-scored (mean 0, std 1)  -> []
+[PASS] no leakage column names in the clustering matrix  -> []
+[PASS] cleaning_log.csv exists
+[PASS] clustering/comparison.csv exists
+[INFO] comparison.csv columns  -> model, variant, clusters, noise_pct, silhouette_common, davies_bouldin, calinski_harabasz, max_ARI_col, max_NMI_col, NMI_col
+[PASS] kmeans/baseline run.py exists
+[PASS] kmeans/baseline labels length  -> 52817 vs 52817
+[PASS] kmeans/baseline cluster count matches table  -> labels 3 vs table 3
+[PASS] kmeans/baseline noise % matches table  -> labels 0.00 vs table 0.0
+[PASS] kmeans/baseline Davies-Bouldin matches labels  -> recomputed 2.1476 vs table 2.1476
+[PASS] kmeans/baseline Calinski-Harabasz matches labels  -> recomputed 6968.6 vs table 6968.6
+[WARN] kmeans/baseline table silhouette appears in results.txt  -> table 0.1563 | results.txt []
+[WARN] kmeans/baseline cluster sizes parse  -> Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+[PASS] kmeans/tuned run.py exists
+[PASS] kmeans/tuned labels length  -> 52817 vs 52817
+[PASS] kmeans/tuned cluster count matches table  -> labels 5 vs table 5
+[PASS] kmeans/tuned noise % matches table  -> labels 0.00 vs table 0.0
+[PASS] kmeans/tuned Davies-Bouldin matches labels  -> recomputed 1.8786 vs table 1.8786
+[PASS] kmeans/tuned Calinski-Harabasz matches labels  -> recomputed 7111.1 vs table 7111.1
+[PASS] kmeans/tuned table silhouette appears in results.txt  -> table 0.1689 | results.txt [0.1563, 0.1689]
+[PASS] kmeans/tuned cluster sizes in results.txt equal labels.npy
+[PASS] gmm/baseline run.py exists
+[PASS] gmm/baseline labels length  -> 52817 vs 52817
+[PASS] gmm/baseline cluster count matches table  -> labels 3 vs table 3
+[PASS] gmm/baseline noise % matches table  -> labels 0.00 vs table 0.0
+[PASS] gmm/baseline Davies-Bouldin matches labels  -> recomputed 2.0598 vs table 2.0598
+[PASS] gmm/baseline Calinski-Harabasz matches labels  -> recomputed 6036.9 vs table 6036.9
+[WARN] gmm/baseline table silhouette appears in results.txt  -> table 0.1476 | results.txt []
+[PASS] gmm/tuned run.py exists
+[PASS] gmm/tuned labels length  -> 52817 vs 52817
+[PASS] gmm/tuned cluster count matches table  -> labels 5 vs table 5
+[PASS] gmm/tuned noise % matches table  -> labels 0.00 vs table 0.0
+[PASS] gmm/tuned Davies-Bouldin matches labels  -> recomputed 1.8141 vs table 1.8141
+[PASS] gmm/tuned Calinski-Harabasz matches labels  -> recomputed 6987.1 vs table 6987.1
+[WARN] gmm/tuned table silhouette appears in results.txt  -> table 0.1672 | results.txt []
+[PASS] agglomerative/baseline run.py exists
+[PASS] agglomerative/baseline labels length  -> 52817 vs 52817
+[PASS] agglomerative/baseline cluster count matches table  -> labels 4 vs table 4
+[PASS] agglomerative/baseline noise % matches table  -> labels 0.00 vs table 0.0
+[PASS] agglomerative/baseline Davies-Bouldin matches labels  -> recomputed 1.9408 vs table 1.9408
+[PASS] agglomerative/baseline Calinski-Harabasz matches labels  -> recomputed 6767.2 vs table 6767.2
+[PASS] agglomerative/baseline table silhouette appears in results.txt  -> table 0.1595 | results.txt [0.16]
+[PASS] agglomerative/tuned run.py exists
+[PASS] agglomerative/tuned labels length  -> 52817 vs 52817
+[PASS] agglomerative/tuned cluster count matches table  -> labels 6 vs table 6
+[PASS] agglomerative/tuned noise % matches table  -> labels 0.00 vs table 0.0
+[PASS] agglomerative/tuned Davies-Bouldin matches labels  -> recomputed 1.9806 vs table 1.9806
+[PASS] agglomerative/tuned Calinski-Harabasz matches labels  -> recomputed 6525.6 vs table 6525.6
+[WARN] agglomerative/tuned table silhouette appears in results.txt  -> table 0.1513 | results.txt []
+[PASS] dbscan/baseline run.py exists
+[PASS] dbscan/baseline labels length  -> 52817 vs 52817
+[PASS] dbscan/baseline cluster count matches table  -> labels 2098 vs table 2098
+[PASS] dbscan/baseline noise % matches table  -> labels 47.32 vs table 47.32
+[PASS] dbscan/baseline Davies-Bouldin matches labels  -> recomputed 1.0714 vs table 1.0714
+[PASS] dbscan/baseline Calinski-Harabasz matches labels  -> recomputed 387.6 vs table 387.6
+[PASS] dbscan/baseline table silhouette appears in results.txt  -> table -0.1934 | results.txt [-0.1934]
+[PASS] dbscan/tuned run.py exists
+[PASS] dbscan/tuned labels length  -> 52817 vs 52817
+[PASS] dbscan/tuned cluster count matches table  -> labels 5 vs table 5
+[PASS] dbscan/tuned noise % matches table  -> labels 9.52 vs table 9.52
+[PASS] dbscan/tuned Davies-Bouldin matches labels  -> recomputed 1.7722 vs table 1.7722
+[PASS] dbscan/tuned Calinski-Harabasz matches labels  -> recomputed 4786.1 vs table 4786.1
+[WARN] dbscan/tuned table silhouette appears in results.txt  -> table 0.1263 | results.txt []
+[PASS] kmeans tuned profile shares sum to 100  -> 100.00
+[PASS] README.md mentions only existing files  -> missing: 
+[PASS] clustering\README.md mentions only existing files  -> missing: 
+[PASS] data\processed\README.md mentions only existing files  -> missing: 
+[PASS] outputs\README.md mentions only existing files  -> missing: 
+[PASS] README has the GitHub repository URL
+[WARN] README has a commit SHA
+[PASS] no file over 50 MB (GitHub limit is 100 MB)  -> []
+[PASS] no notebooks in the repo  -> []
+[PASS] requirements.txt lists pandas
+[PASS] requirements.txt lists numpy
+[PASS] requirements.txt lists scikit-learn
+[PASS] requirements.txt lists matplotlib
+[PASS] requirements.txt lists scipy
+[INFO] experiments/fix_test.py exists  -> False
+[INFO] experiments/improve_test.py exists  -> False
+[PASS] no model files are tracked by git  -> []
+[PASS] your own account has commits  -> 56	fedo-cmyk <fedo.original@gmail.com> |     11	janakarara <janakarara@yahoo.com> |      4	Abdallah256 <abdallah.alhoseny@gmail.com> |      3	7oseny <71086842+Abdallah256@users.noreply.github.com>
+
+SUMMARY: PASS 77, FAIL 0, WARN 7, INFO 9
+
+GIT BRANCH: clustering-fresh
+GIT REMOTE:
+origin	https://github.com/janaakarara/Hotel-ML-Project.git (fetch)
+origin	https://github.com/janaakarara/Hotel-ML-Project.git (push)
+GIT STATUS (uncommitted):
+M README.md
+ M outputs/README.md
+?? experiments/audit_check.py
+?? experiments/audit_output/
+GIT AHEAD/BEHIND upstream (behind<TAB>ahead): 0	0
+TRACKED FILES: 156 | experiments tracked: ['experiments/README.md', 'experiments/comparing_experiments/grid_common.py', 'experiments/comparing_experiments/outputs/all_models_encoding_comparison.png', 'experiments/comparing_experiments/outputs/all_models_results.csv', 'experiments/comparing_experiments/outputs/all_models_winners.txt', 'experiments/comparing_experiments/outputs/grid/grid_final_comparison.png', 'experiments/comparing_experiments/outputs/grid/grid_final_table.csv', 'experiments/comparing_experiments/outputs/grid/grid_heatmaps.png', 'experiments/comparing_experiments/outputs/grid/grid_k_curves.png', 'experiments/comparing_experiments/outputs/grid/grid_results.csv', 'experiments/comparing_experiments/outputs/grid/grid_winners.txt', 'experiments/comparing_experiments/run_all_models.py']
+GIT AUTHORS:
+56	fedo-cmyk <fedo.original@gmail.com>
+    11	janakarara <janakarara@yahoo.com>
+     4	Abdallah256 <abdallah.alhoseny@gmail.com>
+     3	7oseny <71086842+Abdallah256@users.noreply.github.com>
+GIT LOG (date | author | message):
+2026-11-28 | fedo-cmyk | Add DB and CH to comparison.csv, remove duplicate K-Means outputs, auto-describe clusters
+2026-11-28 | fedo-cmyk | Move encoding comparison to experiments/comparing_experiments
+2026-11-28 | fedo-cmyk | Remove old GMM main, widen DBSCAN eps grid to 2.5, README note
+2026-11-28 | fedo-cmyk | README: setup, limitations, step 9
+2026-11-28 | fedo-cmyk | Clustering: common ruler, 12-D frequency fits, single-column guard, GMM baseline, cluster profiles
+2026-11-28 | fedo-cmyk | Clustering: remove PCA from fits, add common.py, NMI/ARI single-column guard, fix agglomerative and DBSCAN tuned, untrack joblib models
+2026-11-27 | fedo-cmyk | Remove unused stage 6 idea and broken GMM scripts
+2026-11-27 | fedo-cmyk | Remove duplicates, placeholders and empty folders
+2026-11-27 | fedo-cmyk | Group outputs by pipeline step
+2026-11-27 | fedo-cmyk | Reorganize pipeline in chronological order, add file guides
+2026-11-27 | fedo-cmyk | Reorganize pipeline in chronological order (01 cleaning to 04 encoding comparison)
+2026-11-27 | janakarara | Clean up tuned Agglomerative and DBSCAN pipelines on PCA-90 and organize experiments
+2026-11-27 | janakarara | Finalize PCA-90 GMM tuning and add Agglomerative tuning pipeline
+2026-11-27 | janakarara | Add frequency encoding + PCA-90 preprocessing and update GMM & K-Means models
+2026-11-27 | fedo-cmyk | Add frequency encoding option and encoding experiment; baselines use frequency input
+2026-11-27 | janakarara | Baseline and tuned GMM scripts
+2026-11-27 | fedo-cmyk | Add empty kmeans and gmm baseline/tuned files
+2026-11-27 | fedo-cmyk | Clustering baselines, experiments folder (Gower + FAMD), 0.5 cat-weighted stage5
+2026-11-27 | fedo-cmyk | Clustering baselines (agglomerative, dbscan) and 0.5 cat-weighted stage5
+2026-11-27 | fedo-cmyk | .
+2026-11-27 | fedo-cmyk | cleaning folder creation
+2026-11-26 | fedo-cmyk | Restore Meal and ReservedRoomType in clustering features (cat_weight 1.0)
+2026-11-26 | fedo-cmyk | Drop Meal and ReservedRoomType from clustering features; cat_weight 1.0
+2026-11-26 | fedo-cmyk | .
+2026-11-26 | fedo-cmyk | file moving
+2026-11-26 | fedo-cmyk | Move Gower experiment into its own folder
+2026-11-26 | fedo-cmyk | Remove duplicates experiment write-up
+2026-11-26 | fedo-cmyk | Group Country into 4 groups with a shared mapping; add post-grouping figures
+2026-11-25 | fedo-cmyk | Update stage 2 and 5a outputs
+2026-11-25 | fedo-cmyk | Update HasChildren scaling comments to match code
+2026-11-25 | fedo-cmyk | Update project
+2026-11-25 | fedo-cmyk | Update preprocessing stage 1
+2026-11-25 | fedo-cmyk | Update preprocessing stage 1
+2026-11-25 | fedo-cmyk | Fix stage numbering in script headings, remove stale decisions file
+2026-11-25 | fedo-cmyk | Remove zero-adult rows in clustering stage 1; save profile columns; rerun all stages and pipeline
+2026-11-25 | fedo-cmyk | Add reusable clustering preprocessing pipeline with tests
+2026-11-25 | fedo-cmyk | Add scaling (4b) and encoding (5) stages, renumber preprocessing stages as a/b pairs
+2026-11-25 | fedo-cmyk | scaling problem using standard scaler
+2026-11-24 | fedo-cmyk | Stage 5: group rare categories and fix skew
+2026-11-24 | fedo-cmyk | Stage 4: skew and rare-category checks
+2026-11-24 | fedo-cmyk | Add Stage 3 clustering feature reduction
+2026-11-24 | fedo-cmyk | Add preprocessing scripts and stage 2 output figures
+2026-11-24 | fedo-cmyk | Clustering stage 1: drop outcome and future-event columns
+2026-11-24 | fedo-cmyk | EDA: renumber figures, keep only needed plots
+2026-11-24 | fedo-cmyk | Phase 1: add data-understanding graphs and tables for shared cleaning and preprocessing
+2026-11-23 | fedo-cmyk | data visualization for later decisions
+2026-11-23 | fedo-cmyk | Add cleaned data and the script that reproduces it (clean.py)
+2026-11-23 | fedo-cmyk | Start clustering from scratch: keep only raw H2.csv and .gitignore
+2026-11-22 | fedo-cmyk | K-Means baseline: drop Meal and HasKids from inputs (null-test justified), k=4
+2026-11-22 | fedo-cmyk | Group all not-used Version B files together
+2026-11-22 | fedo-cmyk | K-Means baseline: average over 5 seeds, add stability (ARI); k=5
+2026-11-22 | fedo-cmyk | Clean up clustering repo: use reproducible h2_clean.csv, park Version B as not used
+2026-10-31 | fedo-cmyk | Merge k-means tuning with cluster explanation (top 2 k, feature-to-cluster table)
+2026-10-31 | fedo-cmyk | Update clustering analysis
+2026-10-31 | fedo-cmyk | Merge branch 'clustering' of https://github.com/janaakarara/Hotel-ML-Project into clustering
+2026-10-31 | fedo-cmyk | Add clustering preprocessing (encode/scale/boolean) and v0 clean CSV
+2026-10-30 | Abdallah256 | Merge latest clustering branch
+2026-10-30 | 7oseny | Add files via upload
+2026-10-30 | Abdallah256 | Add k = 4 K-Means baseline figures and tables
+2026-10-30 | Abdallah256 | Add K-Means clustering baseline with k scan, figures and profiles

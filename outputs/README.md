@@ -12,7 +12,6 @@ and share a name. Model results are not here: each model writes next to its own 
 | `04_scaling/` | `stage4a_scaling_check.py` | `stage4a_scaling_distributions` + `stage4a_scaling_summary.csv` (each column under each scaler), `stage4a_scaling_spread` + `stage4a_scaling_ranking.csv` (which scaler wins) |
 | `05_encoding_balance/` | `src/03_encoding/stage5a_feature_balance_check.py` | `stage5a_balance_<tag>` (share of the distance each feature group controls) |
 | `gmm/` | `clustering/gmm/baseline/run.py`, `clustering/gmm/tuned/run.py` | `clustering_gmm_untuned_*` (baseline), `clustering_gmm_tuned_*` (tuned model), `clustering_gmm_tuning_*` and `clustering_gmm_k_comparison` (search for k and covariance type), `clustering_gmm_comparison.csv` (untuned vs tuned) |
-| `gmm/subclusters/` | `experiments/gmm_subclusters.py` | side analysis: cluster means and sub-groups of the largest GMM cluster (not part of the main pipeline) |
 
 Naming: `stageNx_<what>` = pipeline step N, part x. Run order is in the root `README.md`.
 
