@@ -7,7 +7,8 @@
     "feature_weights": {
       "target": 3.0,
       "categorical": 0.5
-    }
+    },
+    "threshold": 0.4444444444444445
   },
   "search_space": {
     "classifier__n_neighbors": [

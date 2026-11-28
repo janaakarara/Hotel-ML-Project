@@ -1,4 +1,3 @@
-
 from __future__ import annotations
 
 import json
@@ -12,7 +11,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import torch
-from sklearn.base import BaseEstimator, ClassifierMixin, TransformerMixin
+from sklearn.base import BaseEstimator, ClassifierMixin
+from sklearn.metrics import PrecisionRecallDisplay, make_scorer
+from sklearn.model_selection import TunedThresholdClassifierCV  
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import (
@@ -30,7 +31,6 @@ from sklearn.model_selection import (
     ParameterGrid,
     StratifiedKFold,
     cross_validate,
-    train_test_split,
 )
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler, TargetEncoder
@@ -40,23 +40,13 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from config import ARTIFACTS_DIR, DATA_FILE, RANDOM_STATE, TARGET_CLASSIFICATION
-from pipeline.preprocess import preprocess 
+from config import ARTIFACTS_DIR, RANDOM_STATE
+from pipeline.data import N_SPLITS, SCORING, get_cv, load_data, split_data
+from pipeline.transformers import LogTransformer
 
 MODEL_NAME = "KNN"
-TEST_SIZE = 0.2
-N_SPLITS = 5
+PRECISION_FLOOR = 0.65
 LOG_COLUMNS = ["LeadTime", "ADR"]  # right-skewed; log transform is a tuned option
-ID_LIKE_COLUMNS = ["Agent", "Company"]  # IDs: must be treated as categories
-    
-SCORING = {
-    "accuracy": "accuracy",
-    "precision": "precision",
-    "recall": "recall",
-    "f1": "f1",
-    "roc_auc": "roc_auc",
-    "pr_auc": "average_precision",
-}
 
 FULL_GRID = {
     "classifier__n_neighbors": [21, 31, 41, 61],
@@ -69,20 +59,6 @@ FULL_GRID = {
         {"target": 3.0, "categorical": 0.5},
     ],
 }
-
-# Custom transformer
-class LogTransformer(BaseEstimator, TransformerMixin):
-
-    def __init__(self, apply: bool = False) -> None:
-        self.apply = apply
-
-    def fit(self, X, y=None):
-        return self
-
-    def transform(self, X):
-        X = np.asarray(X, dtype=float)
-        return np.log1p(np.clip(X, 0, None)) if self.apply else X
-
 
 # GPU KNN classifier (sklearn-compatible)
 class TorchKNNClassifier(ClassifierMixin, BaseEstimator):
@@ -183,22 +159,6 @@ class TorchKNNClassifier(ClassifierMixin, BaseEstimator):
         proba = self.predict_proba(X)
         return self.classes_[np.argmax(proba, axis=1)]
 
-
-# Data
-def load_data() -> tuple[pd.DataFrame, pd.Series]:
-    raw = pd.read_csv(DATA_FILE)
-    df, _ = preprocess(raw)
-
-    # Strip stray whitespace in text columns; force ID columns to be categories.
-    for col in df.select_dtypes(exclude="number").columns:
-        df[col] = df[col].astype(str).str.strip()
-    for col in ID_LIKE_COLUMNS:
-        if col in df.columns:
-            df[col] = df[col].astype(str).str.strip()
-
-    y = df[TARGET_CLASSIFICATION].astype(int)
-    X = df.drop(columns=[TARGET_CLASSIFICATION])
-    return X, y
 
 # Pipeline
 def build_pipeline(X: pd.DataFrame) -> Pipeline:
@@ -314,7 +274,7 @@ def save_results(rows: list[dict], path: Path) -> None:
     new.to_csv(path, index=False, float_format="%.4f")
 
 
-def save_plots(out: Path, y_test, results: dict) -> None:
+def save_plots(out: Path, y_test, results: dict, threshold: float) -> None:
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.5))
     for ax, (label, r) in zip(axes, results.items()):
         ConfusionMatrixDisplay.from_predictions(
@@ -335,6 +295,34 @@ def save_plots(out: Path, y_test, results: dict) -> None:
     fig.savefig(out / "knn_roc_curve.png", dpi=150)
     plt.close(fig)
 
+    fig, ax = plt.subplots(figsize=(7, 5.5))
+    for label, r in results.items():
+        PrecisionRecallDisplay.from_predictions(
+            y_test, r["proba"], name=f"KNN {label}", ax=ax
+        )
+
+    # Operating points on the tuned curve
+    proba = results["tuned"]["proba"]
+    points = [
+        ("threshold 0.50", proba > 0.5),
+        (f"precision-floor threshold {threshold:.2f}", proba >= threshold),
+    ]
+    for name, pred in points:
+        ax.scatter(
+            recall_score(y_test, pred),
+            precision_score(y_test, pred, zero_division=0),
+            s=60, zorder=3, label=name,
+        )
+
+    rate = float(np.mean(y_test))
+    ax.axhline(rate, color="k", linestyle="--", alpha=0.4,
+               label=f"random guess ({rate:.2f})")
+    ax.set_title("KNN precision-recall curve (test)")
+    ax.legend(loc="upper right")
+    fig.tight_layout()
+    fig.savefig(out / "knn_pr_curve.png", dpi=150)
+    plt.close(fig)
+
 class ProgressAccuracy:
 
     def __init__(self, total: int) -> None:
@@ -350,6 +338,12 @@ class ProgressAccuracy:
               end="", flush=True)
         return score
 
+def recall_at_precision_floor(y_true, y_pred) -> float:
+    """Recall if precision meets the floor, otherwise 0."""
+    if precision_score(y_true, y_pred, zero_division=0) < PRECISION_FLOOR:
+        return 0.0
+    return recall_score(y_true, y_pred, zero_division=0)
+
 def main() -> None:
     gpu = (
         "GPU - " + torch.cuda.get_device_name(0)
@@ -363,11 +357,9 @@ def main() -> None:
     X, y = load_data()
     print(f"Rows: {len(X):,} | features: {X.shape[1]} | cancel rate: {y.mean():.2%}")
 
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=TEST_SIZE, stratify=y, random_state=RANDOM_STATE
-    )
+    X_train, X_test, y_train, y_test = split_data(X, y)
     print(f"Train: {len(X_train):,} | Test: {len(X_test):,}")
-    cv = StratifiedKFold(n_splits=N_SPLITS, shuffle=True, random_state=RANDOM_STATE)
+    cv = get_cv()
 
     # ---------------- Baseline (sklearn defaults: k=5, uniform, Euclidean) ------
     print("\n[1/2] Baseline KNN ...")
@@ -380,25 +372,35 @@ def main() -> None:
     print(f"  CV Accuracy = {base_cv['cv_accuracy_mean']:.4f} | test Accuracy = {base_test['test_accuracy']:.4f}")
     # ---------------- Tuned (GridSearchCV, scoring = Accuracy) -----------------------
     print("\n[2/2] GridSearchCV ...")
-    grid_space = FULL_GRID
-    progress = ProgressAccuracy(len(ParameterGrid(grid_space)) * N_SPLITS)
+    progress = ProgressAccuracy(len(ParameterGrid(FULL_GRID)) * N_SPLITS)
     grid = GridSearchCV(
         build_pipeline(X_train),
-        param_grid=grid_space,
+        param_grid=FULL_GRID,
         scoring=progress,
         cv=cv,
         n_jobs=1,  # GPU is shared; parallel workers would fight over it
-        refit=True,
-        verbose=0,
     )
     t0 = time.perf_counter()
     grid.fit(X_train, y_train)
     print()  # finish the progress line
     search_time = time.perf_counter() - t0
-    tuned = grid.best_estimator_
+
+    # Highest recall with precision >= floor (training data only)
+    print(f"  Tuning decision threshold (precision floor {PRECISION_FLOOR}) ...")
+    t0 = time.perf_counter()
+    tuned = TunedThresholdClassifierCV(
+        grid.best_estimator_,
+        scoring=make_scorer(recall_at_precision_floor),
+        cv=cv,
+        n_jobs=1,
+    )
+    tuned.fit(X_train, y_train)
+    search_time += time.perf_counter() - t0
+    threshold = float(tuned.best_threshold_)
+
     tuned_cv = cv_metrics(tuned, X_train, y_train, cv)
     tuned_test, tuned_pred, tuned_proba = test_metrics(tuned, X_test, y_test)
-    best_params = short_params(tuned)
+    best_params = {**short_params(grid.best_estimator_), "threshold": threshold}
     print(f"  Best params: {best_params}")
     print(f"  CV Accuracy = {tuned_cv['cv_accuracy_mean']:.4f} | test Accuracy = {tuned_test['test_accuracy']:.4f}")
     # Save 
@@ -411,7 +413,8 @@ def main() -> None:
         },
         {
             "task": "classification", "model": MODEL_NAME, "config": "tuned",
-            "params": json.dumps(best_params), "selection_metric": "accuracy (5-fold CV)",
+            "params": json.dumps(best_params),
+            "selection_metric": f"accuracy (grid search), recall at precision >= {PRECISION_FLOOR} (threshold)",
             "fit_time_s": float(grid.refit_time_), "search_time_s": search_time,
             **tuned_cv, **tuned_test,
         },
@@ -430,7 +433,7 @@ def main() -> None:
     )
     (out / "knn_best_params.json").write_text(
         json.dumps(
-            {"best_params": best_params, "search_space": {k: list(v) for k, v in grid_space.items()},
+            {"best_params": best_params, "search_space": {k: list(v) for k, v in FULL_GRID.items()},
              "scoring": "accuracy", "cv_folds": N_SPLITS, "random_state": RANDOM_STATE},
             indent=2, default=str,
         ),
@@ -440,6 +443,7 @@ def main() -> None:
         out, y_test,
         {"baseline": {"pred": base_pred, "proba": base_proba},
          "tuned": {"pred": tuned_pred, "proba": tuned_proba}},
+        threshold,
     )
     
     joblib.dump(tuned, out / "knn_classifier.joblib", compress=3)
