@@ -1,84 +1,55 @@
+﻿import sys
 from pathlib import Path
-import numpy as np
-import pandas as pd
-import matplotlib
-matplotlib.use("Agg")
+HERE = Path(__file__).resolve().parent; ROOT = HERE.parents[2]
+sys.path.insert(0, str(ROOT / "clustering"))
+import numpy as np, pandas as pd
+import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from joblib import Parallel, delayed
 from scipy.cluster.hierarchy import linkage, dendrogram
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.decomposition import PCA
-from sklearn.metrics import adjusted_rand_score, silhouette_score, davies_bouldin_score, calinski_harabasz_score
+from sklearn.metrics import adjusted_rand_score
 from sklearn.neighbors import KNeighborsClassifier
+import common as C
+X, SEED, SAMPLE = C.X, C.SEED, 10_000
+OUT = HERE / "outputs"; OUT.mkdir(exist_ok=True)
+CONFIGS = [("ward","euclidean"),("average","euclidean"),("average","cosine"),("complete","euclidean"),("complete","cosine")]
+idx = np.sort(np.random.default_rng(SEED).choice(len(X), SAMPLE, replace=False))
 
-SEED = 42
-SAMPLE = 10_000
-K_RANGE = range(2, 11)
-CONFIGS = [("ward", "euclidean"), ("average", "euclidean"), ("average", "cosine"), ("complete", "euclidean"), ("complete", "cosine")]
-
-HERE = Path(__file__).resolve().parent
-ROOT = HERE.parents[2]
-OUT = HERE / "outputs"
-OUT.mkdir(exist_ok=True)
-
-X = pd.read_csv(ROOT / "data/processed/h2_clustering_pca90.csv").to_numpy(dtype=float)
-rng = np.random.default_rng(SEED)
-idx = np.sort(rng.choice(len(X), SAMPLE, replace=False))
-sil_idx = np.sort(rng.choice(len(X), SAMPLE, replace=False))
-
-
-def fit_predict_full(sub_idx, k, link, metric):
-    Xs = X[sub_idx]
+def fit_full(sub, k, link, metric):
+    Xs = X[sub]
     ls = AgglomerativeClustering(n_clusters=k, linkage=link, metric=metric).fit_predict(Xs)
-    labels = KNeighborsClassifier(n_neighbors=5, weights="distance", metric=metric).fit(Xs, ls).predict(X)
-    labels[sub_idx] = ls
-    return labels
-
+    knn = KNeighborsClassifier(n_neighbors=5, weights="distance", metric=metric).fit(Xs, ls)
+    lab = np.concatenate([knn.predict(X[i:i+2000]) for i in range(0, len(X), 2000)])
+    lab[sub] = ls
+    return lab
 
 def evaluate(k, link, metric):
-    labels = fit_predict_full(idx, k, link, metric)
-    shares = np.bincount(labels, minlength=k) / len(X) * 100.0
-    if (shares == 0).any() or shares.min() < 2.0:
-        return None
-    sil = silhouette_score(X[sil_idx], labels[sil_idx])
-    return {"k": k, "linkage": link, "metric": metric, "sil": sil, "labels": labels}
+    lab = fit_full(idx, k, link, metric)
+    share = np.bincount(lab, minlength=k) / len(X) * 100
+    dep = C.dependence(lab)
+    return {"k": k, "linkage": link, "metric": metric, "sil": C.common_silhouette(lab),
+            "min_share": share.min(), "ari_col": dep["ari"], "nmi_col": dep["nmi"], "col": dep["nmi_col"],
+            "rejected": bool(share.min() < 2 or C.is_single_column(dep)), "labels": lab}
 
+res = Parallel(n_jobs=2)(delayed(evaluate)(k, l, m) for k in range(2, 11) for l, m in CONFIGS)
+pd.DataFrame([{a: b for a, b in r.items() if a != "labels"} for r in res]).to_csv(OUT / "tuning_grid.csv", index=False)
+ok = sorted([r for r in res if not r["rejected"]], key=lambda r: -r["sil"])
+if not ok: raise RuntimeError("every config was rejected (single-column or tiny cluster)")
+for r in ok[:5]:
+    r["stab"] = float(np.mean([adjusted_rand_score(r["labels"], fit_full(
+        np.sort(np.random.default_rng(s).choice(len(X), SAMPLE, replace=False)), r["k"], r["linkage"], r["metric"])) for s in (10, 20, 30)]))
+short = ok[:5]
+stable = [r for r in short if r["stab"] >= C.STAB_MIN]
+best = stable[0] if stable else max(short, key=lambda r: r["stab"])
+extra = [f"stability ARI (3 subsamples): {best['stab']:.3f}"]
+if not stable: extra.append("WARNING: no shortlisted model reached stability 0.8; most stable one reported")
+lab = best["labels"]
+C.write_results(OUT, "AGGLOMERATIVE TUNED (12-D)", f"linkage={best['linkage']}, metric={best['metric']}, k={best['k']}, sample={SAMPLE}, knn=5", lab, extra)
+plt.figure(figsize=(10, 5)); dendrogram(linkage(X[idx], method=best["linkage"], metric=best["metric"]), truncate_mode="lastp", p=30, no_labels=True)
+plt.title("Agglomerative tuned: dendrogram"); plt.tight_layout(); plt.savefig(OUT / "dendrogram.png", dpi=150); plt.close()
+p = PCA(n_components=2, random_state=SEED).fit_transform(X[C.SIL_IDX])
+plt.figure(figsize=(7, 6)); plt.scatter(p[:, 0], p[:, 1], s=3, c=lab[C.SIL_IDX], cmap="tab10")
+plt.title("Agglomerative tuned: 2-D PCA (plot only)"); plt.tight_layout(); plt.savefig(OUT / "pca.png", dpi=150); plt.close()
 
-results = [r for r in Parallel(n_jobs=-1)(delayed(evaluate)(k, l, m) for k in K_RANGE for l, m in CONFIGS) if r]
-results.sort(key=lambda r: r["sil"], reverse=True)
-
-# Pick highest-silhouette candidate that is also stable across subsamples (mean ARI >= 0.60)
-best = results[0]
-for cand in results[:5]:
-    aris = [adjusted_rand_score(cand["labels"], fit_predict_full(np.sort(np.random.default_rng(s).choice(len(X), SAMPLE, replace=False)), cand["k"], cand["linkage"], cand["metric"])) for s in [10, 20, 30]]
-    cand["ari"] = float(np.mean(aris))
-    if cand["ari"] >= 0.60:
-        best = cand
-        break
-
-labels = best["labels"]
-k, link, metric = best["k"], best["linkage"], best["metric"]
-sil = silhouette_score(X, labels, sample_size=SAMPLE, random_state=SEED)
-db = davies_bouldin_score(X, labels)
-ch = calinski_harabasz_score(X, labels)
-
-lines = [
-    "AGGLOMERATIVE TUNED (PCA-90)",
-    f"settings: linkage={link}, metric={metric}, k={k}, sample={SAMPLE}, knn=5(distance)",
-    f"rows: {len(X)} | cluster sizes: {np.bincount(labels).tolist()}",
-    f"silhouette: {sil:.4f} | davies-bouldin: {db:.4f} | calinski-harabasz: {ch:.1f} | stability_ari: {best.get('ari', 0):.4f}",
-]
-print("\n".join(lines))
-(OUT / "results.txt").write_text("\n".join(lines), encoding="utf-8")
-np.save(OUT / "labels.npy", labels)
-
-plt.figure(figsize=(10, 5))
-dendrogram(linkage(X[idx], method=link, metric=metric), truncate_mode="lastp", p=30, no_labels=True)
-plt.title(f"Agglomerative tuned: dendrogram ({link}/{metric}, last 30 merges)")
-plt.tight_layout(); plt.savefig(OUT / "dendrogram.png", dpi=150); plt.close()
-
-p = PCA(n_components=2, random_state=SEED).fit_transform(X[sil_idx])
-plt.figure(figsize=(7, 6))
-plt.scatter(p[:, 0], p[:, 1], s=3, c=labels[sil_idx], cmap="tab10")
-plt.title(f"Agglomerative tuned (k={k}, {link}/{metric}) in PCA space"); plt.xlabel("PC1"); plt.ylabel("PC2")
-plt.tight_layout(); plt.savefig(OUT / "pca.png", dpi=150); plt.close()

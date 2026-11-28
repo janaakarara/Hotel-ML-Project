@@ -6,3 +6,7 @@ __pycache__/
 .ipynb_checkpoints/
 .venv/
 .pytest_cache/
+
+clustering/**/outputs/*.joblib
+clustering/**/outputs/*.pkl
+*.joblib

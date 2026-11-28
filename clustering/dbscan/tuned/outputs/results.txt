@@ -1,5 +1,10 @@
-DBSCAN TUNED (PCA-90)
-settings: eps=2.0, min_samples=50, metric=euclidean, all rows
-rows: 52817 | clusters: 2 | noise %: 0.72
-cluster sizes: [47999, 4436]
-silhouette (non-noise): 0.1586 | davies-bouldin: 2.0206 | calinski-harabasz: 3230.8
+DBSCAN TUNED (12-D)
+settings: eps=2.0, min_samples=150, euclidean
+input: 12-D frequency matrix (no PCA)
+rows: 52817 | cluster sizes (noise incl. if any): [5028, 29182, 717, 9149, 5804, 2937] | noise %: 9.52
+silhouette (common ruler, 10k fixed sample, noise = own group): 0.1263
+davies-bouldin (non-noise): 1.7722 | calinski-harabasz (non-noise): 4786.1
+closest single column: ARI 0.46 (Meal) | NMI 0.52 (Meal)
+best eps=2.0, min_samples=150
+WARNING: no config passed the single-column guard (NMI < 0.5). Reported the near-miss with the lowest NMI; its clusters are largely driven by one input column. It may also contain clusters under 2% of rows (check cluster sizes). Do not present as a real segmentation.
+NOTE: winner is at the edge of the eps grid

@@ -1,0 +1,7 @@
+model,variant,clusters,noise_pct,silhouette_common,max_ARI_col,max_NMI_col,NMI_col
+agglomerative,baseline,4,0.0,0.1595,0.47,0.51,CustomerType
+agglomerative,tuned,6,0.0,0.1513,0.16,0.37,CustomerType
+dbscan,baseline,2098,47.32,-0.1934,0.0,0.37,ArrivalMonth
+dbscan,tuned,5,9.52,0.1263,0.46,0.52,Meal
+kmeans,baseline,3,0.0,0.0418,0.29,0.57,ArrivalMonth
+kmeans,tuned,5,0.0,0.1689,0.24,0.4,Meal

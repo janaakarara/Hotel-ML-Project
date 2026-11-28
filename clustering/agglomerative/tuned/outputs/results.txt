@@ -1,4 +1,8 @@
-AGGLOMERATIVE TUNED (PCA-90)
-settings: linkage=average, metric=cosine, k=2, sample=10000, knn=5(distance)
-rows: 52817 | cluster sizes: [27585, 25232]
-silhouette: 0.2783 | davies-bouldin: 1.3015 | calinski-harabasz: 28926.2 | stability_ari: 0.6146
+AGGLOMERATIVE TUNED (12-D)
+settings: linkage=average, metric=cosine, k=6, sample=10000, knn=5
+input: 12-D frequency matrix (no PCA)
+rows: 52817 | cluster sizes (noise incl. if any): [11652, 9768, 10086, 8314, 8290, 4707] | noise %: 0.00
+silhouette (common ruler, 10k fixed sample, noise = own group): 0.1513
+davies-bouldin (non-noise): 1.9806 | calinski-harabasz (non-noise): 6525.6
+closest single column: ARI 0.16 (MarketSegment) | NMI 0.37 (CustomerType)
+stability ARI (3 subsamples): 0.802
