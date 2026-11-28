@@ -19,5 +19,4 @@ Files are named after the step that made them. Read top to bottom = pipeline ord
 | 5 | h2_clustering_stage4.csv | scaled numbers, categories still text. INPUT of every encoding |
 | 6 | h2_clustering_stage5.csv + stage5_encoding_columns.json | one-hot, 29 columns (category weight is stored in the json, currently 0.5) |
 | 6 | h2_clustering_stage5_frequency.csv + stage5_frequency_maps.json | frequency, 12 columns, month as sin/cos (recommended) |
-| 6 | h2_clustering_stage5_freq.csv + stage5_freq_encoding.json | frequency, older version, 11 columns, month as raw 1-12. Feeds the PCA file |
-| 7 | h2_clustering_pca90.csv + pca90_metadata.json | PCA keeping 90% variance, 8 columns |
+| 7 | h2_clustering_pca90.csv + pca90_metadata.json | PCA keeping 90% variance, 8 columns (built from h2_clustering_stage5_frequency.csv) |

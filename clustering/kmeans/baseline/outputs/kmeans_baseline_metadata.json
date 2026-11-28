@@ -24,7 +24,7 @@
     52817,
     12
   ],
-  "training_time_sec": 0.492,
+  "training_time_sec": 0.568,
   "inertia": 458510.83,
   "n_iter": 21,
   "stability_seeds": [
@@ -79,7 +79,7 @@
     "mean_max_posterior": null,
     "mean_normalised_entropy": null,
     "cluster_shares_pct": "{\"0\": 57.55, \"1\": 33.54, \"2\": 8.91}",
-    "training_time_sec": 0.492,
+    "training_time_sec": 0.568,
     "data_zero_eigenvalues": 0,
     "max_condition_number": null,
     "min_eig_at_floor_per_component": null,

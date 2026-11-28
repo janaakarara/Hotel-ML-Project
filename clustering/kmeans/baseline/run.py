@@ -17,7 +17,6 @@ Writes to --output-dir (default clustering/kmeans/baseline/outputs):
   kmeans_baseline_metadata.json           hyper-parameters, shape, runtime, seed ARI, cluster distribution
   clustering_kmeans_baseline_metrics.csv  one row, same column order as clustering_gmm_untuned_metrics.csv
                                           (GMM-only columns left empty, K-Means extras appended at the end)
-  clustering_kmeans_baseline_profiles.csv cluster profiles (same columns as the GMM profiles, minus posterior)
   kmeans_baseline_pca2d.png               clusters + centroids on PC1-PC2
   results.txt, labels.npy                 README.md convention (summary text; one label per CSV row)
 """
@@ -169,7 +168,6 @@ def main():
     joblib.dump(pipe, out_dir / "kmeans_baseline_model.joblib")
     (out_dir / "kmeans_baseline_metadata.json").write_text(json.dumps(meta, indent=2), encoding="utf-8")
     metrics_df.to_csv(out_dir / "clustering_kmeans_baseline_metrics.csv", index=False)
-    profiles.to_csv(out_dir / "clustering_kmeans_baseline_profiles.csv", index=False)
     np.save(out_dir / "labels.npy", labels)
     plot_pca_2d(X, labels, km.cluster_centers_, out_dir / "kmeans_baseline_pca2d.png",
                 f"K-Means untuned baseline (raw {X.shape[1]}-D, k=3, k-means++, n_init=10)")

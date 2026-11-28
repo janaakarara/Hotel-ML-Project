@@ -10,7 +10,7 @@ Choice: unsupervised only. A configuration is VALID if
 Also fits the baseline (k=3, k-means++, n_init=10) on the same input so baseline vs tuned is a fair comparison.
 Run from the project root:  python clustering/kmeans/tuned/run.py
 Writes to clustering/kmeans/tuned/outputs/: results.txt, grid.csv, labels.npy, k_curves.png, pca.png,
-                                            profiles.csv, kmeans_tuned_model.joblib
+                                            kmeans_tuned_model.joblib
 """
 from pathlib import Path
 import json
@@ -105,7 +105,6 @@ prof["pct_children"] *= 100
 prof.insert(1, "share_pct", prof["rows"] / len(labels) * 100)
 for c in ["MarketSegment", "Country", "Meal", "CustomerType", "ReservedRoomType"]:
     prof["top_" + c] = rawp.groupby("cluster")[c].agg(lambda s: s.value_counts().index[0])
-prof.round(2).to_csv(OUT / "profiles.csv")
 
 # ---- figure 1: the decision graph (silhouette and inertia vs k) ----
 fig, (a1, a2) = plt.subplots(1, 2, figsize=(13, 4.8))
