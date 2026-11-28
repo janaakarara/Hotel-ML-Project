@@ -40,4 +40,4 @@ File guide: data/processed/README.md (datasets) and outputs/README.md (figures a
 - DBSCAN baseline: its results.txt reports 0.2814 (computed by the baseline script itself); comparison.csv re-scores every model on the same ruler with noise counted as its own group, which gives -0.1934 (47% noise, 2,098 clusters). Use the comparison.csv value when ranking models.
 
 - Reproduce the rejected-idea tests: `python experiments/rejected_ideas/fix_test.py` (HasChildren weights, Meal ordinal) and `python experiments/rejected_ideas/improve_test.py` (drop-one-column, PCA, derived features, richer profiles). Outputs: experiments/rejected_ideas/fix_test_outputs and experiments/rejected_ideas/improve_test_outputs.
-Submitted commit SHA (code state): 89419a9
+Submitted commit SHA (code state): b23fd03
