@@ -79,7 +79,7 @@
 [PASS] data\processed\README.md mentions only existing files  -> missing: 
 [PASS] outputs\README.md mentions only existing files  -> missing: 
 [PASS] README has the GitHub repository URL
-[WARN] README has a commit SHA
+[PASS] README has a commit SHA
 [PASS] no file over 50 MB (GitHub limit is 100 MB)  -> []
 [PASS] no notebooks in the repo  -> []
 [PASS] requirements.txt lists pandas
@@ -87,12 +87,12 @@
 [PASS] requirements.txt lists scikit-learn
 [PASS] requirements.txt lists matplotlib
 [PASS] requirements.txt lists scipy
-[INFO] experiments/fix_test.py exists  -> False
-[INFO] experiments/improve_test.py exists  -> False
+[INFO] experiments/rejected_ideas/fix_test.py exists  -> True
+[INFO] experiments/rejected_ideas/improve_test.py exists  -> True
 [PASS] no model files are tracked by git  -> []
-[PASS] your own account has commits  -> 56	fedo-cmyk <fedo.original@gmail.com> |     11	janakarara <janakarara@yahoo.com> |      4	Abdallah256 <abdallah.alhoseny@gmail.com> |      3	7oseny <71086842+Abdallah256@users.noreply.github.com>
+[PASS] your own account has commits  -> 62	fedo-cmyk <fedo.original@gmail.com> |     11	janakarara <janakarara@yahoo.com> |      4	Abdallah256 <abdallah.alhoseny@gmail.com> |      3	7oseny <71086842+Abdallah256@users.noreply.github.com>
 
-SUMMARY: PASS 77, FAIL 0, WARN 7, INFO 9
+SUMMARY: PASS 78, FAIL 0, WARN 6, INFO 9
 
 GIT BRANCH: clustering-fresh
 GIT REMOTE:
@@ -100,17 +100,35 @@ origin	https://github.com/janaakarara/Hotel-ML-Project.git (fetch)
 origin	https://github.com/janaakarara/Hotel-ML-Project.git (push)
 GIT STATUS (uncommitted):
 M README.md
- M outputs/README.md
-?? experiments/audit_check.py
-?? experiments/audit_output/
+ D experiments/audit_check.py
+ D experiments/audit_output/audit_report.txt
+ D experiments/fix_test.py
+ D experiments/fix_test_outputs/fix_test_chart.png
+ D experiments/fix_test_outputs/fix_test_results.csv
+ D experiments/fix_test_outputs/fix_test_summary.txt
+ D experiments/improve_test.py
+ D experiments/improve_test_outputs/cluster_profiles_rich.csv
+ D experiments/improve_test_outputs/improve_test_chart.png
+ D experiments/improve_test_outputs/improve_test_results.csv
+ D experiments/improve_test_outputs/improve_test_summary.txt
+ D experiments/improve_test_outputs/profile_heatmap.png
+?? docs/
+?? experiments/audit/
+?? experiments/rejected_ideas/
 GIT AHEAD/BEHIND upstream (behind<TAB>ahead): 0	0
-TRACKED FILES: 156 | experiments tracked: ['experiments/README.md', 'experiments/comparing_experiments/grid_common.py', 'experiments/comparing_experiments/outputs/all_models_encoding_comparison.png', 'experiments/comparing_experiments/outputs/all_models_results.csv', 'experiments/comparing_experiments/outputs/all_models_winners.txt', 'experiments/comparing_experiments/outputs/grid/grid_final_comparison.png', 'experiments/comparing_experiments/outputs/grid/grid_final_table.csv', 'experiments/comparing_experiments/outputs/grid/grid_heatmaps.png', 'experiments/comparing_experiments/outputs/grid/grid_k_curves.png', 'experiments/comparing_experiments/outputs/grid/grid_results.csv', 'experiments/comparing_experiments/outputs/grid/grid_winners.txt', 'experiments/comparing_experiments/run_all_models.py']
+TRACKED FILES: 168 | experiments tracked: ['experiments/README.md', 'experiments/audit_check.py', 'experiments/audit_output/audit_report.txt', 'experiments/comparing_experiments/grid_common.py', 'experiments/comparing_experiments/outputs/all_models_encoding_comparison.png', 'experiments/comparing_experiments/outputs/all_models_results.csv', 'experiments/comparing_experiments/outputs/all_models_winners.txt', 'experiments/comparing_experiments/outputs/grid/grid_final_comparison.png', 'experiments/comparing_experiments/outputs/grid/grid_final_table.csv', 'experiments/comparing_experiments/outputs/grid/grid_heatmaps.png', 'experiments/comparing_experiments/outputs/grid/grid_k_curves.png', 'experiments/comparing_experiments/outputs/grid/grid_results.csv']
 GIT AUTHORS:
-56	fedo-cmyk <fedo.original@gmail.com>
+62	fedo-cmyk <fedo.original@gmail.com>
     11	janakarara <janakarara@yahoo.com>
      4	Abdallah256 <abdallah.alhoseny@gmail.com>
      3	7oseny <71086842+Abdallah256@users.noreply.github.com>
 GIT LOG (date | author | message):
+2026-11-28 | fedo-cmyk | README: update submitted commit SHA
+2026-11-28 | fedo-cmyk | Add fix_test.py and improve_test.py with their outputs (rejected-idea tests)
+2026-11-28 | fedo-cmyk | README: update submitted commit SHA
+2026-11-28 | fedo-cmyk | README: explain DBSCAN baseline silhouette difference, audit count
+2026-11-28 | fedo-cmyk | README: record submitted commit SHA
+2026-11-28 | fedo-cmyk | Clustering: audit script, README final-audit notes, remove dead reference
 2026-11-28 | fedo-cmyk | Add DB and CH to comparison.csv, remove duplicate K-Means outputs, auto-describe clusters
 2026-11-28 | fedo-cmyk | Move encoding comparison to experiments/comparing_experiments
 2026-11-28 | fedo-cmyk | Remove old GMM main, widen DBSCAN eps grid to 2.5, README note
@@ -165,9 +183,3 @@ GIT LOG (date | author | message):
 2026-11-22 | fedo-cmyk | Clean up clustering repo: use reproducible h2_clean.csv, park Version B as not used
 2026-10-31 | fedo-cmyk | Merge k-means tuning with cluster explanation (top 2 k, feature-to-cluster table)
 2026-10-31 | fedo-cmyk | Update clustering analysis
-2026-10-31 | fedo-cmyk | Merge branch 'clustering' of https://github.com/janaakarara/Hotel-ML-Project into clustering
-2026-10-31 | fedo-cmyk | Add clustering preprocessing (encode/scale/boolean) and v0 clean CSV
-2026-10-30 | Abdallah256 | Merge latest clustering branch
-2026-10-30 | 7oseny | Add files via upload
-2026-10-30 | Abdallah256 | Add k = 4 K-Means baseline figures and tables
-2026-10-30 | Abdallah256 | Add K-Means clustering baseline with k scan, figures and profiles

@@ -4,8 +4,8 @@ from pathlib import Path
 import numpy as np, pandas as pd
 from sklearn.metrics import davies_bouldin_score, calinski_harabasz_score
 
-ROOT = Path(__file__).resolve().parents[1]; P = ROOT / "data" / "processed"
-OUT = ROOT / "experiments" / "audit_output"; OUT.mkdir(parents=True, exist_ok=True)
+ROOT = Path(__file__).resolve().parents[2]; P = ROOT / "data" / "processed"
+OUT = ROOT / "experiments" / "audit" / "audit_output"; OUT.mkdir(parents=True, exist_ok=True)
 res = []
 def chk(ok, name, detail=""): res.append(("PASS" if ok else "FAIL", name, detail))
 def soft(ok, name, detail=""): res.append(("PASS" if ok else "WARN", name, detail))
@@ -105,7 +105,7 @@ req = (ROOT / "requirements.txt").read_text(encoding="utf-8", errors="ignore").l
 for lib in ["pandas", "numpy", "scikit-learn", "matplotlib", "scipy"]:
     soft(lib in req, f"requirements.txt lists {lib}")
 for f in ["fix_test.py", "improve_test.py"]:
-    info(f"experiments/{f} exists", str((ROOT / "experiments" / f).exists()))
+    info(f"experiments/rejected_ideas/{f} exists", str((ROOT / "experiments" / "rejected_ideas" / f).exists()))
 
 # ---- 5. git ----
 tracked = git("ls-files").splitlines()

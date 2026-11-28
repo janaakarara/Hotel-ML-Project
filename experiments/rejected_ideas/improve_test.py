@@ -1,6 +1,6 @@
 """Test 4 ideas for better scores and profiles. One file. Run from the project root:
-   python experiments/improve_test.py            (full run)
-   python experiments/improve_test.py --quick    (crash test)
+   python experiments/rejected_ideas/improve_test.py            (full run)
+   python experiments/rejected_ideas/improve_test.py --quick    (crash test)
 1 profiles : heatmap + extra columns for the current tuned K-Means labels (extra columns used AFTER clustering only)
 2 leave-one-column-out : K-Means without each input column
 3 PCA      : K-Means on PCA(90%) and PCA(90%, whitened)
@@ -18,8 +18,8 @@ from sklearn.preprocessing import PowerTransformer
 from sklearn.metrics import silhouette_score, adjusted_rand_score, normalized_mutual_info_score
 
 QUICK = "--quick" in sys.argv
-ROOT = Path(__file__).resolve().parents[1]; P = ROOT / "data" / "processed"
-OUT = ROOT / "experiments" / "improve_test_outputs"; OUT.mkdir(parents=True, exist_ok=True)
+ROOT = Path(__file__).resolve().parents[2]; P = ROOT / "data" / "processed"
+OUT = ROOT / "experiments" / "rejected_ideas" / "improve_test_outputs"; OUT.mkdir(parents=True, exist_ok=True)
 KS = [3, 5] if QUICK else [3, 4, 5, 6, 7]; GOWER_N = 800 if QUICK else 3000
 s1 = pd.read_csv(P / "h2_clustering_stage1.csv"); s2 = pd.read_csv(P / "h2_clustering_stage2.csv")
 s3 = pd.read_csv(P / "h2_clustering_stage3.csv"); s4 = pd.read_csv(P / "h2_clustering_stage4.csv")

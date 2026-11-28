@@ -35,9 +35,9 @@ File guide: data/processed/README.md (datasets) and outputs/README.md (figures a
 
 
 ## Final audit (clustering)
-- `python experiments/audit_check.py` re-derives cluster counts, noise, Davies-Bouldin and Calinski-Harabasz from each labels.npy and checks them against clustering/comparison.csv (77 checks, 0 failed).
+- `python experiments/audit/audit_check.py` re-derives cluster counts, noise, Davies-Bouldin and Calinski-Harabasz from each labels.npy and checks them against clustering/comparison.csv (77 checks, 0 failed).
 - K-Means baseline silhouette is 0.1549 in its own results.txt (10k sample) and 0.1563 in comparison.csv (common ruler); both are correct for their sample.
 - DBSCAN baseline: its results.txt reports 0.2814 (computed by the baseline script itself); comparison.csv re-scores every model on the same ruler with noise counted as its own group, which gives -0.1934 (47% noise, 2,098 clusters). Use the comparison.csv value when ranking models.
 
-- Reproduce the rejected-idea tests: `python experiments/fix_test.py` (HasChildren weights, Meal ordinal) and `python experiments/improve_test.py` (drop-one-column, PCA, derived features, richer profiles). Outputs: experiments/fix_test_outputs and experiments/improve_test_outputs.
+- Reproduce the rejected-idea tests: `python experiments/rejected_ideas/fix_test.py` (HasChildren weights, Meal ordinal) and `python experiments/rejected_ideas/improve_test.py` (drop-one-column, PCA, derived features, richer profiles). Outputs: experiments/rejected_ideas/fix_test_outputs and experiments/rejected_ideas/improve_test_outputs.
 Submitted commit SHA (code state): 89419a9

@@ -1,7 +1,7 @@
 """Do the proposed fixes help? One file, no other script needed.
 
-Run from the project root:   python experiments/fix_test.py
-Quick crash test (1 min):    python experiments/fix_test.py --quick
+Run from the project root:   python experiments/rejected_ideas/fix_test.py
+Quick crash test (1 min):    python experiments/rejected_ideas/fix_test.py --quick
 
 Variants tested (everything else identical to the current frequency matrix):
   current         the matrix the models use now
@@ -26,9 +26,9 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import silhouette_score, adjusted_rand_score, normalized_mutual_info_score
 
 QUICK = "--quick" in sys.argv
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 P = ROOT / "data" / "processed"
-OUT = ROOT / "experiments" / "fix_test_outputs"; OUT.mkdir(parents=True, exist_ok=True)
+OUT = ROOT / "experiments" / "rejected_ideas" / "fix_test_outputs"; OUT.mkdir(parents=True, exist_ok=True)
 SEED = 42
 KS = [3, 5] if QUICK else [3, 4, 5, 6, 7]
 AGG_N = 1500 if QUICK else 6000
